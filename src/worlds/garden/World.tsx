@@ -36,7 +36,7 @@ export default function GardenWorld() {
 
   return (
     <WorldFrame world="garden">
-      <div data-theme="light">
+      <div>
         <section ref={root} className="wrap" id="app" aria-live="off" aria-label="Word Garden" />
         <p ref={live} className="k-sr-only" aria-live="assertive" />
       </div>

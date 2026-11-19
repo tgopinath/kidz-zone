@@ -14,7 +14,7 @@ flowchart LR
     A[Android shell<br/>Capacitor, com.gopinath.kidzzone<br/>native text-to-speech] --> L
     I[iPhone shell<br/>SwiftUI WKWebView, KidzZone-iOS] --> L
   end
-  B[Browser] --> L[kidz-zone.vercel.app<br/>static Vite build]
+  B[Browser] --> L[kidz-zone-mu.vercel.app<br/>static Vite build]
   L --> K[Kolam kits from GitHub Pages<br/>kolam-m3.js / kolam-ios.js]
   L --> S[(localStorage + IndexedDB<br/>on the device only)]
   L -. optional, env-gated .-> SB[(Supabase cloud save<br/>Pets world, off by default)]
@@ -88,7 +88,7 @@ flowchart LR
 ```mermaid
 flowchart LR
   G[git push main<br/>tgopinath/kidz-zone] --> V[Vercel project kidz-zone<br/>npm run build -> dist]
-  V --> LIVE[kidz-zone.vercel.app]
+  V --> LIVE[kidz-zone-mu.vercel.app]
   LIVE --> APK[Android shell<br/>android-wrappers/build-remote.sh<br/>kidz-zone.apk on release v1.0.0]
   LIVE --> IOS[iPhone shell<br/>KidzZone-iOS, Simulator screenshots]
   LIVE --> P[Portfolio card<br/>gopinath-portfolio + PetProjects]

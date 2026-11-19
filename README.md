@@ -2,7 +2,7 @@
 
 One app for children aged 4 to 12, with eight worlds and one profile, one set of stars and one grown-ups area.
 
-Live: https://kidz-zone.vercel.app
+Live: https://kidz-zone-mu.vercel.app
 
 | Group | World | From | What the child does |
 |---|---|---|---|
