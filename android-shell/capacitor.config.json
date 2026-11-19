@@ -1,0 +1,1 @@
+{ "appId": "com.gopinath.kidzzone", "appName": "KidZ Zone", "webDir": "www", "server": { "url": "https://kidz-zone-mu.vercel.app/", "cleartext": false } }
