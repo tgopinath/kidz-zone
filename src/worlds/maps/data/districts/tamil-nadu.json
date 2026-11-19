@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "about": "Curated learning content for Tamil Nadu districts, keyed by LGD district code. Names in 'name' follow Government of Tamil Nadu spellings; the LGD dataset name is kept in the map data as lgdName. Boundaries come from LGD data, never from this file.",
+    "stateId": "tamil-nadu",
+    "contentStatus": "curated",
+    "reviewedOn": "2026-11-13",
+    "tamil": "Tamil names, headquarters and facts (ta) are read aloud when the Tamil voice is chosen."
+  },
+  "districts": {
+    "610": {
+      "name": "Ariyalur",
+      "headquarters": "Ariyalur",
+      "fact": "Its rocks are full of fossils of sea creatures that lived here millions of years ago, and it is home to the Gangaikonda Cholapuram temple built by Rajendra Chola I.",
+      "ta": {
+        "name": "அரியலூர்",
+        "headquarters": "அரியலூர்",
+        "fact": "இங்குள்ள பாறைகளில் கோடிக்கணக்கான ஆண்டுகளுக்கு முன் வாழ்ந்த கடல் உயிரினங்களின் புதைபடிவங்கள் உள்ளன. முதலாம் இராஜேந்திர சோழன் கட்டிய கங்கைகொண்ட சோழபுரம் கோயிலும் இங்குதான் உள்ளது."
+      }
+    },
+    "730": {
+      "name": "Chengalpattu",
+      "headquarters": "Chengalpattu",
+      "fact": "Mamallapuram's Shore Temple and stone carvings, a UNESCO World Heritage Site, are in this district. So is Vedanthangal, one of India's oldest bird sanctuaries.",
+      "ta": {
+        "name": "செங்கல்பட்டு",
+        "headquarters": "செங்கல்பட்டு",
+        "fact": "யுனெஸ்கோ உலகப் பாரம்பரியச் சின்னமான மாமல்லபுரம் கடற்கரைக் கோயில் இந்த மாவட்டத்தில் உள்ளது. இந்தியாவின் பழமையான பறவைகள் சரணாலயங்களில் ஒன்றான வேடந்தாங்கலும் இங்குதான்."
+      }
+    },
+    "568": {
+      "name": "Chennai",
+      "headquarters": "Chennai",
+      "fact": "Chennai is the state capital, and Marina Beach is one of the longest city beaches in the world.",
+      "ta": {
+        "name": "சென்னை",
+        "headquarters": "சென்னை",
+        "fact": "சென்னை தமிழ்நாட்டின் தலைநகரம். இங்குள்ள மெரினா கடற்கரை உலகின் மிக நீளமான நகரக் கடற்கரைகளில் ஒன்று."
+      }
+    },
+    "569": {
+      "name": "Coimbatore",
+      "headquarters": "Coimbatore",
+      "fact": "Coimbatore is nicknamed the 'Manchester of South India' because of its many textile mills.",
+      "ta": {
+        "name": "கோயம்புத்தூர்",
+        "headquarters": "கோயம்புத்தூர்",
+        "fact": "நிறைய நூற்பாலைகள் இருப்பதால் கோயம்புத்தூரை 'தென்னிந்தியாவின் மான்செஸ்டர்' என்று அழைக்கிறார்கள்."
+      }
+    },
+    "570": {
+      "name": "Cuddalore",
+      "headquarters": "Cuddalore",
+      "fact": "Pichavaram, one of the world's largest mangrove forests, lets you row a boat through tunnels of trees.",
+      "ta": {
+        "name": "கடலூர்",
+        "headquarters": "கடலூர்",
+        "fact": "உலகின் பெரிய சதுப்புநிலக் காடுகளில் ஒன்றான பிச்சாவரம் இங்குள்ளது. மரங்களின் நடுவே படகில் பயணம் செய்யலாம்."
+      }
+    },
+    "571": {
+      "name": "Dharmapuri",
+      "headquarters": "Dharmapuri",
+      "fact": "At Hogenakkal Falls the Kaveri river crashes over rocks, and people cross the water in round coracle boats.",
+      "ta": {
+        "name": "தருமபுரி",
+        "headquarters": "தருமபுரி",
+        "fact": "ஒகேனக்கல் அருவியில் காவிரி ஆறு பாறைகளின் மேல் விழுகிறது. மக்கள் வட்டமான பரிசல்களில் ஆற்றைக் கடக்கிறார்கள்."
+      }
+    },
+    "572": {
+      "name": "Dindigul",
+      "headquarters": "Dindigul",
+      "fact": "Dindigul is famous for strong locks and tasty biryani. The hill station Kodaikanal is also in this district.",
+      "ta": {
+        "name": "திண்டுக்கல்",
+        "headquarters": "திண்டுக்கல்",
+        "fact": "திண்டுக்கல் உறுதியான பூட்டுகளுக்கும் சுவையான பிரியாணிக்கும் பெயர் பெற்றது. கொடைக்கானல் மலைவாழிடமும் இந்த மாவட்டத்தில்தான் உள்ளது."
+      }
+    },
+    "573": {
+      "name": "Erode",
+      "headquarters": "Erode",
+      "fact": "Erode is called 'Turmeric City' — it has some of the biggest turmeric markets in India.",
+      "ta": {
+        "name": "ஈரோடு",
+        "headquarters": "ஈரோடு",
+        "fact": "இந்தியாவின் பெரிய மஞ்சள் சந்தைகள் இருப்பதால் ஈரோட்டை 'மஞ்சள் நகரம்' என்கிறார்கள்."
+      }
+    },
+    "729": {
+      "name": "Kallakurichi",
+      "headquarters": "Kallakurichi",
+      "fact": "One of Tamil Nadu's newer districts (2019), it is home to the green Kalvarayan Hills.",
+      "ta": {
+        "name": "கள்ளக்குறிச்சி",
+        "headquarters": "கள்ளக்குறிச்சி",
+        "fact": "2019-இல் உருவான புதிய மாவட்டம் இது. பசுமையான கல்வராயன் மலைகள் இங்குள்ளன."
+      }
+    },
+    "574": {
+      "name": "Kancheepuram",
+      "headquarters": "Kancheepuram",
+      "fact": "Known as the 'City of a Thousand Temples', it is also famous for beautiful silk sarees.",
+      "ta": {
+        "name": "காஞ்சிபுரம்",
+        "headquarters": "காஞ்சிபுரம்",
+        "fact": "'ஆயிரம் கோயில்களின் நகரம்' என்று அழைக்கப்படும் காஞ்சிபுரம், அழகான பட்டுப் புடவைகளுக்கும் புகழ்பெற்றது."
+      }
+    },
+    "575": {
+      "name": "Kanniyakumari",
+      "headquarters": "Nagercoil",
+      "fact": "At the southern tip of mainland India, you can watch the sun rise and set over the sea. The tall Thiruvalluvar statue stands here.",
+      "ta": {
+        "name": "கன்னியாகுமரி",
+        "headquarters": "நாகர்கோவில்",
+        "fact": "இந்தியப் பெருநிலத்தின் தென்முனை இது. இங்கே கடலில் சூரிய உதயத்தையும் மறைவையும் பார்க்கலாம். உயரமான திருவள்ளுவர் சிலையும் இங்குதான் உள்ளது."
+      }
+    },
+    "576": {
+      "name": "Karur",
+      "headquarters": "Karur",
+      "fact": "Karur weaves bedsheets, curtains and towels that are sent all over the world.",
+      "ta": {
+        "name": "கரூர்",
+        "headquarters": "கரூர்",
+        "fact": "கரூரில் நெய்யப்படும் படுக்கை விரிப்புகள், திரைச்சீலைகள், துண்டுகள் உலகெங்கும் அனுப்பப்படுகின்றன."
+      }
+    },
+    "577": {
+      "name": "Krishnagiri",
+      "headquarters": "Krishnagiri",
+      "fact": "Krishnagiri grows so many mangoes that it is one of the biggest mango-producing districts in the state.",
+      "ta": {
+        "name": "கிருஷ்ணகிரி",
+        "headquarters": "கிருஷ்ணகிரி",
+        "fact": "மாநிலத்திலேயே அதிக மாம்பழம் விளையும் மாவட்டங்களில் கிருஷ்ணகிரியும் ஒன்று."
+      }
+    },
+    "578": {
+      "name": "Madurai",
+      "headquarters": "Madurai",
+      "fact": "Madurai is one of the oldest cities in India and home to the colourful Meenakshi Amman Temple.",
+      "ta": {
+        "name": "மதுரை",
+        "headquarters": "மதுரை",
+        "fact": "மதுரை இந்தியாவின் மிகப் பழமையான நகரங்களில் ஒன்று. வண்ணமயமான மீனாட்சி அம்மன் கோயில் இங்குதான் உள்ளது."
+      }
+    },
+    "735": {
+      "name": "Mayiladuthurai",
+      "headquarters": "Mayiladuthurai",
+      "fact": "Tamil Nadu's newest district (formed from Nagapattinam). Its name means 'town of peacocks', and the old Chola port of Poompuhar is here.",
+      "ta": {
+        "name": "மயிலாடுதுறை",
+        "headquarters": "மயிலாடுதுறை",
+        "fact": "நாகப்பட்டினத்திலிருந்து பிரிக்கப்பட்ட, தமிழ்நாட்டின் புதிய மாவட்டம் இது. இதன் பெயருக்கு 'மயில்கள் ஆடும் துறை' என்று பொருள். பழைய சோழர் துறைமுகமான பூம்புகார் இங்குள்ளது."
+      }
+    },
+    "579": {
+      "name": "Nagapattinam",
+      "headquarters": "Nagapattinam",
+      "fact": "Point Calimere (Kodiyakkarai) sanctuary here welcomes thousands of pink flamingos every winter.",
+      "ta": {
+        "name": "நாகப்பட்டினம்",
+        "headquarters": "நாகப்பட்டினம்",
+        "fact": "இங்குள்ள கோடியக்கரை சரணாலயத்துக்கு ஒவ்வொரு குளிர்காலத்திலும் ஆயிரக்கணக்கான பூநாரைகள் வருகின்றன."
+      }
+    },
+    "580": {
+      "name": "Namakkal",
+      "headquarters": "Namakkal",
+      "fact": "Namakkal is known as 'Egg City' because its poultry farms produce millions of eggs every day.",
+      "ta": {
+        "name": "நாமக்கல்",
+        "headquarters": "நாமக்கல்",
+        "fact": "இங்குள்ள கோழிப் பண்ணைகள் தினமும் லட்சக்கணக்கான முட்டைகளை உற்பத்தி செய்வதால் நாமக்கல்லை 'முட்டை நகரம்' என்கிறார்கள்."
+      }
+    },
+    "587": {
+      "name": "The Nilgiris",
+      "headquarters": "Udhagamandalam (Ooty)",
+      "fact": "'Nilgiri' means blue mountains. The Nilgiri Mountain Railway toy train is a UNESCO World Heritage Site.",
+      "ta": {
+        "name": "நீலகிரி",
+        "headquarters": "உதகமண்டலம் (ஊட்டி)",
+        "fact": "'நீலகிரி' என்றால் நீல மலைகள். நீலகிரி மலை ரயில் யுனெஸ்கோ உலகப் பாரம்பரியச் சின்னம்."
+      }
+    },
+    "581": {
+      "name": "Perambalur",
+      "headquarters": "Perambalur",
+      "fact": "The Ranjankudi Fort here was built hundreds of years ago and has three layers of walls.",
+      "ta": {
+        "name": "பெரம்பலூர்",
+        "headquarters": "பெரம்பலூர்",
+        "fact": "பல நூறு ஆண்டுகளுக்கு முன் கட்டப்பட்ட ரஞ்சன்குடி கோட்டைக்கு மூன்று அடுக்குச் சுவர்கள் உள்ளன."
+      }
+    },
+    "582": {
+      "name": "Pudukkottai",
+      "headquarters": "Pudukkottai",
+      "fact": "The Sittanavasal rock-cut cave has ancient paintings of lotus ponds, fish and elephants.",
+      "ta": {
+        "name": "புதுக்கோட்டை",
+        "headquarters": "புதுக்கோட்டை",
+        "fact": "சித்தன்னவாசல் குகையில் தாமரைக் குளம், மீன், யானை போன்ற பழங்கால ஓவியங்கள் உள்ளன."
+      }
+    },
+    "583": {
+      "name": "Ramanathapuram",
+      "headquarters": "Ramanathapuram",
+      "fact": "Rameswaram island and the Pamban bridge over the sea are in this district.",
+      "ta": {
+        "name": "இராமநாதபுரம்",
+        "headquarters": "இராமநாதபுரம்",
+        "fact": "இராமேசுவரம் தீவும் கடலின் மேல் செல்லும் பாம்பன் பாலமும் இந்த மாவட்டத்தில் உள்ளன."
+      }
+    },
+    "731": {
+      "name": "Ranipet",
+      "headquarters": "Ranipet",
+      "fact": "Formed in 2019 from Vellore, Ranipet is known for leather and chemical industries.",
+      "ta": {
+        "name": "இராணிப்பேட்டை",
+        "headquarters": "இராணிப்பேட்டை",
+        "fact": "2019-இல் வேலூரிலிருந்து பிரிக்கப்பட்ட இராணிப்பேட்டை தோல் மற்றும் வேதியியல் தொழில்களுக்குப் பெயர் பெற்றது."
+      }
+    },
+    "584": {
+      "name": "Salem",
+      "headquarters": "Salem",
+      "fact": "Salem has a big steel plant and the cool hill station Yercaud, sometimes called the 'Jewel of the South'.",
+      "ta": {
+        "name": "சேலம்",
+        "headquarters": "சேலம்",
+        "fact": "சேலத்தில் பெரிய இரும்பு ஆலையும், 'தென்னகத்தின் அணிகலன்' எனப்படும் குளிர்ந்த ஏற்காடு மலைவாழிடமும் உள்ளன."
+      }
+    },
+    "585": {
+      "name": "Sivaganga",
+      "headquarters": "Sivaganga",
+      "fact": "Keeladi in Sivaganga revealed an ancient Sangam-era town. The Chettinad mansions of Karaikudi are here too.",
+      "ta": {
+        "name": "சிவகங்கை",
+        "headquarters": "சிவகங்கை",
+        "fact": "சிவகங்கையில் உள்ள கீழடியில் பழங்கால சங்க கால நகரம் கண்டுபிடிக்கப்பட்டது. காரைக்குடியின் செட்டிநாட்டு மாளிகைகளும் இங்குதான்."
+      }
+    },
+    "733": {
+      "name": "Tenkasi",
+      "headquarters": "Tenkasi",
+      "fact": "The Courtallam waterfalls here are so refreshing that the town is called the 'Spa of South India'.",
+      "ta": {
+        "name": "தென்காசி",
+        "headquarters": "தென்காசி",
+        "fact": "இங்குள்ள குற்றால அருவிகள் மிகவும் புத்துணர்ச்சி தருவதால் இதை 'தென்னகத்தின் ஸ்பா' என்கிறார்கள்."
+      }
+    },
+    "586": {
+      "name": "Thanjavur",
+      "headquarters": "Thanjavur",
+      "fact": "The 1,000-year-old Brihadeeswarar (Big) Temple is here. Thanjavur is called the 'Rice Bowl of Tamil Nadu'.",
+      "ta": {
+        "name": "தஞ்சாவூர்",
+        "headquarters": "தஞ்சாவூர்",
+        "fact": "ஆயிரம் ஆண்டுகள் பழமையான பெரிய கோயில் இங்குள்ளது. தஞ்சாவூரை 'தமிழ்நாட்டின் நெற்களஞ்சியம்' என்கிறார்கள்."
+      }
+    },
+    "588": {
+      "name": "Theni",
+      "headquarters": "Theni",
+      "fact": "In the Western Ghats, Theni's Cumbum valley grows grapes, and the Vaigai dam is here.",
+      "ta": {
+        "name": "தேனி",
+        "headquarters": "தேனி",
+        "fact": "மேற்குத் தொடர்ச்சி மலையில் உள்ள தேனியின் கம்பம் பள்ளத்தாக்கில் திராட்சை விளைகிறது. வைகை அணையும் இங்குதான் உள்ளது."
+      }
+    },
+    "589": {
+      "name": "Thiruvallur",
+      "headquarters": "Thiruvallur",
+      "fact": "Pulicat Lake, one of India's largest brackish-water lagoons, is in Thiruvallur.",
+      "ta": {
+        "name": "திருவள்ளூர்",
+        "headquarters": "திருவள்ளூர்",
+        "fact": "இந்தியாவின் பெரிய உவர்நீர் ஏரிகளில் ஒன்றான பழவேற்காடு ஏரி திருவள்ளூரில் உள்ளது."
+      }
+    },
+    "590": {
+      "name": "Thiruvarur",
+      "headquarters": "Thiruvarur",
+      "fact": "The Thyagaraja Temple's chariot is one of the largest temple chariots in India.",
+      "ta": {
+        "name": "திருவாரூர்",
+        "headquarters": "திருவாரூர்",
+        "fact": "தியாகராஜர் கோயிலின் தேர் இந்தியாவின் மிகப் பெரிய கோயில் தேர்களில் ஒன்று."
+      }
+    },
+    "594": {
+      "name": "Thoothukudi",
+      "headquarters": "Thoothukudi",
+      "fact": "Thoothukudi is called the 'Pearl City' because pearls were collected from its sea for centuries.",
+      "ta": {
+        "name": "தூத்துக்குடி",
+        "headquarters": "தூத்துக்குடி",
+        "fact": "பல நூற்றாண்டுகளாக இதன் கடலில் முத்துக்கள் எடுக்கப்பட்டதால் தூத்துக்குடியை 'முத்து நகரம்' என்கிறார்கள்."
+      }
+    },
+    "591": {
+      "name": "Tiruchirappalli",
+      "headquarters": "Tiruchirappalli",
+      "fact": "The Rockfort temple sits on top of a giant rock, and Srirangam has one of the largest temple complexes in the world.",
+      "ta": {
+        "name": "திருச்சிராப்பள்ளி",
+        "headquarters": "திருச்சிராப்பள்ளி",
+        "fact": "மலைக்கோட்டைக் கோயில் ஒரு பெரிய பாறையின் உச்சியில் உள்ளது. உலகின் பெரிய கோயில் வளாகங்களில் ஒன்று ஸ்ரீரங்கத்தில் உள்ளது."
+      }
+    },
+    "592": {
+      "name": "Tirunelveli",
+      "headquarters": "Tirunelveli",
+      "fact": "Tirunelveli is famous for its sweet halwa and the Thamirabarani river.",
+      "ta": {
+        "name": "திருநெல்வேலி",
+        "headquarters": "திருநெல்வேலி",
+        "fact": "திருநெல்வேலி இனிப்பான அல்வாவுக்கும் தாமிரபரணி ஆற்றுக்கும் பெயர் பெற்றது."
+      }
+    },
+    "732": {
+      "name": "Tirupathur",
+      "headquarters": "Tirupathur",
+      "fact": "Formed in 2019 from Vellore, it is home to the Yelagiri hills.",
+      "ta": {
+        "name": "திருப்பத்தூர்",
+        "headquarters": "திருப்பத்தூர்",
+        "fact": "2019-இல் வேலூரிலிருந்து பிரிக்கப்பட்ட இந்த மாவட்டத்தில் ஏலகிரி மலைகள் உள்ளன."
+      }
+    },
+    "634": {
+      "name": "Tiruppur",
+      "headquarters": "Tiruppur",
+      "fact": "Tiruppur is the 'Knitwear Capital of India' — many T-shirts sold around the world are made here.",
+      "ta": {
+        "name": "திருப்பூர்",
+        "headquarters": "திருப்பூர்",
+        "fact": "திருப்பூர் 'இந்தியாவின் பின்னலாடைத் தலைநகரம்'. உலகம் முழுவதும் விற்கப்படும் பல டி-சட்டைகள் இங்கே தயாராகின்றன."
+      }
+    },
+    "593": {
+      "name": "Tiruvannamalai",
+      "headquarters": "Tiruvannamalai",
+      "fact": "During Karthigai Deepam, a giant lamp is lit on top of the Annamalai hill.",
+      "ta": {
+        "name": "திருவண்ணாமலை",
+        "headquarters": "திருவண்ணாமலை",
+        "fact": "கார்த்திகை தீபத் திருநாளில் அண்ணாமலை உச்சியில் பெரிய தீபம் ஏற்றப்படுகிறது."
+      }
+    },
+    "595": {
+      "name": "Vellore",
+      "headquarters": "Vellore",
+      "fact": "Vellore Fort is surrounded by a water-filled moat.",
+      "ta": {
+        "name": "வேலூர்",
+        "headquarters": "வேலூர்",
+        "fact": "வேலூர் கோட்டையைச் சுற்றி தண்ணீர் நிறைந்த அகழி உள்ளது."
+      }
+    },
+    "596": {
+      "name": "Viluppuram",
+      "headquarters": "Viluppuram",
+      "fact": "Gingee Fort, built across three hills, was once called the 'Troy of the East'.",
+      "ta": {
+        "name": "விழுப்புரம்",
+        "headquarters": "விழுப்புரம்",
+        "fact": "மூன்று மலைகளின் மேல் கட்டப்பட்ட செஞ்சிக் கோட்டையை ஒரு காலத்தில் 'கிழக்கின் டிராய்' என்று அழைத்தார்கள்."
+      }
+    },
+    "597": {
+      "name": "Virudhunagar",
+      "headquarters": "Virudhunagar",
+      "fact": "Sivakasi in this district makes fireworks, matches and printed calendars. The Srivilliputhur temple tower appears on the state emblem.",
+      "ta": {
+        "name": "விருதுநகர்",
+        "headquarters": "விருதுநகர்",
+        "fact": "இந்த மாவட்டத்தில் உள்ள சிவகாசியில் பட்டாசுகள், தீப்பெட்டிகள், அச்சிட்ட நாள்காட்டிகள் தயாராகின்றன. ஸ்ரீவில்லிபுத்தூர் கோபுரம் மாநில அரசு முத்திரையில் இடம்பெற்றுள்ளது."
+      }
+    }
+  }
+}

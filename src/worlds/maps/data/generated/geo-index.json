@@ -1,0 +1,9269 @@
+{
+ "source": "LGD / BharatMaps via ramSeraph/indian_admin_boundaries (CC0)",
+ "builtOn": "2026-11-13",
+ "states": {
+  "andhra-pradesh": {
+   "districtCount": 26,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "chhattisgarh",
+    "karnataka",
+    "odisha",
+    "puducherry",
+    "tamil-nadu",
+    "telangana"
+   ],
+   "districts": [
+    {
+     "id": "alluri-sitharama-raju",
+     "lgd": 745,
+     "lgdName": "Alluri Sitharama Raju",
+     "neighbours": [
+      "anakapalli",
+      "east-godavari",
+      "kakinada",
+      "eluru",
+      "vizianagaram",
+      "parvathipuram-manyam"
+     ]
+    },
+    {
+     "id": "anakapalli",
+     "lgd": 744,
+     "lgdName": "Anakapalli",
+     "neighbours": [
+      "alluri-sitharama-raju",
+      "kakinada",
+      "visakhapatanam",
+      "vizianagaram"
+     ]
+    },
+    {
+     "id": "anantapur",
+     "lgd": 502,
+     "lgdName": "Anantapur",
+     "neighbours": [
+      "kurnool",
+      "nandyal",
+      "ysr",
+      "sri-sathya-sai"
+     ]
+    },
+    {
+     "id": "annamayya",
+     "lgd": 753,
+     "lgdName": "Annamayya",
+     "neighbours": [
+      "chittoor",
+      "spsr-nellore",
+      "tirupati",
+      "ysr",
+      "sri-sathya-sai"
+     ]
+    },
+    {
+     "id": "bapatla",
+     "lgd": 750,
+     "lgdName": "Bapatla",
+     "neighbours": [
+      "guntur",
+      "krishna",
+      "palnadu",
+      "prakasam"
+     ]
+    },
+    {
+     "id": "chittoor",
+     "lgd": 503,
+     "lgdName": "Chittoor",
+     "neighbours": [
+      "annamayya",
+      "tirupati"
+     ]
+    },
+    {
+     "id": "east-godavari",
+     "lgd": 505,
+     "lgdName": "East Godavari",
+     "neighbours": [
+      "alluri-sitharama-raju",
+      "kakinada",
+      "konaseema",
+      "eluru",
+      "west-godavari"
+     ]
+    },
+    {
+     "id": "eluru",
+     "lgd": 748,
+     "lgdName": "Eluru",
+     "neighbours": [
+      "alluri-sitharama-raju",
+      "east-godavari",
+      "krishna",
+      "ntr",
+      "west-godavari"
+     ]
+    },
+    {
+     "id": "guntur",
+     "lgd": 506,
+     "lgdName": "Guntur",
+     "neighbours": [
+      "bapatla",
+      "krishna",
+      "ntr",
+      "palnadu"
+     ]
+    },
+    {
+     "id": "kakinada",
+     "lgd": 746,
+     "lgdName": "Kakinada",
+     "neighbours": [
+      "alluri-sitharama-raju",
+      "anakapalli",
+      "east-godavari",
+      "konaseema"
+     ]
+    },
+    {
+     "id": "konaseema",
+     "lgd": 747,
+     "lgdName": "Konaseema",
+     "neighbours": [
+      "east-godavari",
+      "kakinada",
+      "west-godavari"
+     ]
+    },
+    {
+     "id": "krishna",
+     "lgd": 510,
+     "lgdName": "Krishna",
+     "neighbours": [
+      "bapatla",
+      "guntur",
+      "ntr",
+      "eluru",
+      "west-godavari"
+     ]
+    },
+    {
+     "id": "kurnool",
+     "lgd": 511,
+     "lgdName": "Kurnool",
+     "neighbours": [
+      "anantapur",
+      "nandyal"
+     ]
+    },
+    {
+     "id": "nandyal",
+     "lgd": 755,
+     "lgdName": "Nandyal",
+     "neighbours": [
+      "anantapur",
+      "kurnool",
+      "prakasam",
+      "ysr"
+     ]
+    },
+    {
+     "id": "ntr",
+     "lgd": 749,
+     "lgdName": "Ntr",
+     "neighbours": [
+      "guntur",
+      "krishna",
+      "palnadu",
+      "eluru"
+     ]
+    },
+    {
+     "id": "palnadu",
+     "lgd": 751,
+     "lgdName": "Palnadu",
+     "neighbours": [
+      "bapatla",
+      "guntur",
+      "ntr",
+      "prakasam"
+     ]
+    },
+    {
+     "id": "parvathipuram-manyam",
+     "lgd": 743,
+     "lgdName": "Parvathipuram Manyam",
+     "neighbours": [
+      "alluri-sitharama-raju",
+      "srikakulam",
+      "vizianagaram"
+     ]
+    },
+    {
+     "id": "prakasam",
+     "lgd": 517,
+     "lgdName": "Prakasam",
+     "neighbours": [
+      "bapatla",
+      "nandyal",
+      "palnadu",
+      "spsr-nellore",
+      "ysr"
+     ]
+    },
+    {
+     "id": "spsr-nellore",
+     "lgd": 515,
+     "lgdName": "Spsr Nellore",
+     "neighbours": [
+      "annamayya",
+      "prakasam",
+      "tirupati",
+      "ysr"
+     ]
+    },
+    {
+     "id": "sri-sathya-sai",
+     "lgd": 754,
+     "lgdName": "Sri Sathya Sai",
+     "neighbours": [
+      "anantapur",
+      "annamayya",
+      "ysr"
+     ]
+    },
+    {
+     "id": "srikakulam",
+     "lgd": 519,
+     "lgdName": "Srikakulam",
+     "neighbours": [
+      "vizianagaram",
+      "parvathipuram-manyam"
+     ]
+    },
+    {
+     "id": "tirupati",
+     "lgd": 752,
+     "lgdName": "Tirupati",
+     "neighbours": [
+      "annamayya",
+      "chittoor",
+      "spsr-nellore"
+     ]
+    },
+    {
+     "id": "visakhapatanam",
+     "lgd": 520,
+     "lgdName": "Visakhapatanam",
+     "neighbours": [
+      "anakapalli",
+      "vizianagaram"
+     ]
+    },
+    {
+     "id": "vizianagaram",
+     "lgd": 521,
+     "lgdName": "Vizianagaram",
+     "neighbours": [
+      "alluri-sitharama-raju",
+      "anakapalli",
+      "srikakulam",
+      "visakhapatanam",
+      "parvathipuram-manyam"
+     ]
+    },
+    {
+     "id": "west-godavari",
+     "lgd": 523,
+     "lgdName": "West Godavari",
+     "neighbours": [
+      "east-godavari",
+      "konaseema",
+      "krishna",
+      "eluru"
+     ]
+    },
+    {
+     "id": "ysr",
+     "lgd": 504,
+     "lgdName": "Y.S.R.",
+     "neighbours": [
+      "anantapur",
+      "annamayya",
+      "nandyal",
+      "prakasam",
+      "spsr-nellore",
+      "sri-sathya-sai"
+     ]
+    }
+   ]
+  },
+  "arunachal-pradesh": {
+   "districtCount": 26,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "assam",
+    "nagaland"
+   ],
+   "districts": [
+    {
+     "id": "anjaw",
+     "lgd": 628,
+     "lgdName": "Anjaw",
+     "neighbours": [
+      "changlang",
+      "lohit"
+     ]
+    },
+    {
+     "id": "changlang",
+     "lgd": 229,
+     "lgdName": "Changlang",
+     "neighbours": [
+      "anjaw",
+      "lohit",
+      "tirap",
+      "namsai"
+     ]
+    },
+    {
+     "id": "dibang-valley",
+     "lgd": 230,
+     "lgdName": "Dibang Valley",
+     "neighbours": [
+      "lower-dibang-valley",
+      "upper-siang"
+     ]
+    },
+    {
+     "id": "east-kameng",
+     "lgd": 231,
+     "lgdName": "East Kameng",
+     "neighbours": [
+      "kurung-kumey",
+      "papum-pare",
+      "tawang",
+      "west-kameng",
+      "pakke-kessang"
+     ]
+    },
+    {
+     "id": "east-siang",
+     "lgd": 232,
+     "lgdName": "East Siang",
+     "neighbours": [
+      "lower-dibang-valley",
+      "upper-siang",
+      "lower-siang",
+      "siang"
+     ]
+    },
+    {
+     "id": "itanagar-capital-complex",
+     "lgd": 766,
+     "lgdName": "Itanagar capital complex",
+     "neighbours": [
+      "papum-pare"
+     ]
+    },
+    {
+     "id": "kamle",
+     "lgd": 718,
+     "lgdName": "Kamle",
+     "neighbours": [
+      "papum-pare",
+      "upper-subansiri",
+      "lower-siang",
+      "lower-subansiri",
+      "kra-daadi"
+     ]
+    },
+    {
+     "id": "kra-daadi",
+     "lgd": 677,
+     "lgdName": "Kra Daadi",
+     "neighbours": [
+      "kurung-kumey",
+      "upper-subansiri",
+      "lower-subansiri",
+      "kamle"
+     ]
+    },
+    {
+     "id": "kurung-kumey",
+     "lgd": 233,
+     "lgdName": "Kurung Kumey",
+     "neighbours": [
+      "east-kameng",
+      "papum-pare",
+      "upper-subansiri",
+      "lower-subansiri",
+      "kra-daadi"
+     ]
+    },
+    {
+     "id": "leparada",
+     "lgd": 724,
+     "lgdName": "Leparada",
+     "neighbours": [
+      "upper-subansiri",
+      "lower-siang",
+      "west-siang"
+     ]
+    },
+    {
+     "id": "lohit",
+     "lgd": 234,
+     "lgdName": "Lohit",
+     "neighbours": [
+      "anjaw",
+      "changlang",
+      "lower-dibang-valley",
+      "namsai"
+     ]
+    },
+    {
+     "id": "longding",
+     "lgd": 666,
+     "lgdName": "Longding",
+     "neighbours": [
+      "tirap"
+     ]
+    },
+    {
+     "id": "lower-dibang-valley",
+     "lgd": 235,
+     "lgdName": "Lower Dibang Valley",
+     "neighbours": [
+      "dibang-valley",
+      "lohit",
+      "upper-siang",
+      "east-siang"
+     ]
+    },
+    {
+     "id": "lower-siang",
+     "lgd": 719,
+     "lgdName": "Lower Siang",
+     "neighbours": [
+      "upper-subansiri",
+      "siang",
+      "west-siang",
+      "leparada",
+      "kamle",
+      "east-siang"
+     ]
+    },
+    {
+     "id": "lower-subansiri",
+     "lgd": 236,
+     "lgdName": "Lower Subansiri",
+     "neighbours": [
+      "kurung-kumey",
+      "papum-pare",
+      "kra-daadi",
+      "kamle"
+     ]
+    },
+    {
+     "id": "namsai",
+     "lgd": 678,
+     "lgdName": "Namsai",
+     "neighbours": [
+      "changlang",
+      "lohit"
+     ]
+    },
+    {
+     "id": "pakke-kessang",
+     "lgd": 723,
+     "lgdName": "Pakke Kessang",
+     "neighbours": [
+      "east-kameng",
+      "papum-pare",
+      "west-kameng"
+     ]
+    },
+    {
+     "id": "papum-pare",
+     "lgd": 237,
+     "lgdName": "Papum Pare",
+     "neighbours": [
+      "east-kameng",
+      "kurung-kumey",
+      "lower-subansiri",
+      "pakke-kessang",
+      "kamle",
+      "itanagar-capital-complex"
+     ]
+    },
+    {
+     "id": "shi-yomi",
+     "lgd": 725,
+     "lgdName": "Shi Yomi",
+     "neighbours": [
+      "upper-siang",
+      "upper-subansiri",
+      "siang",
+      "west-siang"
+     ]
+    },
+    {
+     "id": "siang",
+     "lgd": 679,
+     "lgdName": "Siang",
+     "neighbours": [
+      "upper-siang",
+      "lower-siang",
+      "west-siang",
+      "shi-yomi",
+      "east-siang"
+     ]
+    },
+    {
+     "id": "tawang",
+     "lgd": 238,
+     "lgdName": "Tawang",
+     "neighbours": [
+      "east-kameng",
+      "west-kameng"
+     ]
+    },
+    {
+     "id": "tirap",
+     "lgd": 239,
+     "lgdName": "Tirap",
+     "neighbours": [
+      "changlang",
+      "longding"
+     ]
+    },
+    {
+     "id": "upper-siang",
+     "lgd": 240,
+     "lgdName": "Upper Siang",
+     "neighbours": [
+      "dibang-valley",
+      "lower-dibang-valley",
+      "siang",
+      "shi-yomi",
+      "east-siang"
+     ]
+    },
+    {
+     "id": "upper-subansiri",
+     "lgd": 241,
+     "lgdName": "Upper Subansiri",
+     "neighbours": [
+      "kurung-kumey",
+      "lower-siang",
+      "west-siang",
+      "shi-yomi",
+      "leparada",
+      "kra-daadi",
+      "kamle"
+     ]
+    },
+    {
+     "id": "west-kameng",
+     "lgd": 242,
+     "lgdName": "West Kameng",
+     "neighbours": [
+      "east-kameng",
+      "tawang",
+      "pakke-kessang"
+     ]
+    },
+    {
+     "id": "west-siang",
+     "lgd": 243,
+     "lgdName": "West Siang",
+     "neighbours": [
+      "upper-subansiri",
+      "lower-siang",
+      "siang",
+      "shi-yomi",
+      "leparada"
+     ]
+    }
+   ]
+  },
+  "assam": {
+   "districtCount": 35,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "arunachal-pradesh",
+    "manipur",
+    "meghalaya",
+    "mizoram",
+    "nagaland",
+    "tripura",
+    "west-bengal"
+   ],
+   "districts": [
+    {
+     "id": "bajali",
+     "lgd": 739,
+     "lgdName": "Bajali",
+     "neighbours": [
+      "barpeta",
+      "nalbari",
+      "baksa"
+     ]
+    },
+    {
+     "id": "baksa",
+     "lgd": 616,
+     "lgdName": "Baksa",
+     "neighbours": [
+      "barpeta",
+      "chirang",
+      "nalbari",
+      "bajali",
+      "tamulpur"
+     ]
+    },
+    {
+     "id": "barpeta",
+     "lgd": 280,
+     "lgdName": "Barpeta",
+     "neighbours": [
+      "kamrup",
+      "chirang",
+      "bongaigaon",
+      "nalbari",
+      "goalpara",
+      "bajali",
+      "baksa"
+     ]
+    },
+    {
+     "id": "biswanath",
+     "lgd": 705,
+     "lgdName": "Biswanath",
+     "neighbours": [
+      "nagaon",
+      "sonitpur",
+      "golaghat",
+      "majuli",
+      "lakhimpur"
+     ]
+    },
+    {
+     "id": "bongaigaon",
+     "lgd": 281,
+     "lgdName": "Bongaigaon",
+     "neighbours": [
+      "kokrajhar",
+      "barpeta",
+      "chirang",
+      "dhubri",
+      "goalpara"
+     ]
+    },
+    {
+     "id": "cachar",
+     "lgd": 282,
+     "lgdName": "Cachar",
+     "neighbours": [
+      "dima-hasao",
+      "karimganj",
+      "hailakandi"
+     ]
+    },
+    {
+     "id": "charaideo",
+     "lgd": 708,
+     "lgdName": "Charaideo",
+     "neighbours": [
+      "sivasagar",
+      "dibrugarh"
+     ]
+    },
+    {
+     "id": "chirang",
+     "lgd": 612,
+     "lgdName": "Chirang",
+     "neighbours": [
+      "kokrajhar",
+      "barpeta",
+      "bongaigaon",
+      "baksa"
+     ]
+    },
+    {
+     "id": "darrang",
+     "lgd": 283,
+     "lgdName": "Darrang",
+     "neighbours": [
+      "kamrup",
+      "udalguri",
+      "kamrup-metro",
+      "marigaon",
+      "sonitpur",
+      "tamulpur"
+     ]
+    },
+    {
+     "id": "dhemaji",
+     "lgd": 284,
+     "lgdName": "Dhemaji",
+     "neighbours": [
+      "tinsukia",
+      "dibrugarh",
+      "lakhimpur"
+     ]
+    },
+    {
+     "id": "dhubri",
+     "lgd": 285,
+     "lgdName": "Dhubri",
+     "neighbours": [
+      "kokrajhar",
+      "bongaigaon",
+      "goalpara",
+      "south-salmara-mancachar"
+     ]
+    },
+    {
+     "id": "dibrugarh",
+     "lgd": 286,
+     "lgdName": "Dibrugarh",
+     "neighbours": [
+      "tinsukia",
+      "dhemaji",
+      "sivasagar",
+      "charaideo",
+      "majuli",
+      "lakhimpur"
+     ]
+    },
+    {
+     "id": "dima-hasao",
+     "lgd": 299,
+     "lgdName": "Dima Hasao",
+     "neighbours": [
+      "cachar",
+      "hojai",
+      "karbi-anglong",
+      "west-karbi-anglong"
+     ]
+    },
+    {
+     "id": "goalpara",
+     "lgd": 287,
+     "lgdName": "Goalpara",
+     "neighbours": [
+      "kamrup",
+      "barpeta",
+      "bongaigaon",
+      "dhubri",
+      "south-salmara-mancachar"
+     ]
+    },
+    {
+     "id": "golaghat",
+     "lgd": 288,
+     "lgdName": "Golaghat",
+     "neighbours": [
+      "nagaon",
+      "jorhat",
+      "biswanath",
+      "majuli",
+      "karbi-anglong"
+     ]
+    },
+    {
+     "id": "hailakandi",
+     "lgd": 289,
+     "lgdName": "Hailakandi",
+     "neighbours": [
+      "cachar",
+      "karimganj"
+     ]
+    },
+    {
+     "id": "hojai",
+     "lgd": 709,
+     "lgdName": "Hojai",
+     "neighbours": [
+      "nagaon",
+      "dima-hasao",
+      "karbi-anglong",
+      "west-karbi-anglong"
+     ]
+    },
+    {
+     "id": "jorhat",
+     "lgd": 290,
+     "lgdName": "Jorhat",
+     "neighbours": [
+      "sivasagar",
+      "golaghat",
+      "majuli"
+     ]
+    },
+    {
+     "id": "kamrup",
+     "lgd": 291,
+     "lgdName": "Kamrup",
+     "neighbours": [
+      "barpeta",
+      "nalbari",
+      "kamrup-metro",
+      "goalpara",
+      "darrang",
+      "tamulpur"
+     ]
+    },
+    {
+     "id": "kamrup-metro",
+     "lgd": 618,
+     "lgdName": "Kamrup Metro",
+     "neighbours": [
+      "kamrup",
+      "marigaon",
+      "darrang"
+     ]
+    },
+    {
+     "id": "karbi-anglong",
+     "lgd": 292,
+     "lgdName": "Karbi Anglong",
+     "neighbours": [
+      "nagaon",
+      "dima-hasao",
+      "golaghat",
+      "hojai"
+     ]
+    },
+    {
+     "id": "karimganj",
+     "lgd": 293,
+     "lgdName": "Karimganj",
+     "neighbours": [
+      "cachar",
+      "hailakandi"
+     ]
+    },
+    {
+     "id": "kokrajhar",
+     "lgd": 294,
+     "lgdName": "Kokrajhar",
+     "neighbours": [
+      "chirang",
+      "bongaigaon",
+      "dhubri"
+     ]
+    },
+    {
+     "id": "lakhimpur",
+     "lgd": 295,
+     "lgdName": "Lakhimpur",
+     "neighbours": [
+      "dhemaji",
+      "dibrugarh",
+      "biswanath",
+      "majuli"
+     ]
+    },
+    {
+     "id": "majuli",
+     "lgd": 706,
+     "lgdName": "Majuli",
+     "neighbours": [
+      "jorhat",
+      "sivasagar",
+      "dibrugarh",
+      "golaghat",
+      "biswanath",
+      "lakhimpur"
+     ]
+    },
+    {
+     "id": "marigaon",
+     "lgd": 296,
+     "lgdName": "Marigaon",
+     "neighbours": [
+      "nagaon",
+      "kamrup-metro",
+      "sonitpur",
+      "west-karbi-anglong",
+      "darrang"
+     ]
+    },
+    {
+     "id": "nagaon",
+     "lgd": 297,
+     "lgdName": "Nagaon",
+     "neighbours": [
+      "marigaon",
+      "sonitpur",
+      "golaghat",
+      "biswanath",
+      "hojai",
+      "karbi-anglong",
+      "west-karbi-anglong"
+     ]
+    },
+    {
+     "id": "nalbari",
+     "lgd": 298,
+     "lgdName": "Nalbari",
+     "neighbours": [
+      "kamrup",
+      "barpeta",
+      "bajali",
+      "baksa",
+      "tamulpur"
+     ]
+    },
+    {
+     "id": "sivasagar",
+     "lgd": 300,
+     "lgdName": "Sivasagar",
+     "neighbours": [
+      "jorhat",
+      "dibrugarh",
+      "charaideo",
+      "majuli"
+     ]
+    },
+    {
+     "id": "sonitpur",
+     "lgd": 301,
+     "lgdName": "Sonitpur",
+     "neighbours": [
+      "nagaon",
+      "udalguri",
+      "marigaon",
+      "biswanath",
+      "darrang"
+     ]
+    },
+    {
+     "id": "south-salmara-mancachar",
+     "lgd": 707,
+     "lgdName": "South Salmara Mancachar",
+     "neighbours": [
+      "dhubri",
+      "goalpara"
+     ]
+    },
+    {
+     "id": "tamulpur",
+     "lgd": 756,
+     "lgdName": "Tamulpur",
+     "neighbours": [
+      "kamrup",
+      "nalbari",
+      "udalguri",
+      "darrang",
+      "baksa"
+     ]
+    },
+    {
+     "id": "tinsukia",
+     "lgd": 302,
+     "lgdName": "Tinsukia",
+     "neighbours": [
+      "dhemaji",
+      "dibrugarh"
+     ]
+    },
+    {
+     "id": "udalguri",
+     "lgd": 617,
+     "lgdName": "Udalguri",
+     "neighbours": [
+      "sonitpur",
+      "darrang",
+      "tamulpur"
+     ]
+    },
+    {
+     "id": "west-karbi-anglong",
+     "lgd": 710,
+     "lgdName": "West Karbi Anglong",
+     "neighbours": [
+      "nagaon",
+      "marigaon",
+      "dima-hasao",
+      "hojai"
+     ]
+    }
+   ]
+  },
+  "bihar": {
+   "districtCount": 38,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "jharkhand",
+    "uttar-pradesh",
+    "west-bengal"
+   ],
+   "districts": [
+    {
+     "id": "araria",
+     "lgd": 188,
+     "lgdName": "Araria",
+     "neighbours": [
+      "kishanganj",
+      "madhepura",
+      "purnia",
+      "supaul"
+     ]
+    },
+    {
+     "id": "arwal",
+     "lgd": 611,
+     "lgdName": "Arwal",
+     "neighbours": [
+      "aurangabad",
+      "bhojpur",
+      "gaya",
+      "jehanabad",
+      "patna",
+      "rohtas"
+     ]
+    },
+    {
+     "id": "aurangabad",
+     "lgd": 189,
+     "lgdName": "Aurangabad",
+     "neighbours": [
+      "arwal",
+      "gaya",
+      "rohtas"
+     ]
+    },
+    {
+     "id": "banka",
+     "lgd": 190,
+     "lgdName": "Banka",
+     "neighbours": [
+      "bhagalpur",
+      "jamui",
+      "munger"
+     ]
+    },
+    {
+     "id": "begusarai",
+     "lgd": 191,
+     "lgdName": "Begusarai",
+     "neighbours": [
+      "khagaria",
+      "lakhisarai",
+      "munger",
+      "patna",
+      "samastipur"
+     ]
+    },
+    {
+     "id": "bhagalpur",
+     "lgd": 192,
+     "lgdName": "Bhagalpur",
+     "neighbours": [
+      "banka",
+      "katihar",
+      "khagaria",
+      "madhepura",
+      "munger",
+      "purnia"
+     ]
+    },
+    {
+     "id": "bhojpur",
+     "lgd": 193,
+     "lgdName": "Bhojpur",
+     "neighbours": [
+      "arwal",
+      "buxar",
+      "patna",
+      "rohtas",
+      "saran"
+     ]
+    },
+    {
+     "id": "buxar",
+     "lgd": 194,
+     "lgdName": "Buxar",
+     "neighbours": [
+      "kaimur-bhabua",
+      "bhojpur",
+      "rohtas"
+     ]
+    },
+    {
+     "id": "darbhanga",
+     "lgd": 195,
+     "lgdName": "Darbhanga",
+     "neighbours": [
+      "khagaria",
+      "madhubani",
+      "muzaffarpur",
+      "saharsa",
+      "samastipur",
+      "sitamarhi"
+     ]
+    },
+    {
+     "id": "gaya",
+     "lgd": 196,
+     "lgdName": "Gaya",
+     "neighbours": [
+      "arwal",
+      "aurangabad",
+      "jehanabad",
+      "nalanda",
+      "nawada"
+     ]
+    },
+    {
+     "id": "gopalganj",
+     "lgd": 197,
+     "lgdName": "Gopalganj",
+     "neighbours": [
+      "muzaffarpur",
+      "pashchim-champaran",
+      "purbi-champaran",
+      "saran",
+      "siwan"
+     ]
+    },
+    {
+     "id": "jamui",
+     "lgd": 198,
+     "lgdName": "Jamui",
+     "neighbours": [
+      "banka",
+      "lakhisarai",
+      "munger",
+      "nawada",
+      "sheikhpura"
+     ]
+    },
+    {
+     "id": "jehanabad",
+     "lgd": 199,
+     "lgdName": "Jehanabad",
+     "neighbours": [
+      "arwal",
+      "gaya",
+      "nalanda",
+      "patna"
+     ]
+    },
+    {
+     "id": "kaimur-bhabua",
+     "lgd": 200,
+     "lgdName": "Kaimur (Bhabua)",
+     "neighbours": [
+      "buxar",
+      "rohtas"
+     ]
+    },
+    {
+     "id": "katihar",
+     "lgd": 201,
+     "lgdName": "Katihar",
+     "neighbours": [
+      "bhagalpur",
+      "purnia"
+     ]
+    },
+    {
+     "id": "khagaria",
+     "lgd": 202,
+     "lgdName": "Khagaria",
+     "neighbours": [
+      "begusarai",
+      "bhagalpur",
+      "darbhanga",
+      "madhepura",
+      "munger",
+      "saharsa",
+      "samastipur"
+     ]
+    },
+    {
+     "id": "kishanganj",
+     "lgd": 203,
+     "lgdName": "Kishanganj",
+     "neighbours": [
+      "araria",
+      "purnia"
+     ]
+    },
+    {
+     "id": "lakhisarai",
+     "lgd": 204,
+     "lgdName": "Lakhisarai",
+     "neighbours": [
+      "begusarai",
+      "jamui",
+      "munger",
+      "nalanda",
+      "patna",
+      "sheikhpura"
+     ]
+    },
+    {
+     "id": "madhepura",
+     "lgd": 205,
+     "lgdName": "Madhepura",
+     "neighbours": [
+      "araria",
+      "bhagalpur",
+      "khagaria",
+      "purnia",
+      "saharsa",
+      "supaul"
+     ]
+    },
+    {
+     "id": "madhubani",
+     "lgd": 206,
+     "lgdName": "Madhubani",
+     "neighbours": [
+      "darbhanga",
+      "saharsa",
+      "sitamarhi",
+      "supaul"
+     ]
+    },
+    {
+     "id": "munger",
+     "lgd": 207,
+     "lgdName": "Munger",
+     "neighbours": [
+      "banka",
+      "begusarai",
+      "bhagalpur",
+      "jamui",
+      "khagaria",
+      "lakhisarai"
+     ]
+    },
+    {
+     "id": "muzaffarpur",
+     "lgd": 208,
+     "lgdName": "Muzaffarpur",
+     "neighbours": [
+      "darbhanga",
+      "gopalganj",
+      "purbi-champaran",
+      "samastipur",
+      "saran",
+      "sheohar",
+      "sitamarhi",
+      "vaishali"
+     ]
+    },
+    {
+     "id": "nalanda",
+     "lgd": 209,
+     "lgdName": "Nalanda",
+     "neighbours": [
+      "gaya",
+      "jehanabad",
+      "lakhisarai",
+      "nawada",
+      "patna",
+      "sheikhpura"
+     ]
+    },
+    {
+     "id": "nawada",
+     "lgd": 210,
+     "lgdName": "Nawada",
+     "neighbours": [
+      "gaya",
+      "jamui",
+      "nalanda",
+      "sheikhpura"
+     ]
+    },
+    {
+     "id": "pashchim-champaran",
+     "lgd": 211,
+     "lgdName": "Pashchim Champaran",
+     "neighbours": [
+      "gopalganj",
+      "purbi-champaran"
+     ]
+    },
+    {
+     "id": "patna",
+     "lgd": 212,
+     "lgdName": "Patna",
+     "neighbours": [
+      "arwal",
+      "begusarai",
+      "bhojpur",
+      "jehanabad",
+      "lakhisarai",
+      "nalanda",
+      "samastipur",
+      "saran",
+      "vaishali"
+     ]
+    },
+    {
+     "id": "purbi-champaran",
+     "lgd": 213,
+     "lgdName": "Purbi Champaran",
+     "neighbours": [
+      "gopalganj",
+      "muzaffarpur",
+      "pashchim-champaran",
+      "sheohar",
+      "sitamarhi"
+     ]
+    },
+    {
+     "id": "purnia",
+     "lgd": 214,
+     "lgdName": "Purnia",
+     "neighbours": [
+      "araria",
+      "bhagalpur",
+      "katihar",
+      "kishanganj",
+      "madhepura"
+     ]
+    },
+    {
+     "id": "rohtas",
+     "lgd": 215,
+     "lgdName": "Rohtas",
+     "neighbours": [
+      "arwal",
+      "aurangabad",
+      "kaimur-bhabua",
+      "bhojpur",
+      "buxar"
+     ]
+    },
+    {
+     "id": "saharsa",
+     "lgd": 216,
+     "lgdName": "Saharsa",
+     "neighbours": [
+      "darbhanga",
+      "khagaria",
+      "madhepura",
+      "madhubani",
+      "supaul"
+     ]
+    },
+    {
+     "id": "samastipur",
+     "lgd": 217,
+     "lgdName": "Samastipur",
+     "neighbours": [
+      "begusarai",
+      "darbhanga",
+      "khagaria",
+      "muzaffarpur",
+      "patna",
+      "vaishali"
+     ]
+    },
+    {
+     "id": "saran",
+     "lgd": 218,
+     "lgdName": "Saran",
+     "neighbours": [
+      "bhojpur",
+      "gopalganj",
+      "muzaffarpur",
+      "patna",
+      "siwan",
+      "vaishali"
+     ]
+    },
+    {
+     "id": "sheikhpura",
+     "lgd": 219,
+     "lgdName": "Sheikhpura",
+     "neighbours": [
+      "jamui",
+      "lakhisarai",
+      "nalanda",
+      "nawada"
+     ]
+    },
+    {
+     "id": "sheohar",
+     "lgd": 220,
+     "lgdName": "Sheohar",
+     "neighbours": [
+      "muzaffarpur",
+      "purbi-champaran",
+      "sitamarhi"
+     ]
+    },
+    {
+     "id": "sitamarhi",
+     "lgd": 221,
+     "lgdName": "Sitamarhi",
+     "neighbours": [
+      "darbhanga",
+      "madhubani",
+      "muzaffarpur",
+      "purbi-champaran",
+      "sheohar"
+     ]
+    },
+    {
+     "id": "siwan",
+     "lgd": 222,
+     "lgdName": "Siwan",
+     "neighbours": [
+      "gopalganj",
+      "saran"
+     ]
+    },
+    {
+     "id": "supaul",
+     "lgd": 223,
+     "lgdName": "Supaul",
+     "neighbours": [
+      "araria",
+      "madhepura",
+      "madhubani",
+      "saharsa"
+     ]
+    },
+    {
+     "id": "vaishali",
+     "lgd": 224,
+     "lgdName": "Vaishali",
+     "neighbours": [
+      "muzaffarpur",
+      "patna",
+      "samastipur",
+      "saran"
+     ]
+    }
+   ]
+  },
+  "chhattisgarh": {
+   "districtCount": 33,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "andhra-pradesh",
+    "jharkhand",
+    "madhya-pradesh",
+    "maharashtra",
+    "odisha",
+    "telangana",
+    "uttar-pradesh"
+   ],
+   "districts": [
+    {
+     "id": "balod",
+     "lgd": 646,
+     "lgdName": "Balod",
+     "neighbours": [
+      "dhamtari",
+      "durg",
+      "kanker",
+      "rajnandgaon",
+      "mohla-manpur-ambagarh-chouki"
+     ]
+    },
+    {
+     "id": "baloda-bazar",
+     "lgd": 644,
+     "lgdName": "Baloda Bazar",
+     "neighbours": [
+      "bemetara",
+      "bilaspur",
+      "janjgir-champa",
+      "mahasamund",
+      "mungeli",
+      "raipur",
+      "sarangarh-bilaigarh"
+     ]
+    },
+    {
+     "id": "balrampur",
+     "lgd": 649,
+     "lgdName": "Balrampur",
+     "neighbours": [
+      "jashpur",
+      "surajpur",
+      "surguja"
+     ]
+    },
+    {
+     "id": "bastar",
+     "lgd": 374,
+     "lgdName": "Bastar",
+     "neighbours": [
+      "bijapur",
+      "dantewada",
+      "kondagaon",
+      "sukma"
+     ]
+    },
+    {
+     "id": "bemetara",
+     "lgd": 650,
+     "lgdName": "Bemetara",
+     "neighbours": [
+      "baloda-bazar",
+      "durg",
+      "janjgir-champa",
+      "kabirdham",
+      "mungeli",
+      "raipur",
+      "khairgarh-chhuikhadan-gandai"
+     ]
+    },
+    {
+     "id": "bijapur",
+     "lgd": 636,
+     "lgdName": "Bijapur",
+     "neighbours": [
+      "dantewada",
+      "kondagaon",
+      "narayanpur",
+      "sukma",
+      "bastar"
+     ]
+    },
+    {
+     "id": "bilaspur",
+     "lgd": 375,
+     "lgdName": "Bilaspur",
+     "neighbours": [
+      "baloda-bazar",
+      "gaurella-pendra-marwahi",
+      "janjgir-champa",
+      "korba",
+      "mungeli"
+     ]
+    },
+    {
+     "id": "dantewada",
+     "lgd": 376,
+     "lgdName": "Dantewada",
+     "neighbours": [
+      "bijapur",
+      "sukma",
+      "bastar"
+     ]
+    },
+    {
+     "id": "dhamtari",
+     "lgd": 377,
+     "lgdName": "Dhamtari",
+     "neighbours": [
+      "balod",
+      "durg",
+      "gariyaband",
+      "kanker",
+      "kondagaon",
+      "raipur"
+     ]
+    },
+    {
+     "id": "durg",
+     "lgd": 378,
+     "lgdName": "Durg",
+     "neighbours": [
+      "balod",
+      "bemetara",
+      "dhamtari",
+      "raipur",
+      "rajnandgaon",
+      "khairgarh-chhuikhadan-gandai"
+     ]
+    },
+    {
+     "id": "gariyaband",
+     "lgd": 645,
+     "lgdName": "Gariyaband",
+     "neighbours": [
+      "dhamtari",
+      "mahasamund",
+      "raipur"
+     ]
+    },
+    {
+     "id": "gaurella-pendra-marwahi",
+     "lgd": 734,
+     "lgdName": "Gaurella Pendra Marwahi",
+     "neighbours": [
+      "bilaspur",
+      "korba",
+      "manendragarh-chirimiri-bharatpur",
+      "mungeli"
+     ]
+    },
+    {
+     "id": "janjgir-champa",
+     "lgd": 379,
+     "lgdName": "Janjgir-Champa",
+     "neighbours": [
+      "baloda-bazar",
+      "bemetara",
+      "bilaspur",
+      "korba",
+      "mungeli",
+      "sarangarh-bilaigarh",
+      "sakti"
+     ]
+    },
+    {
+     "id": "jashpur",
+     "lgd": 380,
+     "lgdName": "Jashpur",
+     "neighbours": [
+      "balrampur",
+      "raigarh",
+      "surguja"
+     ]
+    },
+    {
+     "id": "kabirdham",
+     "lgd": 382,
+     "lgdName": "Kabirdham",
+     "neighbours": [
+      "bemetara",
+      "mungeli",
+      "khairgarh-chhuikhadan-gandai"
+     ]
+    },
+    {
+     "id": "kanker",
+     "lgd": 381,
+     "lgdName": "Kanker",
+     "neighbours": [
+      "balod",
+      "dhamtari",
+      "kondagaon",
+      "narayanpur",
+      "mohla-manpur-ambagarh-chouki"
+     ]
+    },
+    {
+     "id": "khairgarh-chhuikhadan-gandai",
+     "lgd": 759,
+     "lgdName": "Khairgarh Chhuikhadan Gandai",
+     "neighbours": [
+      "bemetara",
+      "durg",
+      "kabirdham",
+      "rajnandgaon"
+     ]
+    },
+    {
+     "id": "kondagaon",
+     "lgd": 643,
+     "lgdName": "Kondagaon",
+     "neighbours": [
+      "bijapur",
+      "dhamtari",
+      "kanker",
+      "narayanpur",
+      "bastar"
+     ]
+    },
+    {
+     "id": "korba",
+     "lgd": 383,
+     "lgdName": "Korba",
+     "neighbours": [
+      "bilaspur",
+      "gaurella-pendra-marwahi",
+      "janjgir-champa",
+      "manendragarh-chirimiri-bharatpur",
+      "raigarh",
+      "surajpur",
+      "surguja",
+      "sakti"
+     ]
+    },
+    {
+     "id": "korea",
+     "lgd": 384,
+     "lgdName": "Korea",
+     "neighbours": [
+      "manendragarh-chirimiri-bharatpur",
+      "surajpur"
+     ]
+    },
+    {
+     "id": "mahasamund",
+     "lgd": 385,
+     "lgdName": "Mahasamund",
+     "neighbours": [
+      "baloda-bazar",
+      "gariyaband",
+      "raipur",
+      "sarangarh-bilaigarh"
+     ]
+    },
+    {
+     "id": "manendragarh-chirimiri-bharatpur",
+     "lgd": 760,
+     "lgdName": "Manendragarh Chirimiri Bharatpur",
+     "neighbours": [
+      "gaurella-pendra-marwahi",
+      "korba",
+      "surajpur",
+      "korea"
+     ]
+    },
+    {
+     "id": "mohla-manpur-ambagarh-chouki",
+     "lgd": 761,
+     "lgdName": "Mohla Manpur Ambagarh Chouki",
+     "neighbours": [
+      "balod",
+      "kanker",
+      "rajnandgaon"
+     ]
+    },
+    {
+     "id": "mungeli",
+     "lgd": 647,
+     "lgdName": "Mungeli",
+     "neighbours": [
+      "baloda-bazar",
+      "bemetara",
+      "bilaspur",
+      "gaurella-pendra-marwahi",
+      "janjgir-champa",
+      "kabirdham"
+     ]
+    },
+    {
+     "id": "narayanpur",
+     "lgd": 637,
+     "lgdName": "Narayanpur",
+     "neighbours": [
+      "bijapur",
+      "kanker",
+      "kondagaon"
+     ]
+    },
+    {
+     "id": "raigarh",
+     "lgd": 386,
+     "lgdName": "Raigarh",
+     "neighbours": [
+      "jashpur",
+      "korba",
+      "surguja",
+      "sarangarh-bilaigarh",
+      "sakti"
+     ]
+    },
+    {
+     "id": "raipur",
+     "lgd": 387,
+     "lgdName": "Raipur",
+     "neighbours": [
+      "baloda-bazar",
+      "bemetara",
+      "dhamtari",
+      "durg",
+      "gariyaband",
+      "mahasamund"
+     ]
+    },
+    {
+     "id": "rajnandgaon",
+     "lgd": 388,
+     "lgdName": "Rajnandgaon",
+     "neighbours": [
+      "balod",
+      "durg",
+      "khairgarh-chhuikhadan-gandai",
+      "mohla-manpur-ambagarh-chouki"
+     ]
+    },
+    {
+     "id": "sakti",
+     "lgd": 762,
+     "lgdName": "Sakti",
+     "neighbours": [
+      "janjgir-champa",
+      "korba",
+      "raigarh",
+      "sarangarh-bilaigarh"
+     ]
+    },
+    {
+     "id": "sarangarh-bilaigarh",
+     "lgd": 763,
+     "lgdName": "Sarangarh Bilaigarh",
+     "neighbours": [
+      "baloda-bazar",
+      "janjgir-champa",
+      "mahasamund",
+      "raigarh",
+      "sakti"
+     ]
+    },
+    {
+     "id": "sukma",
+     "lgd": 642,
+     "lgdName": "Sukma",
+     "neighbours": [
+      "bijapur",
+      "dantewada",
+      "bastar"
+     ]
+    },
+    {
+     "id": "surajpur",
+     "lgd": 648,
+     "lgdName": "Surajpur",
+     "neighbours": [
+      "balrampur",
+      "korba",
+      "manendragarh-chirimiri-bharatpur",
+      "surguja",
+      "korea"
+     ]
+    },
+    {
+     "id": "surguja",
+     "lgd": 389,
+     "lgdName": "Surguja",
+     "neighbours": [
+      "balrampur",
+      "jashpur",
+      "korba",
+      "raigarh",
+      "surajpur"
+     ]
+    }
+   ]
+  },
+  "goa": {
+   "districtCount": 2,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "karnataka",
+    "maharashtra"
+   ],
+   "districts": [
+    {
+     "id": "north-goa",
+     "lgd": 551,
+     "lgdName": "North Goa",
+     "neighbours": [
+      "south-goa"
+     ]
+    },
+    {
+     "id": "south-goa",
+     "lgd": 552,
+     "lgdName": "South Goa",
+     "neighbours": [
+      "north-goa"
+     ]
+    }
+   ]
+  },
+  "gujarat": {
+   "districtCount": 33,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "dadra-and-nagar-haveli-and-daman-and-diu",
+    "madhya-pradesh",
+    "maharashtra",
+    "rajasthan"
+   ],
+   "districts": [
+    {
+     "id": "ahmadabad",
+     "lgd": 438,
+     "lgdName": "Ahmadabad",
+     "neighbours": [
+      "anand",
+      "bhavnagar",
+      "surendranagar",
+      "botad",
+      "kheda",
+      "mahesana",
+      "gandhinagar"
+     ]
+    },
+    {
+     "id": "amreli",
+     "lgd": 439,
+     "lgdName": "Amreli",
+     "neighbours": [
+      "bhavnagar",
+      "gir-somnath",
+      "junagadh",
+      "rajkot",
+      "botad"
+     ]
+    },
+    {
+     "id": "anand",
+     "lgd": 440,
+     "lgdName": "Anand",
+     "neighbours": [
+      "ahmadabad",
+      "vadodara",
+      "kheda"
+     ]
+    },
+    {
+     "id": "arvalli",
+     "lgd": 672,
+     "lgdName": "Arvalli",
+     "neighbours": [
+      "mahisagar",
+      "sabar-kantha",
+      "kheda",
+      "gandhinagar"
+     ]
+    },
+    {
+     "id": "banas-kantha",
+     "lgd": 441,
+     "lgdName": "Banas Kantha",
+     "neighbours": [
+      "kachchh",
+      "sabar-kantha",
+      "mahesana",
+      "patan"
+     ]
+    },
+    {
+     "id": "bharuch",
+     "lgd": 442,
+     "lgdName": "Bharuch",
+     "neighbours": [
+      "surat",
+      "narmada",
+      "vadodara"
+     ]
+    },
+    {
+     "id": "bhavnagar",
+     "lgd": 443,
+     "lgdName": "Bhavnagar",
+     "neighbours": [
+      "ahmadabad",
+      "amreli",
+      "botad"
+     ]
+    },
+    {
+     "id": "botad",
+     "lgd": 676,
+     "lgdName": "Botad",
+     "neighbours": [
+      "ahmadabad",
+      "bhavnagar",
+      "amreli",
+      "rajkot",
+      "surendranagar"
+     ]
+    },
+    {
+     "id": "chhotaudepur",
+     "lgd": 668,
+     "lgdName": "Chhotaudepur",
+     "neighbours": [
+      "dohad",
+      "narmada",
+      "panch-mahals",
+      "vadodara"
+     ]
+    },
+    {
+     "id": "dang",
+     "lgd": 444,
+     "lgdName": "Dang",
+     "neighbours": [
+      "navsari",
+      "tapi"
+     ]
+    },
+    {
+     "id": "devbhumi-dwarka",
+     "lgd": 674,
+     "lgdName": "Devbhumi Dwarka",
+     "neighbours": [
+      "jamnagar",
+      "porbandar"
+     ]
+    },
+    {
+     "id": "dohad",
+     "lgd": 445,
+     "lgdName": "Dohad",
+     "neighbours": [
+      "chhotaudepur",
+      "mahisagar",
+      "panch-mahals"
+     ]
+    },
+    {
+     "id": "gandhinagar",
+     "lgd": 446,
+     "lgdName": "Gandhinagar",
+     "neighbours": [
+      "ahmadabad",
+      "arvalli",
+      "sabar-kantha",
+      "kheda",
+      "mahesana"
+     ]
+    },
+    {
+     "id": "gir-somnath",
+     "lgd": 675,
+     "lgdName": "Gir Somnath",
+     "neighbours": [
+      "junagadh",
+      "amreli"
+     ]
+    },
+    {
+     "id": "jamnagar",
+     "lgd": 447,
+     "lgdName": "Jamnagar",
+     "neighbours": [
+      "morbi",
+      "devbhumi-dwarka",
+      "porbandar",
+      "rajkot"
+     ]
+    },
+    {
+     "id": "junagadh",
+     "lgd": 448,
+     "lgdName": "Junagadh",
+     "neighbours": [
+      "gir-somnath",
+      "amreli",
+      "porbandar",
+      "rajkot"
+     ]
+    },
+    {
+     "id": "kachchh",
+     "lgd": 449,
+     "lgdName": "Kachchh",
+     "neighbours": [
+      "morbi",
+      "banas-kantha",
+      "surendranagar",
+      "patan"
+     ]
+    },
+    {
+     "id": "kheda",
+     "lgd": 450,
+     "lgdName": "Kheda",
+     "neighbours": [
+      "ahmadabad",
+      "anand",
+      "arvalli",
+      "mahisagar",
+      "panch-mahals",
+      "vadodara",
+      "gandhinagar"
+     ]
+    },
+    {
+     "id": "mahesana",
+     "lgd": 451,
+     "lgdName": "Mahesana",
+     "neighbours": [
+      "ahmadabad",
+      "banas-kantha",
+      "sabar-kantha",
+      "surendranagar",
+      "gandhinagar",
+      "patan"
+     ]
+    },
+    {
+     "id": "mahisagar",
+     "lgd": 669,
+     "lgdName": "Mahisagar",
+     "neighbours": [
+      "arvalli",
+      "dohad",
+      "panch-mahals",
+      "kheda"
+     ]
+    },
+    {
+     "id": "morbi",
+     "lgd": 673,
+     "lgdName": "Morbi",
+     "neighbours": [
+      "jamnagar",
+      "kachchh",
+      "rajkot",
+      "surendranagar"
+     ]
+    },
+    {
+     "id": "narmada",
+     "lgd": 452,
+     "lgdName": "Narmada",
+     "neighbours": [
+      "bharuch",
+      "surat",
+      "chhotaudepur",
+      "tapi",
+      "vadodara"
+     ]
+    },
+    {
+     "id": "navsari",
+     "lgd": 453,
+     "lgdName": "Navsari",
+     "neighbours": [
+      "surat",
+      "valsad",
+      "dang",
+      "tapi"
+     ]
+    },
+    {
+     "id": "panch-mahals",
+     "lgd": 454,
+     "lgdName": "Panch Mahals",
+     "neighbours": [
+      "chhotaudepur",
+      "dohad",
+      "mahisagar",
+      "vadodara",
+      "kheda"
+     ]
+    },
+    {
+     "id": "patan",
+     "lgd": 455,
+     "lgdName": "Patan",
+     "neighbours": [
+      "kachchh",
+      "banas-kantha",
+      "surendranagar",
+      "mahesana"
+     ]
+    },
+    {
+     "id": "porbandar",
+     "lgd": 456,
+     "lgdName": "Porbandar",
+     "neighbours": [
+      "devbhumi-dwarka",
+      "jamnagar",
+      "junagadh",
+      "rajkot"
+     ]
+    },
+    {
+     "id": "rajkot",
+     "lgd": 457,
+     "lgdName": "Rajkot",
+     "neighbours": [
+      "morbi",
+      "jamnagar",
+      "junagadh",
+      "amreli",
+      "porbandar",
+      "surendranagar",
+      "botad"
+     ]
+    },
+    {
+     "id": "sabar-kantha",
+     "lgd": 458,
+     "lgdName": "Sabar Kantha",
+     "neighbours": [
+      "arvalli",
+      "banas-kantha",
+      "mahesana",
+      "gandhinagar"
+     ]
+    },
+    {
+     "id": "surat",
+     "lgd": 459,
+     "lgdName": "Surat",
+     "neighbours": [
+      "bharuch",
+      "navsari",
+      "narmada",
+      "tapi"
+     ]
+    },
+    {
+     "id": "surendranagar",
+     "lgd": 460,
+     "lgdName": "Surendranagar",
+     "neighbours": [
+      "morbi",
+      "ahmadabad",
+      "kachchh",
+      "rajkot",
+      "botad",
+      "mahesana",
+      "patan"
+     ]
+    },
+    {
+     "id": "tapi",
+     "lgd": 641,
+     "lgdName": "Tapi",
+     "neighbours": [
+      "surat",
+      "navsari",
+      "dang",
+      "narmada"
+     ]
+    },
+    {
+     "id": "vadodara",
+     "lgd": 461,
+     "lgdName": "Vadodara",
+     "neighbours": [
+      "anand",
+      "bharuch",
+      "chhotaudepur",
+      "narmada",
+      "panch-mahals",
+      "kheda"
+     ]
+    },
+    {
+     "id": "valsad",
+     "lgd": 462,
+     "lgdName": "Valsad",
+     "neighbours": [
+      "navsari"
+     ]
+    }
+   ]
+  },
+  "haryana": {
+   "districtCount": 22,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "chandigarh",
+    "delhi",
+    "himachal-pradesh",
+    "punjab",
+    "rajasthan",
+    "uttar-pradesh"
+   ],
+   "districts": [
+    {
+     "id": "ambala",
+     "lgd": 58,
+     "lgdName": "Ambala",
+     "neighbours": [
+      "kurukshetra",
+      "yamunanagar",
+      "panchkula"
+     ]
+    },
+    {
+     "id": "bhiwani",
+     "lgd": 59,
+     "lgdName": "Bhiwani",
+     "neighbours": [
+      "hisar",
+      "mahendragarh",
+      "rohtak",
+      "charki-dadri"
+     ]
+    },
+    {
+     "id": "charki-dadri",
+     "lgd": 701,
+     "lgdName": "Charki Dadri",
+     "neighbours": [
+      "bhiwani",
+      "jhajjar",
+      "mahendragarh",
+      "rewari",
+      "rohtak"
+     ]
+    },
+    {
+     "id": "faridabad",
+     "lgd": 60,
+     "lgdName": "Faridabad",
+     "neighbours": [
+      "gurugram",
+      "palwal"
+     ]
+    },
+    {
+     "id": "fatehabad",
+     "lgd": 61,
+     "lgdName": "Fatehabad",
+     "neighbours": [
+      "hisar",
+      "jind",
+      "sirsa"
+     ]
+    },
+    {
+     "id": "gurugram",
+     "lgd": 62,
+     "lgdName": "Gurugram",
+     "neighbours": [
+      "jhajjar",
+      "nuh",
+      "palwal",
+      "rewari",
+      "faridabad"
+     ]
+    },
+    {
+     "id": "hisar",
+     "lgd": 63,
+     "lgdName": "Hisar",
+     "neighbours": [
+      "bhiwani",
+      "fatehabad",
+      "jind",
+      "rohtak"
+     ]
+    },
+    {
+     "id": "jhajjar",
+     "lgd": 64,
+     "lgdName": "Jhajjar",
+     "neighbours": [
+      "gurugram",
+      "rewari",
+      "rohtak",
+      "sonipat",
+      "charki-dadri"
+     ]
+    },
+    {
+     "id": "jind",
+     "lgd": 65,
+     "lgdName": "Jind",
+     "neighbours": [
+      "fatehabad",
+      "hisar",
+      "kaithal",
+      "karnal",
+      "panipat",
+      "rohtak",
+      "sonipat"
+     ]
+    },
+    {
+     "id": "kaithal",
+     "lgd": 66,
+     "lgdName": "Kaithal",
+     "neighbours": [
+      "jind",
+      "karnal",
+      "kurukshetra"
+     ]
+    },
+    {
+     "id": "karnal",
+     "lgd": 67,
+     "lgdName": "Karnal",
+     "neighbours": [
+      "jind",
+      "kaithal",
+      "kurukshetra",
+      "panipat",
+      "yamunanagar"
+     ]
+    },
+    {
+     "id": "kurukshetra",
+     "lgd": 68,
+     "lgdName": "Kurukshetra",
+     "neighbours": [
+      "ambala",
+      "kaithal",
+      "karnal",
+      "yamunanagar"
+     ]
+    },
+    {
+     "id": "mahendragarh",
+     "lgd": 69,
+     "lgdName": "Mahendragarh",
+     "neighbours": [
+      "bhiwani",
+      "rewari",
+      "charki-dadri"
+     ]
+    },
+    {
+     "id": "nuh",
+     "lgd": 604,
+     "lgdName": "Nuh",
+     "neighbours": [
+      "gurugram",
+      "palwal",
+      "rewari"
+     ]
+    },
+    {
+     "id": "palwal",
+     "lgd": 619,
+     "lgdName": "Palwal",
+     "neighbours": [
+      "gurugram",
+      "nuh",
+      "faridabad"
+     ]
+    },
+    {
+     "id": "panchkula",
+     "lgd": 70,
+     "lgdName": "Panchkula",
+     "neighbours": [
+      "ambala"
+     ]
+    },
+    {
+     "id": "panipat",
+     "lgd": 71,
+     "lgdName": "Panipat",
+     "neighbours": [
+      "jind",
+      "karnal",
+      "sonipat"
+     ]
+    },
+    {
+     "id": "rewari",
+     "lgd": 72,
+     "lgdName": "Rewari",
+     "neighbours": [
+      "gurugram",
+      "jhajjar",
+      "mahendragarh",
+      "nuh",
+      "charki-dadri"
+     ]
+    },
+    {
+     "id": "rohtak",
+     "lgd": 73,
+     "lgdName": "Rohtak",
+     "neighbours": [
+      "bhiwani",
+      "hisar",
+      "jhajjar",
+      "jind",
+      "sonipat",
+      "charki-dadri"
+     ]
+    },
+    {
+     "id": "sirsa",
+     "lgd": 74,
+     "lgdName": "Sirsa",
+     "neighbours": [
+      "fatehabad"
+     ]
+    },
+    {
+     "id": "sonipat",
+     "lgd": 75,
+     "lgdName": "Sonipat",
+     "neighbours": [
+      "jhajjar",
+      "jind",
+      "panipat",
+      "rohtak"
+     ]
+    },
+    {
+     "id": "yamunanagar",
+     "lgd": 76,
+     "lgdName": "Yamunanagar",
+     "neighbours": [
+      "ambala",
+      "karnal",
+      "kurukshetra"
+     ]
+    }
+   ]
+  },
+  "himachal-pradesh": {
+   "districtCount": 12,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "haryana",
+    "jammu-and-kashmir",
+    "ladakh",
+    "punjab",
+    "uttar-pradesh",
+    "uttarakhand"
+   ],
+   "districts": [
+    {
+     "id": "bilaspur",
+     "lgd": 15,
+     "lgdName": "Bilaspur",
+     "neighbours": [
+      "hamirpur",
+      "mandi",
+      "solan",
+      "una"
+     ]
+    },
+    {
+     "id": "chamba",
+     "lgd": 16,
+     "lgdName": "Chamba",
+     "neighbours": [
+      "kangra",
+      "lahul-and-spiti"
+     ]
+    },
+    {
+     "id": "hamirpur",
+     "lgd": 17,
+     "lgdName": "Hamirpur",
+     "neighbours": [
+      "bilaspur",
+      "kangra",
+      "mandi",
+      "una"
+     ]
+    },
+    {
+     "id": "kangra",
+     "lgd": 18,
+     "lgdName": "Kangra",
+     "neighbours": [
+      "chamba",
+      "hamirpur",
+      "kullu",
+      "mandi",
+      "una",
+      "lahul-and-spiti"
+     ]
+    },
+    {
+     "id": "kinnaur",
+     "lgd": 19,
+     "lgdName": "Kinnaur",
+     "neighbours": [
+      "kullu",
+      "shimla",
+      "lahul-and-spiti"
+     ]
+    },
+    {
+     "id": "kullu",
+     "lgd": 20,
+     "lgdName": "Kullu",
+     "neighbours": [
+      "kangra",
+      "mandi",
+      "shimla",
+      "kinnaur",
+      "lahul-and-spiti"
+     ]
+    },
+    {
+     "id": "lahul-and-spiti",
+     "lgd": 21,
+     "lgdName": "Lahul And Spiti",
+     "neighbours": [
+      "chamba",
+      "kangra",
+      "kullu",
+      "kinnaur"
+     ]
+    },
+    {
+     "id": "mandi",
+     "lgd": 22,
+     "lgdName": "Mandi",
+     "neighbours": [
+      "bilaspur",
+      "hamirpur",
+      "kangra",
+      "kullu",
+      "shimla",
+      "solan"
+     ]
+    },
+    {
+     "id": "shimla",
+     "lgd": 23,
+     "lgdName": "Shimla",
+     "neighbours": [
+      "kullu",
+      "mandi",
+      "sirmaur",
+      "solan",
+      "kinnaur"
+     ]
+    },
+    {
+     "id": "sirmaur",
+     "lgd": 24,
+     "lgdName": "Sirmaur",
+     "neighbours": [
+      "shimla",
+      "solan"
+     ]
+    },
+    {
+     "id": "solan",
+     "lgd": 25,
+     "lgdName": "Solan",
+     "neighbours": [
+      "bilaspur",
+      "mandi",
+      "shimla",
+      "sirmaur"
+     ]
+    },
+    {
+     "id": "una",
+     "lgd": 26,
+     "lgdName": "Una",
+     "neighbours": [
+      "bilaspur",
+      "hamirpur",
+      "kangra"
+     ]
+    }
+   ]
+  },
+  "jharkhand": {
+   "districtCount": 24,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "bihar",
+    "chhattisgarh",
+    "odisha",
+    "uttar-pradesh",
+    "west-bengal"
+   ],
+   "districts": [
+    {
+     "id": "bokaro",
+     "lgd": 322,
+     "lgdName": "Bokaro",
+     "neighbours": [
+      "dhanbad",
+      "giridih",
+      "hazaribagh",
+      "ramgarh"
+     ]
+    },
+    {
+     "id": "chatra",
+     "lgd": 323,
+     "lgdName": "Chatra",
+     "neighbours": [
+      "hazaribagh",
+      "latehar",
+      "palamu",
+      "ranchi"
+     ]
+    },
+    {
+     "id": "deoghar",
+     "lgd": 324,
+     "lgdName": "Deoghar",
+     "neighbours": [
+      "dumka",
+      "giridih",
+      "jamtara"
+     ]
+    },
+    {
+     "id": "dhanbad",
+     "lgd": 325,
+     "lgdName": "Dhanbad",
+     "neighbours": [
+      "bokaro",
+      "giridih",
+      "jamtara"
+     ]
+    },
+    {
+     "id": "dumka",
+     "lgd": 326,
+     "lgdName": "Dumka",
+     "neighbours": [
+      "godda",
+      "jamtara",
+      "pakur",
+      "deoghar"
+     ]
+    },
+    {
+     "id": "east-singhbum",
+     "lgd": 327,
+     "lgdName": "East Singhbum",
+     "neighbours": [
+      "saraikela-kharsawan"
+     ]
+    },
+    {
+     "id": "garhwa",
+     "lgd": 328,
+     "lgdName": "Garhwa",
+     "neighbours": [
+      "latehar",
+      "palamu"
+     ]
+    },
+    {
+     "id": "giridih",
+     "lgd": 329,
+     "lgdName": "Giridih",
+     "neighbours": [
+      "bokaro",
+      "dhanbad",
+      "hazaribagh",
+      "jamtara",
+      "koderma",
+      "deoghar"
+     ]
+    },
+    {
+     "id": "godda",
+     "lgd": 330,
+     "lgdName": "Godda",
+     "neighbours": [
+      "dumka",
+      "pakur",
+      "sahebganj"
+     ]
+    },
+    {
+     "id": "gumla",
+     "lgd": 331,
+     "lgdName": "Gumla",
+     "neighbours": [
+      "khunti",
+      "latehar",
+      "lohardaga",
+      "ranchi",
+      "simdega"
+     ]
+    },
+    {
+     "id": "hazaribagh",
+     "lgd": 332,
+     "lgdName": "Hazaribagh",
+     "neighbours": [
+      "bokaro",
+      "chatra",
+      "giridih",
+      "koderma",
+      "ramgarh",
+      "ranchi"
+     ]
+    },
+    {
+     "id": "jamtara",
+     "lgd": 333,
+     "lgdName": "Jamtara",
+     "neighbours": [
+      "dhanbad",
+      "dumka",
+      "giridih",
+      "deoghar"
+     ]
+    },
+    {
+     "id": "khunti",
+     "lgd": 606,
+     "lgdName": "Khunti",
+     "neighbours": [
+      "gumla",
+      "west-singhbhum",
+      "ranchi",
+      "saraikela-kharsawan",
+      "simdega"
+     ]
+    },
+    {
+     "id": "koderma",
+     "lgd": 334,
+     "lgdName": "Koderma",
+     "neighbours": [
+      "giridih",
+      "hazaribagh"
+     ]
+    },
+    {
+     "id": "latehar",
+     "lgd": 335,
+     "lgdName": "Latehar",
+     "neighbours": [
+      "chatra",
+      "garhwa",
+      "gumla",
+      "lohardaga",
+      "palamu",
+      "ranchi"
+     ]
+    },
+    {
+     "id": "lohardaga",
+     "lgd": 336,
+     "lgdName": "Lohardaga",
+     "neighbours": [
+      "gumla",
+      "latehar",
+      "ranchi"
+     ]
+    },
+    {
+     "id": "pakur",
+     "lgd": 337,
+     "lgdName": "Pakur",
+     "neighbours": [
+      "dumka",
+      "godda",
+      "sahebganj"
+     ]
+    },
+    {
+     "id": "palamu",
+     "lgd": 338,
+     "lgdName": "Palamu",
+     "neighbours": [
+      "chatra",
+      "garhwa",
+      "latehar"
+     ]
+    },
+    {
+     "id": "ramgarh",
+     "lgd": 607,
+     "lgdName": "Ramgarh",
+     "neighbours": [
+      "bokaro",
+      "hazaribagh",
+      "ranchi"
+     ]
+    },
+    {
+     "id": "ranchi",
+     "lgd": 339,
+     "lgdName": "Ranchi",
+     "neighbours": [
+      "chatra",
+      "gumla",
+      "hazaribagh",
+      "khunti",
+      "latehar",
+      "lohardaga",
+      "ramgarh",
+      "saraikela-kharsawan"
+     ]
+    },
+    {
+     "id": "sahebganj",
+     "lgd": 340,
+     "lgdName": "Sahebganj",
+     "neighbours": [
+      "godda",
+      "pakur"
+     ]
+    },
+    {
+     "id": "saraikela-kharsawan",
+     "lgd": 341,
+     "lgdName": "Saraikela Kharsawan",
+     "neighbours": [
+      "khunti",
+      "west-singhbhum",
+      "east-singhbum",
+      "ranchi"
+     ]
+    },
+    {
+     "id": "simdega",
+     "lgd": 342,
+     "lgdName": "Simdega",
+     "neighbours": [
+      "gumla",
+      "khunti",
+      "west-singhbhum"
+     ]
+    },
+    {
+     "id": "west-singhbhum",
+     "lgd": 343,
+     "lgdName": "West Singhbhum",
+     "neighbours": [
+      "khunti",
+      "saraikela-kharsawan",
+      "simdega"
+     ]
+    }
+   ]
+  },
+  "karnataka": {
+   "districtCount": 31,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "andhra-pradesh",
+    "goa",
+    "kerala",
+    "maharashtra",
+    "tamil-nadu",
+    "telangana"
+   ],
+   "districts": [
+    {
+     "id": "bagalkote",
+     "lgd": 524,
+     "lgdName": "Bagalkote",
+     "neighbours": [
+      "gadag",
+      "koppal",
+      "raichur",
+      "vijayapura",
+      "belagavi"
+     ]
+    },
+    {
+     "id": "ballari",
+     "lgd": 528,
+     "lgdName": "Ballari",
+     "neighbours": [
+      "chitradurga",
+      "koppal",
+      "raichur",
+      "vijayanagar"
+     ]
+    },
+    {
+     "id": "belagavi",
+     "lgd": 527,
+     "lgdName": "Belagavi",
+     "neighbours": [
+      "bagalkote",
+      "dharwad",
+      "gadag",
+      "uttara-kannada",
+      "vijayapura"
+     ]
+    },
+    {
+     "id": "bengaluru-rural",
+     "lgd": 526,
+     "lgdName": "Bengaluru Rural",
+     "neighbours": [
+      "bengaluru-urban",
+      "chikkaballapura",
+      "kolar",
+      "ramanagara",
+      "tumakuru"
+     ]
+    },
+    {
+     "id": "bengaluru-urban",
+     "lgd": 525,
+     "lgdName": "Bengaluru Urban",
+     "neighbours": [
+      "bengaluru-rural",
+      "ramanagara"
+     ]
+    },
+    {
+     "id": "bidar",
+     "lgd": 529,
+     "lgdName": "Bidar",
+     "neighbours": [
+      "kalaburagi"
+     ]
+    },
+    {
+     "id": "chamarajanagara",
+     "lgd": 531,
+     "lgdName": "Chamarajanagara",
+     "neighbours": [
+      "mysuru",
+      "ramanagara",
+      "mandya"
+     ]
+    },
+    {
+     "id": "chikkaballapura",
+     "lgd": 630,
+     "lgdName": "Chikkaballapura",
+     "neighbours": [
+      "bengaluru-rural",
+      "kolar",
+      "tumakuru"
+     ]
+    },
+    {
+     "id": "chikkamagaluru",
+     "lgd": 532,
+     "lgdName": "Chikkamagaluru",
+     "neighbours": [
+      "chitradurga",
+      "dakshina-kannada",
+      "davangere",
+      "hassan",
+      "shivamogga",
+      "tumakuru",
+      "udupi"
+     ]
+    },
+    {
+     "id": "chitradurga",
+     "lgd": 533,
+     "lgdName": "Chitradurga",
+     "neighbours": [
+      "ballari",
+      "chikkamagaluru",
+      "davangere",
+      "tumakuru",
+      "vijayanagar"
+     ]
+    },
+    {
+     "id": "dakshina-kannada",
+     "lgd": 534,
+     "lgdName": "Dakshina Kannada",
+     "neighbours": [
+      "chikkamagaluru",
+      "hassan",
+      "kodagu",
+      "udupi"
+     ]
+    },
+    {
+     "id": "davangere",
+     "lgd": 535,
+     "lgdName": "Davangere",
+     "neighbours": [
+      "chikkamagaluru",
+      "chitradurga",
+      "haveri",
+      "shivamogga",
+      "vijayanagar"
+     ]
+    },
+    {
+     "id": "dharwad",
+     "lgd": 536,
+     "lgdName": "Dharwad",
+     "neighbours": [
+      "gadag",
+      "haveri",
+      "uttara-kannada",
+      "belagavi"
+     ]
+    },
+    {
+     "id": "gadag",
+     "lgd": 537,
+     "lgdName": "Gadag",
+     "neighbours": [
+      "bagalkote",
+      "dharwad",
+      "haveri",
+      "koppal",
+      "vijayanagar",
+      "belagavi"
+     ]
+    },
+    {
+     "id": "hassan",
+     "lgd": 539,
+     "lgdName": "Hassan",
+     "neighbours": [
+      "chikkamagaluru",
+      "dakshina-kannada",
+      "kodagu",
+      "mysuru",
+      "tumakuru",
+      "mandya"
+     ]
+    },
+    {
+     "id": "haveri",
+     "lgd": 540,
+     "lgdName": "Haveri",
+     "neighbours": [
+      "davangere",
+      "dharwad",
+      "gadag",
+      "shivamogga",
+      "uttara-kannada",
+      "vijayanagar"
+     ]
+    },
+    {
+     "id": "kalaburagi",
+     "lgd": 538,
+     "lgdName": "Kalaburagi",
+     "neighbours": [
+      "vijayapura",
+      "yadgir",
+      "bidar"
+     ]
+    },
+    {
+     "id": "kodagu",
+     "lgd": 541,
+     "lgdName": "Kodagu",
+     "neighbours": [
+      "dakshina-kannada",
+      "hassan",
+      "mysuru"
+     ]
+    },
+    {
+     "id": "kolar",
+     "lgd": 542,
+     "lgdName": "Kolar",
+     "neighbours": [
+      "bengaluru-rural",
+      "chikkaballapura"
+     ]
+    },
+    {
+     "id": "koppal",
+     "lgd": 543,
+     "lgdName": "Koppal",
+     "neighbours": [
+      "bagalkote",
+      "ballari",
+      "gadag",
+      "raichur",
+      "vijayanagar"
+     ]
+    },
+    {
+     "id": "mandya",
+     "lgd": 544,
+     "lgdName": "Mandya",
+     "neighbours": [
+      "chamarajanagara",
+      "hassan",
+      "mysuru",
+      "ramanagara",
+      "tumakuru"
+     ]
+    },
+    {
+     "id": "mysuru",
+     "lgd": 545,
+     "lgdName": "Mysuru",
+     "neighbours": [
+      "chamarajanagara",
+      "hassan",
+      "kodagu",
+      "mandya"
+     ]
+    },
+    {
+     "id": "raichur",
+     "lgd": 546,
+     "lgdName": "Raichur",
+     "neighbours": [
+      "bagalkote",
+      "ballari",
+      "koppal",
+      "vijayapura",
+      "yadgir"
+     ]
+    },
+    {
+     "id": "ramanagara",
+     "lgd": 631,
+     "lgdName": "Ramanagara",
+     "neighbours": [
+      "bengaluru-rural",
+      "bengaluru-urban",
+      "chamarajanagara",
+      "tumakuru",
+      "mandya"
+     ]
+    },
+    {
+     "id": "shivamogga",
+     "lgd": 547,
+     "lgdName": "Shivamogga",
+     "neighbours": [
+      "chikkamagaluru",
+      "davangere",
+      "haveri",
+      "udupi",
+      "uttara-kannada"
+     ]
+    },
+    {
+     "id": "tumakuru",
+     "lgd": 548,
+     "lgdName": "Tumakuru",
+     "neighbours": [
+      "bengaluru-rural",
+      "chikkaballapura",
+      "chikkamagaluru",
+      "chitradurga",
+      "hassan",
+      "ramanagara",
+      "mandya"
+     ]
+    },
+    {
+     "id": "udupi",
+     "lgd": 549,
+     "lgdName": "Udupi",
+     "neighbours": [
+      "chikkamagaluru",
+      "dakshina-kannada",
+      "shivamogga",
+      "uttara-kannada"
+     ]
+    },
+    {
+     "id": "uttara-kannada",
+     "lgd": 550,
+     "lgdName": "Uttara Kannada",
+     "neighbours": [
+      "dharwad",
+      "haveri",
+      "shivamogga",
+      "udupi",
+      "belagavi"
+     ]
+    },
+    {
+     "id": "vijayanagar",
+     "lgd": 738,
+     "lgdName": "Vijayanagar",
+     "neighbours": [
+      "ballari",
+      "chitradurga",
+      "davangere",
+      "gadag",
+      "haveri",
+      "koppal"
+     ]
+    },
+    {
+     "id": "vijayapura",
+     "lgd": 530,
+     "lgdName": "Vijayapura",
+     "neighbours": [
+      "bagalkote",
+      "kalaburagi",
+      "raichur",
+      "yadgir",
+      "belagavi"
+     ]
+    },
+    {
+     "id": "yadgir",
+     "lgd": 635,
+     "lgdName": "Yadgir",
+     "neighbours": [
+      "kalaburagi",
+      "raichur",
+      "vijayapura"
+     ]
+    }
+   ]
+  },
+  "kerala": {
+   "districtCount": 14,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "karnataka",
+    "puducherry",
+    "tamil-nadu"
+   ],
+   "districts": [
+    {
+     "id": "alappuzha",
+     "lgd": 554,
+     "lgdName": "Alappuzha",
+     "neighbours": [
+      "ernakulam",
+      "kollam",
+      "kottayam",
+      "pathanamthitta"
+     ]
+    },
+    {
+     "id": "ernakulam",
+     "lgd": 555,
+     "lgdName": "Ernakulam",
+     "neighbours": [
+      "alappuzha",
+      "idukki",
+      "kottayam",
+      "thrissur"
+     ]
+    },
+    {
+     "id": "idukki",
+     "lgd": 556,
+     "lgdName": "Idukki",
+     "neighbours": [
+      "ernakulam",
+      "kottayam",
+      "pathanamthitta"
+     ]
+    },
+    {
+     "id": "kannur",
+     "lgd": 557,
+     "lgdName": "Kannur",
+     "neighbours": [
+      "kasaragod",
+      "kozhikode",
+      "wayanad"
+     ]
+    },
+    {
+     "id": "kasaragod",
+     "lgd": 558,
+     "lgdName": "Kasaragod",
+     "neighbours": [
+      "kannur"
+     ]
+    },
+    {
+     "id": "kollam",
+     "lgd": 559,
+     "lgdName": "Kollam",
+     "neighbours": [
+      "alappuzha",
+      "pathanamthitta",
+      "thiruvananthapuram"
+     ]
+    },
+    {
+     "id": "kottayam",
+     "lgd": 560,
+     "lgdName": "Kottayam",
+     "neighbours": [
+      "alappuzha",
+      "ernakulam",
+      "idukki",
+      "pathanamthitta"
+     ]
+    },
+    {
+     "id": "kozhikode",
+     "lgd": 561,
+     "lgdName": "Kozhikode",
+     "neighbours": [
+      "kannur",
+      "malappuram",
+      "wayanad"
+     ]
+    },
+    {
+     "id": "malappuram",
+     "lgd": 562,
+     "lgdName": "Malappuram",
+     "neighbours": [
+      "kozhikode",
+      "palakkad",
+      "thrissur",
+      "wayanad"
+     ]
+    },
+    {
+     "id": "palakkad",
+     "lgd": 563,
+     "lgdName": "Palakkad",
+     "neighbours": [
+      "malappuram",
+      "thrissur"
+     ]
+    },
+    {
+     "id": "pathanamthitta",
+     "lgd": 564,
+     "lgdName": "Pathanamthitta",
+     "neighbours": [
+      "alappuzha",
+      "idukki",
+      "kollam",
+      "kottayam"
+     ]
+    },
+    {
+     "id": "thiruvananthapuram",
+     "lgd": 565,
+     "lgdName": "Thiruvananthapuram",
+     "neighbours": [
+      "kollam"
+     ]
+    },
+    {
+     "id": "thrissur",
+     "lgd": 566,
+     "lgdName": "Thrissur",
+     "neighbours": [
+      "ernakulam",
+      "malappuram",
+      "palakkad"
+     ]
+    },
+    {
+     "id": "wayanad",
+     "lgd": 567,
+     "lgdName": "Wayanad",
+     "neighbours": [
+      "kannur",
+      "kozhikode",
+      "malappuram"
+     ]
+    }
+   ]
+  },
+  "madhya-pradesh": {
+   "districtCount": 52,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "chhattisgarh",
+    "gujarat",
+    "maharashtra",
+    "rajasthan",
+    "uttar-pradesh"
+   ],
+   "districts": [
+    {
+     "id": "agar-malwa",
+     "lgd": 667,
+     "lgdName": "Agar Malwa",
+     "neighbours": [
+      "rajgarh",
+      "ratlam",
+      "shajapur",
+      "ujjain"
+     ]
+    },
+    {
+     "id": "alirajpur",
+     "lgd": 639,
+     "lgdName": "Alirajpur",
+     "neighbours": [
+      "barwani",
+      "dhar",
+      "jhabua"
+     ]
+    },
+    {
+     "id": "anuppur",
+     "lgd": 390,
+     "lgdName": "Anuppur",
+     "neighbours": [
+      "dindori",
+      "shahdol",
+      "umaria"
+     ]
+    },
+    {
+     "id": "ashoknagar",
+     "lgd": 391,
+     "lgdName": "Ashoknagar",
+     "neighbours": [
+      "guna",
+      "sagar",
+      "shivpuri",
+      "vidisha"
+     ]
+    },
+    {
+     "id": "balaghat",
+     "lgd": 392,
+     "lgdName": "Balaghat",
+     "neighbours": [
+      "mandla",
+      "seoni"
+     ]
+    },
+    {
+     "id": "barwani",
+     "lgd": 393,
+     "lgdName": "Barwani",
+     "neighbours": [
+      "alirajpur",
+      "dhar",
+      "khargone"
+     ]
+    },
+    {
+     "id": "betul",
+     "lgd": 394,
+     "lgdName": "Betul",
+     "neighbours": [
+      "chhindwara",
+      "east-nimar",
+      "harda",
+      "narmadapuram"
+     ]
+    },
+    {
+     "id": "bhind",
+     "lgd": 395,
+     "lgdName": "Bhind",
+     "neighbours": [
+      "datia",
+      "gwalior",
+      "morena"
+     ]
+    },
+    {
+     "id": "bhopal",
+     "lgd": 396,
+     "lgdName": "Bhopal",
+     "neighbours": [
+      "guna",
+      "raisen",
+      "rajgarh",
+      "sehore",
+      "vidisha"
+     ]
+    },
+    {
+     "id": "burhanpur",
+     "lgd": 397,
+     "lgdName": "Burhanpur",
+     "neighbours": [
+      "east-nimar",
+      "khargone"
+     ]
+    },
+    {
+     "id": "chhatarpur",
+     "lgd": 398,
+     "lgdName": "Chhatarpur",
+     "neighbours": [
+      "damoh",
+      "panna",
+      "sagar",
+      "tikamgarh"
+     ]
+    },
+    {
+     "id": "chhindwara",
+     "lgd": 399,
+     "lgdName": "Chhindwara",
+     "neighbours": [
+      "betul",
+      "narmadapuram",
+      "narsinghpur",
+      "seoni"
+     ]
+    },
+    {
+     "id": "damoh",
+     "lgd": 400,
+     "lgdName": "Damoh",
+     "neighbours": [
+      "chhatarpur",
+      "jabalpur",
+      "katni",
+      "narsinghpur",
+      "panna",
+      "sagar"
+     ]
+    },
+    {
+     "id": "datia",
+     "lgd": 401,
+     "lgdName": "Datia",
+     "neighbours": [
+      "bhind",
+      "gwalior",
+      "shivpuri"
+     ]
+    },
+    {
+     "id": "dewas",
+     "lgd": 402,
+     "lgdName": "Dewas",
+     "neighbours": [
+      "east-nimar",
+      "harda",
+      "indore",
+      "sehore",
+      "shajapur",
+      "ujjain",
+      "khargone"
+     ]
+    },
+    {
+     "id": "dhar",
+     "lgd": 403,
+     "lgdName": "Dhar",
+     "neighbours": [
+      "alirajpur",
+      "barwani",
+      "indore",
+      "jhabua",
+      "ratlam",
+      "ujjain",
+      "khargone"
+     ]
+    },
+    {
+     "id": "dindori",
+     "lgd": 404,
+     "lgdName": "Dindori",
+     "neighbours": [
+      "anuppur",
+      "jabalpur",
+      "mandla",
+      "umaria"
+     ]
+    },
+    {
+     "id": "east-nimar",
+     "lgd": 405,
+     "lgdName": "East Nimar",
+     "neighbours": [
+      "betul",
+      "burhanpur",
+      "dewas",
+      "harda",
+      "khargone"
+     ]
+    },
+    {
+     "id": "guna",
+     "lgd": 406,
+     "lgdName": "Guna",
+     "neighbours": [
+      "ashoknagar",
+      "bhopal",
+      "rajgarh",
+      "shivpuri",
+      "vidisha"
+     ]
+    },
+    {
+     "id": "gwalior",
+     "lgd": 407,
+     "lgdName": "Gwalior",
+     "neighbours": [
+      "bhind",
+      "datia",
+      "morena",
+      "shivpuri"
+     ]
+    },
+    {
+     "id": "harda",
+     "lgd": 408,
+     "lgdName": "Harda",
+     "neighbours": [
+      "betul",
+      "dewas",
+      "east-nimar",
+      "narmadapuram",
+      "sehore"
+     ]
+    },
+    {
+     "id": "indore",
+     "lgd": 410,
+     "lgdName": "Indore",
+     "neighbours": [
+      "dewas",
+      "dhar",
+      "ujjain",
+      "khargone"
+     ]
+    },
+    {
+     "id": "jabalpur",
+     "lgd": 411,
+     "lgdName": "Jabalpur",
+     "neighbours": [
+      "damoh",
+      "dindori",
+      "katni",
+      "mandla",
+      "narsinghpur",
+      "seoni",
+      "umaria"
+     ]
+    },
+    {
+     "id": "jhabua",
+     "lgd": 412,
+     "lgdName": "Jhabua",
+     "neighbours": [
+      "alirajpur",
+      "dhar",
+      "ratlam"
+     ]
+    },
+    {
+     "id": "katni",
+     "lgd": 413,
+     "lgdName": "Katni",
+     "neighbours": [
+      "damoh",
+      "jabalpur",
+      "panna",
+      "satna",
+      "umaria"
+     ]
+    },
+    {
+     "id": "khargone",
+     "lgd": 414,
+     "lgdName": "Khargone",
+     "neighbours": [
+      "barwani",
+      "burhanpur",
+      "dewas",
+      "dhar",
+      "east-nimar",
+      "indore"
+     ]
+    },
+    {
+     "id": "mandla",
+     "lgd": 415,
+     "lgdName": "Mandla",
+     "neighbours": [
+      "balaghat",
+      "dindori",
+      "jabalpur",
+      "seoni"
+     ]
+    },
+    {
+     "id": "mandsaur",
+     "lgd": 416,
+     "lgdName": "Mandsaur",
+     "neighbours": [
+      "neemuch",
+      "ratlam"
+     ]
+    },
+    {
+     "id": "morena",
+     "lgd": 417,
+     "lgdName": "Morena",
+     "neighbours": [
+      "bhind",
+      "gwalior",
+      "sheopur",
+      "shivpuri"
+     ]
+    },
+    {
+     "id": "narmadapuram",
+     "lgd": 409,
+     "lgdName": "Narmadapuram",
+     "neighbours": [
+      "betul",
+      "chhindwara",
+      "harda",
+      "narsinghpur",
+      "raisen",
+      "sehore"
+     ]
+    },
+    {
+     "id": "narsinghpur",
+     "lgd": 418,
+     "lgdName": "Narsinghpur",
+     "neighbours": [
+      "chhindwara",
+      "damoh",
+      "narmadapuram",
+      "jabalpur",
+      "raisen",
+      "sagar",
+      "seoni"
+     ]
+    },
+    {
+     "id": "neemuch",
+     "lgd": 419,
+     "lgdName": "Neemuch",
+     "neighbours": [
+      "mandsaur"
+     ]
+    },
+    {
+     "id": "niwari",
+     "lgd": 722,
+     "lgdName": "Niwari",
+     "neighbours": [
+      "tikamgarh"
+     ]
+    },
+    {
+     "id": "panna",
+     "lgd": 420,
+     "lgdName": "Panna",
+     "neighbours": [
+      "chhatarpur",
+      "damoh",
+      "katni",
+      "satna"
+     ]
+    },
+    {
+     "id": "raisen",
+     "lgd": 421,
+     "lgdName": "Raisen",
+     "neighbours": [
+      "bhopal",
+      "narmadapuram",
+      "narsinghpur",
+      "sagar",
+      "sehore",
+      "vidisha"
+     ]
+    },
+    {
+     "id": "rajgarh",
+     "lgd": 422,
+     "lgdName": "Rajgarh",
+     "neighbours": [
+      "agar-malwa",
+      "bhopal",
+      "guna",
+      "sehore",
+      "shajapur"
+     ]
+    },
+    {
+     "id": "ratlam",
+     "lgd": 423,
+     "lgdName": "Ratlam",
+     "neighbours": [
+      "agar-malwa",
+      "dhar",
+      "jhabua",
+      "mandsaur",
+      "ujjain"
+     ]
+    },
+    {
+     "id": "rewa",
+     "lgd": 424,
+     "lgdName": "Rewa",
+     "neighbours": [
+      "satna",
+      "sidhi",
+      "singrauli"
+     ]
+    },
+    {
+     "id": "sagar",
+     "lgd": 425,
+     "lgdName": "Sagar",
+     "neighbours": [
+      "ashoknagar",
+      "chhatarpur",
+      "damoh",
+      "narsinghpur",
+      "raisen",
+      "vidisha"
+     ]
+    },
+    {
+     "id": "satna",
+     "lgd": 426,
+     "lgdName": "Satna",
+     "neighbours": [
+      "katni",
+      "panna",
+      "rewa",
+      "shahdol",
+      "sidhi",
+      "umaria"
+     ]
+    },
+    {
+     "id": "sehore",
+     "lgd": 427,
+     "lgdName": "Sehore",
+     "neighbours": [
+      "bhopal",
+      "dewas",
+      "harda",
+      "narmadapuram",
+      "raisen",
+      "rajgarh",
+      "shajapur"
+     ]
+    },
+    {
+     "id": "seoni",
+     "lgd": 428,
+     "lgdName": "Seoni",
+     "neighbours": [
+      "balaghat",
+      "chhindwara",
+      "jabalpur",
+      "mandla",
+      "narsinghpur"
+     ]
+    },
+    {
+     "id": "shahdol",
+     "lgd": 429,
+     "lgdName": "Shahdol",
+     "neighbours": [
+      "anuppur",
+      "satna",
+      "sidhi",
+      "umaria"
+     ]
+    },
+    {
+     "id": "shajapur",
+     "lgd": 430,
+     "lgdName": "Shajapur",
+     "neighbours": [
+      "agar-malwa",
+      "dewas",
+      "rajgarh",
+      "sehore",
+      "ujjain"
+     ]
+    },
+    {
+     "id": "sheopur",
+     "lgd": 431,
+     "lgdName": "Sheopur",
+     "neighbours": [
+      "morena",
+      "shivpuri"
+     ]
+    },
+    {
+     "id": "shivpuri",
+     "lgd": 432,
+     "lgdName": "Shivpuri",
+     "neighbours": [
+      "ashoknagar",
+      "datia",
+      "guna",
+      "gwalior",
+      "morena",
+      "sheopur"
+     ]
+    },
+    {
+     "id": "sidhi",
+     "lgd": 433,
+     "lgdName": "Sidhi",
+     "neighbours": [
+      "rewa",
+      "satna",
+      "shahdol",
+      "singrauli"
+     ]
+    },
+    {
+     "id": "singrauli",
+     "lgd": 638,
+     "lgdName": "Singrauli",
+     "neighbours": [
+      "rewa",
+      "sidhi"
+     ]
+    },
+    {
+     "id": "tikamgarh",
+     "lgd": 434,
+     "lgdName": "Tikamgarh",
+     "neighbours": [
+      "chhatarpur",
+      "niwari"
+     ]
+    },
+    {
+     "id": "ujjain",
+     "lgd": 435,
+     "lgdName": "Ujjain",
+     "neighbours": [
+      "agar-malwa",
+      "dewas",
+      "dhar",
+      "indore",
+      "ratlam",
+      "shajapur"
+     ]
+    },
+    {
+     "id": "umaria",
+     "lgd": 436,
+     "lgdName": "Umaria",
+     "neighbours": [
+      "anuppur",
+      "dindori",
+      "jabalpur",
+      "katni",
+      "satna",
+      "shahdol"
+     ]
+    },
+    {
+     "id": "vidisha",
+     "lgd": 437,
+     "lgdName": "Vidisha",
+     "neighbours": [
+      "ashoknagar",
+      "bhopal",
+      "guna",
+      "raisen",
+      "sagar"
+     ]
+    }
+   ]
+  },
+  "maharashtra": {
+   "districtCount": 36,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "chhattisgarh",
+    "dadra-and-nagar-haveli-and-daman-and-diu",
+    "goa",
+    "gujarat",
+    "karnataka",
+    "madhya-pradesh",
+    "telangana"
+   ],
+   "districts": [
+    {
+     "id": "ahmednagar",
+     "lgd": 466,
+     "lgdName": "Ahmednagar",
+     "neighbours": [
+      "aurangabad",
+      "beed",
+      "nashik",
+      "osmanabad",
+      "pune",
+      "solapur",
+      "thane"
+     ]
+    },
+    {
+     "id": "akola",
+     "lgd": 467,
+     "lgdName": "Akola",
+     "neighbours": [
+      "amravati",
+      "buldhana",
+      "washim"
+     ]
+    },
+    {
+     "id": "amravati",
+     "lgd": 468,
+     "lgdName": "Amravati",
+     "neighbours": [
+      "akola",
+      "buldhana",
+      "nagpur",
+      "wardha",
+      "washim",
+      "yavatmal"
+     ]
+    },
+    {
+     "id": "aurangabad",
+     "lgd": 469,
+     "lgdName": "Aurangabad",
+     "neighbours": [
+      "ahmednagar",
+      "beed",
+      "buldhana",
+      "jalgaon",
+      "jalna",
+      "nashik"
+     ]
+    },
+    {
+     "id": "beed",
+     "lgd": 470,
+     "lgdName": "Beed",
+     "neighbours": [
+      "ahmednagar",
+      "aurangabad",
+      "jalna",
+      "latur",
+      "osmanabad",
+      "parbhani"
+     ]
+    },
+    {
+     "id": "bhandara",
+     "lgd": 471,
+     "lgdName": "Bhandara",
+     "neighbours": [
+      "chandrapur",
+      "gadchiroli",
+      "gondia",
+      "nagpur"
+     ]
+    },
+    {
+     "id": "buldhana",
+     "lgd": 472,
+     "lgdName": "Buldhana",
+     "neighbours": [
+      "akola",
+      "amravati",
+      "aurangabad",
+      "hingoli",
+      "jalgaon",
+      "jalna",
+      "washim"
+     ]
+    },
+    {
+     "id": "chandrapur",
+     "lgd": 473,
+     "lgdName": "Chandrapur",
+     "neighbours": [
+      "bhandara",
+      "gadchiroli",
+      "nagpur",
+      "wardha",
+      "yavatmal"
+     ]
+    },
+    {
+     "id": "dhule",
+     "lgd": 474,
+     "lgdName": "Dhule",
+     "neighbours": [
+      "jalgaon",
+      "nandurbar",
+      "nashik"
+     ]
+    },
+    {
+     "id": "gadchiroli",
+     "lgd": 475,
+     "lgdName": "Gadchiroli",
+     "neighbours": [
+      "bhandara",
+      "chandrapur",
+      "gondia"
+     ]
+    },
+    {
+     "id": "gondia",
+     "lgd": 476,
+     "lgdName": "Gondia",
+     "neighbours": [
+      "bhandara",
+      "gadchiroli"
+     ]
+    },
+    {
+     "id": "hingoli",
+     "lgd": 477,
+     "lgdName": "Hingoli",
+     "neighbours": [
+      "buldhana",
+      "jalna",
+      "nanded",
+      "parbhani",
+      "washim",
+      "yavatmal"
+     ]
+    },
+    {
+     "id": "jalgaon",
+     "lgd": 478,
+     "lgdName": "Jalgaon",
+     "neighbours": [
+      "aurangabad",
+      "buldhana",
+      "dhule",
+      "jalna",
+      "nashik"
+     ]
+    },
+    {
+     "id": "jalna",
+     "lgd": 479,
+     "lgdName": "Jalna",
+     "neighbours": [
+      "aurangabad",
+      "beed",
+      "buldhana",
+      "hingoli",
+      "jalgaon",
+      "parbhani"
+     ]
+    },
+    {
+     "id": "kolhapur",
+     "lgd": 480,
+     "lgdName": "Kolhapur",
+     "neighbours": [
+      "ratnagiri",
+      "sangli",
+      "sindhudurg"
+     ]
+    },
+    {
+     "id": "latur",
+     "lgd": 481,
+     "lgdName": "Latur",
+     "neighbours": [
+      "beed",
+      "nanded",
+      "osmanabad",
+      "parbhani"
+     ]
+    },
+    {
+     "id": "mumbai",
+     "lgd": 482,
+     "lgdName": "Mumbai",
+     "neighbours": [
+      "mumbai-suburban"
+     ]
+    },
+    {
+     "id": "mumbai-suburban",
+     "lgd": 483,
+     "lgdName": "Mumbai Suburban",
+     "neighbours": [
+      "mumbai",
+      "raigad",
+      "thane"
+     ]
+    },
+    {
+     "id": "nagpur",
+     "lgd": 484,
+     "lgdName": "Nagpur",
+     "neighbours": [
+      "amravati",
+      "bhandara",
+      "chandrapur",
+      "wardha"
+     ]
+    },
+    {
+     "id": "nanded",
+     "lgd": 485,
+     "lgdName": "Nanded",
+     "neighbours": [
+      "hingoli",
+      "latur",
+      "parbhani",
+      "yavatmal"
+     ]
+    },
+    {
+     "id": "nandurbar",
+     "lgd": 486,
+     "lgdName": "Nandurbar",
+     "neighbours": [
+      "dhule"
+     ]
+    },
+    {
+     "id": "nashik",
+     "lgd": 487,
+     "lgdName": "Nashik",
+     "neighbours": [
+      "ahmednagar",
+      "aurangabad",
+      "dhule",
+      "jalgaon",
+      "palghar",
+      "thane"
+     ]
+    },
+    {
+     "id": "osmanabad",
+     "lgd": 488,
+     "lgdName": "Osmanabad",
+     "neighbours": [
+      "ahmednagar",
+      "beed",
+      "latur",
+      "solapur"
+     ]
+    },
+    {
+     "id": "palghar",
+     "lgd": 665,
+     "lgdName": "Palghar",
+     "neighbours": [
+      "nashik",
+      "thane"
+     ]
+    },
+    {
+     "id": "parbhani",
+     "lgd": 489,
+     "lgdName": "Parbhani",
+     "neighbours": [
+      "beed",
+      "hingoli",
+      "jalna",
+      "latur",
+      "nanded"
+     ]
+    },
+    {
+     "id": "pune",
+     "lgd": 490,
+     "lgdName": "Pune",
+     "neighbours": [
+      "ahmednagar",
+      "raigad",
+      "satara",
+      "solapur",
+      "thane"
+     ]
+    },
+    {
+     "id": "raigad",
+     "lgd": 491,
+     "lgdName": "Raigad",
+     "neighbours": [
+      "pune",
+      "ratnagiri",
+      "satara",
+      "mumbai-suburban",
+      "thane"
+     ]
+    },
+    {
+     "id": "ratnagiri",
+     "lgd": 492,
+     "lgdName": "Ratnagiri",
+     "neighbours": [
+      "kolhapur",
+      "raigad",
+      "sangli",
+      "satara",
+      "sindhudurg"
+     ]
+    },
+    {
+     "id": "sangli",
+     "lgd": 493,
+     "lgdName": "Sangli",
+     "neighbours": [
+      "kolhapur",
+      "ratnagiri",
+      "satara",
+      "solapur"
+     ]
+    },
+    {
+     "id": "satara",
+     "lgd": 494,
+     "lgdName": "Satara",
+     "neighbours": [
+      "pune",
+      "raigad",
+      "ratnagiri",
+      "sangli",
+      "solapur"
+     ]
+    },
+    {
+     "id": "sindhudurg",
+     "lgd": 495,
+     "lgdName": "Sindhudurg",
+     "neighbours": [
+      "kolhapur",
+      "ratnagiri"
+     ]
+    },
+    {
+     "id": "solapur",
+     "lgd": 496,
+     "lgdName": "Solapur",
+     "neighbours": [
+      "ahmednagar",
+      "osmanabad",
+      "pune",
+      "sangli",
+      "satara"
+     ]
+    },
+    {
+     "id": "thane",
+     "lgd": 497,
+     "lgdName": "Thane",
+     "neighbours": [
+      "ahmednagar",
+      "nashik",
+      "palghar",
+      "pune",
+      "raigad",
+      "mumbai-suburban"
+     ]
+    },
+    {
+     "id": "wardha",
+     "lgd": 498,
+     "lgdName": "Wardha",
+     "neighbours": [
+      "amravati",
+      "chandrapur",
+      "nagpur",
+      "yavatmal"
+     ]
+    },
+    {
+     "id": "washim",
+     "lgd": 499,
+     "lgdName": "Washim",
+     "neighbours": [
+      "akola",
+      "amravati",
+      "buldhana",
+      "hingoli",
+      "yavatmal"
+     ]
+    },
+    {
+     "id": "yavatmal",
+     "lgd": 500,
+     "lgdName": "Yavatmal",
+     "neighbours": [
+      "amravati",
+      "chandrapur",
+      "hingoli",
+      "nanded",
+      "wardha",
+      "washim"
+     ]
+    }
+   ]
+  },
+  "manipur": {
+   "districtCount": 16,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "assam",
+    "mizoram",
+    "nagaland"
+   ],
+   "districts": [
+    {
+     "id": "bishnupur",
+     "lgd": 252,
+     "lgdName": "Bishnupur",
+     "neighbours": [
+      "churachandpur",
+      "imphal-west",
+      "noney",
+      "kangpokpi",
+      "kakching"
+     ]
+    },
+    {
+     "id": "chandel",
+     "lgd": 253,
+     "lgdName": "Chandel",
+     "neighbours": [
+      "churachandpur",
+      "tengnoupal",
+      "kakching"
+     ]
+    },
+    {
+     "id": "churachandpur",
+     "lgd": 254,
+     "lgdName": "Churachandpur",
+     "neighbours": [
+      "bishnupur",
+      "chandel",
+      "noney",
+      "pherzawl",
+      "kakching"
+     ]
+    },
+    {
+     "id": "imphal-east",
+     "lgd": 255,
+     "lgdName": "Imphal East",
+     "neighbours": [
+      "imphal-west",
+      "thoubal",
+      "kangpokpi"
+     ]
+    },
+    {
+     "id": "imphal-west",
+     "lgd": 256,
+     "lgdName": "Imphal West",
+     "neighbours": [
+      "bishnupur",
+      "imphal-east",
+      "thoubal",
+      "kangpokpi",
+      "kakching"
+     ]
+    },
+    {
+     "id": "jiribam",
+     "lgd": 713,
+     "lgdName": "Jiribam",
+     "neighbours": [
+      "tamenglong",
+      "pherzawl"
+     ]
+    },
+    {
+     "id": "kakching",
+     "lgd": 711,
+     "lgdName": "Kakching",
+     "neighbours": [
+      "bishnupur",
+      "chandel",
+      "churachandpur",
+      "imphal-west",
+      "thoubal",
+      "tengnoupal"
+     ]
+    },
+    {
+     "id": "kamjong",
+     "lgd": 717,
+     "lgdName": "Kamjong",
+     "neighbours": [
+      "ukhrul",
+      "tengnoupal",
+      "kangpokpi"
+     ]
+    },
+    {
+     "id": "kangpokpi",
+     "lgd": 712,
+     "lgdName": "Kangpokpi",
+     "neighbours": [
+      "bishnupur",
+      "imphal-west",
+      "imphal-east",
+      "ukhrul",
+      "senapati",
+      "tamenglong",
+      "thoubal",
+      "kamjong",
+      "noney",
+      "tengnoupal"
+     ]
+    },
+    {
+     "id": "noney",
+     "lgd": 714,
+     "lgdName": "Noney",
+     "neighbours": [
+      "bishnupur",
+      "churachandpur",
+      "tamenglong",
+      "pherzawl",
+      "kangpokpi"
+     ]
+    },
+    {
+     "id": "pherzawl",
+     "lgd": 715,
+     "lgdName": "Pherzawl",
+     "neighbours": [
+      "churachandpur",
+      "jiribam",
+      "tamenglong",
+      "noney"
+     ]
+    },
+    {
+     "id": "senapati",
+     "lgd": 257,
+     "lgdName": "Senapati",
+     "neighbours": [
+      "ukhrul",
+      "tamenglong",
+      "kangpokpi"
+     ]
+    },
+    {
+     "id": "tamenglong",
+     "lgd": 258,
+     "lgdName": "Tamenglong",
+     "neighbours": [
+      "jiribam",
+      "senapati",
+      "noney",
+      "pherzawl",
+      "kangpokpi"
+     ]
+    },
+    {
+     "id": "tengnoupal",
+     "lgd": 716,
+     "lgdName": "Tengnoupal",
+     "neighbours": [
+      "chandel",
+      "thoubal",
+      "kamjong",
+      "kangpokpi",
+      "kakching"
+     ]
+    },
+    {
+     "id": "thoubal",
+     "lgd": 259,
+     "lgdName": "Thoubal",
+     "neighbours": [
+      "imphal-west",
+      "imphal-east",
+      "tengnoupal",
+      "kangpokpi",
+      "kakching"
+     ]
+    },
+    {
+     "id": "ukhrul",
+     "lgd": 260,
+     "lgdName": "Ukhrul",
+     "neighbours": [
+      "senapati",
+      "kamjong",
+      "kangpokpi"
+     ]
+    }
+   ]
+  },
+  "meghalaya": {
+   "districtCount": 12,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "assam"
+   ],
+   "districts": [
+    {
+     "id": "east-garo-hills",
+     "lgd": 273,
+     "lgdName": "East Garo Hills",
+     "neighbours": [
+      "south-garo-hills",
+      "west-garo-hills",
+      "west-khasi-hills",
+      "north-garo-hills"
+     ]
+    },
+    {
+     "id": "east-jaintia-hills",
+     "lgd": 657,
+     "lgdName": "East Jaintia Hills",
+     "neighbours": [
+      "west-jaintia-hills"
+     ]
+    },
+    {
+     "id": "east-khasi-hills",
+     "lgd": 274,
+     "lgdName": "East Khasi Hills",
+     "neighbours": [
+      "ri-bhoi",
+      "south-west-khasi-hills",
+      "west-jaintia-hills",
+      "eastern-west-khasi-hills"
+     ]
+    },
+    {
+     "id": "eastern-west-khasi-hills",
+     "lgd": 740,
+     "lgdName": "Eastern West Khasi Hills",
+     "neighbours": [
+      "east-khasi-hills",
+      "west-khasi-hills",
+      "ri-bhoi",
+      "south-west-khasi-hills"
+     ]
+    },
+    {
+     "id": "north-garo-hills",
+     "lgd": 656,
+     "lgdName": "North Garo Hills",
+     "neighbours": [
+      "east-garo-hills",
+      "west-garo-hills",
+      "west-khasi-hills"
+     ]
+    },
+    {
+     "id": "ri-bhoi",
+     "lgd": 276,
+     "lgdName": "Ri Bhoi",
+     "neighbours": [
+      "east-khasi-hills",
+      "west-khasi-hills",
+      "eastern-west-khasi-hills"
+     ]
+    },
+    {
+     "id": "south-garo-hills",
+     "lgd": 277,
+     "lgdName": "South Garo Hills",
+     "neighbours": [
+      "east-garo-hills",
+      "west-garo-hills",
+      "west-khasi-hills",
+      "south-west-khasi-hills"
+     ]
+    },
+    {
+     "id": "south-west-garo-hills",
+     "lgd": 663,
+     "lgdName": "South West Garo Hills",
+     "neighbours": [
+      "west-garo-hills"
+     ]
+    },
+    {
+     "id": "south-west-khasi-hills",
+     "lgd": 658,
+     "lgdName": "South West Khasi Hills",
+     "neighbours": [
+      "east-khasi-hills",
+      "south-garo-hills",
+      "west-khasi-hills",
+      "eastern-west-khasi-hills"
+     ]
+    },
+    {
+     "id": "west-garo-hills",
+     "lgd": 278,
+     "lgdName": "West Garo Hills",
+     "neighbours": [
+      "east-garo-hills",
+      "south-garo-hills",
+      "south-west-garo-hills",
+      "north-garo-hills"
+     ]
+    },
+    {
+     "id": "west-jaintia-hills",
+     "lgd": 275,
+     "lgdName": "West Jaintia Hills",
+     "neighbours": [
+      "east-khasi-hills",
+      "east-jaintia-hills"
+     ]
+    },
+    {
+     "id": "west-khasi-hills",
+     "lgd": 279,
+     "lgdName": "West Khasi Hills",
+     "neighbours": [
+      "east-garo-hills",
+      "south-garo-hills",
+      "ri-bhoi",
+      "south-west-khasi-hills",
+      "north-garo-hills",
+      "eastern-west-khasi-hills"
+     ]
+    }
+   ]
+  },
+  "mizoram": {
+   "districtCount": 11,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "assam",
+    "manipur",
+    "tripura"
+   ],
+   "districts": [
+    {
+     "id": "aizawl",
+     "lgd": 261,
+     "lgdName": "Aizawl",
+     "neighbours": [
+      "serchhip",
+      "kolasib",
+      "mamit",
+      "lunglei",
+      "khawzawl",
+      "saitual"
+     ]
+    },
+    {
+     "id": "champhai",
+     "lgd": 262,
+     "lgdName": "Champhai",
+     "neighbours": [
+      "serchhip",
+      "khawzawl",
+      "saitual"
+     ]
+    },
+    {
+     "id": "hnahthial",
+     "lgd": 726,
+     "lgdName": "Hnahthial",
+     "neighbours": [
+      "lawngtlai",
+      "serchhip",
+      "lunglei"
+     ]
+    },
+    {
+     "id": "khawzawl",
+     "lgd": 728,
+     "lgdName": "Khawzawl",
+     "neighbours": [
+      "serchhip",
+      "aizawl",
+      "champhai",
+      "saitual"
+     ]
+    },
+    {
+     "id": "kolasib",
+     "lgd": 263,
+     "lgdName": "Kolasib",
+     "neighbours": [
+      "mamit",
+      "aizawl"
+     ]
+    },
+    {
+     "id": "lawngtlai",
+     "lgd": 264,
+     "lgdName": "Lawngtlai",
+     "neighbours": [
+      "saiha",
+      "lunglei",
+      "hnahthial"
+     ]
+    },
+    {
+     "id": "lunglei",
+     "lgd": 265,
+     "lgdName": "Lunglei",
+     "neighbours": [
+      "saiha",
+      "lawngtlai",
+      "serchhip",
+      "mamit",
+      "aizawl",
+      "hnahthial"
+     ]
+    },
+    {
+     "id": "mamit",
+     "lgd": 266,
+     "lgdName": "Mamit",
+     "neighbours": [
+      "kolasib",
+      "lunglei",
+      "aizawl"
+     ]
+    },
+    {
+     "id": "saiha",
+     "lgd": 267,
+     "lgdName": "Saiha",
+     "neighbours": [
+      "lawngtlai",
+      "lunglei"
+     ]
+    },
+    {
+     "id": "saitual",
+     "lgd": 727,
+     "lgdName": "Saitual",
+     "neighbours": [
+      "aizawl",
+      "champhai",
+      "khawzawl"
+     ]
+    },
+    {
+     "id": "serchhip",
+     "lgd": 268,
+     "lgdName": "Serchhip",
+     "neighbours": [
+      "lunglei",
+      "aizawl",
+      "hnahthial",
+      "champhai",
+      "khawzawl"
+     ]
+    }
+   ]
+  },
+  "nagaland": {
+   "districtCount": 16,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "arunachal-pradesh",
+    "assam",
+    "manipur"
+   ],
+   "districts": [
+    {
+     "id": "chumoukedima",
+     "lgd": 758,
+     "lgdName": "Chumoukedima",
+     "neighbours": [
+      "peren",
+      "kohima",
+      "tseminyu",
+      "dimapur",
+      "niuland"
+     ]
+    },
+    {
+     "id": "dimapur",
+     "lgd": 244,
+     "lgdName": "Dimapur",
+     "neighbours": [
+      "chumoukedima"
+     ]
+    },
+    {
+     "id": "kiphire",
+     "lgd": 614,
+     "lgdName": "Kiphire",
+     "neighbours": [
+      "phek",
+      "zunheboto",
+      "tuensang",
+      "noklak"
+     ]
+    },
+    {
+     "id": "kohima",
+     "lgd": 245,
+     "lgdName": "Kohima",
+     "neighbours": [
+      "peren",
+      "phek",
+      "chumoukedima",
+      "zunheboto",
+      "tseminyu"
+     ]
+    },
+    {
+     "id": "longleng",
+     "lgd": 615,
+     "lgdName": "Longleng",
+     "neighbours": [
+      "mokokchung",
+      "mon",
+      "tuensang"
+     ]
+    },
+    {
+     "id": "mokokchung",
+     "lgd": 246,
+     "lgdName": "Mokokchung",
+     "neighbours": [
+      "wokha",
+      "zunheboto",
+      "tuensang",
+      "longleng"
+     ]
+    },
+    {
+     "id": "mon",
+     "lgd": 247,
+     "lgdName": "Mon",
+     "neighbours": [
+      "tuensang",
+      "longleng",
+      "noklak"
+     ]
+    },
+    {
+     "id": "niuland",
+     "lgd": 764,
+     "lgdName": "Niuland",
+     "neighbours": [
+      "chumoukedima",
+      "tseminyu"
+     ]
+    },
+    {
+     "id": "noklak",
+     "lgd": 736,
+     "lgdName": "Noklak",
+     "neighbours": [
+      "kiphire",
+      "mon",
+      "tuensang",
+      "shamator"
+     ]
+    },
+    {
+     "id": "peren",
+     "lgd": 613,
+     "lgdName": "Peren",
+     "neighbours": [
+      "chumoukedima",
+      "kohima"
+     ]
+    },
+    {
+     "id": "phek",
+     "lgd": 248,
+     "lgdName": "Phek",
+     "neighbours": [
+      "kohima",
+      "kiphire",
+      "zunheboto"
+     ]
+    },
+    {
+     "id": "shamator",
+     "lgd": 765,
+     "lgdName": "Shamator",
+     "neighbours": [
+      "tuensang",
+      "noklak"
+     ]
+    },
+    {
+     "id": "tseminyu",
+     "lgd": 757,
+     "lgdName": "Tseminyu",
+     "neighbours": [
+      "wokha",
+      "chumoukedima",
+      "kohima",
+      "zunheboto",
+      "niuland"
+     ]
+    },
+    {
+     "id": "tuensang",
+     "lgd": 249,
+     "lgdName": "Tuensang",
+     "neighbours": [
+      "kiphire",
+      "zunheboto",
+      "mokokchung",
+      "mon",
+      "longleng",
+      "noklak",
+      "shamator"
+     ]
+    },
+    {
+     "id": "wokha",
+     "lgd": 250,
+     "lgdName": "Wokha",
+     "neighbours": [
+      "zunheboto",
+      "mokokchung",
+      "tseminyu"
+     ]
+    },
+    {
+     "id": "zunheboto",
+     "lgd": 251,
+     "lgdName": "Zunheboto",
+     "neighbours": [
+      "phek",
+      "wokha",
+      "kohima",
+      "kiphire",
+      "mokokchung",
+      "tuensang",
+      "tseminyu"
+     ]
+    }
+   ]
+  },
+  "odisha": {
+   "districtCount": 30,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "andhra-pradesh",
+    "chhattisgarh",
+    "jharkhand",
+    "west-bengal"
+   ],
+   "districts": [
+    {
+     "id": "anugul",
+     "lgd": 344,
+     "lgdName": "Anugul",
+     "neighbours": [
+      "cuttack",
+      "deogarh",
+      "dhenkanal",
+      "kendujhar",
+      "nayagarh",
+      "sambalpur",
+      "sonepur",
+      "sundargarh",
+      "boudh"
+     ]
+    },
+    {
+     "id": "balangir",
+     "lgd": 345,
+     "lgdName": "Balangir",
+     "neighbours": [
+      "bargarh",
+      "kalahandi",
+      "kandhamal",
+      "nuapada",
+      "sonepur",
+      "boudh"
+     ]
+    },
+    {
+     "id": "baleshwar",
+     "lgd": 346,
+     "lgdName": "Baleshwar",
+     "neighbours": [
+      "bhadrak",
+      "kendujhar",
+      "mayurbhanj"
+     ]
+    },
+    {
+     "id": "bargarh",
+     "lgd": 347,
+     "lgdName": "Bargarh",
+     "neighbours": [
+      "balangir",
+      "jharsuguda",
+      "nuapada",
+      "sambalpur",
+      "sonepur"
+     ]
+    },
+    {
+     "id": "bhadrak",
+     "lgd": 348,
+     "lgdName": "Bhadrak",
+     "neighbours": [
+      "baleshwar",
+      "jajapur",
+      "kendrapara",
+      "kendujhar"
+     ]
+    },
+    {
+     "id": "boudh",
+     "lgd": 349,
+     "lgdName": "Boudh",
+     "neighbours": [
+      "anugul",
+      "balangir",
+      "kandhamal",
+      "nayagarh",
+      "sonepur"
+     ]
+    },
+    {
+     "id": "cuttack",
+     "lgd": 350,
+     "lgdName": "Cuttack",
+     "neighbours": [
+      "anugul",
+      "dhenkanal",
+      "jagatsinghapur",
+      "jajapur",
+      "kendrapara",
+      "khordha",
+      "nayagarh",
+      "puri"
+     ]
+    },
+    {
+     "id": "deogarh",
+     "lgd": 351,
+     "lgdName": "Deogarh",
+     "neighbours": [
+      "anugul",
+      "sambalpur",
+      "sundargarh"
+     ]
+    },
+    {
+     "id": "dhenkanal",
+     "lgd": 352,
+     "lgdName": "Dhenkanal",
+     "neighbours": [
+      "anugul",
+      "cuttack",
+      "jajapur",
+      "kendujhar"
+     ]
+    },
+    {
+     "id": "gajapati",
+     "lgd": 353,
+     "lgdName": "Gajapati",
+     "neighbours": [
+      "ganjam",
+      "kandhamal",
+      "rayagada"
+     ]
+    },
+    {
+     "id": "ganjam",
+     "lgd": 354,
+     "lgdName": "Ganjam",
+     "neighbours": [
+      "gajapati",
+      "kandhamal",
+      "khordha",
+      "nayagarh",
+      "puri"
+     ]
+    },
+    {
+     "id": "jagatsinghapur",
+     "lgd": 355,
+     "lgdName": "Jagatsinghapur",
+     "neighbours": [
+      "cuttack",
+      "kendrapara",
+      "puri"
+     ]
+    },
+    {
+     "id": "jajapur",
+     "lgd": 356,
+     "lgdName": "Jajapur",
+     "neighbours": [
+      "bhadrak",
+      "cuttack",
+      "dhenkanal",
+      "kendrapara",
+      "kendujhar"
+     ]
+    },
+    {
+     "id": "jharsuguda",
+     "lgd": 357,
+     "lgdName": "Jharsuguda",
+     "neighbours": [
+      "bargarh",
+      "sambalpur",
+      "sundargarh"
+     ]
+    },
+    {
+     "id": "kalahandi",
+     "lgd": 358,
+     "lgdName": "Kalahandi",
+     "neighbours": [
+      "balangir",
+      "kandhamal",
+      "koraput",
+      "nabarangpur",
+      "nuapada",
+      "rayagada"
+     ]
+    },
+    {
+     "id": "kandhamal",
+     "lgd": 359,
+     "lgdName": "Kandhamal",
+     "neighbours": [
+      "balangir",
+      "gajapati",
+      "ganjam",
+      "kalahandi",
+      "nayagarh",
+      "rayagada",
+      "boudh"
+     ]
+    },
+    {
+     "id": "kendrapara",
+     "lgd": 360,
+     "lgdName": "Kendrapara",
+     "neighbours": [
+      "bhadrak",
+      "cuttack",
+      "jagatsinghapur",
+      "jajapur"
+     ]
+    },
+    {
+     "id": "kendujhar",
+     "lgd": 361,
+     "lgdName": "Kendujhar",
+     "neighbours": [
+      "anugul",
+      "baleshwar",
+      "bhadrak",
+      "dhenkanal",
+      "jajapur",
+      "mayurbhanj",
+      "sundargarh"
+     ]
+    },
+    {
+     "id": "khordha",
+     "lgd": 362,
+     "lgdName": "Khordha",
+     "neighbours": [
+      "cuttack",
+      "ganjam",
+      "nayagarh",
+      "puri"
+     ]
+    },
+    {
+     "id": "koraput",
+     "lgd": 363,
+     "lgdName": "Koraput",
+     "neighbours": [
+      "kalahandi",
+      "malkangiri",
+      "nabarangpur",
+      "rayagada"
+     ]
+    },
+    {
+     "id": "malkangiri",
+     "lgd": 364,
+     "lgdName": "Malkangiri",
+     "neighbours": [
+      "koraput"
+     ]
+    },
+    {
+     "id": "mayurbhanj",
+     "lgd": 365,
+     "lgdName": "Mayurbhanj",
+     "neighbours": [
+      "baleshwar",
+      "kendujhar"
+     ]
+    },
+    {
+     "id": "nabarangpur",
+     "lgd": 366,
+     "lgdName": "Nabarangpur",
+     "neighbours": [
+      "kalahandi",
+      "koraput"
+     ]
+    },
+    {
+     "id": "nayagarh",
+     "lgd": 367,
+     "lgdName": "Nayagarh",
+     "neighbours": [
+      "anugul",
+      "cuttack",
+      "ganjam",
+      "kandhamal",
+      "khordha",
+      "boudh"
+     ]
+    },
+    {
+     "id": "nuapada",
+     "lgd": 368,
+     "lgdName": "Nuapada",
+     "neighbours": [
+      "balangir",
+      "bargarh",
+      "kalahandi"
+     ]
+    },
+    {
+     "id": "puri",
+     "lgd": 369,
+     "lgdName": "Puri",
+     "neighbours": [
+      "cuttack",
+      "ganjam",
+      "jagatsinghapur",
+      "khordha"
+     ]
+    },
+    {
+     "id": "rayagada",
+     "lgd": 370,
+     "lgdName": "Rayagada",
+     "neighbours": [
+      "gajapati",
+      "kalahandi",
+      "kandhamal",
+      "koraput"
+     ]
+    },
+    {
+     "id": "sambalpur",
+     "lgd": 371,
+     "lgdName": "Sambalpur",
+     "neighbours": [
+      "anugul",
+      "bargarh",
+      "deogarh",
+      "jharsuguda",
+      "sonepur",
+      "sundargarh"
+     ]
+    },
+    {
+     "id": "sonepur",
+     "lgd": 372,
+     "lgdName": "Sonepur",
+     "neighbours": [
+      "anugul",
+      "balangir",
+      "bargarh",
+      "sambalpur",
+      "boudh"
+     ]
+    },
+    {
+     "id": "sundargarh",
+     "lgd": 373,
+     "lgdName": "Sundargarh",
+     "neighbours": [
+      "anugul",
+      "deogarh",
+      "jharsuguda",
+      "kendujhar",
+      "sambalpur"
+     ]
+    }
+   ]
+  },
+  "punjab": {
+   "districtCount": 23,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "chandigarh",
+    "haryana",
+    "himachal-pradesh",
+    "jammu-and-kashmir",
+    "rajasthan"
+   ],
+   "districts": [
+    {
+     "id": "amritsar",
+     "lgd": 27,
+     "lgdName": "Amritsar",
+     "neighbours": [
+      "gurdaspur",
+      "kapurthala",
+      "tarn-taran"
+     ]
+    },
+    {
+     "id": "barnala",
+     "lgd": 605,
+     "lgdName": "Barnala",
+     "neighbours": [
+      "bathinda",
+      "ludhiana",
+      "mansa",
+      "moga",
+      "malerkotla",
+      "sangrur"
+     ]
+    },
+    {
+     "id": "bathinda",
+     "lgd": 28,
+     "lgdName": "Bathinda",
+     "neighbours": [
+      "barnala",
+      "faridkot",
+      "mansa",
+      "moga",
+      "sri-muktsar-sahib"
+     ]
+    },
+    {
+     "id": "faridkot",
+     "lgd": 29,
+     "lgdName": "Faridkot",
+     "neighbours": [
+      "bathinda",
+      "ferozepur",
+      "moga",
+      "sri-muktsar-sahib"
+     ]
+    },
+    {
+     "id": "fatehgarh-sahib",
+     "lgd": 30,
+     "lgdName": "Fatehgarh Sahib",
+     "neighbours": [
+      "ludhiana",
+      "patiala",
+      "rupnagar",
+      "sas-nagar",
+      "malerkotla"
+     ]
+    },
+    {
+     "id": "fazilka",
+     "lgd": 651,
+     "lgdName": "Fazilka",
+     "neighbours": [
+      "ferozepur",
+      "sri-muktsar-sahib"
+     ]
+    },
+    {
+     "id": "ferozepur",
+     "lgd": 31,
+     "lgdName": "Ferozepur",
+     "neighbours": [
+      "faridkot",
+      "fazilka",
+      "jalandhar",
+      "kapurthala",
+      "moga",
+      "sri-muktsar-sahib",
+      "tarn-taran"
+     ]
+    },
+    {
+     "id": "gurdaspur",
+     "lgd": 32,
+     "lgdName": "Gurdaspur",
+     "neighbours": [
+      "amritsar",
+      "hoshiarpur",
+      "kapurthala",
+      "pathankot"
+     ]
+    },
+    {
+     "id": "hoshiarpur",
+     "lgd": 33,
+     "lgdName": "Hoshiarpur",
+     "neighbours": [
+      "gurdaspur",
+      "jalandhar",
+      "kapurthala",
+      "shahid-bhagat-singh-nagar",
+      "rupnagar"
+     ]
+    },
+    {
+     "id": "jalandhar",
+     "lgd": 34,
+     "lgdName": "Jalandhar",
+     "neighbours": [
+      "ferozepur",
+      "hoshiarpur",
+      "kapurthala",
+      "ludhiana",
+      "moga",
+      "shahid-bhagat-singh-nagar"
+     ]
+    },
+    {
+     "id": "kapurthala",
+     "lgd": 35,
+     "lgdName": "Kapurthala",
+     "neighbours": [
+      "amritsar",
+      "ferozepur",
+      "gurdaspur",
+      "hoshiarpur",
+      "jalandhar",
+      "shahid-bhagat-singh-nagar",
+      "tarn-taran"
+     ]
+    },
+    {
+     "id": "ludhiana",
+     "lgd": 36,
+     "lgdName": "Ludhiana",
+     "neighbours": [
+      "barnala",
+      "fatehgarh-sahib",
+      "jalandhar",
+      "moga",
+      "shahid-bhagat-singh-nagar",
+      "rupnagar",
+      "malerkotla"
+     ]
+    },
+    {
+     "id": "malerkotla",
+     "lgd": 737,
+     "lgdName": "Malerkotla",
+     "neighbours": [
+      "barnala",
+      "fatehgarh-sahib",
+      "ludhiana",
+      "patiala",
+      "sangrur"
+     ]
+    },
+    {
+     "id": "mansa",
+     "lgd": 37,
+     "lgdName": "Mansa",
+     "neighbours": [
+      "barnala",
+      "bathinda",
+      "sangrur"
+     ]
+    },
+    {
+     "id": "moga",
+     "lgd": 38,
+     "lgdName": "Moga",
+     "neighbours": [
+      "barnala",
+      "bathinda",
+      "faridkot",
+      "ferozepur",
+      "jalandhar",
+      "ludhiana"
+     ]
+    },
+    {
+     "id": "pathankot",
+     "lgd": 662,
+     "lgdName": "Pathankot",
+     "neighbours": [
+      "gurdaspur"
+     ]
+    },
+    {
+     "id": "patiala",
+     "lgd": 41,
+     "lgdName": "Patiala",
+     "neighbours": [
+      "fatehgarh-sahib",
+      "sas-nagar",
+      "malerkotla",
+      "sangrur"
+     ]
+    },
+    {
+     "id": "rupnagar",
+     "lgd": 42,
+     "lgdName": "Rupnagar",
+     "neighbours": [
+      "fatehgarh-sahib",
+      "hoshiarpur",
+      "ludhiana",
+      "shahid-bhagat-singh-nagar",
+      "sas-nagar"
+     ]
+    },
+    {
+     "id": "sas-nagar",
+     "lgd": 608,
+     "lgdName": "S.A.S Nagar",
+     "neighbours": [
+      "fatehgarh-sahib",
+      "patiala",
+      "rupnagar"
+     ]
+    },
+    {
+     "id": "sangrur",
+     "lgd": 43,
+     "lgdName": "Sangrur",
+     "neighbours": [
+      "barnala",
+      "mansa",
+      "patiala",
+      "malerkotla"
+     ]
+    },
+    {
+     "id": "shahid-bhagat-singh-nagar",
+     "lgd": 40,
+     "lgdName": "Shahid Bhagat Singh Nagar",
+     "neighbours": [
+      "hoshiarpur",
+      "jalandhar",
+      "kapurthala",
+      "ludhiana",
+      "rupnagar"
+     ]
+    },
+    {
+     "id": "sri-muktsar-sahib",
+     "lgd": 39,
+     "lgdName": "Sri Muktsar Sahib",
+     "neighbours": [
+      "bathinda",
+      "faridkot",
+      "fazilka",
+      "ferozepur"
+     ]
+    },
+    {
+     "id": "tarn-taran",
+     "lgd": 609,
+     "lgdName": "Tarn Taran",
+     "neighbours": [
+      "amritsar",
+      "ferozepur",
+      "kapurthala"
+     ]
+    }
+   ]
+  },
+  "rajasthan": {
+   "districtCount": 49,
+   "dataStatus": "issues",
+   "issues": [
+    "1 district shape(s) could not be used",
+    "Rajasthan abolished 9 of these districts in December 2024; this snapshot predates that."
+   ],
+   "areaRatio": 1.014,
+   "neighbours": [
+    "gujarat",
+    "haryana",
+    "madhya-pradesh",
+    "punjab",
+    "uttar-pradesh"
+   ],
+   "districts": [
+    {
+     "id": "ajmer",
+     "lgd": 86,
+     "lgdName": "Ajmer",
+     "neighbours": [
+      "tonk",
+      "didwana-kuchaman",
+      "dudu",
+      "beawar",
+      "kekri",
+      "jaipur-gramin",
+      "nagaur"
+     ]
+    },
+    {
+     "id": "alwar",
+     "lgd": 87,
+     "lgdName": "Alwar",
+     "neighbours": [
+      "bharatpur",
+      "dausa",
+      "deeg",
+      "khairthal-tijara",
+      "kotputli-behror",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "anoopgarh",
+     "lgd": 776,
+     "lgdName": "Anoopgarh",
+     "neighbours": [
+      "ganganagar",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "balotra",
+     "lgd": 775,
+     "lgdName": "Balotra",
+     "neighbours": [
+      "barmer",
+      "jaisalmer",
+      "jalore",
+      "pali",
+      "jodhpur-gramin"
+     ]
+    },
+    {
+     "id": "banswara",
+     "lgd": 88,
+     "lgdName": "Banswara",
+     "neighbours": [
+      "dungarpur",
+      "pratapgarh"
+     ]
+    },
+    {
+     "id": "baran",
+     "lgd": 89,
+     "lgdName": "Baran",
+     "neighbours": [
+      "jhalawar",
+      "kota"
+     ]
+    },
+    {
+     "id": "barmer",
+     "lgd": 90,
+     "lgdName": "Barmer",
+     "neighbours": [
+      "jaisalmer",
+      "jalore",
+      "balotra"
+     ]
+    },
+    {
+     "id": "beawar",
+     "lgd": 774,
+     "lgdName": "Beawar",
+     "neighbours": [
+      "ajmer",
+      "bhilwara",
+      "pali",
+      "rajsamand",
+      "jodhpur-gramin",
+      "kekri",
+      "nagaur"
+     ]
+    },
+    {
+     "id": "bharatpur",
+     "lgd": 91,
+     "lgdName": "Bharatpur",
+     "neighbours": [
+      "alwar",
+      "dholpur",
+      "karauli",
+      "dausa",
+      "deeg"
+     ]
+    },
+    {
+     "id": "bhilwara",
+     "lgd": 92,
+     "lgdName": "Bhilwara",
+     "neighbours": [
+      "bundi",
+      "chittorgarh",
+      "rajsamand",
+      "beawar",
+      "shahpura",
+      "kekri"
+     ]
+    },
+    {
+     "id": "bikaner",
+     "lgd": 93,
+     "lgdName": "Bikaner",
+     "neighbours": [
+      "churu",
+      "hanumangarh",
+      "jaisalmer",
+      "ganganagar",
+      "phalodi",
+      "anoopgarh",
+      "nagaur"
+     ]
+    },
+    {
+     "id": "bundi",
+     "lgd": 94,
+     "lgdName": "Bundi",
+     "neighbours": [
+      "bhilwara",
+      "chittorgarh",
+      "kota",
+      "sawai-madhopur",
+      "tonk",
+      "shahpura"
+     ]
+    },
+    {
+     "id": "chittorgarh",
+     "lgd": 95,
+     "lgdName": "Chittorgarh",
+     "neighbours": [
+      "bhilwara",
+      "bundi",
+      "kota",
+      "pratapgarh",
+      "rajsamand",
+      "udaipur",
+      "salumbar",
+      "shahpura"
+     ]
+    },
+    {
+     "id": "churu",
+     "lgd": 96,
+     "lgdName": "Churu",
+     "neighbours": [
+      "hanumangarh",
+      "jhunjhunu",
+      "sikar",
+      "didwana-kuchaman",
+      "nagaur",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "dausa",
+     "lgd": 97,
+     "lgdName": "Dausa",
+     "neighbours": [
+      "alwar",
+      "bharatpur",
+      "karauli",
+      "sawai-madhopur",
+      "tonk",
+      "gangapurcity",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "deeg",
+     "lgd": 767,
+     "lgdName": "Deeg",
+     "neighbours": [
+      "alwar",
+      "bharatpur"
+     ]
+    },
+    {
+     "id": "dholpur",
+     "lgd": 98,
+     "lgdName": "Dholpur",
+     "neighbours": [
+      "bharatpur",
+      "karauli"
+     ]
+    },
+    {
+     "id": "didwana-kuchaman",
+     "lgd": 768,
+     "lgdName": "Didwana Kuchaman",
+     "neighbours": [
+      "ajmer",
+      "churu",
+      "sikar",
+      "jaipur-gramin",
+      "nagaur"
+     ]
+    },
+    {
+     "id": "dudu",
+     "lgd": 769,
+     "lgdName": "Dudu",
+     "neighbours": [
+      "ajmer",
+      "jaipur",
+      "tonk",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "dungarpur",
+     "lgd": 99,
+     "lgdName": "Dungarpur",
+     "neighbours": [
+      "banswara",
+      "pratapgarh",
+      "udaipur",
+      "salumbar"
+     ]
+    },
+    {
+     "id": "ganganagar",
+     "lgd": 100,
+     "lgdName": "Ganganagar",
+     "neighbours": [
+      "hanumangarh",
+      "anoopgarh",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "gangapurcity",
+     "lgd": 771,
+     "lgdName": "Gangapurcity",
+     "neighbours": [
+      "karauli",
+      "sawai-madhopur",
+      "dausa"
+     ]
+    },
+    {
+     "id": "hanumangarh",
+     "lgd": 101,
+     "lgdName": "Hanumangarh",
+     "neighbours": [
+      "churu",
+      "ganganagar",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "jaipur",
+     "lgd": 102,
+     "lgdName": "Jaipur",
+     "neighbours": [
+      "dudu",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "jaipur-gramin",
+     "lgd": 783,
+     "lgdName": "Jaipur Gramin",
+     "neighbours": [
+      "ajmer",
+      "alwar",
+      "jaipur",
+      "sikar",
+      "tonk",
+      "dausa",
+      "didwana-kuchaman",
+      "dudu",
+      "neem-ka-thana",
+      "kotputli-behror"
+     ]
+    },
+    {
+     "id": "jaisalmer",
+     "lgd": 103,
+     "lgdName": "Jaisalmer",
+     "neighbours": [
+      "barmer",
+      "phalodi",
+      "balotra",
+      "jodhpur-gramin",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "jalore",
+     "lgd": 104,
+     "lgdName": "Jalore",
+     "neighbours": [
+      "barmer",
+      "pali",
+      "sirohi",
+      "balotra"
+     ]
+    },
+    {
+     "id": "jhalawar",
+     "lgd": 105,
+     "lgdName": "Jhalawar",
+     "neighbours": [
+      "baran",
+      "kota"
+     ]
+    },
+    {
+     "id": "jhunjhunu",
+     "lgd": 106,
+     "lgdName": "Jhunjhunu",
+     "neighbours": [
+      "churu",
+      "sikar",
+      "neem-ka-thana"
+     ]
+    },
+    {
+     "id": "jodhpur",
+     "lgd": 107,
+     "lgdName": "Jodhpur",
+     "neighbours": [
+      "jodhpur-gramin"
+     ]
+    },
+    {
+     "id": "jodhpur-gramin",
+     "lgd": 778,
+     "lgdName": "Jodhpur Gramin",
+     "neighbours": [
+      "jaisalmer",
+      "jodhpur",
+      "pali",
+      "phalodi",
+      "beawar",
+      "balotra",
+      "nagaur"
+     ]
+    },
+    {
+     "id": "karauli",
+     "lgd": 108,
+     "lgdName": "Karauli",
+     "neighbours": [
+      "bharatpur",
+      "dholpur",
+      "sawai-madhopur",
+      "dausa",
+      "gangapurcity"
+     ]
+    },
+    {
+     "id": "kekri",
+     "lgd": 781,
+     "lgdName": "Kekri",
+     "neighbours": [
+      "ajmer",
+      "bhilwara",
+      "tonk",
+      "beawar",
+      "shahpura"
+     ]
+    },
+    {
+     "id": "khairthal-tijara",
+     "lgd": 770,
+     "lgdName": "Khairthal-Tijara",
+     "neighbours": [
+      "alwar",
+      "kotputli-behror"
+     ]
+    },
+    {
+     "id": "kota",
+     "lgd": 109,
+     "lgdName": "Kota",
+     "neighbours": [
+      "baran",
+      "bundi",
+      "chittorgarh",
+      "jhalawar",
+      "sawai-madhopur"
+     ]
+    },
+    {
+     "id": "kotputli-behror",
+     "lgd": 782,
+     "lgdName": "Kotputli-Behror",
+     "neighbours": [
+      "alwar",
+      "khairthal-tijara",
+      "neem-ka-thana",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "nagaur",
+     "lgd": 110,
+     "lgdName": "Nagaur",
+     "neighbours": [
+      "ajmer",
+      "churu",
+      "didwana-kuchaman",
+      "phalodi",
+      "beawar",
+      "jodhpur-gramin",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "neem-ka-thana",
+     "lgd": 773,
+     "lgdName": "Neem Ka Thana",
+     "neighbours": [
+      "jhunjhunu",
+      "sikar",
+      "kotputli-behror",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "pali",
+     "lgd": 111,
+     "lgdName": "Pali",
+     "neighbours": [
+      "jalore",
+      "rajsamand",
+      "sirohi",
+      "udaipur",
+      "beawar",
+      "balotra",
+      "jodhpur-gramin"
+     ]
+    },
+    {
+     "id": "phalodi",
+     "lgd": 772,
+     "lgdName": "Phalodi",
+     "neighbours": [
+      "jaisalmer",
+      "jodhpur-gramin",
+      "nagaur",
+      "bikaner"
+     ]
+    },
+    {
+     "id": "pratapgarh",
+     "lgd": 629,
+     "lgdName": "Pratapgarh",
+     "neighbours": [
+      "banswara",
+      "chittorgarh",
+      "dungarpur",
+      "salumbar"
+     ]
+    },
+    {
+     "id": "rajsamand",
+     "lgd": 112,
+     "lgdName": "Rajsamand",
+     "neighbours": [
+      "bhilwara",
+      "chittorgarh",
+      "pali",
+      "udaipur",
+      "beawar"
+     ]
+    },
+    {
+     "id": "salumbar",
+     "lgd": 777,
+     "lgdName": "Salumbar",
+     "neighbours": [
+      "chittorgarh",
+      "dungarpur",
+      "pratapgarh",
+      "udaipur"
+     ]
+    },
+    {
+     "id": "sawai-madhopur",
+     "lgd": 113,
+     "lgdName": "Sawai Madhopur",
+     "neighbours": [
+      "bundi",
+      "karauli",
+      "kota",
+      "tonk",
+      "dausa",
+      "gangapurcity"
+     ]
+    },
+    {
+     "id": "shahpura",
+     "lgd": 780,
+     "lgdName": "Shahpura",
+     "neighbours": [
+      "bhilwara",
+      "bundi",
+      "chittorgarh",
+      "tonk",
+      "kekri"
+     ]
+    },
+    {
+     "id": "sikar",
+     "lgd": 114,
+     "lgdName": "Sikar",
+     "neighbours": [
+      "churu",
+      "jhunjhunu",
+      "didwana-kuchaman",
+      "neem-ka-thana",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "sirohi",
+     "lgd": 115,
+     "lgdName": "Sirohi",
+     "neighbours": [
+      "jalore",
+      "pali",
+      "udaipur"
+     ]
+    },
+    {
+     "id": "tonk",
+     "lgd": 116,
+     "lgdName": "Tonk",
+     "neighbours": [
+      "ajmer",
+      "bundi",
+      "sawai-madhopur",
+      "dausa",
+      "dudu",
+      "shahpura",
+      "kekri",
+      "jaipur-gramin"
+     ]
+    },
+    {
+     "id": "udaipur",
+     "lgd": 117,
+     "lgdName": "Udaipur",
+     "neighbours": [
+      "chittorgarh",
+      "dungarpur",
+      "pali",
+      "rajsamand",
+      "sirohi",
+      "salumbar"
+     ]
+    }
+   ]
+  },
+  "sikkim": {
+   "districtCount": 6,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "west-bengal"
+   ],
+   "districts": [
+    {
+     "id": "gangtok",
+     "lgd": 225,
+     "lgdName": "Gangtok",
+     "neighbours": [
+      "mangan",
+      "namchi",
+      "pakyong"
+     ]
+    },
+    {
+     "id": "gyalshing",
+     "lgd": 228,
+     "lgdName": "Gyalshing",
+     "neighbours": [
+      "mangan",
+      "namchi",
+      "soreng"
+     ]
+    },
+    {
+     "id": "mangan",
+     "lgd": 226,
+     "lgdName": "Mangan",
+     "neighbours": [
+      "gangtok",
+      "namchi",
+      "gyalshing"
+     ]
+    },
+    {
+     "id": "namchi",
+     "lgd": 227,
+     "lgdName": "Namchi",
+     "neighbours": [
+      "gangtok",
+      "mangan",
+      "gyalshing",
+      "soreng"
+     ]
+    },
+    {
+     "id": "pakyong",
+     "lgd": 741,
+     "lgdName": "Pakyong",
+     "neighbours": [
+      "gangtok"
+     ]
+    },
+    {
+     "id": "soreng",
+     "lgd": 742,
+     "lgdName": "Soreng",
+     "neighbours": [
+      "namchi",
+      "gyalshing"
+     ]
+    }
+   ]
+  },
+  "tamil-nadu": {
+   "districtCount": 38,
+   "dataStatus": "verified",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "andhra-pradesh",
+    "karnataka",
+    "kerala",
+    "puducherry"
+   ],
+   "districts": [
+    {
+     "id": "ariyalur",
+     "lgd": 610,
+     "lgdName": "Ariyalur",
+     "neighbours": [
+      "cuddalore",
+      "perambalur",
+      "tiruchirappalli",
+      "thanjavur"
+     ]
+    },
+    {
+     "id": "chengalpattu",
+     "lgd": 730,
+     "lgdName": "Chengalpattu",
+     "neighbours": [
+      "chennai",
+      "thiruvallur",
+      "tiruvannamalai",
+      "villupuram",
+      "kanchipuram"
+     ]
+    },
+    {
+     "id": "chennai",
+     "lgd": 568,
+     "lgdName": "Chennai",
+     "neighbours": [
+      "chengalpattu",
+      "thiruvallur",
+      "kanchipuram"
+     ]
+    },
+    {
+     "id": "coimbatore",
+     "lgd": 569,
+     "lgdName": "Coimbatore",
+     "neighbours": [
+      "erode",
+      "the-nilgiris",
+      "tiruppur"
+     ]
+    },
+    {
+     "id": "cuddalore",
+     "lgd": 570,
+     "lgdName": "Cuddalore",
+     "neighbours": [
+      "ariyalur",
+      "kallakurichi",
+      "perambalur",
+      "villupuram",
+      "mayiladuthurai",
+      "thanjavur"
+     ]
+    },
+    {
+     "id": "dharmapuri",
+     "lgd": 571,
+     "lgdName": "Dharmapuri",
+     "neighbours": [
+      "kallakurichi",
+      "salem",
+      "tiruvannamalai",
+      "krishnagiri"
+     ]
+    },
+    {
+     "id": "dindigul",
+     "lgd": 572,
+     "lgdName": "Dindigul",
+     "neighbours": [
+      "karur",
+      "madurai",
+      "theni",
+      "tiruchirappalli",
+      "tiruppur"
+     ]
+    },
+    {
+     "id": "erode",
+     "lgd": 573,
+     "lgdName": "Erode",
+     "neighbours": [
+      "coimbatore",
+      "karur",
+      "the-nilgiris",
+      "namakkal",
+      "salem",
+      "tiruppur"
+     ]
+    },
+    {
+     "id": "kallakurichi",
+     "lgd": 729,
+     "lgdName": "Kallakurichi",
+     "neighbours": [
+      "cuddalore",
+      "dharmapuri",
+      "perambalur",
+      "salem",
+      "tiruvannamalai",
+      "villupuram"
+     ]
+    },
+    {
+     "id": "kanchipuram",
+     "lgd": 574,
+     "lgdName": "Kanchipuram",
+     "neighbours": [
+      "chengalpattu",
+      "chennai",
+      "ranipet",
+      "thiruvallur",
+      "tiruvannamalai"
+     ]
+    },
+    {
+     "id": "kanniyakumari",
+     "lgd": 575,
+     "lgdName": "Kanniyakumari",
+     "neighbours": [
+      "tirunelveli"
+     ]
+    },
+    {
+     "id": "karur",
+     "lgd": 576,
+     "lgdName": "Karur",
+     "neighbours": [
+      "dindigul",
+      "erode",
+      "namakkal",
+      "tiruchirappalli",
+      "tiruppur"
+     ]
+    },
+    {
+     "id": "krishnagiri",
+     "lgd": 577,
+     "lgdName": "Krishnagiri",
+     "neighbours": [
+      "dharmapuri",
+      "tirupathur",
+      "tiruvannamalai"
+     ]
+    },
+    {
+     "id": "madurai",
+     "lgd": 578,
+     "lgdName": "Madurai",
+     "neighbours": [
+      "dindigul",
+      "sivaganga",
+      "theni",
+      "tiruchirappalli",
+      "virudhunagar"
+     ]
+    },
+    {
+     "id": "mayiladuthurai",
+     "lgd": 735,
+     "lgdName": "Mayiladuthurai",
+     "neighbours": [
+      "cuddalore",
+      "thiruvarur",
+      "thanjavur"
+     ]
+    },
+    {
+     "id": "nagapattinam",
+     "lgd": 579,
+     "lgdName": "Nagapattinam",
+     "neighbours": [
+      "thiruvarur"
+     ]
+    },
+    {
+     "id": "namakkal",
+     "lgd": 580,
+     "lgdName": "Namakkal",
+     "neighbours": [
+      "erode",
+      "karur",
+      "salem",
+      "tiruchirappalli"
+     ]
+    },
+    {
+     "id": "perambalur",
+     "lgd": 581,
+     "lgdName": "Perambalur",
+     "neighbours": [
+      "ariyalur",
+      "cuddalore",
+      "kallakurichi",
+      "salem",
+      "tiruchirappalli"
+     ]
+    },
+    {
+     "id": "pudukkottai",
+     "lgd": 582,
+     "lgdName": "Pudukkottai",
+     "neighbours": [
+      "ramanathapuram",
+      "sivaganga",
+      "tiruchirappalli",
+      "thanjavur"
+     ]
+    },
+    {
+     "id": "ramanathapuram",
+     "lgd": 583,
+     "lgdName": "Ramanathapuram",
+     "neighbours": [
+      "sivaganga",
+      "tuticorin",
+      "virudhunagar",
+      "pudukkottai"
+     ]
+    },
+    {
+     "id": "ranipet",
+     "lgd": 731,
+     "lgdName": "Ranipet",
+     "neighbours": [
+      "thiruvallur",
+      "tiruvannamalai",
+      "vellore",
+      "kanchipuram"
+     ]
+    },
+    {
+     "id": "salem",
+     "lgd": 584,
+     "lgdName": "Salem",
+     "neighbours": [
+      "dharmapuri",
+      "erode",
+      "kallakurichi",
+      "namakkal",
+      "perambalur",
+      "tiruchirappalli"
+     ]
+    },
+    {
+     "id": "sivaganga",
+     "lgd": 585,
+     "lgdName": "Sivaganga",
+     "neighbours": [
+      "madurai",
+      "ramanathapuram",
+      "tiruchirappalli",
+      "virudhunagar",
+      "pudukkottai"
+     ]
+    },
+    {
+     "id": "tenkasi",
+     "lgd": 733,
+     "lgdName": "Tenkasi",
+     "neighbours": [
+      "tirunelveli",
+      "tuticorin",
+      "virudhunagar"
+     ]
+    },
+    {
+     "id": "thanjavur",
+     "lgd": 586,
+     "lgdName": "Thanjavur",
+     "neighbours": [
+      "ariyalur",
+      "cuddalore",
+      "thiruvarur",
+      "tiruchirappalli",
+      "mayiladuthurai",
+      "pudukkottai"
+     ]
+    },
+    {
+     "id": "the-nilgiris",
+     "lgd": 587,
+     "lgdName": "The Nilgiris",
+     "neighbours": [
+      "coimbatore",
+      "erode"
+     ]
+    },
+    {
+     "id": "theni",
+     "lgd": 588,
+     "lgdName": "Theni",
+     "neighbours": [
+      "dindigul",
+      "madurai",
+      "virudhunagar"
+     ]
+    },
+    {
+     "id": "thiruvallur",
+     "lgd": 589,
+     "lgdName": "Thiruvallur",
+     "neighbours": [
+      "chengalpattu",
+      "chennai",
+      "ranipet",
+      "vellore",
+      "kanchipuram"
+     ]
+    },
+    {
+     "id": "thiruvarur",
+     "lgd": 590,
+     "lgdName": "Thiruvarur",
+     "neighbours": [
+      "nagapattinam",
+      "mayiladuthurai",
+      "thanjavur"
+     ]
+    },
+    {
+     "id": "tiruchirappalli",
+     "lgd": 591,
+     "lgdName": "Tiruchirappalli",
+     "neighbours": [
+      "ariyalur",
+      "dindigul",
+      "karur",
+      "madurai",
+      "namakkal",
+      "perambalur",
+      "salem",
+      "sivaganga",
+      "thanjavur",
+      "pudukkottai"
+     ]
+    },
+    {
+     "id": "tirunelveli",
+     "lgd": 592,
+     "lgdName": "Tirunelveli",
+     "neighbours": [
+      "kanniyakumari",
+      "tenkasi",
+      "tuticorin"
+     ]
+    },
+    {
+     "id": "tirupathur",
+     "lgd": 732,
+     "lgdName": "Tirupathur",
+     "neighbours": [
+      "tiruvannamalai",
+      "vellore",
+      "krishnagiri"
+     ]
+    },
+    {
+     "id": "tiruppur",
+     "lgd": 634,
+     "lgdName": "Tiruppur",
+     "neighbours": [
+      "coimbatore",
+      "dindigul",
+      "erode",
+      "karur"
+     ]
+    },
+    {
+     "id": "tiruvannamalai",
+     "lgd": 593,
+     "lgdName": "Tiruvannamalai",
+     "neighbours": [
+      "chengalpattu",
+      "dharmapuri",
+      "kallakurichi",
+      "ranipet",
+      "tirupathur",
+      "vellore",
+      "villupuram",
+      "krishnagiri",
+      "kanchipuram"
+     ]
+    },
+    {
+     "id": "tuticorin",
+     "lgd": 594,
+     "lgdName": "Tuticorin",
+     "neighbours": [
+      "ramanathapuram",
+      "tenkasi",
+      "tirunelveli",
+      "virudhunagar"
+     ]
+    },
+    {
+     "id": "vellore",
+     "lgd": 595,
+     "lgdName": "Vellore",
+     "neighbours": [
+      "ranipet",
+      "tirupathur",
+      "thiruvallur",
+      "tiruvannamalai"
+     ]
+    },
+    {
+     "id": "villupuram",
+     "lgd": 596,
+     "lgdName": "Villupuram",
+     "neighbours": [
+      "chengalpattu",
+      "cuddalore",
+      "kallakurichi",
+      "tiruvannamalai"
+     ]
+    },
+    {
+     "id": "virudhunagar",
+     "lgd": 597,
+     "lgdName": "Virudhunagar",
+     "neighbours": [
+      "madurai",
+      "ramanathapuram",
+      "sivaganga",
+      "theni",
+      "tenkasi",
+      "tuticorin"
+     ]
+    }
+   ]
+  },
+  "telangana": {
+   "districtCount": 33,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "andhra-pradesh",
+    "chhattisgarh",
+    "karnataka",
+    "maharashtra"
+   ],
+   "districts": [
+    {
+     "id": "adilabad",
+     "lgd": 501,
+     "lgdName": "Adilabad",
+     "neighbours": [
+      "kumuram-bheem-asifabad",
+      "nirmal"
+     ]
+    },
+    {
+     "id": "bhadradri-kothagudem",
+     "lgd": 690,
+     "lgdName": "Bhadradri Kothagudem",
+     "neighbours": [
+      "mulugu",
+      "khammam",
+      "mahabubabad"
+     ]
+    },
+    {
+     "id": "hanumakonda",
+     "lgd": 686,
+     "lgdName": "Hanumakonda",
+     "neighbours": [
+      "karimnagar",
+      "siddipet",
+      "mulugu",
+      "jangoan",
+      "warangal",
+      "jayashankar-bhupalapally"
+     ]
+    },
+    {
+     "id": "hyderabad",
+     "lgd": 507,
+     "lgdName": "Hyderabad",
+     "neighbours": [
+      "ranga-reddy",
+      "medchal-malkajgiri"
+     ]
+    },
+    {
+     "id": "jagitial",
+     "lgd": 681,
+     "lgdName": "Jagitial",
+     "neighbours": [
+      "karimnagar",
+      "nizamabad",
+      "mancherial",
+      "nirmal",
+      "peddapalli",
+      "rajanna-sircilla"
+     ]
+    },
+    {
+     "id": "jangoan",
+     "lgd": 689,
+     "lgdName": "Jangoan",
+     "neighbours": [
+      "siddipet",
+      "yadadri-bhuvanagiri",
+      "suryapet",
+      "mahabubabad",
+      "warangal",
+      "hanumakonda"
+     ]
+    },
+    {
+     "id": "jayashankar-bhupalapally",
+     "lgd": 687,
+     "lgdName": "Jayashankar Bhupalapally",
+     "neighbours": [
+      "karimnagar",
+      "mulugu",
+      "mancherial",
+      "peddapalli",
+      "hanumakonda"
+     ]
+    },
+    {
+     "id": "jogulamba-gadwal",
+     "lgd": 695,
+     "lgdName": "Jogulamba Gadwal",
+     "neighbours": [
+      "wanaparthy",
+      "narayanpet"
+     ]
+    },
+    {
+     "id": "kamareddy",
+     "lgd": 685,
+     "lgdName": "Kamareddy",
+     "neighbours": [
+      "siddipet",
+      "nizamabad",
+      "sangareddy",
+      "rajanna-sircilla",
+      "medak"
+     ]
+    },
+    {
+     "id": "karimnagar",
+     "lgd": 508,
+     "lgdName": "Karimnagar",
+     "neighbours": [
+      "siddipet",
+      "jayashankar-bhupalapally",
+      "peddapalli",
+      "jagitial",
+      "rajanna-sircilla",
+      "hanumakonda"
+     ]
+    },
+    {
+     "id": "khammam",
+     "lgd": 509,
+     "lgdName": "Khammam",
+     "neighbours": [
+      "bhadradri-kothagudem",
+      "suryapet",
+      "mahabubabad"
+     ]
+    },
+    {
+     "id": "kumuram-bheem-asifabad",
+     "lgd": 699,
+     "lgdName": "Kumuram Bheem Asifabad",
+     "neighbours": [
+      "adilabad",
+      "mancherial",
+      "nirmal"
+     ]
+    },
+    {
+     "id": "mahabubabad",
+     "lgd": 688,
+     "lgdName": "Mahabubabad",
+     "neighbours": [
+      "bhadradri-kothagudem",
+      "mulugu",
+      "suryapet",
+      "khammam",
+      "jangoan",
+      "warangal"
+     ]
+    },
+    {
+     "id": "mahabubnagar",
+     "lgd": 512,
+     "lgdName": "Mahabubnagar",
+     "neighbours": [
+      "ranga-reddy",
+      "nagarkurnool",
+      "wanaparthy",
+      "narayanpet",
+      "vikarabad"
+     ]
+    },
+    {
+     "id": "mancherial",
+     "lgd": 684,
+     "lgdName": "Mancherial",
+     "neighbours": [
+      "kumuram-bheem-asifabad",
+      "nirmal",
+      "jayashankar-bhupalapally",
+      "peddapalli",
+      "jagitial"
+     ]
+    },
+    {
+     "id": "medak",
+     "lgd": 513,
+     "lgdName": "Medak",
+     "neighbours": [
+      "siddipet",
+      "kamareddy",
+      "sangareddy",
+      "medchal-malkajgiri"
+     ]
+    },
+    {
+     "id": "medchal-malkajgiri",
+     "lgd": 700,
+     "lgdName": "Medchal Malkajgiri",
+     "neighbours": [
+      "hyderabad",
+      "siddipet",
+      "ranga-reddy",
+      "sangareddy",
+      "yadadri-bhuvanagiri",
+      "medak"
+     ]
+    },
+    {
+     "id": "mulugu",
+     "lgd": 720,
+     "lgdName": "Mulugu",
+     "neighbours": [
+      "bhadradri-kothagudem",
+      "mahabubabad",
+      "warangal",
+      "jayashankar-bhupalapally",
+      "hanumakonda"
+     ]
+    },
+    {
+     "id": "nagarkurnool",
+     "lgd": 694,
+     "lgdName": "Nagarkurnool",
+     "neighbours": [
+      "mahabubnagar",
+      "nalgonda",
+      "ranga-reddy",
+      "wanaparthy"
+     ]
+    },
+    {
+     "id": "nalgonda",
+     "lgd": 514,
+     "lgdName": "Nalgonda",
+     "neighbours": [
+      "ranga-reddy",
+      "nagarkurnool",
+      "yadadri-bhuvanagiri",
+      "suryapet"
+     ]
+    },
+    {
+     "id": "narayanpet",
+     "lgd": 721,
+     "lgdName": "Narayanpet",
+     "neighbours": [
+      "mahabubnagar",
+      "jogulamba-gadwal",
+      "wanaparthy",
+      "vikarabad"
+     ]
+    },
+    {
+     "id": "nirmal",
+     "lgd": 680,
+     "lgdName": "Nirmal",
+     "neighbours": [
+      "adilabad",
+      "nizamabad",
+      "kumuram-bheem-asifabad",
+      "mancherial",
+      "jagitial"
+     ]
+    },
+    {
+     "id": "nizamabad",
+     "lgd": 516,
+     "lgdName": "Nizamabad",
+     "neighbours": [
+      "nirmal",
+      "kamareddy",
+      "jagitial",
+      "rajanna-sircilla"
+     ]
+    },
+    {
+     "id": "peddapalli",
+     "lgd": 682,
+     "lgdName": "Peddapalli",
+     "neighbours": [
+      "karimnagar",
+      "mancherial",
+      "jayashankar-bhupalapally",
+      "jagitial"
+     ]
+    },
+    {
+     "id": "rajanna-sircilla",
+     "lgd": 683,
+     "lgdName": "Rajanna Sircilla",
+     "neighbours": [
+      "karimnagar",
+      "siddipet",
+      "nizamabad",
+      "kamareddy",
+      "jagitial"
+     ]
+    },
+    {
+     "id": "ranga-reddy",
+     "lgd": 518,
+     "lgdName": "Ranga Reddy",
+     "neighbours": [
+      "hyderabad",
+      "mahabubnagar",
+      "nalgonda",
+      "sangareddy",
+      "nagarkurnool",
+      "vikarabad",
+      "medchal-malkajgiri",
+      "yadadri-bhuvanagiri"
+     ]
+    },
+    {
+     "id": "sangareddy",
+     "lgd": 691,
+     "lgdName": "Sangareddy",
+     "neighbours": [
+      "ranga-reddy",
+      "kamareddy",
+      "vikarabad",
+      "medchal-malkajgiri",
+      "medak"
+     ]
+    },
+    {
+     "id": "siddipet",
+     "lgd": 692,
+     "lgdName": "Siddipet",
+     "neighbours": [
+      "karimnagar",
+      "kamareddy",
+      "medchal-malkajgiri",
+      "yadadri-bhuvanagiri",
+      "jangoan",
+      "rajanna-sircilla",
+      "medak",
+      "hanumakonda"
+     ]
+    },
+    {
+     "id": "suryapet",
+     "lgd": 696,
+     "lgdName": "Suryapet",
+     "neighbours": [
+      "nalgonda",
+      "yadadri-bhuvanagiri",
+      "khammam",
+      "mahabubabad",
+      "jangoan"
+     ]
+    },
+    {
+     "id": "vikarabad",
+     "lgd": 698,
+     "lgdName": "Vikarabad",
+     "neighbours": [
+      "mahabubnagar",
+      "ranga-reddy",
+      "sangareddy",
+      "narayanpet"
+     ]
+    },
+    {
+     "id": "wanaparthy",
+     "lgd": 693,
+     "lgdName": "Wanaparthy",
+     "neighbours": [
+      "mahabubnagar",
+      "jogulamba-gadwal",
+      "nagarkurnool",
+      "narayanpet"
+     ]
+    },
+    {
+     "id": "warangal",
+     "lgd": 522,
+     "lgdName": "Warangal",
+     "neighbours": [
+      "mulugu",
+      "mahabubabad",
+      "jangoan",
+      "hanumakonda"
+     ]
+    },
+    {
+     "id": "yadadri-bhuvanagiri",
+     "lgd": 697,
+     "lgdName": "Yadadri Bhuvanagiri",
+     "neighbours": [
+      "siddipet",
+      "nalgonda",
+      "ranga-reddy",
+      "medchal-malkajgiri",
+      "suryapet",
+      "jangoan"
+     ]
+    }
+   ]
+  },
+  "tripura": {
+   "districtCount": 8,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "assam",
+    "mizoram"
+   ],
+   "districts": [
+    {
+     "id": "dhalai",
+     "lgd": 269,
+     "lgdName": "Dhalai",
+     "neighbours": [
+      "gomati",
+      "khowai",
+      "north-tripura",
+      "unakoti"
+     ]
+    },
+    {
+     "id": "gomati",
+     "lgd": 654,
+     "lgdName": "Gomati",
+     "neighbours": [
+      "dhalai",
+      "khowai",
+      "sepahijala",
+      "south-tripura"
+     ]
+    },
+    {
+     "id": "khowai",
+     "lgd": 652,
+     "lgdName": "Khowai",
+     "neighbours": [
+      "dhalai",
+      "gomati",
+      "sepahijala",
+      "west-tripura"
+     ]
+    },
+    {
+     "id": "north-tripura",
+     "lgd": 270,
+     "lgdName": "North Tripura",
+     "neighbours": [
+      "dhalai",
+      "unakoti"
+     ]
+    },
+    {
+     "id": "sepahijala",
+     "lgd": 653,
+     "lgdName": "Sepahijala",
+     "neighbours": [
+      "gomati",
+      "khowai",
+      "south-tripura",
+      "west-tripura"
+     ]
+    },
+    {
+     "id": "south-tripura",
+     "lgd": 271,
+     "lgdName": "South Tripura",
+     "neighbours": [
+      "gomati",
+      "sepahijala"
+     ]
+    },
+    {
+     "id": "unakoti",
+     "lgd": 655,
+     "lgdName": "Unakoti",
+     "neighbours": [
+      "dhalai",
+      "north-tripura"
+     ]
+    },
+    {
+     "id": "west-tripura",
+     "lgd": 272,
+     "lgdName": "West Tripura",
+     "neighbours": [
+      "khowai",
+      "sepahijala"
+     ]
+    }
+   ]
+  },
+  "uttar-pradesh": {
+   "districtCount": 75,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "bihar",
+    "chhattisgarh",
+    "delhi",
+    "haryana",
+    "himachal-pradesh",
+    "jharkhand",
+    "madhya-pradesh",
+    "rajasthan",
+    "uttarakhand"
+   ],
+   "districts": [
+    {
+     "id": "agra",
+     "lgd": 118,
+     "lgdName": "Agra",
+     "neighbours": [
+      "etah",
+      "etawah",
+      "firozabad",
+      "hathras",
+      "mathura"
+     ]
+    },
+    {
+     "id": "aligarh",
+     "lgd": 119,
+     "lgdName": "Aligarh",
+     "neighbours": [
+      "budaun",
+      "bulandshahr",
+      "gautam-buddha-nagar",
+      "hathras",
+      "kasganj",
+      "mathura",
+      "sambhal"
+     ]
+    },
+    {
+     "id": "ambedkar-nagar",
+     "lgd": 121,
+     "lgdName": "Ambedkar Nagar",
+     "neighbours": [
+      "azamgarh",
+      "basti",
+      "ayodhya",
+      "gorakhpur",
+      "sant-kabeer-nagar",
+      "sultanpur"
+     ]
+    },
+    {
+     "id": "amethi",
+     "lgd": 640,
+     "lgdName": "Amethi",
+     "neighbours": [
+      "barabanki",
+      "ayodhya",
+      "pratapgarh",
+      "rae-bareli",
+      "sultanpur"
+     ]
+    },
+    {
+     "id": "amroha",
+     "lgd": 154,
+     "lgdName": "Amroha",
+     "neighbours": [
+      "bijnor",
+      "bulandshahr",
+      "hapur",
+      "meerut",
+      "moradabad",
+      "sambhal"
+     ]
+    },
+    {
+     "id": "auraiya",
+     "lgd": 122,
+     "lgdName": "Auraiya",
+     "neighbours": [
+      "etawah",
+      "jalaun",
+      "kannauj",
+      "kanpur-dehat"
+     ]
+    },
+    {
+     "id": "ayodhya",
+     "lgd": 140,
+     "lgdName": "Ayodhya",
+     "neighbours": [
+      "ambedkar-nagar",
+      "amethi",
+      "barabanki",
+      "basti",
+      "gonda",
+      "sultanpur"
+     ]
+    },
+    {
+     "id": "azamgarh",
+     "lgd": 123,
+     "lgdName": "Azamgarh",
+     "neighbours": [
+      "ambedkar-nagar",
+      "ghazipur",
+      "gorakhpur",
+      "jaunpur",
+      "mau",
+      "sultanpur"
+     ]
+    },
+    {
+     "id": "baghpat",
+     "lgd": 124,
+     "lgdName": "Baghpat",
+     "neighbours": [
+      "ghaziabad",
+      "meerut",
+      "muzaffarnagar",
+      "shamli"
+     ]
+    },
+    {
+     "id": "bahraich",
+     "lgd": 125,
+     "lgdName": "Bahraich",
+     "neighbours": [
+      "barabanki",
+      "gonda",
+      "kheri",
+      "shravasti",
+      "sitapur"
+     ]
+    },
+    {
+     "id": "ballia",
+     "lgd": 126,
+     "lgdName": "Ballia",
+     "neighbours": [
+      "deoria",
+      "ghazipur",
+      "mau"
+     ]
+    },
+    {
+     "id": "balrampur",
+     "lgd": 127,
+     "lgdName": "Balrampur",
+     "neighbours": [
+      "gonda",
+      "shravasti",
+      "siddharth-nagar"
+     ]
+    },
+    {
+     "id": "banda",
+     "lgd": 128,
+     "lgdName": "Banda",
+     "neighbours": [
+      "chitrakoot",
+      "fatehpur",
+      "hamirpur",
+      "mahoba"
+     ]
+    },
+    {
+     "id": "barabanki",
+     "lgd": 129,
+     "lgdName": "Barabanki",
+     "neighbours": [
+      "amethi",
+      "bahraich",
+      "ayodhya",
+      "gonda",
+      "lucknow",
+      "rae-bareli",
+      "sitapur"
+     ]
+    },
+    {
+     "id": "bareilly",
+     "lgd": 130,
+     "lgdName": "Bareilly",
+     "neighbours": [
+      "budaun",
+      "pilibhit",
+      "rampur",
+      "shahjahanpur"
+     ]
+    },
+    {
+     "id": "basti",
+     "lgd": 131,
+     "lgdName": "Basti",
+     "neighbours": [
+      "ambedkar-nagar",
+      "ayodhya",
+      "gonda",
+      "sant-kabeer-nagar",
+      "siddharth-nagar"
+     ]
+    },
+    {
+     "id": "bhadohi",
+     "lgd": 179,
+     "lgdName": "Bhadohi",
+     "neighbours": [
+      "jaunpur",
+      "mirzapur",
+      "varanasi",
+      "prayagraj"
+     ]
+    },
+    {
+     "id": "bijnor",
+     "lgd": 132,
+     "lgdName": "Bijnor",
+     "neighbours": [
+      "amroha",
+      "meerut",
+      "moradabad",
+      "muzaffarnagar"
+     ]
+    },
+    {
+     "id": "budaun",
+     "lgd": 133,
+     "lgdName": "Budaun",
+     "neighbours": [
+      "aligarh",
+      "bareilly",
+      "farrukhabad",
+      "kasganj",
+      "rampur",
+      "sambhal",
+      "shahjahanpur"
+     ]
+    },
+    {
+     "id": "bulandshahr",
+     "lgd": 134,
+     "lgdName": "Bulandshahr",
+     "neighbours": [
+      "aligarh",
+      "amroha",
+      "gautam-buddha-nagar",
+      "hapur",
+      "sambhal"
+     ]
+    },
+    {
+     "id": "chandauli",
+     "lgd": 135,
+     "lgdName": "Chandauli",
+     "neighbours": [
+      "ghazipur",
+      "mirzapur",
+      "sonbhadra",
+      "varanasi"
+     ]
+    },
+    {
+     "id": "chitrakoot",
+     "lgd": 136,
+     "lgdName": "Chitrakoot",
+     "neighbours": [
+      "banda",
+      "fatehpur",
+      "kaushambi",
+      "prayagraj"
+     ]
+    },
+    {
+     "id": "deoria",
+     "lgd": 137,
+     "lgdName": "Deoria",
+     "neighbours": [
+      "ballia",
+      "gorakhpur",
+      "kushi-nagar",
+      "mau"
+     ]
+    },
+    {
+     "id": "etah",
+     "lgd": 138,
+     "lgdName": "Etah",
+     "neighbours": [
+      "agra",
+      "farrukhabad",
+      "firozabad",
+      "hathras",
+      "kasganj",
+      "mainpuri"
+     ]
+    },
+    {
+     "id": "etawah",
+     "lgd": 139,
+     "lgdName": "Etawah",
+     "neighbours": [
+      "agra",
+      "auraiya",
+      "firozabad",
+      "jalaun",
+      "kannauj",
+      "mainpuri"
+     ]
+    },
+    {
+     "id": "farrukhabad",
+     "lgd": 141,
+     "lgdName": "Farrukhabad",
+     "neighbours": [
+      "budaun",
+      "etah",
+      "hardoi",
+      "kannauj",
+      "kasganj",
+      "mainpuri",
+      "shahjahanpur"
+     ]
+    },
+    {
+     "id": "fatehpur",
+     "lgd": 142,
+     "lgdName": "Fatehpur",
+     "neighbours": [
+      "banda",
+      "chitrakoot",
+      "hamirpur",
+      "kanpur-nagar",
+      "kaushambi",
+      "rae-bareli",
+      "unnao"
+     ]
+    },
+    {
+     "id": "firozabad",
+     "lgd": 143,
+     "lgdName": "Firozabad",
+     "neighbours": [
+      "agra",
+      "etah",
+      "etawah",
+      "mainpuri"
+     ]
+    },
+    {
+     "id": "gautam-buddha-nagar",
+     "lgd": 144,
+     "lgdName": "Gautam Buddha Nagar",
+     "neighbours": [
+      "aligarh",
+      "bulandshahr",
+      "ghaziabad",
+      "hapur"
+     ]
+    },
+    {
+     "id": "ghaziabad",
+     "lgd": 145,
+     "lgdName": "Ghaziabad",
+     "neighbours": [
+      "baghpat",
+      "gautam-buddha-nagar",
+      "hapur",
+      "meerut"
+     ]
+    },
+    {
+     "id": "ghazipur",
+     "lgd": 146,
+     "lgdName": "Ghazipur",
+     "neighbours": [
+      "azamgarh",
+      "ballia",
+      "chandauli",
+      "jaunpur",
+      "mau",
+      "varanasi"
+     ]
+    },
+    {
+     "id": "gonda",
+     "lgd": 147,
+     "lgdName": "Gonda",
+     "neighbours": [
+      "bahraich",
+      "balrampur",
+      "barabanki",
+      "basti",
+      "ayodhya",
+      "shravasti",
+      "siddharth-nagar"
+     ]
+    },
+    {
+     "id": "gorakhpur",
+     "lgd": 148,
+     "lgdName": "Gorakhpur",
+     "neighbours": [
+      "ambedkar-nagar",
+      "azamgarh",
+      "deoria",
+      "kushi-nagar",
+      "mau",
+      "sant-kabeer-nagar",
+      "siddharth-nagar",
+      "maharajganj"
+     ]
+    },
+    {
+     "id": "hamirpur",
+     "lgd": 149,
+     "lgdName": "Hamirpur",
+     "neighbours": [
+      "banda",
+      "fatehpur",
+      "jalaun",
+      "jhansi",
+      "kanpur-nagar",
+      "kanpur-dehat",
+      "mahoba"
+     ]
+    },
+    {
+     "id": "hapur",
+     "lgd": 661,
+     "lgdName": "Hapur",
+     "neighbours": [
+      "amroha",
+      "bulandshahr",
+      "gautam-buddha-nagar",
+      "ghaziabad",
+      "meerut"
+     ]
+    },
+    {
+     "id": "hardoi",
+     "lgd": 150,
+     "lgdName": "Hardoi",
+     "neighbours": [
+      "farrukhabad",
+      "kannauj",
+      "kanpur-nagar",
+      "kheri",
+      "lucknow",
+      "shahjahanpur",
+      "sitapur",
+      "unnao"
+     ]
+    },
+    {
+     "id": "hathras",
+     "lgd": 163,
+     "lgdName": "Hathras",
+     "neighbours": [
+      "agra",
+      "aligarh",
+      "etah",
+      "kasganj",
+      "mathura"
+     ]
+    },
+    {
+     "id": "jalaun",
+     "lgd": 151,
+     "lgdName": "Jalaun",
+     "neighbours": [
+      "auraiya",
+      "etawah",
+      "hamirpur",
+      "jhansi",
+      "kanpur-dehat"
+     ]
+    },
+    {
+     "id": "jaunpur",
+     "lgd": 152,
+     "lgdName": "Jaunpur",
+     "neighbours": [
+      "azamgarh",
+      "bhadohi",
+      "ghazipur",
+      "pratapgarh",
+      "sultanpur",
+      "varanasi",
+      "prayagraj"
+     ]
+    },
+    {
+     "id": "jhansi",
+     "lgd": 153,
+     "lgdName": "Jhansi",
+     "neighbours": [
+      "hamirpur",
+      "jalaun",
+      "lalitpur",
+      "mahoba"
+     ]
+    },
+    {
+     "id": "kannauj",
+     "lgd": 155,
+     "lgdName": "Kannauj",
+     "neighbours": [
+      "auraiya",
+      "etawah",
+      "farrukhabad",
+      "hardoi",
+      "kanpur-nagar",
+      "kanpur-dehat",
+      "mainpuri"
+     ]
+    },
+    {
+     "id": "kanpur-dehat",
+     "lgd": 156,
+     "lgdName": "Kanpur Dehat",
+     "neighbours": [
+      "auraiya",
+      "hamirpur",
+      "jalaun",
+      "kannauj",
+      "kanpur-nagar"
+     ]
+    },
+    {
+     "id": "kanpur-nagar",
+     "lgd": 157,
+     "lgdName": "Kanpur Nagar",
+     "neighbours": [
+      "fatehpur",
+      "hamirpur",
+      "hardoi",
+      "kannauj",
+      "kanpur-dehat",
+      "unnao"
+     ]
+    },
+    {
+     "id": "kasganj",
+     "lgd": 633,
+     "lgdName": "Kasganj",
+     "neighbours": [
+      "aligarh",
+      "budaun",
+      "etah",
+      "farrukhabad",
+      "hathras"
+     ]
+    },
+    {
+     "id": "kaushambi",
+     "lgd": 158,
+     "lgdName": "Kaushambi",
+     "neighbours": [
+      "chitrakoot",
+      "fatehpur",
+      "pratapgarh",
+      "prayagraj"
+     ]
+    },
+    {
+     "id": "kheri",
+     "lgd": 159,
+     "lgdName": "Kheri",
+     "neighbours": [
+      "bahraich",
+      "hardoi",
+      "pilibhit",
+      "shahjahanpur",
+      "sitapur"
+     ]
+    },
+    {
+     "id": "kushi-nagar",
+     "lgd": 160,
+     "lgdName": "Kushi Nagar",
+     "neighbours": [
+      "deoria",
+      "gorakhpur",
+      "maharajganj"
+     ]
+    },
+    {
+     "id": "lalitpur",
+     "lgd": 161,
+     "lgdName": "Lalitpur",
+     "neighbours": [
+      "jhansi"
+     ]
+    },
+    {
+     "id": "lucknow",
+     "lgd": 162,
+     "lgdName": "Lucknow",
+     "neighbours": [
+      "barabanki",
+      "hardoi",
+      "rae-bareli",
+      "sitapur",
+      "unnao"
+     ]
+    },
+    {
+     "id": "maharajganj",
+     "lgd": 164,
+     "lgdName": "Maharajganj",
+     "neighbours": [
+      "gorakhpur",
+      "kushi-nagar",
+      "siddharth-nagar"
+     ]
+    },
+    {
+     "id": "mahoba",
+     "lgd": 165,
+     "lgdName": "Mahoba",
+     "neighbours": [
+      "banda",
+      "hamirpur",
+      "jhansi"
+     ]
+    },
+    {
+     "id": "mainpuri",
+     "lgd": 166,
+     "lgdName": "Mainpuri",
+     "neighbours": [
+      "etah",
+      "etawah",
+      "farrukhabad",
+      "firozabad",
+      "kannauj"
+     ]
+    },
+    {
+     "id": "mathura",
+     "lgd": 167,
+     "lgdName": "Mathura",
+     "neighbours": [
+      "agra",
+      "aligarh",
+      "hathras"
+     ]
+    },
+    {
+     "id": "mau",
+     "lgd": 168,
+     "lgdName": "Mau",
+     "neighbours": [
+      "azamgarh",
+      "ballia",
+      "deoria",
+      "ghazipur",
+      "gorakhpur"
+     ]
+    },
+    {
+     "id": "meerut",
+     "lgd": 169,
+     "lgdName": "Meerut",
+     "neighbours": [
+      "amroha",
+      "baghpat",
+      "bijnor",
+      "ghaziabad",
+      "hapur",
+      "muzaffarnagar"
+     ]
+    },
+    {
+     "id": "mirzapur",
+     "lgd": 170,
+     "lgdName": "Mirzapur",
+     "neighbours": [
+      "bhadohi",
+      "chandauli",
+      "sonbhadra",
+      "varanasi",
+      "prayagraj"
+     ]
+    },
+    {
+     "id": "moradabad",
+     "lgd": 171,
+     "lgdName": "Moradabad",
+     "neighbours": [
+      "amroha",
+      "bijnor",
+      "rampur",
+      "sambhal"
+     ]
+    },
+    {
+     "id": "muzaffarnagar",
+     "lgd": 172,
+     "lgdName": "Muzaffarnagar",
+     "neighbours": [
+      "baghpat",
+      "bijnor",
+      "meerut",
+      "saharanpur",
+      "shamli"
+     ]
+    },
+    {
+     "id": "pilibhit",
+     "lgd": 173,
+     "lgdName": "Pilibhit",
+     "neighbours": [
+      "bareilly",
+      "kheri",
+      "shahjahanpur"
+     ]
+    },
+    {
+     "id": "pratapgarh",
+     "lgd": 174,
+     "lgdName": "Pratapgarh",
+     "neighbours": [
+      "amethi",
+      "jaunpur",
+      "kaushambi",
+      "rae-bareli",
+      "sultanpur",
+      "prayagraj"
+     ]
+    },
+    {
+     "id": "prayagraj",
+     "lgd": 120,
+     "lgdName": "Prayagraj",
+     "neighbours": [
+      "bhadohi",
+      "chitrakoot",
+      "jaunpur",
+      "kaushambi",
+      "mirzapur",
+      "pratapgarh"
+     ]
+    },
+    {
+     "id": "rae-bareli",
+     "lgd": 175,
+     "lgdName": "Rae Bareli",
+     "neighbours": [
+      "amethi",
+      "barabanki",
+      "fatehpur",
+      "lucknow",
+      "pratapgarh",
+      "unnao"
+     ]
+    },
+    {
+     "id": "rampur",
+     "lgd": 176,
+     "lgdName": "Rampur",
+     "neighbours": [
+      "budaun",
+      "bareilly",
+      "moradabad",
+      "sambhal"
+     ]
+    },
+    {
+     "id": "saharanpur",
+     "lgd": 177,
+     "lgdName": "Saharanpur",
+     "neighbours": [
+      "muzaffarnagar",
+      "shamli"
+     ]
+    },
+    {
+     "id": "sambhal",
+     "lgd": 659,
+     "lgdName": "Sambhal",
+     "neighbours": [
+      "aligarh",
+      "amroha",
+      "budaun",
+      "bulandshahr",
+      "moradabad",
+      "rampur"
+     ]
+    },
+    {
+     "id": "sant-kabeer-nagar",
+     "lgd": 178,
+     "lgdName": "Sant Kabeer Nagar",
+     "neighbours": [
+      "ambedkar-nagar",
+      "basti",
+      "gorakhpur",
+      "siddharth-nagar"
+     ]
+    },
+    {
+     "id": "shahjahanpur",
+     "lgd": 180,
+     "lgdName": "Shahjahanpur",
+     "neighbours": [
+      "budaun",
+      "bareilly",
+      "farrukhabad",
+      "hardoi",
+      "kheri",
+      "pilibhit"
+     ]
+    },
+    {
+     "id": "shamli",
+     "lgd": 660,
+     "lgdName": "Shamli",
+     "neighbours": [
+      "baghpat",
+      "muzaffarnagar",
+      "saharanpur"
+     ]
+    },
+    {
+     "id": "shravasti",
+     "lgd": 181,
+     "lgdName": "Shravasti",
+     "neighbours": [
+      "bahraich",
+      "balrampur",
+      "gonda"
+     ]
+    },
+    {
+     "id": "siddharth-nagar",
+     "lgd": 182,
+     "lgdName": "Siddharth Nagar",
+     "neighbours": [
+      "balrampur",
+      "basti",
+      "gonda",
+      "gorakhpur",
+      "sant-kabeer-nagar",
+      "maharajganj"
+     ]
+    },
+    {
+     "id": "sitapur",
+     "lgd": 183,
+     "lgdName": "Sitapur",
+     "neighbours": [
+      "bahraich",
+      "barabanki",
+      "hardoi",
+      "kheri",
+      "lucknow"
+     ]
+    },
+    {
+     "id": "sonbhadra",
+     "lgd": 184,
+     "lgdName": "Sonbhadra",
+     "neighbours": [
+      "chandauli",
+      "mirzapur"
+     ]
+    },
+    {
+     "id": "sultanpur",
+     "lgd": 185,
+     "lgdName": "Sultanpur",
+     "neighbours": [
+      "ambedkar-nagar",
+      "amethi",
+      "azamgarh",
+      "ayodhya",
+      "jaunpur",
+      "pratapgarh"
+     ]
+    },
+    {
+     "id": "unnao",
+     "lgd": 186,
+     "lgdName": "Unnao",
+     "neighbours": [
+      "fatehpur",
+      "hardoi",
+      "kanpur-nagar",
+      "lucknow",
+      "rae-bareli"
+     ]
+    },
+    {
+     "id": "varanasi",
+     "lgd": 187,
+     "lgdName": "Varanasi",
+     "neighbours": [
+      "bhadohi",
+      "chandauli",
+      "ghazipur",
+      "jaunpur",
+      "mirzapur"
+     ]
+    }
+   ]
+  },
+  "uttarakhand": {
+   "districtCount": 13,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "himachal-pradesh",
+    "uttar-pradesh"
+   ],
+   "districts": [
+    {
+     "id": "almora",
+     "lgd": 45,
+     "lgdName": "Almora",
+     "neighbours": [
+      "bageshwar",
+      "champawat",
+      "nainital",
+      "pauri-garhwal",
+      "chamoli",
+      "pithoragarh"
+     ]
+    },
+    {
+     "id": "bageshwar",
+     "lgd": 46,
+     "lgdName": "Bageshwar",
+     "neighbours": [
+      "almora",
+      "chamoli",
+      "pithoragarh"
+     ]
+    },
+    {
+     "id": "chamoli",
+     "lgd": 47,
+     "lgdName": "Chamoli",
+     "neighbours": [
+      "almora",
+      "bageshwar",
+      "pauri-garhwal",
+      "rudra-prayag",
+      "pithoragarh",
+      "uttar-kashi"
+     ]
+    },
+    {
+     "id": "champawat",
+     "lgd": 48,
+     "lgdName": "Champawat",
+     "neighbours": [
+      "almora",
+      "nainital",
+      "udam-singh-nagar",
+      "pithoragarh"
+     ]
+    },
+    {
+     "id": "dehradun",
+     "lgd": 49,
+     "lgdName": "Dehradun",
+     "neighbours": [
+      "haridwar",
+      "pauri-garhwal",
+      "tehri-garhwal",
+      "uttar-kashi"
+     ]
+    },
+    {
+     "id": "haridwar",
+     "lgd": 50,
+     "lgdName": "Haridwar",
+     "neighbours": [
+      "dehradun",
+      "pauri-garhwal"
+     ]
+    },
+    {
+     "id": "nainital",
+     "lgd": 51,
+     "lgdName": "Nainital",
+     "neighbours": [
+      "almora",
+      "champawat",
+      "pauri-garhwal",
+      "udam-singh-nagar"
+     ]
+    },
+    {
+     "id": "pauri-garhwal",
+     "lgd": 52,
+     "lgdName": "Pauri Garhwal",
+     "neighbours": [
+      "almora",
+      "dehradun",
+      "haridwar",
+      "nainital",
+      "rudra-prayag",
+      "tehri-garhwal",
+      "chamoli"
+     ]
+    },
+    {
+     "id": "pithoragarh",
+     "lgd": 53,
+     "lgdName": "Pithoragarh",
+     "neighbours": [
+      "almora",
+      "bageshwar",
+      "champawat",
+      "chamoli"
+     ]
+    },
+    {
+     "id": "rudra-prayag",
+     "lgd": 54,
+     "lgdName": "Rudra Prayag",
+     "neighbours": [
+      "pauri-garhwal",
+      "tehri-garhwal",
+      "chamoli",
+      "uttar-kashi"
+     ]
+    },
+    {
+     "id": "tehri-garhwal",
+     "lgd": 55,
+     "lgdName": "Tehri Garhwal",
+     "neighbours": [
+      "dehradun",
+      "pauri-garhwal",
+      "rudra-prayag",
+      "uttar-kashi"
+     ]
+    },
+    {
+     "id": "udam-singh-nagar",
+     "lgd": 56,
+     "lgdName": "Udam Singh Nagar",
+     "neighbours": [
+      "champawat",
+      "nainital"
+     ]
+    },
+    {
+     "id": "uttar-kashi",
+     "lgd": 57,
+     "lgdName": "Uttar Kashi",
+     "neighbours": [
+      "dehradun",
+      "rudra-prayag",
+      "tehri-garhwal",
+      "chamoli"
+     ]
+    }
+   ]
+  },
+  "west-bengal": {
+   "districtCount": 23,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "assam",
+    "bihar",
+    "jharkhand",
+    "odisha",
+    "sikkim"
+   ],
+   "districts": [
+    {
+     "id": "24-paraganas-north",
+     "lgd": 303,
+     "lgdName": "24 Paraganas North",
+     "neighbours": [
+      "howrah",
+      "hooghly",
+      "kolkata",
+      "nadia",
+      "24-paraganas-south"
+     ]
+    },
+    {
+     "id": "24-paraganas-south",
+     "lgd": 304,
+     "lgdName": "24 Paraganas South",
+     "neighbours": [
+      "howrah",
+      "kolkata",
+      "24-paraganas-north"
+     ]
+    },
+    {
+     "id": "alipurduar",
+     "lgd": 664,
+     "lgdName": "Alipurduar",
+     "neighbours": [
+      "jalpaiguri",
+      "coochbehar"
+     ]
+    },
+    {
+     "id": "bankura",
+     "lgd": 305,
+     "lgdName": "Bankura",
+     "neighbours": [
+      "purba-bardhaman",
+      "hooghly",
+      "medinipur-west",
+      "purulia",
+      "jhargram",
+      "paschim-bardhaman"
+     ]
+    },
+    {
+     "id": "birbhum",
+     "lgd": 307,
+     "lgdName": "Birbhum",
+     "neighbours": [
+      "purba-bardhaman",
+      "murshidabad",
+      "paschim-bardhaman"
+     ]
+    },
+    {
+     "id": "coochbehar",
+     "lgd": 308,
+     "lgdName": "Coochbehar",
+     "neighbours": [
+      "alipurduar",
+      "jalpaiguri"
+     ]
+    },
+    {
+     "id": "darjeeling",
+     "lgd": 309,
+     "lgdName": "Darjeeling",
+     "neighbours": [
+      "jalpaiguri",
+      "dinajpur-uttar",
+      "kalimpong"
+     ]
+    },
+    {
+     "id": "dinajpur-dakshin",
+     "lgd": 310,
+     "lgdName": "Dinajpur Dakshin",
+     "neighbours": [
+      "maldah",
+      "dinajpur-uttar"
+     ]
+    },
+    {
+     "id": "dinajpur-uttar",
+     "lgd": 311,
+     "lgdName": "Dinajpur Uttar",
+     "neighbours": [
+      "dinajpur-dakshin",
+      "darjeeling",
+      "maldah"
+     ]
+    },
+    {
+     "id": "hooghly",
+     "lgd": 312,
+     "lgdName": "Hooghly",
+     "neighbours": [
+      "bankura",
+      "purba-bardhaman",
+      "howrah",
+      "nadia",
+      "24-paraganas-north",
+      "medinipur-west"
+     ]
+    },
+    {
+     "id": "howrah",
+     "lgd": 313,
+     "lgdName": "Howrah",
+     "neighbours": [
+      "medinipur-east",
+      "hooghly",
+      "kolkata",
+      "24-paraganas-north",
+      "medinipur-west",
+      "24-paraganas-south"
+     ]
+    },
+    {
+     "id": "jalpaiguri",
+     "lgd": 314,
+     "lgdName": "Jalpaiguri",
+     "neighbours": [
+      "alipurduar",
+      "darjeeling",
+      "kalimpong",
+      "coochbehar"
+     ]
+    },
+    {
+     "id": "jhargram",
+     "lgd": 703,
+     "lgdName": "Jhargram",
+     "neighbours": [
+      "bankura",
+      "medinipur-west",
+      "purulia"
+     ]
+    },
+    {
+     "id": "kalimpong",
+     "lgd": 702,
+     "lgdName": "Kalimpong",
+     "neighbours": [
+      "darjeeling",
+      "jalpaiguri"
+     ]
+    },
+    {
+     "id": "kolkata",
+     "lgd": 315,
+     "lgdName": "Kolkata",
+     "neighbours": [
+      "howrah",
+      "24-paraganas-north",
+      "24-paraganas-south"
+     ]
+    },
+    {
+     "id": "maldah",
+     "lgd": 316,
+     "lgdName": "Maldah",
+     "neighbours": [
+      "dinajpur-dakshin",
+      "murshidabad",
+      "dinajpur-uttar"
+     ]
+    },
+    {
+     "id": "medinipur-east",
+     "lgd": 317,
+     "lgdName": "Medinipur East",
+     "neighbours": [
+      "howrah",
+      "medinipur-west"
+     ]
+    },
+    {
+     "id": "medinipur-west",
+     "lgd": 318,
+     "lgdName": "Medinipur West",
+     "neighbours": [
+      "bankura",
+      "medinipur-east",
+      "howrah",
+      "hooghly",
+      "jhargram"
+     ]
+    },
+    {
+     "id": "murshidabad",
+     "lgd": 319,
+     "lgdName": "Murshidabad",
+     "neighbours": [
+      "purba-bardhaman",
+      "birbhum",
+      "maldah",
+      "nadia"
+     ]
+    },
+    {
+     "id": "nadia",
+     "lgd": 320,
+     "lgdName": "Nadia",
+     "neighbours": [
+      "purba-bardhaman",
+      "hooghly",
+      "murshidabad",
+      "24-paraganas-north"
+     ]
+    },
+    {
+     "id": "paschim-bardhaman",
+     "lgd": 704,
+     "lgdName": "Paschim Bardhaman",
+     "neighbours": [
+      "bankura",
+      "purba-bardhaman",
+      "birbhum",
+      "purulia"
+     ]
+    },
+    {
+     "id": "purba-bardhaman",
+     "lgd": 306,
+     "lgdName": "Purba Bardhaman",
+     "neighbours": [
+      "bankura",
+      "birbhum",
+      "hooghly",
+      "murshidabad",
+      "nadia",
+      "paschim-bardhaman"
+     ]
+    },
+    {
+     "id": "purulia",
+     "lgd": 321,
+     "lgdName": "Purulia",
+     "neighbours": [
+      "bankura",
+      "jhargram",
+      "paschim-bardhaman"
+     ]
+    }
+   ]
+  },
+  "andaman-and-nicobar-islands": {
+   "districtCount": 3,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [],
+   "districts": [
+    {
+     "id": "nicobars",
+     "lgd": 603,
+     "lgdName": "Nicobars",
+     "neighbours": []
+    },
+    {
+     "id": "north-and-middle-andaman",
+     "lgd": 632,
+     "lgdName": "North And Middle Andaman",
+     "neighbours": []
+    },
+    {
+     "id": "south-andamans",
+     "lgd": 602,
+     "lgdName": "South Andamans",
+     "neighbours": []
+    }
+   ]
+  },
+  "chandigarh": {
+   "districtCount": 1,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "haryana",
+    "punjab"
+   ],
+   "districts": [
+    {
+     "id": "chandigarh",
+     "lgd": 44,
+     "lgdName": "Chandigarh",
+     "neighbours": []
+    }
+   ]
+  },
+  "dadra-and-nagar-haveli-and-daman-and-diu": {
+   "districtCount": 3,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "gujarat",
+    "maharashtra"
+   ],
+   "districts": [
+    {
+     "id": "dadra-and-nagar-haveli",
+     "lgd": 465,
+     "lgdName": "Dadra And Nagar Haveli",
+     "neighbours": []
+    },
+    {
+     "id": "daman",
+     "lgd": 463,
+     "lgdName": "Daman",
+     "neighbours": []
+    },
+    {
+     "id": "diu",
+     "lgd": 464,
+     "lgdName": "Diu",
+     "neighbours": []
+    }
+   ]
+  },
+  "delhi": {
+   "districtCount": 11,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "haryana",
+    "uttar-pradesh"
+   ],
+   "districts": [
+    {
+     "id": "central",
+     "lgd": 77,
+     "lgdName": "Central",
+     "neighbours": [
+      "east",
+      "new-delhi",
+      "north",
+      "north-east",
+      "north-west",
+      "shahdara",
+      "west",
+      "south-east"
+     ]
+    },
+    {
+     "id": "east",
+     "lgd": 78,
+     "lgdName": "East",
+     "neighbours": [
+      "central",
+      "shahdara"
+     ]
+    },
+    {
+     "id": "new-delhi",
+     "lgd": 79,
+     "lgdName": "New Delhi",
+     "neighbours": [
+      "central",
+      "south",
+      "south-west",
+      "west",
+      "south-east"
+     ]
+    },
+    {
+     "id": "north",
+     "lgd": 80,
+     "lgdName": "North",
+     "neighbours": [
+      "central",
+      "north-west"
+     ]
+    },
+    {
+     "id": "north-east",
+     "lgd": 81,
+     "lgdName": "North East",
+     "neighbours": [
+      "central",
+      "shahdara"
+     ]
+    },
+    {
+     "id": "north-west",
+     "lgd": 82,
+     "lgdName": "North West",
+     "neighbours": [
+      "central",
+      "north",
+      "west"
+     ]
+    },
+    {
+     "id": "shahdara",
+     "lgd": 671,
+     "lgdName": "Shahdara",
+     "neighbours": [
+      "central",
+      "east",
+      "north-east"
+     ]
+    },
+    {
+     "id": "south",
+     "lgd": 83,
+     "lgdName": "South",
+     "neighbours": [
+      "new-delhi",
+      "south-east"
+     ]
+    },
+    {
+     "id": "south-east",
+     "lgd": 670,
+     "lgdName": "South East",
+     "neighbours": [
+      "central",
+      "new-delhi",
+      "south"
+     ]
+    },
+    {
+     "id": "south-west",
+     "lgd": 84,
+     "lgdName": "South West",
+     "neighbours": [
+      "new-delhi",
+      "west"
+     ]
+    },
+    {
+     "id": "west",
+     "lgd": 85,
+     "lgdName": "West",
+     "neighbours": [
+      "central",
+      "new-delhi",
+      "north-west",
+      "south-west"
+     ]
+    }
+   ]
+  },
+  "jammu-and-kashmir": {
+   "districtCount": 22,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "himachal-pradesh",
+    "ladakh",
+    "punjab"
+   ],
+   "districts": [
+    {
+     "id": "anantnag",
+     "lgd": 1,
+     "lgdName": "Anantnag",
+     "neighbours": [
+      "ganderbal",
+      "kulgam",
+      "pulwama",
+      "ramban",
+      "kishtwar",
+      "doda"
+     ]
+    },
+    {
+     "id": "bandipora",
+     "lgd": 623,
+     "lgdName": "Bandipora",
+     "neighbours": [
+      "muzaffarabad",
+      "baramulla",
+      "ganderbal",
+      "kupwara",
+      "srinagar"
+     ]
+    },
+    {
+     "id": "baramulla",
+     "lgd": 3,
+     "lgdName": "Baramulla",
+     "neighbours": [
+      "muzaffarabad",
+      "poonch",
+      "budgam",
+      "bandipora",
+      "kupwara",
+      "srinagar"
+     ]
+    },
+    {
+     "id": "budgam",
+     "lgd": 2,
+     "lgdName": "Budgam",
+     "neighbours": [
+      "poonch",
+      "baramulla",
+      "kulgam",
+      "pulwama",
+      "shopian",
+      "srinagar"
+     ]
+    },
+    {
+     "id": "doda",
+     "lgd": 4,
+     "lgdName": "Doda",
+     "neighbours": [
+      "anantnag",
+      "kathua",
+      "udhampur",
+      "ramban",
+      "kishtwar"
+     ]
+    },
+    {
+     "id": "ganderbal",
+     "lgd": 626,
+     "lgdName": "Ganderbal",
+     "neighbours": [
+      "anantnag",
+      "bandipora",
+      "pulwama",
+      "srinagar"
+     ]
+    },
+    {
+     "id": "jammu",
+     "lgd": 5,
+     "lgdName": "Jammu",
+     "neighbours": [
+      "mirpur",
+      "udhampur",
+      "rajouri",
+      "reasi",
+      "samba"
+     ]
+    },
+    {
+     "id": "kathua",
+     "lgd": 7,
+     "lgdName": "Kathua",
+     "neighbours": [
+      "udhampur",
+      "doda",
+      "samba"
+     ]
+    },
+    {
+     "id": "kishtwar",
+     "lgd": 620,
+     "lgdName": "Kishtwar",
+     "neighbours": [
+      "anantnag",
+      "doda"
+     ]
+    },
+    {
+     "id": "kulgam",
+     "lgd": 622,
+     "lgdName": "Kulgam",
+     "neighbours": [
+      "poonch",
+      "anantnag",
+      "budgam",
+      "pulwama",
+      "rajouri",
+      "ramban",
+      "reasi",
+      "shopian"
+     ]
+    },
+    {
+     "id": "kupwara",
+     "lgd": 8,
+     "lgdName": "Kupwara",
+     "neighbours": [
+      "muzaffarabad",
+      "baramulla",
+      "bandipora"
+     ]
+    },
+    {
+     "id": "mirpur",
+     "lgd": 0,
+     "lgdName": "Mirpur",
+     "neighbours": [
+      "poonch",
+      "rajouri",
+      "jammu"
+     ]
+    },
+    {
+     "id": "muzaffarabad",
+     "lgd": 0,
+     "lgdName": "Muzaffarabad",
+     "neighbours": [
+      "poonch",
+      "baramulla",
+      "bandipora",
+      "kupwara"
+     ]
+    },
+    {
+     "id": "poonch",
+     "lgd": 10,
+     "lgdName": "Poonch",
+     "neighbours": [
+      "mirpur",
+      "muzaffarabad",
+      "baramulla",
+      "budgam",
+      "kulgam",
+      "rajouri"
+     ]
+    },
+    {
+     "id": "pulwama",
+     "lgd": 11,
+     "lgdName": "Pulwama",
+     "neighbours": [
+      "anantnag",
+      "budgam",
+      "ganderbal",
+      "kulgam",
+      "shopian",
+      "srinagar"
+     ]
+    },
+    {
+     "id": "rajouri",
+     "lgd": 12,
+     "lgdName": "Rajouri",
+     "neighbours": [
+      "mirpur",
+      "poonch",
+      "kulgam",
+      "reasi",
+      "jammu"
+     ]
+    },
+    {
+     "id": "ramban",
+     "lgd": 621,
+     "lgdName": "Ramban",
+     "neighbours": [
+      "anantnag",
+      "udhampur",
+      "kulgam",
+      "reasi",
+      "doda"
+     ]
+    },
+    {
+     "id": "reasi",
+     "lgd": 627,
+     "lgdName": "Reasi",
+     "neighbours": [
+      "udhampur",
+      "kulgam",
+      "rajouri",
+      "ramban",
+      "jammu"
+     ]
+    },
+    {
+     "id": "samba",
+     "lgd": 624,
+     "lgdName": "Samba",
+     "neighbours": [
+      "kathua",
+      "udhampur",
+      "jammu"
+     ]
+    },
+    {
+     "id": "shopian",
+     "lgd": 625,
+     "lgdName": "Shopian",
+     "neighbours": [
+      "budgam",
+      "kulgam",
+      "pulwama"
+     ]
+    },
+    {
+     "id": "srinagar",
+     "lgd": 13,
+     "lgdName": "Srinagar",
+     "neighbours": [
+      "baramulla",
+      "budgam",
+      "bandipora",
+      "ganderbal",
+      "pulwama"
+     ]
+    },
+    {
+     "id": "udhampur",
+     "lgd": 14,
+     "lgdName": "Udhampur",
+     "neighbours": [
+      "kathua",
+      "ramban",
+      "reasi",
+      "doda",
+      "samba",
+      "jammu"
+     ]
+    }
+   ]
+  },
+  "ladakh": {
+   "districtCount": 2,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "himachal-pradesh",
+    "jammu-and-kashmir"
+   ],
+   "districts": [
+    {
+     "id": "kargil",
+     "lgd": 6,
+     "lgdName": "Kargil",
+     "neighbours": [
+      "leh-ladakh"
+     ]
+    },
+    {
+     "id": "leh-ladakh",
+     "lgd": 9,
+     "lgdName": "Leh Ladakh",
+     "neighbours": [
+      "kargil"
+     ]
+    }
+   ]
+  },
+  "lakshadweep": {
+   "districtCount": 1,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [],
+   "districts": [
+    {
+     "id": "lakshadweep-district",
+     "lgd": 553,
+     "lgdName": "Lakshadweep District",
+     "neighbours": []
+    }
+   ]
+  },
+  "puducherry": {
+   "districtCount": 4,
+   "dataStatus": "snapshot",
+   "issues": [],
+   "areaRatio": 1,
+   "neighbours": [
+    "andhra-pradesh",
+    "kerala",
+    "tamil-nadu"
+   ],
+   "districts": [
+    {
+     "id": "karaikal",
+     "lgd": 598,
+     "lgdName": "Karaikal",
+     "neighbours": []
+    },
+    {
+     "id": "mahe",
+     "lgd": 599,
+     "lgdName": "Mahe",
+     "neighbours": []
+    },
+    {
+     "id": "pondicherry",
+     "lgd": 600,
+     "lgdName": "Pondicherry",
+     "neighbours": []
+    },
+    {
+     "id": "yanam",
+     "lgd": 601,
+     "lgdName": "Yanam",
+     "neighbours": []
+    }
+   ]
+  }
+ }
+}

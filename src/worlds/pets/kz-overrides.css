@@ -1,0 +1,13 @@
+/* KidZ Zone look for Virtual Pet Universe: flat buttons and cards, Lato, the world's rose accent. */
+.w-pets { font-family: var(--font-sans); }
+.w-pets :is(h1, h2, h3, .font-display, button) { font-family: var(--font-display); }
+.w-pets .btn { background: var(--kz-accent); box-shadow: none; border-radius: 14px; font-weight: 700; }
+.w-pets .btn:active { transform: scale(.98); box-shadow: none; }
+.w-pets .btn-blue { background: #1f6fb2; box-shadow: none; }
+.w-pets .btn-green { background: #12704d; box-shadow: none; }
+.w-pets .btn-gold { background: #f2c230; color: #3d2a00; box-shadow: none; }
+.w-pets .btn-white { background: #fff; color: var(--color-ink); box-shadow: none; border: 1px solid var(--color-line); }
+.w-pets :is(.btn-blue, .btn-green, .btn-gold, .btn-white):active { box-shadow: none; }
+.w-pets .card { background: #fff; border-radius: 18px; border: 1px solid var(--color-line); box-shadow: 0 6px 18px -10px rgb(31 36 51 / .18); }
+.w-pets .bubble { font-family: var(--font-display); font-weight: 700; }
+.w-pets :focus-visible { outline: 3px solid var(--color-brand); outline-offset: 2px; border-radius: 10px; }

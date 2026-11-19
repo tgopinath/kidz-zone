@@ -1,0 +1,12 @@
+/* Money Master's own rules (drag cursor, the play table, hover remove buttons), plus the KidZ Zone look. */
+body.is-dragging, body.is-dragging * { cursor: grabbing !important; user-select: none; }
+.w-money .table-mat { background-color: #fffdf9; background-image: radial-gradient(rgba(168, 74, 11, 0.12) 1.4px, transparent 1.6px); background-size: 22px 22px; }
+@media (hover: hover) {
+  .w-money .money-item .remove-btn { opacity: 0; transform: scale(0.7); }
+  .w-money .money-item:hover .remove-btn, .w-money .money-item .remove-btn:focus-visible { opacity: 1; transform: scale(1); }
+}
+.w-money .kid-btn { border-bottom-width: 0 !important; box-shadow: none; border-radius: 12px; font-weight: 700; }
+.w-money .kid-btn:active { transform: scale(.98); }
+html.k-android .w-money .mm-panel { border-radius: 16px; background: var(--md-sys-color-surface-container-low); box-shadow: none; }
+html.k-ios .w-money .mm-panel { border-radius: 22px; background: var(--ios-grouped2); box-shadow: none; --tw-ring-shadow: 0 0 #0000; }
+html:is(.k-android, .k-ios) .w-money .kid-btn { border-radius: 999px; }

@@ -1,0 +1,19 @@
+/* My Supermarket's component utilities and animations, renamed (s…) so they never collide with other worlds. */
+
+@keyframes s-pop { 0% { transform: scale(.6); opacity: 0 } 70% { transform: scale(1.08) } 100% { transform: scale(1); opacity: 1 } }
+@keyframes s-rise { from { transform: translateY(12px); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes s-print { from { max-height: 0 } to { max-height: 900px } }
+@keyframes s-wobble { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-6deg) } 75% { transform: rotate(6deg) } }
+@keyframes s-shake { 0%,100% { transform: none } 20%,60% { transform: translateX(-6px) } 40%,80% { transform: translateX(6px) } }
+@keyframes s-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+@keyframes confetti { to { transform: translateY(110vh) rotate(720deg) } }
+.w-shop .anim-pop { animation: s-pop .35s ease-out both }
+.w-shop .anim-rise { animation: s-rise .3s ease-out both }
+.w-shop .anim-print { animation: s-print 1.6s steps(24) both; overflow: hidden }
+.w-shop .anim-shake { animation: s-shake .4s }
+.w-shop .anim-float { animation: s-float 3s ease-in-out infinite }
+.w-shop .anim-wobble { animation: s-wobble .6s ease-in-out }
+.w-shop { --color-brand: #4a6b12; --color-brand-dark: #3a540e; }
+/* Full-screen HUDs keep clear of the notch and home indicator. */
+.w-shop .vs-hud { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+.w-shop .vs-hud-pad { padding: 12px calc(env(safe-area-inset-right) + 12px) 12px calc(env(safe-area-inset-left) + 12px); }

@@ -1,0 +1,59 @@
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { challengeAt, type Challenge } from '../lib/challenges';
+import type { Denomination } from '../lib/currency';
+import { useStoredState } from '../hooks/useStoredState';
+
+export function useChallenges(values: Denomination[], onComplete: () => void, startOn = false) {
+  const [on, setOn] = useState(startOn);
+  const [index, setIndex] = useStoredState('money-master:level', 0);
+  const [memory, setMemory] = useState<Record<string, string[]>>({});
+  const [completed, setCompleted] = useStoredState<string[]>('money-master:stars', []);
+  const [celebrating, setCelebrating] = useState<Challenge | null>(null);
+  const satisfied = useRef<string | null>(null);
+
+  const challenge = challengeAt(index);
+  const remembered = memory[challenge.id];
+  const status = useMemo(() => (on ? challenge.evaluate(values, remembered ?? []) : null), [on, challenge, values, remembered]);
+
+  useEffect(() => {
+    if (!status) return;
+    const { remember } = status;
+    if (remember && !(remembered ?? []).includes(remember)) {
+      setMemory((m) => ({ ...m, [challenge.id]: [...(m[challenge.id] ?? []), remember] }));
+    }
+    if (!status.done) {
+      satisfied.current = null;
+      return;
+    }
+    // Celebrate once per success, not on every re-render while it stays solved.
+    if (satisfied.current === challenge.id) return;
+    satisfied.current = challenge.id;
+    setCompleted((c) => (c.includes(challenge.id) ? c : [...c, challenge.id]));
+    setCelebrating(challenge);
+    onComplete();
+  }, [status, challenge, remembered, setCompleted, onComplete]);
+
+  const goTo = (i: number) => {
+    const next = Math.max(0, i);
+    satisfied.current = null;
+    setMemory((m) => ({ ...m, [challengeAt(next).id]: [] }));
+    setIndex(next);
+    setCelebrating(null);
+  };
+
+  return {
+    on,
+    toggle: () => {
+      satisfied.current = null;
+      setOn((v) => !v);
+    },
+    challenge,
+    index,
+    status,
+    completed,
+    celebrating,
+    dismiss: () => setCelebrating(null),
+    next: () => goTo(index + 1),
+    prev: () => goTo(index - 1),
+  };
+}

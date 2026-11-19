@@ -1,0 +1,31 @@
+/* KidZ Zone look for Puzzle Quest: Lato, white surfaces, hairline borders, flat buttons in the world's accent. */
+.w-puzzles {
+  --font-display: Lato, "Noto Sans Tamil", system-ui, sans-serif;
+  --font: Lato, "Noto Sans Tamil", system-ui, sans-serif;
+  --sky: #0e66a3; --sky-600: #0b5285; --sky-50: #e4f1fa;
+  --purple: #5b3cc4; --purple-600: #47309c; --purple-50: #efeafc;
+  --green: #1d7f52; --green-600: #156541;
+  --yellow: #f2c230; --yellow-600: #c99c12;
+  --ink: #1f2433; --ink-2: #474e60; --ink-3: #636b7e; --line: #e2e3e8;
+  --bg: #f6f6f3; --cream: #fbf7f0;
+  --radius-sm: 10px; --radius: 16px; --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgb(31 36 51 / .05), 0 6px 18px -10px rgb(31 36 51 / .16);
+  --shadow: 0 2px 4px rgb(31 36 51 / .06), 0 12px 28px -12px rgb(31 36 51 / .2);
+  font-family: var(--font);
+  color: var(--ink);
+}
+.w-puzzles .kid-bg { background: var(--bg); }
+.w-puzzles .btn { box-shadow: none; border-radius: 14px; font-weight: 700; }
+.w-puzzles .btn:active { transform: scale(.98); box-shadow: none; }
+.w-puzzles .btn.sm { box-shadow: none; }
+.w-puzzles .btn.ghost { border: 1px solid var(--line); }
+.w-puzzles .btn.yellow { --fg: #3d2a00; }
+.w-puzzles .card { border: 1px solid var(--line); }
+.w-puzzles h1, .w-puzzles h2, .w-puzzles h3 { font-weight: 900; letter-spacing: -0.01em; }
+.w-puzzles :focus-visible { outline: 3px solid var(--sky); }
+.w-puzzles .page { padding-top: 16px; }
+.w-puzzles .hero-card { box-shadow: none; }
+.w-puzzles .hero-card.continue { background: #0e66a3; }
+.w-puzzles .hero-card.daily { background: #1f2433; }
+.w-puzzles .hero-card.daily.done { background: #1d7f52; }
+.w-puzzles .hero-title { font-weight: 900; }

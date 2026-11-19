@@ -1,0 +1,4005 @@
+{
+ "source": "Natural Earth 1:10m Admin 0 countries, India point of view (public domain); India outline from LGD",
+ "builtOn": "2026-11-16",
+ "countries": [
+  {
+   "id": "af",
+   "name": "Afghanistan",
+   "iso2": "AF",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 38041754,
+   "kind": "Sovereign country",
+   "sovereign": "Afghanistan",
+   "capitals": [
+    "Kabul"
+   ],
+   "neighbours": [
+    "cn",
+    "in",
+    "ir",
+    "pk",
+    "tj",
+    "tm",
+    "uz"
+   ]
+  },
+  {
+   "id": "ax",
+   "name": "Åland",
+   "iso2": "AX",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 29884,
+   "kind": "Country",
+   "sovereign": "Finland",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "al",
+   "name": "Albania",
+   "iso2": "AL",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 2854191,
+   "kind": "Sovereign country",
+   "sovereign": "Albania",
+   "capitals": [
+    "Tirana"
+   ],
+   "neighbours": [
+    "gr",
+    "me",
+    "mk",
+    "rs"
+   ]
+  },
+  {
+   "id": "dz",
+   "name": "Algeria",
+   "iso2": "DZ",
+   "continent": "Africa",
+   "subregion": "Northern Africa",
+   "pop": 43053054,
+   "kind": "Sovereign country",
+   "sovereign": "Algeria",
+   "capitals": [
+    "Algiers"
+   ],
+   "neighbours": [
+    "ly",
+    "ma",
+    "ml",
+    "mr",
+    "ne",
+    "tn"
+   ]
+  },
+  {
+   "id": "as",
+   "name": "American Samoa",
+   "iso2": "AS",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 55312,
+   "kind": "Dependency",
+   "sovereign": "United States of America",
+   "capitals": [
+    "Pago Pago"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ad",
+   "name": "Andorra",
+   "iso2": "AD",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 77142,
+   "kind": "Sovereign country",
+   "sovereign": "Andorra",
+   "capitals": [
+    "Andorra"
+   ],
+   "neighbours": [
+    "es",
+    "fr"
+   ]
+  },
+  {
+   "id": "ao",
+   "name": "Angola",
+   "iso2": "AO",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 31825295,
+   "kind": "Sovereign country",
+   "sovereign": "Angola",
+   "capitals": [
+    "Luanda"
+   ],
+   "neighbours": [
+    "cd",
+    "cg",
+    "na",
+    "zm"
+   ]
+  },
+  {
+   "id": "ai",
+   "name": "Anguilla",
+   "iso2": "AI",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 14731,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "aq",
+   "name": "Antarctica",
+   "iso2": "AQ",
+   "continent": "Antarctica",
+   "subregion": "Antarctica",
+   "pop": 4490,
+   "kind": "Indeterminate",
+   "sovereign": "Antarctica",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "ag",
+   "name": "Antigua and Barb.",
+   "iso2": "AG",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 97118,
+   "kind": "Sovereign country",
+   "sovereign": "Antigua and Barbuda",
+   "capitals": [
+    "Saint John's"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ar",
+   "name": "Argentina",
+   "iso2": "AR",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 44938712,
+   "kind": "Sovereign country",
+   "sovereign": "Argentina",
+   "capitals": [
+    "Buenos Aires"
+   ],
+   "neighbours": [
+    "bo",
+    "br",
+    "cl",
+    "py",
+    "uy"
+   ]
+  },
+  {
+   "id": "am",
+   "name": "Armenia",
+   "iso2": "AM",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 2957731,
+   "kind": "Sovereign country",
+   "sovereign": "Armenia",
+   "capitals": [
+    "Yerevan"
+   ],
+   "neighbours": [
+    "az",
+    "ge",
+    "ir",
+    "tr"
+   ]
+  },
+  {
+   "id": "aw",
+   "name": "Aruba",
+   "iso2": "AW",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 106314,
+   "kind": "Country",
+   "sovereign": "Netherlands",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "au",
+   "name": "Australia",
+   "iso2": "AU",
+   "continent": "Oceania",
+   "subregion": "Australia and New Zealand",
+   "pop": 25364307,
+   "kind": "Country",
+   "sovereign": "Australia",
+   "capitals": [
+    "Canberra"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "at",
+   "name": "Austria",
+   "iso2": "AT",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 8877067,
+   "kind": "Sovereign country",
+   "sovereign": "Austria",
+   "capitals": [
+    "Vienna"
+   ],
+   "neighbours": [
+    "ch",
+    "cz",
+    "de",
+    "hu",
+    "it",
+    "li",
+    "si",
+    "sk"
+   ]
+  },
+  {
+   "id": "az",
+   "name": "Azerbaijan",
+   "iso2": "AZ",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 10023318,
+   "kind": "Sovereign country",
+   "sovereign": "Azerbaijan",
+   "capitals": [
+    "Baku"
+   ],
+   "neighbours": [
+    "am",
+    "ge",
+    "ir",
+    "ru",
+    "tr"
+   ]
+  },
+  {
+   "id": "bs",
+   "name": "Bahamas",
+   "iso2": "BS",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 389482,
+   "kind": "Sovereign country",
+   "sovereign": "The Bahamas",
+   "capitals": [
+    "Nassau"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "bh",
+   "name": "Bahrain",
+   "iso2": "BH",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 1641172,
+   "kind": "Sovereign country",
+   "sovereign": "Bahrain",
+   "capitals": [
+    "Manama"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "bd",
+   "name": "Bangladesh",
+   "iso2": "BD",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 163046161,
+   "kind": "Sovereign country",
+   "sovereign": "Bangladesh",
+   "capitals": [
+    "Dhaka"
+   ],
+   "neighbours": [
+    "in",
+    "mm"
+   ]
+  },
+  {
+   "id": "bb",
+   "name": "Barbados",
+   "iso2": "BB",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 287025,
+   "kind": "Sovereign country",
+   "sovereign": "Barbados",
+   "capitals": [
+    "Bridgetown"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "by",
+   "name": "Belarus",
+   "iso2": "BY",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 9466856,
+   "kind": "Sovereign country",
+   "sovereign": "Belarus",
+   "capitals": [
+    "Minsk"
+   ],
+   "neighbours": [
+    "lt",
+    "lv",
+    "pl",
+    "ru",
+    "ua"
+   ]
+  },
+  {
+   "id": "be",
+   "name": "Belgium",
+   "iso2": "BE",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 11484055,
+   "kind": "Sovereign country",
+   "sovereign": "Belgium",
+   "capitals": [
+    "Brussels"
+   ],
+   "neighbours": [
+    "de",
+    "fr",
+    "lu",
+    "nl"
+   ]
+  },
+  {
+   "id": "bz",
+   "name": "Belize",
+   "iso2": "BZ",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 390353,
+   "kind": "Sovereign country",
+   "sovereign": "Belize",
+   "capitals": [
+    "Belmopan"
+   ],
+   "neighbours": [
+    "gt",
+    "mx"
+   ]
+  },
+  {
+   "id": "bj",
+   "name": "Benin",
+   "iso2": "BJ",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 11801151,
+   "kind": "Sovereign country",
+   "sovereign": "Benin",
+   "capitals": [
+    "Cotonou"
+   ],
+   "neighbours": [
+    "bf",
+    "ne",
+    "ng",
+    "tg"
+   ]
+  },
+  {
+   "id": "bm",
+   "name": "Bermuda",
+   "iso2": "BM",
+   "continent": "North America",
+   "subregion": "Northern America",
+   "pop": 63918,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [
+    "Hamilton"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "bt",
+   "name": "Bhutan",
+   "iso2": "BT",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 763092,
+   "kind": "Sovereign country",
+   "sovereign": "Bhutan",
+   "capitals": [
+    "Thimphu"
+   ],
+   "neighbours": [
+    "cn",
+    "in"
+   ]
+  },
+  {
+   "id": "bo",
+   "name": "Bolivia",
+   "iso2": "BO",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 11513100,
+   "kind": "Sovereign country",
+   "sovereign": "Bolivia",
+   "capitals": [
+    "Sucre",
+    "La Paz"
+   ],
+   "neighbours": [
+    "ar",
+    "br",
+    "cl",
+    "pe",
+    "py"
+   ]
+  },
+  {
+   "id": "ba",
+   "name": "Bosnia and Herz.",
+   "iso2": "BA",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 3301000,
+   "kind": "Sovereign country",
+   "sovereign": "Bosnia and Herzegovina",
+   "capitals": [
+    "Sarajevo"
+   ],
+   "neighbours": [
+    "hr",
+    "me",
+    "rs"
+   ]
+  },
+  {
+   "id": "bw",
+   "name": "Botswana",
+   "iso2": "BW",
+   "continent": "Africa",
+   "subregion": "Southern Africa",
+   "pop": 2303697,
+   "kind": "Sovereign country",
+   "sovereign": "Botswana",
+   "capitals": [
+    "Gaborone"
+   ],
+   "neighbours": [
+    "na",
+    "za",
+    "zw"
+   ]
+  },
+  {
+   "id": "br",
+   "name": "Brazil",
+   "iso2": "BR",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 211049527,
+   "kind": "Sovereign country",
+   "sovereign": "Brazil",
+   "capitals": [
+    "Brasília"
+   ],
+   "neighbours": [
+    "ar",
+    "bo",
+    "co",
+    "fr",
+    "gy",
+    "pe",
+    "py",
+    "sr",
+    "uy",
+    "ve"
+   ]
+  },
+  {
+   "id": "vg",
+   "name": "British Virgin Is.",
+   "iso2": "VG",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 30030,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "bn",
+   "name": "Brunei",
+   "iso2": "BN",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 433285,
+   "kind": "Sovereign country",
+   "sovereign": "Brunei",
+   "capitals": [
+    "Bandar Seri Begawan"
+   ],
+   "neighbours": [
+    "my"
+   ]
+  },
+  {
+   "id": "bg",
+   "name": "Bulgaria",
+   "iso2": "BG",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 6975761,
+   "kind": "Sovereign country",
+   "sovereign": "Bulgaria",
+   "capitals": [
+    "Sofia"
+   ],
+   "neighbours": [
+    "gr",
+    "mk",
+    "ro",
+    "rs",
+    "tr"
+   ]
+  },
+  {
+   "id": "bf",
+   "name": "Burkina Faso",
+   "iso2": "BF",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 20321378,
+   "kind": "Sovereign country",
+   "sovereign": "Burkina Faso",
+   "capitals": [
+    "Ouagadougou"
+   ],
+   "neighbours": [
+    "bj",
+    "ci",
+    "gh",
+    "ml",
+    "ne",
+    "tg"
+   ]
+  },
+  {
+   "id": "bi",
+   "name": "Burundi",
+   "iso2": "BI",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 11530580,
+   "kind": "Sovereign country",
+   "sovereign": "Burundi",
+   "capitals": [
+    "Bujumbura"
+   ],
+   "neighbours": [
+    "cd",
+    "rw",
+    "tz"
+   ]
+  },
+  {
+   "id": "cv",
+   "name": "Cabo Verde",
+   "iso2": "CV",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 549935,
+   "kind": "Sovereign country",
+   "sovereign": "Cabo Verde",
+   "capitals": [
+    "Praia"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "kh",
+   "name": "Cambodia",
+   "iso2": "KH",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 16486542,
+   "kind": "Sovereign country",
+   "sovereign": "Cambodia",
+   "capitals": [
+    "Phnom Penh"
+   ],
+   "neighbours": [
+    "la",
+    "th",
+    "vn"
+   ]
+  },
+  {
+   "id": "cm",
+   "name": "Cameroon",
+   "iso2": "CM",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 25876380,
+   "kind": "Sovereign country",
+   "sovereign": "Cameroon",
+   "capitals": [
+    "Yaoundé"
+   ],
+   "neighbours": [
+    "cf",
+    "cg",
+    "ga",
+    "gq",
+    "ng",
+    "td"
+   ]
+  },
+  {
+   "id": "ca",
+   "name": "Canada",
+   "iso2": "CA",
+   "continent": "North America",
+   "subregion": "Northern America",
+   "pop": 37589262,
+   "kind": "Sovereign country",
+   "sovereign": "Canada",
+   "capitals": [
+    "Ottawa"
+   ],
+   "neighbours": [
+    "us"
+   ]
+  },
+  {
+   "id": "ky",
+   "name": "Cayman Is.",
+   "iso2": "KY",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 64948,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [
+    "George Town"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "cf",
+   "name": "Central African Rep.",
+   "iso2": "CF",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 4745185,
+   "kind": "Sovereign country",
+   "sovereign": "Central African Republic",
+   "capitals": [
+    "Bangui"
+   ],
+   "neighbours": [
+    "cd",
+    "cg",
+    "cm",
+    "sd",
+    "ss",
+    "td"
+   ]
+  },
+  {
+   "id": "td",
+   "name": "Chad",
+   "iso2": "TD",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 15946876,
+   "kind": "Sovereign country",
+   "sovereign": "Chad",
+   "capitals": [
+    "N'Djamena"
+   ],
+   "neighbours": [
+    "cf",
+    "cm",
+    "ly",
+    "ne",
+    "ng",
+    "sd"
+   ]
+  },
+  {
+   "id": "cl",
+   "name": "Chile",
+   "iso2": "CL",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 18952038,
+   "kind": "Sovereign country",
+   "sovereign": "Chile",
+   "capitals": [
+    "Santiago"
+   ],
+   "neighbours": [
+    "ar",
+    "bo",
+    "pe"
+   ]
+  },
+  {
+   "id": "cn",
+   "name": "China",
+   "iso2": "CN",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 1397715000,
+   "kind": "Country",
+   "sovereign": "China",
+   "capitals": [
+    "Beijing"
+   ],
+   "neighbours": [
+    "af",
+    "bt",
+    "hk",
+    "in",
+    "kg",
+    "kp",
+    "kz",
+    "la",
+    "mm",
+    "mn",
+    "mo",
+    "np",
+    "ru",
+    "tj",
+    "vn"
+   ]
+  },
+  {
+   "id": "co",
+   "name": "Colombia",
+   "iso2": "CO",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 50339443,
+   "kind": "Sovereign country",
+   "sovereign": "Colombia",
+   "capitals": [
+    "Bogota"
+   ],
+   "neighbours": [
+    "br",
+    "ec",
+    "pa",
+    "pe",
+    "ve"
+   ]
+  },
+  {
+   "id": "km",
+   "name": "Comoros",
+   "iso2": "KM",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 850886,
+   "kind": "Sovereign country",
+   "sovereign": "Comoros",
+   "capitals": [
+    "Moroni"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ck",
+   "name": "Cook Is.",
+   "iso2": "CK",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 17459,
+   "kind": "Dependency",
+   "sovereign": "New Zealand",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "cr",
+   "name": "Costa Rica",
+   "iso2": "CR",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 5047561,
+   "kind": "Sovereign country",
+   "sovereign": "Costa Rica",
+   "capitals": [
+    "San José"
+   ],
+   "neighbours": [
+    "ni",
+    "pa"
+   ]
+  },
+  {
+   "id": "ci",
+   "name": "Côte d'Ivoire",
+   "iso2": "CI",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 25716544,
+   "kind": "Sovereign country",
+   "sovereign": "Ivory Coast",
+   "capitals": [
+    "Yamoussoukro"
+   ],
+   "neighbours": [
+    "bf",
+    "gh",
+    "gn",
+    "lr",
+    "ml"
+   ]
+  },
+  {
+   "id": "hr",
+   "name": "Croatia",
+   "iso2": "HR",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 4067500,
+   "kind": "Sovereign country",
+   "sovereign": "Croatia",
+   "capitals": [
+    "Zagreb"
+   ],
+   "neighbours": [
+    "ba",
+    "hu",
+    "me",
+    "rs",
+    "si"
+   ]
+  },
+  {
+   "id": "cu",
+   "name": "Cuba",
+   "iso2": "CU",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 11333483,
+   "kind": "Sovereignty",
+   "sovereign": "Cuba",
+   "capitals": [
+    "Havana"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "cw",
+   "name": "Curaçao",
+   "iso2": "CW",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 157538,
+   "kind": "Country",
+   "sovereign": "Netherlands",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "cy",
+   "name": "Cyprus",
+   "iso2": "CY",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 1198575,
+   "kind": "Sovereign country",
+   "sovereign": "Cyprus",
+   "capitals": [
+    "Nicosia"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "cz",
+   "name": "Czechia",
+   "iso2": "CZ",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 10669709,
+   "kind": "Sovereign country",
+   "sovereign": "Czechia",
+   "capitals": [
+    "Prague"
+   ],
+   "neighbours": [
+    "at",
+    "de",
+    "pl",
+    "sk"
+   ]
+  },
+  {
+   "id": "kp",
+   "name": "Dem. Rep. Korea",
+   "iso2": "KP",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 25666161,
+   "kind": "Sovereign country",
+   "sovereign": "North Korea",
+   "capitals": [
+    "Pyongyang"
+   ],
+   "neighbours": [
+    "cn",
+    "kr",
+    "ru"
+   ]
+  },
+  {
+   "id": "cd",
+   "name": "Democratic Republic of the Congo",
+   "iso2": "CD",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 86790567,
+   "kind": "Sovereign country",
+   "sovereign": "Democratic Republic of the Congo",
+   "capitals": [
+    "Kinshasa"
+   ],
+   "neighbours": [
+    "ao",
+    "bi",
+    "cf",
+    "cg",
+    "rw",
+    "ss",
+    "tz",
+    "ug",
+    "zm"
+   ]
+  },
+  {
+   "id": "dk",
+   "name": "Denmark",
+   "iso2": "DK",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 5818553,
+   "kind": "Country",
+   "sovereign": "Denmark",
+   "capitals": [
+    "København"
+   ],
+   "neighbours": [
+    "de"
+   ]
+  },
+  {
+   "id": "dj",
+   "name": "Djibouti",
+   "iso2": "DJ",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 973560,
+   "kind": "Sovereign country",
+   "sovereign": "Djibouti",
+   "capitals": [
+    "Djibouti"
+   ],
+   "neighbours": [
+    "er",
+    "et",
+    "so"
+   ]
+  },
+  {
+   "id": "dm",
+   "name": "Dominica",
+   "iso2": "DM",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 71808,
+   "kind": "Sovereign country",
+   "sovereign": "Dominica",
+   "capitals": [
+    "Roseau"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "do",
+   "name": "Dominican Rep.",
+   "iso2": "DO",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 10738958,
+   "kind": "Sovereign country",
+   "sovereign": "Dominican Republic",
+   "capitals": [
+    "Santo Domingo"
+   ],
+   "neighbours": [
+    "ht"
+   ]
+  },
+  {
+   "id": "ec",
+   "name": "Ecuador",
+   "iso2": "EC",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 17373662,
+   "kind": "Sovereign country",
+   "sovereign": "Ecuador",
+   "capitals": [
+    "Quito"
+   ],
+   "neighbours": [
+    "co",
+    "pe"
+   ]
+  },
+  {
+   "id": "eg",
+   "name": "Egypt",
+   "iso2": "EG",
+   "continent": "Africa",
+   "subregion": "Northern Africa",
+   "pop": 100388073,
+   "kind": "Sovereign country",
+   "sovereign": "Egypt",
+   "capitals": [
+    "Cairo"
+   ],
+   "neighbours": [
+    "il",
+    "ly",
+    "ps",
+    "sd"
+   ]
+  },
+  {
+   "id": "sv",
+   "name": "El Salvador",
+   "iso2": "SV",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 6453553,
+   "kind": "Sovereign country",
+   "sovereign": "El Salvador",
+   "capitals": [
+    "San Salvador"
+   ],
+   "neighbours": [
+    "gt",
+    "hn"
+   ]
+  },
+  {
+   "id": "gq",
+   "name": "Eq. Guinea",
+   "iso2": "GQ",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 1355986,
+   "kind": "Sovereign country",
+   "sovereign": "Equatorial Guinea",
+   "capitals": [
+    "Malabo"
+   ],
+   "neighbours": [
+    "cm",
+    "ga"
+   ]
+  },
+  {
+   "id": "er",
+   "name": "Eritrea",
+   "iso2": "ER",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 6081196,
+   "kind": "Sovereign country",
+   "sovereign": "Eritrea",
+   "capitals": [
+    "Asmara"
+   ],
+   "neighbours": [
+    "dj",
+    "et",
+    "sd"
+   ]
+  },
+  {
+   "id": "ee",
+   "name": "Estonia",
+   "iso2": "EE",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 1326590,
+   "kind": "Sovereign country",
+   "sovereign": "Estonia",
+   "capitals": [
+    "Tallinn"
+   ],
+   "neighbours": [
+    "lv",
+    "ru"
+   ]
+  },
+  {
+   "id": "sz",
+   "name": "eSwatini",
+   "iso2": "SZ",
+   "continent": "Africa",
+   "subregion": "Southern Africa",
+   "pop": 1148130,
+   "kind": "Sovereign country",
+   "sovereign": "eSwatini",
+   "capitals": [
+    "Mbabane"
+   ],
+   "neighbours": [
+    "mz",
+    "za"
+   ]
+  },
+  {
+   "id": "et",
+   "name": "Ethiopia",
+   "iso2": "ET",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 112078730,
+   "kind": "Sovereign country",
+   "sovereign": "Ethiopia",
+   "capitals": [
+    "Addis Ababa"
+   ],
+   "neighbours": [
+    "dj",
+    "er",
+    "ke",
+    "sd",
+    "so",
+    "ss"
+   ]
+  },
+  {
+   "id": "fo",
+   "name": "Faeroe Islands",
+   "iso2": "FO",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 48678,
+   "kind": "Dependency",
+   "sovereign": "Denmark",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "fk",
+   "name": "Falkland Is.",
+   "iso2": "FK",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 3398,
+   "kind": "Disputed",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "fj",
+   "name": "Fiji",
+   "iso2": "FJ",
+   "continent": "Oceania",
+   "subregion": "Melanesia",
+   "pop": 889953,
+   "kind": "Sovereign country",
+   "sovereign": "Fiji",
+   "capitals": [
+    "Suva"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "fi",
+   "name": "Finland",
+   "iso2": "FI",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 5520314,
+   "kind": "Country",
+   "sovereign": "Finland",
+   "capitals": [
+    "Helsinki"
+   ],
+   "neighbours": [
+    "no",
+    "ru",
+    "se"
+   ]
+  },
+  {
+   "id": "pf",
+   "name": "Fr. Polynesia",
+   "iso2": "PF",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 279287,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [
+    "Papeete"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "tf",
+   "name": "Fr. S. and Antarctic Lands",
+   "iso2": "TF",
+   "continent": "Africa",
+   "subregion": "Seven seas (open ocean)",
+   "pop": 140,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "fr",
+   "name": "France",
+   "iso2": "FR",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 67059887,
+   "kind": "Country",
+   "sovereign": "France",
+   "capitals": [
+    "Paris"
+   ],
+   "neighbours": [
+    "ad",
+    "be",
+    "br",
+    "ch",
+    "de",
+    "es",
+    "it",
+    "lu",
+    "mc",
+    "sr"
+   ]
+  },
+  {
+   "id": "ga",
+   "name": "Gabon",
+   "iso2": "GA",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 2172579,
+   "kind": "Sovereign country",
+   "sovereign": "Gabon",
+   "capitals": [
+    "Libreville"
+   ],
+   "neighbours": [
+    "cg",
+    "cm",
+    "gq"
+   ]
+  },
+  {
+   "id": "gm",
+   "name": "Gambia",
+   "iso2": "GM",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 2347706,
+   "kind": "Sovereign country",
+   "sovereign": "Gambia",
+   "capitals": [
+    "Banjul"
+   ],
+   "neighbours": [
+    "sn"
+   ]
+  },
+  {
+   "id": "ge",
+   "name": "Georgia",
+   "iso2": "GE",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 3720382,
+   "kind": "Sovereign country",
+   "sovereign": "Georgia",
+   "capitals": [
+    "Tbilisi"
+   ],
+   "neighbours": [
+    "am",
+    "az",
+    "ru",
+    "tr"
+   ]
+  },
+  {
+   "id": "de",
+   "name": "Germany",
+   "iso2": "DE",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 83132799,
+   "kind": "Sovereign country",
+   "sovereign": "Germany",
+   "capitals": [
+    "Berlin"
+   ],
+   "neighbours": [
+    "at",
+    "be",
+    "ch",
+    "cz",
+    "dk",
+    "fr",
+    "lu",
+    "nl",
+    "pl"
+   ]
+  },
+  {
+   "id": "gh",
+   "name": "Ghana",
+   "iso2": "GH",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 30417856,
+   "kind": "Sovereign country",
+   "sovereign": "Ghana",
+   "capitals": [
+    "Accra"
+   ],
+   "neighbours": [
+    "bf",
+    "ci",
+    "tg"
+   ]
+  },
+  {
+   "id": "gi",
+   "name": "Gibraltar",
+   "iso2": "GI",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 33701,
+   "kind": "Disputed",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": [
+    "es"
+   ]
+  },
+  {
+   "id": "gr",
+   "name": "Greece",
+   "iso2": "GR",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 10716322,
+   "kind": "Sovereign country",
+   "sovereign": "Greece",
+   "capitals": [
+    "Athens"
+   ],
+   "neighbours": [
+    "al",
+    "bg",
+    "mk",
+    "tr"
+   ]
+  },
+  {
+   "id": "gl",
+   "name": "Greenland",
+   "iso2": "GL",
+   "continent": "North America",
+   "subregion": "Northern America",
+   "pop": 56225,
+   "kind": "Country",
+   "sovereign": "Denmark",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "gd",
+   "name": "Grenada",
+   "iso2": "GD",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 112003,
+   "kind": "Sovereign country",
+   "sovereign": "Grenada",
+   "capitals": [
+    "Saint George's"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "gu",
+   "name": "Guam",
+   "iso2": "GU",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 167294,
+   "kind": "Dependency",
+   "sovereign": "United States of America",
+   "capitals": [
+    "Agana"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "gt",
+   "name": "Guatemala",
+   "iso2": "GT",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 16604026,
+   "kind": "Sovereign country",
+   "sovereign": "Guatemala",
+   "capitals": [
+    "Guatemala City"
+   ],
+   "neighbours": [
+    "bz",
+    "hn",
+    "mx",
+    "sv"
+   ]
+  },
+  {
+   "id": "gg",
+   "name": "Guernsey",
+   "iso2": "GG",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 62792,
+   "kind": "Country",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "gn",
+   "name": "Guinea",
+   "iso2": "GN",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 12771246,
+   "kind": "Sovereign country",
+   "sovereign": "Guinea",
+   "capitals": [
+    "Conakry"
+   ],
+   "neighbours": [
+    "ci",
+    "gw",
+    "lr",
+    "ml",
+    "sl",
+    "sn"
+   ]
+  },
+  {
+   "id": "gw",
+   "name": "Guinea-Bissau",
+   "iso2": "GW",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 1920922,
+   "kind": "Sovereign country",
+   "sovereign": "Guinea-Bissau",
+   "capitals": [
+    "Bissau"
+   ],
+   "neighbours": [
+    "gn",
+    "sn"
+   ]
+  },
+  {
+   "id": "gy",
+   "name": "Guyana",
+   "iso2": "GY",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 782766,
+   "kind": "Sovereign country",
+   "sovereign": "Guyana",
+   "capitals": [
+    "Georgetown"
+   ],
+   "neighbours": [
+    "br",
+    "sr",
+    "ve"
+   ]
+  },
+  {
+   "id": "ht",
+   "name": "Haiti",
+   "iso2": "HT",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 11263077,
+   "kind": "Sovereign country",
+   "sovereign": "Haiti",
+   "capitals": [
+    "Port-au-Prince"
+   ],
+   "neighbours": [
+    "do"
+   ]
+  },
+  {
+   "id": "hm",
+   "name": "Heard I. and McDonald Is.",
+   "iso2": "HM",
+   "continent": "Africa",
+   "subregion": "Seven seas (open ocean)",
+   "pop": 0,
+   "kind": "Dependency",
+   "sovereign": "Australia",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "hn",
+   "name": "Honduras",
+   "iso2": "HN",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 9746117,
+   "kind": "Sovereign country",
+   "sovereign": "Honduras",
+   "capitals": [
+    "Tegucigalpa"
+   ],
+   "neighbours": [
+    "gt",
+    "ni",
+    "sv"
+   ]
+  },
+  {
+   "id": "hk",
+   "name": "Hong Kong",
+   "iso2": "HK",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 7507400,
+   "kind": "Country",
+   "sovereign": "China",
+   "capitals": [],
+   "neighbours": [
+    "cn"
+   ]
+  },
+  {
+   "id": "hu",
+   "name": "Hungary",
+   "iso2": "HU",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 9769949,
+   "kind": "Sovereign country",
+   "sovereign": "Hungary",
+   "capitals": [
+    "Budapest"
+   ],
+   "neighbours": [
+    "at",
+    "hr",
+    "ro",
+    "rs",
+    "si",
+    "sk",
+    "ua"
+   ]
+  },
+  {
+   "id": "is",
+   "name": "Iceland",
+   "iso2": "IS",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 361313,
+   "kind": "Sovereign country",
+   "sovereign": "Iceland",
+   "capitals": [
+    "Reykjavík"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "in",
+   "name": "India",
+   "iso2": "IN",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 1366417754,
+   "kind": "Sovereign country",
+   "sovereign": "India",
+   "capitals": [
+    "New Delhi"
+   ],
+   "neighbours": [
+    "af",
+    "bd",
+    "bt",
+    "cn",
+    "mm",
+    "np",
+    "pk"
+   ]
+  },
+  {
+   "id": "ioa",
+   "name": "Indian Ocean Ter.",
+   "iso2": "AU",
+   "continent": "Asia",
+   "subregion": "Seven seas (open ocean)",
+   "pop": 2387,
+   "kind": "Dependency",
+   "sovereign": "Australia",
+   "capitals": [
+    "Canberra"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "id",
+   "name": "Indonesia",
+   "iso2": "ID",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 270625568,
+   "kind": "Sovereign country",
+   "sovereign": "Indonesia",
+   "capitals": [
+    "Jakarta"
+   ],
+   "neighbours": [
+    "my",
+    "pg",
+    "tl"
+   ]
+  },
+  {
+   "id": "ir",
+   "name": "Iran",
+   "iso2": "IR",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 82913906,
+   "kind": "Sovereign country",
+   "sovereign": "Iran",
+   "capitals": [
+    "Tehran"
+   ],
+   "neighbours": [
+    "af",
+    "am",
+    "az",
+    "iq",
+    "pk",
+    "tm",
+    "tr"
+   ]
+  },
+  {
+   "id": "iq",
+   "name": "Iraq",
+   "iso2": "IQ",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 39309783,
+   "kind": "Sovereign country",
+   "sovereign": "Iraq",
+   "capitals": [
+    "Baghdad"
+   ],
+   "neighbours": [
+    "ir",
+    "jo",
+    "kw",
+    "sa",
+    "sy",
+    "tr"
+   ]
+  },
+  {
+   "id": "ie",
+   "name": "Ireland",
+   "iso2": "IE",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 4941444,
+   "kind": "Sovereign country",
+   "sovereign": "Ireland",
+   "capitals": [
+    "Dublin"
+   ],
+   "neighbours": [
+    "gb"
+   ]
+  },
+  {
+   "id": "im",
+   "name": "Isle of Man",
+   "iso2": "IM",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 84584,
+   "kind": "Country",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "il",
+   "name": "Israel",
+   "iso2": "IL",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 9053300,
+   "kind": "Disputed",
+   "sovereign": "Israel",
+   "capitals": [],
+   "neighbours": [
+    "eg",
+    "jo",
+    "lb",
+    "ps",
+    "sy"
+   ]
+  },
+  {
+   "id": "it",
+   "name": "Italy",
+   "iso2": "IT",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 60297396,
+   "kind": "Sovereign country",
+   "sovereign": "Italy",
+   "capitals": [
+    "Rome"
+   ],
+   "neighbours": [
+    "at",
+    "ch",
+    "fr",
+    "si",
+    "sm"
+   ]
+  },
+  {
+   "id": "jm",
+   "name": "Jamaica",
+   "iso2": "JM",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 2948279,
+   "kind": "Sovereign country",
+   "sovereign": "Jamaica",
+   "capitals": [
+    "Kingston"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "jp",
+   "name": "Japan",
+   "iso2": "JP",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 126264931,
+   "kind": "Sovereign country",
+   "sovereign": "Japan",
+   "capitals": [
+    "Tokyo"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "je",
+   "name": "Jersey",
+   "iso2": "JE",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 107800,
+   "kind": "Country",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "jo",
+   "name": "Jordan",
+   "iso2": "JO",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 10101694,
+   "kind": "Sovereign country",
+   "sovereign": "Jordan",
+   "capitals": [
+    "Amman"
+   ],
+   "neighbours": [
+    "il",
+    "iq",
+    "ps",
+    "sa",
+    "sy"
+   ]
+  },
+  {
+   "id": "kz",
+   "name": "Kazakhstan",
+   "iso2": "KZ",
+   "continent": "Asia",
+   "subregion": "Central Asia",
+   "pop": 18513930,
+   "kind": "Sovereignty",
+   "sovereign": "Kazakhstan",
+   "capitals": [
+    "Astana"
+   ],
+   "neighbours": [
+    "cn",
+    "kg",
+    "ru",
+    "tm",
+    "uz"
+   ]
+  },
+  {
+   "id": "ke",
+   "name": "Kenya",
+   "iso2": "KE",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 52573973,
+   "kind": "Sovereign country",
+   "sovereign": "Kenya",
+   "capitals": [
+    "Nairobi"
+   ],
+   "neighbours": [
+    "et",
+    "so",
+    "ss",
+    "tz",
+    "ug"
+   ]
+  },
+  {
+   "id": "ki",
+   "name": "Kiribati",
+   "iso2": "KI",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 117606,
+   "kind": "Sovereign country",
+   "sovereign": "Kiribati",
+   "capitals": [
+    "Tarawa"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "kw",
+   "name": "Kuwait",
+   "iso2": "KW",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 4207083,
+   "kind": "Sovereign country",
+   "sovereign": "Kuwait",
+   "capitals": [
+    "Kuwait City"
+   ],
+   "neighbours": [
+    "iq",
+    "sa"
+   ]
+  },
+  {
+   "id": "kg",
+   "name": "Kyrgyzstan",
+   "iso2": "KG",
+   "continent": "Asia",
+   "subregion": "Central Asia",
+   "pop": 6456900,
+   "kind": "Sovereign country",
+   "sovereign": "Kyrgyzstan",
+   "capitals": [
+    "Bishkek"
+   ],
+   "neighbours": [
+    "cn",
+    "kz",
+    "tj",
+    "uz"
+   ]
+  },
+  {
+   "id": "la",
+   "name": "Laos",
+   "iso2": "LA",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 7169455,
+   "kind": "Sovereign country",
+   "sovereign": "Laos",
+   "capitals": [
+    "Vientiane"
+   ],
+   "neighbours": [
+    "cn",
+    "kh",
+    "mm",
+    "th",
+    "vn"
+   ]
+  },
+  {
+   "id": "lv",
+   "name": "Latvia",
+   "iso2": "LV",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 1912789,
+   "kind": "Sovereign country",
+   "sovereign": "Latvia",
+   "capitals": [
+    "Riga"
+   ],
+   "neighbours": [
+    "by",
+    "ee",
+    "lt",
+    "ru"
+   ]
+  },
+  {
+   "id": "lb",
+   "name": "Lebanon",
+   "iso2": "LB",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 6855713,
+   "kind": "Sovereign country",
+   "sovereign": "Lebanon",
+   "capitals": [
+    "Beirut"
+   ],
+   "neighbours": [
+    "il",
+    "sy"
+   ]
+  },
+  {
+   "id": "ls",
+   "name": "Lesotho",
+   "iso2": "LS",
+   "continent": "Africa",
+   "subregion": "Southern Africa",
+   "pop": 2125268,
+   "kind": "Sovereign country",
+   "sovereign": "Lesotho",
+   "capitals": [
+    "Maseru"
+   ],
+   "neighbours": [
+    "za"
+   ]
+  },
+  {
+   "id": "lr",
+   "name": "Liberia",
+   "iso2": "LR",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 4937374,
+   "kind": "Sovereign country",
+   "sovereign": "Liberia",
+   "capitals": [
+    "Monrovia"
+   ],
+   "neighbours": [
+    "ci",
+    "gn",
+    "sl"
+   ]
+  },
+  {
+   "id": "ly",
+   "name": "Libya",
+   "iso2": "LY",
+   "continent": "Africa",
+   "subregion": "Northern Africa",
+   "pop": 6777452,
+   "kind": "Sovereign country",
+   "sovereign": "Libya",
+   "capitals": [
+    "Tripoli"
+   ],
+   "neighbours": [
+    "dz",
+    "eg",
+    "ne",
+    "sd",
+    "td",
+    "tn"
+   ]
+  },
+  {
+   "id": "li",
+   "name": "Liechtenstein",
+   "iso2": "LI",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 38019,
+   "kind": "Sovereign country",
+   "sovereign": "Liechtenstein",
+   "capitals": [
+    "Vaduz"
+   ],
+   "neighbours": [
+    "at",
+    "ch"
+   ]
+  },
+  {
+   "id": "lt",
+   "name": "Lithuania",
+   "iso2": "LT",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 2786844,
+   "kind": "Sovereign country",
+   "sovereign": "Lithuania",
+   "capitals": [
+    "Vilnius"
+   ],
+   "neighbours": [
+    "by",
+    "lv",
+    "pl",
+    "ru"
+   ]
+  },
+  {
+   "id": "lu",
+   "name": "Luxembourg",
+   "iso2": "LU",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 619896,
+   "kind": "Sovereign country",
+   "sovereign": "Luxembourg",
+   "capitals": [
+    "Luxembourg"
+   ],
+   "neighbours": [
+    "be",
+    "de",
+    "fr"
+   ]
+  },
+  {
+   "id": "mo",
+   "name": "Macao",
+   "iso2": "MO",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 640445,
+   "kind": "Country",
+   "sovereign": "China",
+   "capitals": [],
+   "neighbours": [
+    "cn"
+   ]
+  },
+  {
+   "id": "mg",
+   "name": "Madagascar",
+   "iso2": "MG",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 26969307,
+   "kind": "Sovereign country",
+   "sovereign": "Madagascar",
+   "capitals": [
+    "Antananarivo"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "mw",
+   "name": "Malawi",
+   "iso2": "MW",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 18628747,
+   "kind": "Sovereign country",
+   "sovereign": "Malawi",
+   "capitals": [
+    "Lilongwe"
+   ],
+   "neighbours": [
+    "mz",
+    "tz",
+    "zm"
+   ]
+  },
+  {
+   "id": "my",
+   "name": "Malaysia",
+   "iso2": "MY",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 31949777,
+   "kind": "Sovereign country",
+   "sovereign": "Malaysia",
+   "capitals": [
+    "Kuala Lumpur"
+   ],
+   "neighbours": [
+    "bn",
+    "id",
+    "th"
+   ]
+  },
+  {
+   "id": "mv",
+   "name": "Maldives",
+   "iso2": "MV",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 530953,
+   "kind": "Sovereign country",
+   "sovereign": "Maldives",
+   "capitals": [
+    "Malé"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ml",
+   "name": "Mali",
+   "iso2": "ML",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 19658031,
+   "kind": "Sovereign country",
+   "sovereign": "Mali",
+   "capitals": [
+    "Bamako"
+   ],
+   "neighbours": [
+    "bf",
+    "ci",
+    "dz",
+    "gn",
+    "mr",
+    "ne",
+    "sn"
+   ]
+  },
+  {
+   "id": "mt",
+   "name": "Malta",
+   "iso2": "MT",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 502653,
+   "kind": "Sovereign country",
+   "sovereign": "Malta",
+   "capitals": [
+    "Valletta"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "mh",
+   "name": "Marshall Is.",
+   "iso2": "MH",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 58791,
+   "kind": "Sovereign country",
+   "sovereign": "Marshall Islands",
+   "capitals": [
+    "Majuro"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "mr",
+   "name": "Mauritania",
+   "iso2": "MR",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 4525696,
+   "kind": "Sovereign country",
+   "sovereign": "Mauritania",
+   "capitals": [
+    "Nouakchott"
+   ],
+   "neighbours": [
+    "dz",
+    "ma",
+    "ml",
+    "sn"
+   ]
+  },
+  {
+   "id": "mu",
+   "name": "Mauritius",
+   "iso2": "MU",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 1265711,
+   "kind": "Sovereign country",
+   "sovereign": "Mauritius",
+   "capitals": [
+    "Port Louis"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "mx",
+   "name": "Mexico",
+   "iso2": "MX",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 127575529,
+   "kind": "Sovereign country",
+   "sovereign": "Mexico",
+   "capitals": [
+    "Mexico City"
+   ],
+   "neighbours": [
+    "bz",
+    "gt",
+    "us"
+   ]
+  },
+  {
+   "id": "fm",
+   "name": "Micronesia",
+   "iso2": "FM",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 113815,
+   "kind": "Sovereign country",
+   "sovereign": "Federated States of Micronesia",
+   "capitals": [
+    "Palikir"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "md",
+   "name": "Moldova",
+   "iso2": "MD",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 2657637,
+   "kind": "Sovereign country",
+   "sovereign": "Moldova",
+   "capitals": [
+    "Chișinău"
+   ],
+   "neighbours": [
+    "ro",
+    "ua"
+   ]
+  },
+  {
+   "id": "mc",
+   "name": "Monaco",
+   "iso2": "MC",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 38964,
+   "kind": "Sovereign country",
+   "sovereign": "Monaco",
+   "capitals": [
+    "Monaco"
+   ],
+   "neighbours": [
+    "fr"
+   ]
+  },
+  {
+   "id": "mn",
+   "name": "Mongolia",
+   "iso2": "MN",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 3225167,
+   "kind": "Sovereign country",
+   "sovereign": "Mongolia",
+   "capitals": [
+    "Ulaanbaatar"
+   ],
+   "neighbours": [
+    "cn",
+    "ru"
+   ]
+  },
+  {
+   "id": "me",
+   "name": "Montenegro",
+   "iso2": "ME",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 622137,
+   "kind": "Sovereign country",
+   "sovereign": "Montenegro",
+   "capitals": [
+    "Podgorica"
+   ],
+   "neighbours": [
+    "al",
+    "ba",
+    "hr",
+    "rs"
+   ]
+  },
+  {
+   "id": "ms",
+   "name": "Montserrat",
+   "iso2": "MS",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 4649,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "ma",
+   "name": "Morocco",
+   "iso2": "MA",
+   "continent": "Africa",
+   "subregion": "Northern Africa",
+   "pop": 36471769,
+   "kind": "Sovereign country",
+   "sovereign": "Morocco",
+   "capitals": [
+    "Rabat"
+   ],
+   "neighbours": [
+    "dz",
+    "mr"
+   ]
+  },
+  {
+   "id": "mz",
+   "name": "Mozambique",
+   "iso2": "MZ",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 30366036,
+   "kind": "Sovereign country",
+   "sovereign": "Mozambique",
+   "capitals": [
+    "Maputo"
+   ],
+   "neighbours": [
+    "mw",
+    "sz",
+    "tz",
+    "za",
+    "zm",
+    "zw"
+   ]
+  },
+  {
+   "id": "mm",
+   "name": "Myanmar",
+   "iso2": "MM",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 54045420,
+   "kind": "Sovereign country",
+   "sovereign": "Myanmar",
+   "capitals": [
+    "Naypyidaw"
+   ],
+   "neighbours": [
+    "bd",
+    "cn",
+    "in",
+    "la",
+    "th"
+   ]
+  },
+  {
+   "id": "mp",
+   "name": "N. Mariana Is.",
+   "iso2": "MP",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 57216,
+   "kind": "Dependency",
+   "sovereign": "United States of America",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "na",
+   "name": "Namibia",
+   "iso2": "NA",
+   "continent": "Africa",
+   "subregion": "Southern Africa",
+   "pop": 2494530,
+   "kind": "Sovereign country",
+   "sovereign": "Namibia",
+   "capitals": [
+    "Windhoek"
+   ],
+   "neighbours": [
+    "ao",
+    "bw",
+    "za",
+    "zm"
+   ]
+  },
+  {
+   "id": "nr",
+   "name": "Nauru",
+   "iso2": "NR",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 12581,
+   "kind": "Sovereign country",
+   "sovereign": "Nauru",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "np",
+   "name": "Nepal",
+   "iso2": "NP",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 28608710,
+   "kind": "Sovereign country",
+   "sovereign": "Nepal",
+   "capitals": [
+    "Kathmandu"
+   ],
+   "neighbours": [
+    "cn",
+    "in"
+   ]
+  },
+  {
+   "id": "nl",
+   "name": "Netherlands",
+   "iso2": "NL",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 17332850,
+   "kind": "Country",
+   "sovereign": "Netherlands",
+   "capitals": [
+    "Amsterdam"
+   ],
+   "neighbours": [
+    "be",
+    "de"
+   ]
+  },
+  {
+   "id": "nc",
+   "name": "New Caledonia",
+   "iso2": "NC",
+   "continent": "Oceania",
+   "subregion": "Melanesia",
+   "pop": 287800,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [
+    "Nouméa"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "nz",
+   "name": "New Zealand",
+   "iso2": "NZ",
+   "continent": "Oceania",
+   "subregion": "Australia and New Zealand",
+   "pop": 4917000,
+   "kind": "Country",
+   "sovereign": "New Zealand",
+   "capitals": [
+    "Wellington"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ni",
+   "name": "Nicaragua",
+   "iso2": "NI",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 6545502,
+   "kind": "Sovereign country",
+   "sovereign": "Nicaragua",
+   "capitals": [
+    "Managua"
+   ],
+   "neighbours": [
+    "cr",
+    "hn"
+   ]
+  },
+  {
+   "id": "ne",
+   "name": "Niger",
+   "iso2": "NE",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 23310715,
+   "kind": "Sovereign country",
+   "sovereign": "Niger",
+   "capitals": [
+    "Niamey"
+   ],
+   "neighbours": [
+    "bf",
+    "bj",
+    "dz",
+    "ly",
+    "ml",
+    "ng",
+    "td"
+   ]
+  },
+  {
+   "id": "ng",
+   "name": "Nigeria",
+   "iso2": "NG",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 200963599,
+   "kind": "Sovereign country",
+   "sovereign": "Nigeria",
+   "capitals": [
+    "Abuja"
+   ],
+   "neighbours": [
+    "bj",
+    "cm",
+    "ne",
+    "td"
+   ]
+  },
+  {
+   "id": "nu",
+   "name": "Niue",
+   "iso2": "NU",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 1620,
+   "kind": "Dependency",
+   "sovereign": "New Zealand",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "nf",
+   "name": "Norfolk Island",
+   "iso2": "NF",
+   "continent": "Oceania",
+   "subregion": "Australia and New Zealand",
+   "pop": 2169,
+   "kind": "Dependency",
+   "sovereign": "Australia",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "mk",
+   "name": "North Macedonia",
+   "iso2": "MK",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 2083459,
+   "kind": "Sovereign country",
+   "sovereign": "North Macedonia",
+   "capitals": [
+    "Skopje"
+   ],
+   "neighbours": [
+    "al",
+    "bg",
+    "gr",
+    "rs"
+   ]
+  },
+  {
+   "id": "no",
+   "name": "Norway",
+   "iso2": "NO",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 5347896,
+   "kind": "Sovereign country",
+   "sovereign": "Norway",
+   "capitals": [
+    "Oslo"
+   ],
+   "neighbours": [
+    "fi",
+    "ru",
+    "se"
+   ]
+  },
+  {
+   "id": "om",
+   "name": "Oman",
+   "iso2": "OM",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 4974986,
+   "kind": "Sovereign country",
+   "sovereign": "Oman",
+   "capitals": [
+    "Muscat"
+   ],
+   "neighbours": [
+    "ae",
+    "sa",
+    "ye"
+   ]
+  },
+  {
+   "id": "pk",
+   "name": "Pakistan",
+   "iso2": "PK",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 216565318,
+   "kind": "Sovereign country",
+   "sovereign": "Pakistan",
+   "capitals": [
+    "Islamabad"
+   ],
+   "neighbours": [
+    "af",
+    "in",
+    "ir"
+   ]
+  },
+  {
+   "id": "pw",
+   "name": "Palau",
+   "iso2": "PW",
+   "continent": "Oceania",
+   "subregion": "Micronesia",
+   "pop": 18008,
+   "kind": "Sovereign country",
+   "sovereign": "Palau",
+   "capitals": [
+    "Melekeok"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ps",
+   "name": "Palestine",
+   "iso2": "PS",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 4685306,
+   "kind": "Indeterminate",
+   "sovereign": "Israel",
+   "capitals": [],
+   "neighbours": [
+    "eg",
+    "il",
+    "jo"
+   ]
+  },
+  {
+   "id": "pa",
+   "name": "Panama",
+   "iso2": "PA",
+   "continent": "North America",
+   "subregion": "Central America",
+   "pop": 4246439,
+   "kind": "Sovereign country",
+   "sovereign": "Panama",
+   "capitals": [
+    "Panama City"
+   ],
+   "neighbours": [
+    "co",
+    "cr"
+   ]
+  },
+  {
+   "id": "pg",
+   "name": "Papua New Guinea",
+   "iso2": "PG",
+   "continent": "Oceania",
+   "subregion": "Melanesia",
+   "pop": 8776109,
+   "kind": "Sovereign country",
+   "sovereign": "Papua New Guinea",
+   "capitals": [
+    "Port Moresby"
+   ],
+   "neighbours": [
+    "id"
+   ]
+  },
+  {
+   "id": "py",
+   "name": "Paraguay",
+   "iso2": "PY",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 7044636,
+   "kind": "Sovereign country",
+   "sovereign": "Paraguay",
+   "capitals": [
+    "Asunción"
+   ],
+   "neighbours": [
+    "ar",
+    "bo",
+    "br"
+   ]
+  },
+  {
+   "id": "pe",
+   "name": "Peru",
+   "iso2": "PE",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 32510453,
+   "kind": "Sovereign country",
+   "sovereign": "Peru",
+   "capitals": [
+    "Lima"
+   ],
+   "neighbours": [
+    "bo",
+    "br",
+    "cl",
+    "co",
+    "ec"
+   ]
+  },
+  {
+   "id": "ph",
+   "name": "Philippines",
+   "iso2": "PH",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 108116615,
+   "kind": "Sovereign country",
+   "sovereign": "Philippines",
+   "capitals": [
+    "Manila"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "pn",
+   "name": "Pitcairn Is.",
+   "iso2": "PN",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 54,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "pl",
+   "name": "Poland",
+   "iso2": "PL",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 37970874,
+   "kind": "Sovereign country",
+   "sovereign": "Poland",
+   "capitals": [
+    "Warsaw"
+   ],
+   "neighbours": [
+    "by",
+    "cz",
+    "de",
+    "lt",
+    "ru",
+    "sk",
+    "ua"
+   ]
+  },
+  {
+   "id": "pt",
+   "name": "Portugal",
+   "iso2": "PT",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 10269417,
+   "kind": "Sovereign country",
+   "sovereign": "Portugal",
+   "capitals": [
+    "Lisbon"
+   ],
+   "neighbours": [
+    "es"
+   ]
+  },
+  {
+   "id": "pr",
+   "name": "Puerto Rico",
+   "iso2": "PR",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 3193694,
+   "kind": "Dependency",
+   "sovereign": "United States of America",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "qa",
+   "name": "Qatar",
+   "iso2": "QA",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 2832067,
+   "kind": "Sovereign country",
+   "sovereign": "Qatar",
+   "capitals": [
+    "Doha"
+   ],
+   "neighbours": [
+    "sa"
+   ]
+  },
+  {
+   "id": "kr",
+   "name": "Republic of Korea",
+   "iso2": "KR",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 51709098,
+   "kind": "Sovereign country",
+   "sovereign": "South Korea",
+   "capitals": [
+    "Seoul"
+   ],
+   "neighbours": [
+    "kp"
+   ]
+  },
+  {
+   "id": "cg",
+   "name": "Republic of the Congo",
+   "iso2": "CG",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 5380508,
+   "kind": "Sovereign country",
+   "sovereign": "Republic of the Congo",
+   "capitals": [
+    "Brazzaville"
+   ],
+   "neighbours": [
+    "ao",
+    "cd",
+    "cf",
+    "cm",
+    "ga"
+   ]
+  },
+  {
+   "id": "ro",
+   "name": "Romania",
+   "iso2": "RO",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 19356544,
+   "kind": "Sovereign country",
+   "sovereign": "Romania",
+   "capitals": [
+    "Bucharest"
+   ],
+   "neighbours": [
+    "bg",
+    "hu",
+    "md",
+    "rs",
+    "ua"
+   ]
+  },
+  {
+   "id": "ru",
+   "name": "Russia",
+   "iso2": "RU",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 144373535,
+   "kind": "Sovereign country",
+   "sovereign": "Russia",
+   "capitals": [
+    "Moscow"
+   ],
+   "neighbours": [
+    "az",
+    "by",
+    "cn",
+    "ee",
+    "fi",
+    "ge",
+    "kp",
+    "kz",
+    "lt",
+    "lv",
+    "mn",
+    "no",
+    "pl",
+    "ua"
+   ]
+  },
+  {
+   "id": "rw",
+   "name": "Rwanda",
+   "iso2": "RW",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 12626950,
+   "kind": "Sovereign country",
+   "sovereign": "Rwanda",
+   "capitals": [
+    "Kigali"
+   ],
+   "neighbours": [
+    "bi",
+    "cd",
+    "tz",
+    "ug"
+   ]
+  },
+  {
+   "id": "gs",
+   "name": "S. Geo. and the Is.",
+   "iso2": "GS",
+   "continent": "South America",
+   "subregion": "Seven seas (open ocean)",
+   "pop": 30,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "ss",
+   "name": "S. Sudan",
+   "iso2": "SS",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 11062113,
+   "kind": "Sovereign country",
+   "sovereign": "South Sudan",
+   "capitals": [
+    "Juba"
+   ],
+   "neighbours": [
+    "cd",
+    "cf",
+    "et",
+    "ke",
+    "sd",
+    "ug"
+   ]
+  },
+  {
+   "id": "sh",
+   "name": "Saint Helena",
+   "iso2": "SH",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 4534,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "kn",
+   "name": "Saint Kitts and Nevis",
+   "iso2": "KN",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 52834,
+   "kind": "Sovereign country",
+   "sovereign": "Saint Kitts and Nevis",
+   "capitals": [
+    "Basseterre"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "lc",
+   "name": "Saint Lucia",
+   "iso2": "LC",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 182790,
+   "kind": "Sovereign country",
+   "sovereign": "Saint Lucia",
+   "capitals": [
+    "Castries"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "mf",
+   "name": "Saint-Martin",
+   "iso2": "MF",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 38002,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [],
+   "neighbours": [
+    "sx"
+   ]
+  },
+  {
+   "id": "ws",
+   "name": "Samoa",
+   "iso2": "WS",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 197097,
+   "kind": "Sovereign country",
+   "sovereign": "Samoa",
+   "capitals": [
+    "Apia"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "sm",
+   "name": "San Marino",
+   "iso2": "SM",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 33860,
+   "kind": "Sovereign country",
+   "sovereign": "San Marino",
+   "capitals": [
+    "San Marino"
+   ],
+   "neighbours": [
+    "it"
+   ]
+  },
+  {
+   "id": "st",
+   "name": "Sao Tome and Principe",
+   "iso2": "ST",
+   "continent": "Africa",
+   "subregion": "Middle Africa",
+   "pop": 215056,
+   "kind": "Sovereign country",
+   "sovereign": "São Tomé and Principe",
+   "capitals": [
+    "São Tomé"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "sa",
+   "name": "Saudi Arabia",
+   "iso2": "SA",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 34268528,
+   "kind": "Sovereign country",
+   "sovereign": "Saudi Arabia",
+   "capitals": [
+    "Riyadh"
+   ],
+   "neighbours": [
+    "ae",
+    "iq",
+    "jo",
+    "kw",
+    "om",
+    "qa",
+    "ye"
+   ]
+  },
+  {
+   "id": "sn",
+   "name": "Senegal",
+   "iso2": "SN",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 16296364,
+   "kind": "Sovereign country",
+   "sovereign": "Senegal",
+   "capitals": [
+    "Dakar"
+   ],
+   "neighbours": [
+    "gm",
+    "gn",
+    "gw",
+    "ml",
+    "mr"
+   ]
+  },
+  {
+   "id": "rs",
+   "name": "Serbia",
+   "iso2": "RS",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 6944975,
+   "kind": "Sovereign country",
+   "sovereign": "Republic of Serbia",
+   "capitals": [
+    "Belgrade"
+   ],
+   "neighbours": [
+    "al",
+    "ba",
+    "bg",
+    "hr",
+    "hu",
+    "me",
+    "mk",
+    "ro"
+   ]
+  },
+  {
+   "id": "sc",
+   "name": "Seychelles",
+   "iso2": "SC",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 97625,
+   "kind": "Sovereign country",
+   "sovereign": "Seychelles",
+   "capitals": [
+    "Victoria"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "sl",
+   "name": "Sierra Leone",
+   "iso2": "SL",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 7813215,
+   "kind": "Sovereign country",
+   "sovereign": "Sierra Leone",
+   "capitals": [
+    "Freetown"
+   ],
+   "neighbours": [
+    "gn",
+    "lr"
+   ]
+  },
+  {
+   "id": "sg",
+   "name": "Singapore",
+   "iso2": "SG",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 5703569,
+   "kind": "Sovereign country",
+   "sovereign": "Singapore",
+   "capitals": [
+    "Singapore"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "sx",
+   "name": "Sint Maarten",
+   "iso2": "SX",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 40733,
+   "kind": "Country",
+   "sovereign": "Netherlands",
+   "capitals": [],
+   "neighbours": [
+    "mf"
+   ]
+  },
+  {
+   "id": "sk",
+   "name": "Slovakia",
+   "iso2": "SK",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 5454073,
+   "kind": "Sovereign country",
+   "sovereign": "Slovakia",
+   "capitals": [
+    "Bratislava"
+   ],
+   "neighbours": [
+    "at",
+    "cz",
+    "hu",
+    "pl",
+    "ua"
+   ]
+  },
+  {
+   "id": "si",
+   "name": "Slovenia",
+   "iso2": "SI",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 2087946,
+   "kind": "Sovereign country",
+   "sovereign": "Slovenia",
+   "capitals": [
+    "Ljubljana"
+   ],
+   "neighbours": [
+    "at",
+    "hr",
+    "hu",
+    "it"
+   ]
+  },
+  {
+   "id": "sb",
+   "name": "Solomon Is.",
+   "iso2": "SB",
+   "continent": "Oceania",
+   "subregion": "Melanesia",
+   "pop": 669823,
+   "kind": "Sovereign country",
+   "sovereign": "Solomon Islands",
+   "capitals": [
+    "Honiara"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "so",
+   "name": "Somalia",
+   "iso2": "SO",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 10192317.3,
+   "kind": "Sovereign country",
+   "sovereign": "Somalia",
+   "capitals": [
+    "Mogadishu"
+   ],
+   "neighbours": [
+    "dj",
+    "et",
+    "ke"
+   ]
+  },
+  {
+   "id": "za",
+   "name": "South Africa",
+   "iso2": "ZA",
+   "continent": "Africa",
+   "subregion": "Southern Africa",
+   "pop": 58558270,
+   "kind": "Sovereign country",
+   "sovereign": "South Africa",
+   "capitals": [
+    "Bloemfontein",
+    "Pretoria",
+    "Cape Town"
+   ],
+   "neighbours": [
+    "bw",
+    "ls",
+    "mz",
+    "na",
+    "sz",
+    "zw"
+   ]
+  },
+  {
+   "id": "es",
+   "name": "Spain",
+   "iso2": "ES",
+   "continent": "Europe",
+   "subregion": "Southern Europe",
+   "pop": 47076781,
+   "kind": "Sovereign country",
+   "sovereign": "Spain",
+   "capitals": [
+    "Madrid"
+   ],
+   "neighbours": [
+    "ad",
+    "fr",
+    "gi",
+    "pt"
+   ]
+  },
+  {
+   "id": "lk",
+   "name": "Sri Lanka",
+   "iso2": "LK",
+   "continent": "Asia",
+   "subregion": "Southern Asia",
+   "pop": 21803000,
+   "kind": "Sovereign country",
+   "sovereign": "Sri Lanka",
+   "capitals": [
+    "Sri Jayawardenepura Kotte"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "bl",
+   "name": "St-Barthélemy",
+   "iso2": "BL",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 9961,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "pm",
+   "name": "St. Pierre and Miquelon",
+   "iso2": "PM",
+   "continent": "North America",
+   "subregion": "Northern America",
+   "pop": 5997,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "vc",
+   "name": "St. Vin. and Gren.",
+   "iso2": "VC",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 110589,
+   "kind": "Sovereign country",
+   "sovereign": "Saint Vincent and the Grenadines",
+   "capitals": [
+    "Kingstown"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "sd",
+   "name": "Sudan",
+   "iso2": "SD",
+   "continent": "Africa",
+   "subregion": "Northern Africa",
+   "pop": 42813238,
+   "kind": "Sovereign country",
+   "sovereign": "Sudan",
+   "capitals": [
+    "Khartoum"
+   ],
+   "neighbours": [
+    "cf",
+    "eg",
+    "er",
+    "et",
+    "ly",
+    "ss",
+    "td"
+   ]
+  },
+  {
+   "id": "sr",
+   "name": "Suriname",
+   "iso2": "SR",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 581363,
+   "kind": "Sovereign country",
+   "sovereign": "Suriname",
+   "capitals": [
+    "Paramaribo"
+   ],
+   "neighbours": [
+    "br",
+    "fr",
+    "gy"
+   ]
+  },
+  {
+   "id": "se",
+   "name": "Sweden",
+   "iso2": "SE",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 10285453,
+   "kind": "Sovereign country",
+   "sovereign": "Sweden",
+   "capitals": [
+    "Stockholm"
+   ],
+   "neighbours": [
+    "fi",
+    "no"
+   ]
+  },
+  {
+   "id": "ch",
+   "name": "Switzerland",
+   "iso2": "CH",
+   "continent": "Europe",
+   "subregion": "Western Europe",
+   "pop": 8574832,
+   "kind": "Sovereign country",
+   "sovereign": "Switzerland",
+   "capitals": [
+    "Bern"
+   ],
+   "neighbours": [
+    "at",
+    "de",
+    "fr",
+    "it",
+    "li"
+   ]
+  },
+  {
+   "id": "sy",
+   "name": "Syria",
+   "iso2": "SY",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 17070135,
+   "kind": "Sovereign country",
+   "sovereign": "Syria",
+   "capitals": [
+    "Damascus"
+   ],
+   "neighbours": [
+    "il",
+    "iq",
+    "jo",
+    "lb",
+    "tr"
+   ]
+  },
+  {
+   "id": "cn-tw",
+   "name": "Taiwan",
+   "iso2": "CN-TW",
+   "continent": "Asia",
+   "subregion": "Eastern Asia",
+   "pop": 23568378,
+   "kind": "Sovereign country",
+   "sovereign": "Taiwan",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "tj",
+   "name": "Tajikistan",
+   "iso2": "TJ",
+   "continent": "Asia",
+   "subregion": "Central Asia",
+   "pop": 9321018,
+   "kind": "Sovereign country",
+   "sovereign": "Tajikistan",
+   "capitals": [
+    "Dushanbe"
+   ],
+   "neighbours": [
+    "af",
+    "cn",
+    "kg",
+    "uz"
+   ]
+  },
+  {
+   "id": "tz",
+   "name": "Tanzania",
+   "iso2": "TZ",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 58005463,
+   "kind": "Sovereign country",
+   "sovereign": "United Republic of Tanzania",
+   "capitals": [
+    "Dodoma"
+   ],
+   "neighbours": [
+    "bi",
+    "cd",
+    "ke",
+    "mw",
+    "mz",
+    "rw",
+    "ug",
+    "zm"
+   ]
+  },
+  {
+   "id": "th",
+   "name": "Thailand",
+   "iso2": "TH",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 69625582,
+   "kind": "Sovereign country",
+   "sovereign": "Thailand",
+   "capitals": [
+    "Bangkok"
+   ],
+   "neighbours": [
+    "kh",
+    "la",
+    "mm",
+    "my"
+   ]
+  },
+  {
+   "id": "tl",
+   "name": "Timor-Leste",
+   "iso2": "TL",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 1293119,
+   "kind": "Sovereign country",
+   "sovereign": "East Timor",
+   "capitals": [
+    "Dili"
+   ],
+   "neighbours": [
+    "id"
+   ]
+  },
+  {
+   "id": "tg",
+   "name": "Togo",
+   "iso2": "TG",
+   "continent": "Africa",
+   "subregion": "Western Africa",
+   "pop": 8082366,
+   "kind": "Sovereign country",
+   "sovereign": "Togo",
+   "capitals": [
+    "Lomé"
+   ],
+   "neighbours": [
+    "bf",
+    "bj",
+    "gh"
+   ]
+  },
+  {
+   "id": "to",
+   "name": "Tonga",
+   "iso2": "TO",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 104494,
+   "kind": "Sovereign country",
+   "sovereign": "Tonga",
+   "capitals": [
+    "Nuku'alofa"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "tt",
+   "name": "Trinidad and Tobago",
+   "iso2": "TT",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 1394973,
+   "kind": "Sovereign country",
+   "sovereign": "Trinidad and Tobago",
+   "capitals": [
+    "Port-of-Spain"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "tn",
+   "name": "Tunisia",
+   "iso2": "TN",
+   "continent": "Africa",
+   "subregion": "Northern Africa",
+   "pop": 11694719,
+   "kind": "Sovereign country",
+   "sovereign": "Tunisia",
+   "capitals": [
+    "Tunis"
+   ],
+   "neighbours": [
+    "dz",
+    "ly"
+   ]
+  },
+  {
+   "id": "tr",
+   "name": "Turkey",
+   "iso2": "TR",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 83429615,
+   "kind": "Sovereign country",
+   "sovereign": "Turkey",
+   "capitals": [
+    "Ankara"
+   ],
+   "neighbours": [
+    "am",
+    "az",
+    "bg",
+    "ge",
+    "gr",
+    "iq",
+    "ir",
+    "sy"
+   ]
+  },
+  {
+   "id": "tm",
+   "name": "Turkmenistan",
+   "iso2": "TM",
+   "continent": "Asia",
+   "subregion": "Central Asia",
+   "pop": 5942089,
+   "kind": "Sovereign country",
+   "sovereign": "Turkmenistan",
+   "capitals": [
+    "Ashgabat"
+   ],
+   "neighbours": [
+    "af",
+    "ir",
+    "kz",
+    "uz"
+   ]
+  },
+  {
+   "id": "tc",
+   "name": "Turks and Caicos Is.",
+   "iso2": "TC",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 38191,
+   "kind": "Dependency",
+   "sovereign": "United Kingdom",
+   "capitals": [
+    "Grand Turk"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "vi",
+   "name": "U.S. Virgin Is.",
+   "iso2": "VI",
+   "continent": "North America",
+   "subregion": "Caribbean",
+   "pop": 106631,
+   "kind": "Dependency",
+   "sovereign": "United States of America",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "ug",
+   "name": "Uganda",
+   "iso2": "UG",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 44269594,
+   "kind": "Sovereign country",
+   "sovereign": "Uganda",
+   "capitals": [
+    "Kampala"
+   ],
+   "neighbours": [
+    "cd",
+    "ke",
+    "rw",
+    "ss",
+    "tz"
+   ]
+  },
+  {
+   "id": "ua",
+   "name": "Ukraine",
+   "iso2": "UA",
+   "continent": "Europe",
+   "subregion": "Eastern Europe",
+   "pop": 44385155,
+   "kind": "Sovereign country",
+   "sovereign": "Ukraine",
+   "capitals": [
+    "Kyiv"
+   ],
+   "neighbours": [
+    "by",
+    "hu",
+    "md",
+    "pl",
+    "ro",
+    "ru",
+    "sk"
+   ]
+  },
+  {
+   "id": "ae",
+   "name": "United Arab Emirates",
+   "iso2": "AE",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 9770529,
+   "kind": "Sovereign country",
+   "sovereign": "United Arab Emirates",
+   "capitals": [
+    "Abu Dhabi"
+   ],
+   "neighbours": [
+    "om",
+    "sa"
+   ]
+  },
+  {
+   "id": "gb",
+   "name": "United Kingdom",
+   "iso2": "GB",
+   "continent": "Europe",
+   "subregion": "Northern Europe",
+   "pop": 66834405,
+   "kind": "Country",
+   "sovereign": "United Kingdom",
+   "capitals": [
+    "London"
+   ],
+   "neighbours": [
+    "ie"
+   ]
+  },
+  {
+   "id": "us",
+   "name": "United States",
+   "iso2": "US",
+   "continent": "North America",
+   "subregion": "Northern America",
+   "pop": 328239523,
+   "kind": "Country",
+   "sovereign": "United States of America",
+   "capitals": [
+    "Washington,  D.C."
+   ],
+   "neighbours": [
+    "ca",
+    "mx"
+   ]
+  },
+  {
+   "id": "uy",
+   "name": "Uruguay",
+   "iso2": "UY",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 3461734,
+   "kind": "Sovereign country",
+   "sovereign": "Uruguay",
+   "capitals": [
+    "Montevideo"
+   ],
+   "neighbours": [
+    "ar",
+    "br"
+   ]
+  },
+  {
+   "id": "uz",
+   "name": "Uzbekistan",
+   "iso2": "UZ",
+   "continent": "Asia",
+   "subregion": "Central Asia",
+   "pop": 33580650,
+   "kind": "Sovereign country",
+   "sovereign": "Uzbekistan",
+   "capitals": [
+    "Tashkent"
+   ],
+   "neighbours": [
+    "af",
+    "kg",
+    "kz",
+    "tj",
+    "tm"
+   ]
+  },
+  {
+   "id": "vu",
+   "name": "Vanuatu",
+   "iso2": "VU",
+   "continent": "Oceania",
+   "subregion": "Melanesia",
+   "pop": 299882,
+   "kind": "Sovereign country",
+   "sovereign": "Vanuatu",
+   "capitals": [
+    "Port Vila"
+   ],
+   "neighbours": []
+  },
+  {
+   "id": "ve",
+   "name": "Venezuela",
+   "iso2": "VE",
+   "continent": "South America",
+   "subregion": "South America",
+   "pop": 28515829,
+   "kind": "Sovereign country",
+   "sovereign": "Venezuela",
+   "capitals": [
+    "Caracas"
+   ],
+   "neighbours": [
+    "br",
+    "co",
+    "gy"
+   ]
+  },
+  {
+   "id": "vn",
+   "name": "Vietnam",
+   "iso2": "VN",
+   "continent": "Asia",
+   "subregion": "South-Eastern Asia",
+   "pop": 96462106,
+   "kind": "Sovereign country",
+   "sovereign": "Vietnam",
+   "capitals": [
+    "Hanoi"
+   ],
+   "neighbours": [
+    "cn",
+    "kh",
+    "la"
+   ]
+  },
+  {
+   "id": "wf",
+   "name": "Wallis and Futuna Islands",
+   "iso2": "WF",
+   "continent": "Oceania",
+   "subregion": "Polynesia",
+   "pop": 11558,
+   "kind": "Dependency",
+   "sovereign": "France",
+   "capitals": [],
+   "neighbours": []
+  },
+  {
+   "id": "ye",
+   "name": "Yemen",
+   "iso2": "YE",
+   "continent": "Asia",
+   "subregion": "Western Asia",
+   "pop": 29161922,
+   "kind": "Sovereign country",
+   "sovereign": "Yemen",
+   "capitals": [
+    "Sanaa"
+   ],
+   "neighbours": [
+    "om",
+    "sa"
+   ]
+  },
+  {
+   "id": "zm",
+   "name": "Zambia",
+   "iso2": "ZM",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 17861030,
+   "kind": "Sovereign country",
+   "sovereign": "Zambia",
+   "capitals": [
+    "Lusaka"
+   ],
+   "neighbours": [
+    "ao",
+    "cd",
+    "mw",
+    "mz",
+    "na",
+    "tz",
+    "zw"
+   ]
+  },
+  {
+   "id": "zw",
+   "name": "Zimbabwe",
+   "iso2": "ZW",
+   "continent": "Africa",
+   "subregion": "Eastern Africa",
+   "pop": 14645468,
+   "kind": "Sovereign country",
+   "sovereign": "Zimbabwe",
+   "capitals": [
+    "Harare"
+   ],
+   "neighbours": [
+    "bw",
+    "mz",
+    "za",
+    "zm"
+   ]
+  }
+ ]
+}

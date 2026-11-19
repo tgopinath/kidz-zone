@@ -1,0 +1,781 @@
+{
+ "taj-mahal": {
+  "article": "https://en.wikipedia.org/wiki/Taj_Mahal",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/960px-Taj_Mahal_%28Edited%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   78.0419,
+   27.175
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg",
+   "artist": "Yann; edited by Jim Carter",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "red-fort": {
+  "article": "https://en.wikipedia.org/wiki/Red_Fort",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Delhi_fort.jpg/960px-Delhi_fort.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   77.2408,
+   28.6558
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Delhi_fort.jpg",
+   "artist": "PerSona77",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "india-gate": {
+  "article": "https://en.wikipedia.org/wiki/India_Gate",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/India_Gate_front.jpg/960px-India_Gate_front.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   77.2293,
+   28.6129
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:India_Gate_front.jpg",
+   "artist": "AKS.9955",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "hampi": {
+  "article": "https://en.wikipedia.org/wiki/Hampi",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/960px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   76.4622,
+   15.3344
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Wide_angle_of_Galigopuram_of_Virupaksha_Temple,_Hampi_(04)_(cropped).jpg",
+   "artist": "iMahesh",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "gateway-of-india": {
+  "article": "https://en.wikipedia.org/wiki/Gateway_of_India",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/960px-Mumbai_03-2016_30_Gateway_of_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   72.8347,
+   18.922
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Mumbai_03-2016_30_Gateway_of_India.jpg",
+   "artist": "A.Savin",
+   "license": "FAL"
+  }
+ },
+ "brihadeeswarar": {
+  "article": "https://en.wikipedia.org/wiki/Brihadisvara_Temple",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg/960px-Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   79.1317,
+   10.7828
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_(edit).jpg",
+   "artist": "Original: Rainer Halama Derivative work: UnpetitproleX",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "eiffel-tower": {
+  "article": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/960px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   2.2945,
+   48.8582
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons_(cropped).jpg",
+   "artist": "Benh LIEU SONG",
+   "license": "Public domain"
+  }
+ },
+ "louvre": {
+  "article": "https://en.wikipedia.org/wiki/Louvre",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/960px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   2.3358,
+   48.8611
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg",
+   "artist": "Benh LIEU SONG (Flickr)",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "versailles": {
+  "article": "https://en.wikipedia.org/wiki/Palace_of_Versailles",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Versailles_Palace_%28FRA%29_%E2%80%93_Equestrian_Olympic_Venue.jpg/960px-Versailles_Palace_%28FRA%29_%E2%80%93_Equestrian_Olympic_Venue.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   2.1203,
+   48.8047
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Versailles_Palace_(FRA)_%E2%80%93_Equestrian_Olympic_Venue.jpg",
+   "artist": "ToucanWings",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "pyramids-giza": {
+  "article": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   31.1342,
+   29.9792
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg",
+   "artist": "Douwe C. van der Zee",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "sphinx": {
+  "article": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sphinx_with_the_third_pyramid.jpg/960px-Sphinx_with_the_third_pyramid.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   31.1376,
+   29.9753
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Sphinx_with_the_third_pyramid.jpg",
+   "artist": "Hesham Ebaid",
+   "license": "CC0"
+  }
+ },
+ "colosseum": {
+  "article": "https://en.wikipedia.org/wiki/Colosseum",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   12.4922,
+   41.8903
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg",
+   "artist": "FeaturedPics",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "pisa": {
+  "article": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Italy_-_Pisa_-_Leaning_Tower.jpg/960px-Italy_-_Pisa_-_Leaning_Tower.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   10.3964,
+   43.7231
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Italy_-_Pisa_-_Leaning_Tower.jpg",
+   "artist": "Arne Müseler",
+   "license": "CC BY-SA 3.0 de"
+  }
+ },
+ "statue-of-liberty": {
+  "article": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg/960px-Front_view_of_Statue_of_Liberty_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   -74.0444,
+   40.6892
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Front_view_of_Statue_of_Liberty_(cropped).jpg",
+   "artist": "AskALotl",
+   "license": "CC0"
+  }
+ },
+ "grand-canyon": {
+  "article": "https://en.wikipedia.org/wiki/Grand_Canyon",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Canyon_River_Tree_%28165872763%29.jpeg/960px-Canyon_River_Tree_%28165872763%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   -112.75,
+   36.3
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Canyon_River_Tree_(165872763).jpeg",
+   "artist": "Lennart Sikkema",
+   "license": "CC BY 3.0"
+  }
+ },
+ "great-wall": {
+  "article": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/960px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   116.5644,
+   40.4314
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
+   "artist": "Severin.stalder",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "machu-picchu": {
+  "article": "https://en.wikipedia.org/wiki/Machu_Picchu",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Machu_Picchu%2C_2023_%28012%29.jpg/960px-Machu_Picchu%2C_2023_%28012%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   -72.5456,
+   -13.1633
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Machu_Picchu,_2023_(012).jpg",
+   "artist": "Draceane",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "christ-redeemer": {
+  "article": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Christ_the_Redeemer_-_Cristo_Redentor.jpg/960px-Christ_the_Redeemer_-_Cristo_Redentor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   -43.2106,
+   -22.9519
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_-_Cristo_Redentor.jpg",
+   "artist": "Arne Müseler",
+   "license": "CC BY-SA 3.0 de"
+  }
+ },
+ "sydney-opera-house": {
+  "article": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Sydney_Opera_House_2026.jpg/960px-Sydney_Opera_House_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   151.2151,
+   -33.8568
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_2026.jpg",
+   "artist": "BAVhah",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "big-ben": {
+  "article": "https://en.wikipedia.org/wiki/Big_Ben",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg/960px-Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   -0.1245,
+   51.5007
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg",
+   "artist": "Christian David",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "angkor-wat": {
+  "article": "https://en.wikipedia.org/wiki/Angkor_Wat",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/960px-Angkor_Wat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   103.8667,
+   13.4125
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Angkor_Wat.jpg",
+   "artist": "Bjørn Christian Tørrissen",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "petra": {
+  "article": "https://en.wikipedia.org/wiki/Petra",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Al_Deir_Petra.JPG/960px-Al_Deir_Petra.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   35.4419,
+   30.3286
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Al_Deir_Petra.JPG",
+   "artist": "Azurfrog",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "burj-khalifa": {
+  "article": "https://en.wikipedia.org/wiki/Burj_Khalifa",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg/960px-Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   55.2742,
+   25.1972
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_(worlds_tallest_building)_and_the_Dubai_skyline_(25781049892).jpg",
+   "artist": "imran shahabuddin",
+   "license": "CC BY 2.0"
+  }
+ },
+ "mount-fuji": {
+  "article": "https://en.wikipedia.org/wiki/Mount_Fuji",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/960px-View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   138.7275,
+   35.3608
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg",
+   "artist": "Suicasmo",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "everest": {
+  "article": "https://en.wikipedia.org/wiki/Mount_Everest",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Mt._Everest_from_Gokyo_Ri_November_5%2C_2012.jpg/960px-Mt._Everest_from_Gokyo_Ri_November_5%2C_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   86.9253,
+   27.9883
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Mt._Everest_from_Gokyo_Ri_November_5,_2012.jpg",
+   "artist": "Rdevany",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "kilimanjaro": {
+  "article": "https://en.wikipedia.org/wiki/Mount_Kilimanjaro",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Kilimanjaro_from_Amboseli.jpg/960px-Kilimanjaro_from_Amboseli.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   37.3533,
+   -3.0758
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_from_Amboseli.jpg",
+   "artist": "Sergey Pesterev",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "victoria-falls": {
+  "article": "https://en.wikipedia.org/wiki/Victoria_Falls",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg/960px-Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   25.8567,
+   -17.9244
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Cataratas_Victoria,_Zambia-Zimbabue,_2018-07-27,_DD_04.jpg",
+   "artist": "Diego Delso",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "parthenon": {
+  "article": "https://en.wikipedia.org/wiki/Parthenon",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/960px-The_Parthenon_in_Athens.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   23.7266,
+   37.9715
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg",
+   "artist": "Steve Swayne",
+   "license": "CC BY 2.0"
+  }
+ },
+ "chichen-itza": {
+  "article": "https://en.wikipedia.org/wiki/Chichen_Itza",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/960px-Chichen_Itza_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   -88.5686,
+   20.6831
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_3.jpg",
+   "artist": "Daniel Schwen",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "st-basils": {
+  "article": "https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Saint_Basil%27s_Cathedral_in_Moscow.jpg/960px-Saint_Basil%27s_Cathedral_in_Moscow.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   37.6231,
+   55.7525
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Saint_Basil%27s_Cathedral_in_Moscow.jpg",
+   "artist": "Tsy1980",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "neuschwanstein": {
+  "article": "https://en.wikipedia.org/wiki/Neuschwanstein_Castle",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Schloss_Neuschwanstein_%2845_mm%29.jpg/960px-Schloss_Neuschwanstein_%2845_mm%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   10.7494,
+   47.5575
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Schloss_Neuschwanstein_(45_mm).jpg",
+   "artist": "AuHaidhausen",
+   "license": "CC BY 4.0"
+  }
+ },
+ "sagrada-familia": {
+  "article": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/SF_maig_2_cropped.jpg/960px-SF_maig_2_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   2.1743,
+   41.4037
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:SF_maig_2_cropped.jpg",
+   "artist": "Canaan",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "dosa": {
+  "article": "https://en.wikipedia.org/wiki/Dosa_(food)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg/960px-Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Dosa_at_Sri_Ganesha_Restauran,_Bangkok_(44570742744).jpg",
+   "artist": "Vee Satayamas from Bangkok, Thailand",
+   "license": "CC BY 2.0"
+  }
+ },
+ "idli": {
+  "article": "https://en.wikipedia.org/wiki/Idli",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Idli_Sambar.JPG",
+   "artist": "Soumya dey at English Wikipedia",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "biryani": {
+  "article": "https://en.wikipedia.org/wiki/Biryani",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/960px-%22Hyderabadi_Dum_Biryani%22.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:%22Hyderabadi_Dum_Biryani%22.jpg",
+   "artist": "Mahi Tatavarty",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "sushi": {
+  "article": "https://en.wikipedia.org/wiki/Sushi",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/960px-Sushi_platter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Sushi_platter.jpg",
+   "artist": "chidorian from Japan",
+   "license": "CC BY-SA 2.0"
+  }
+ },
+ "pizza": {
+  "article": "https://en.wikipedia.org/wiki/Pizza",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/960px-Pizza-3007395.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Pizza-3007395.jpg",
+   "artist": "igorovsyannykov",
+   "license": "CC0"
+  }
+ },
+ "pasta": {
+  "article": "https://en.wikipedia.org/wiki/Pasta",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/960px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:(Pasta)_by_David_Adam_Kess_(pic.2).jpg",
+   "artist": "David Adam Kess",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "tacos": {
+  "article": "https://en.wikipedia.org/wiki/Taco",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/960px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:001_Tacos_de_carnitas,_carne_asada_y_al_pastor.jpg",
+   "artist": "Larry Miller",
+   "license": "CC BY-SA 2.0"
+  }
+ },
+ "croissant": {
+  "article": "https://en.wikipedia.org/wiki/Croissant",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg",
+   "artist": "Petr Kratochvil",
+   "license": "CC0"
+  }
+ },
+ "dumplings": {
+  "article": "https://en.wikipedia.org/wiki/Jiaozi",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou,_Taiwan_Caotun_dumplings.jpg",
+   "artist": "Yeepunchmen",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "paella": {
+  "article": "https://en.wikipedia.org/wiki/Paella",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/01_Paella_Valenciana_original.jpg/960px-01_Paella_Valenciana_original.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:01_Paella_Valenciana_original.jpg",
+   "artist": "Jan Harenburg",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "pad-thai": {
+  "article": "https://en.wikipedia.org/wiki/Pad_thai",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/960px-Phat_Thai_kung_Chang_Khien_street_stall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg",
+   "artist": "Takeaway",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "kimchi": {
+  "article": "https://en.wikipedia.org/wiki/Kimchi",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Various_kimchi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Various_kimchi.jpg",
+   "artist": "국립국어원",
+   "license": "CC BY-SA 2.0 kr"
+  }
+ },
+ "feijoada": {
+  "article": "https://en.wikipedia.org/wiki/Feijoada",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Feijoada_%C3%A0_transmontada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Feijoada_%C3%A0_transmontada.jpg",
+   "artist": "Adrião",
+   "license": "CC BY 3.0"
+  }
+ },
+ "injera": {
+  "article": "https://en.wikipedia.org/wiki/Injera",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Injera_with_eight_kinds_of_stew.jpg/960px-Injera_with_eight_kinds_of_stew.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Injera_with_eight_kinds_of_stew.jpg",
+   "artist": "Artem.G",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "pho": {
+  "article": "https://en.wikipedia.org/wiki/Pho",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Bowl_of_Meatball_pho.jpg/960px-Bowl_of_Meatball_pho.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Bowl_of_Meatball_pho.jpg",
+   "artist": "SerraKnightz",
+   "license": "CC BY 4.0"
+  }
+ },
+ "poutine": {
+  "article": "https://en.wikipedia.org/wiki/Poutine",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Food_at_WIkimanian_2017_02.jpg/960px-Food_at_WIkimanian_2017_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Food_at_WIkimanian_2017_02.jpg",
+   "artist": "Camelia.boban",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "sari": {
+  "article": "https://en.wikipedia.org/wiki/Sari",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Sari_on_mannequin_for_demo.jpg/960px-Sari_on_mannequin_for_demo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Sari_on_mannequin_for_demo.jpg",
+   "artist": "Suyash.dwivedi",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "veshti": {
+  "article": "https://en.wikipedia.org/wiki/Dhoti",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/An_Indian_dancer_in_dhoti%2C_wrapped_around_his_waist.jpg/960px-An_Indian_dancer_in_dhoti%2C_wrapped_around_his_waist.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:An_Indian_dancer_in_dhoti,_wrapped_around_his_waist.jpg",
+   "artist": "bhisham pratap padha from Jammu, India",
+   "license": "CC BY 2.0"
+  }
+ },
+ "kimono": {
+  "article": "https://en.wikipedia.org/wiki/Kimono",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Two_young_maiko_in_Seirai-in_Temple_02.jpg/960px-Two_young_maiko_in_Seirai-in_Temple_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Two_young_maiko_in_Seirai-in_Temple_02.jpg",
+   "artist": "Takaaki Kawai",
+   "license": "CC BY-SA 2.0"
+  }
+ },
+ "hanbok": {
+  "article": "https://en.wikipedia.org/wiki/Hanbok",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Hanbok_Day_2016_29_%2830467033136%29.jpg/960px-Hanbok_Day_2016_29_%2830467033136%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Hanbok_Day_2016_29_(30467033136).jpg",
+   "artist": "Republic of Korea from Seoul, Republic of Korea",
+   "license": "CC BY-SA 2.0"
+  }
+ },
+ "kilt": {
+  "article": "https://en.wikipedia.org/wiki/Kilt",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Scottish_mercenaries_in_the_Thirty_Years_War.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Scottish_mercenaries_in_the_Thirty_Years_War.jpg",
+   "artist": "Georg Cöler",
+   "license": "Public domain"
+  }
+ },
+ "qipao": {
+  "article": "https://en.wikipedia.org/wiki/Qipao",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Qipao_woman.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Qipao_woman.jpg",
+   "artist": "非主流影像派",
+   "license": "CC BY 2.5 cn"
+  }
+ },
+ "kente": {
+  "article": "https://en.wikipedia.org/wiki/Kente_cloth",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Kent_wove.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Kent_wove.jpg",
+   "artist": "User:Bottracker",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "dirndl": {
+  "article": "https://en.wikipedia.org/wiki/Dirndl",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Volksfestumzug_in_Vilshofen_a.d._Donau_2012_%283%29.JPG/960px-Volksfestumzug_in_Vilshofen_a.d._Donau_2012_%283%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Volksfestumzug_in_Vilshofen_a.d._Donau_2012_(3).JPG",
+   "artist": "High Contrast",
+   "license": "CC BY 3.0 de"
+  }
+ },
+ "poncho": {
+  "article": "https://en.wikipedia.org/wiki/Poncho",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Chile%2C_Araucanian_Indians_and_gauchos_-_Racinet_%2870086930%29.jpg/960px-Chile%2C_Araucanian_Indians_and_gauchos_-_Racinet_%2870086930%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Chile,_Araucanian_Indians_and_gauchos_-_Racinet_(70086930).jpg",
+   "artist": "Albert Racinet",
+   "license": "Public domain"
+  }
+ },
+ "diwali": {
+  "article": "https://en.wikipedia.org/wiki/Diwali",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/The_Rangoli_of_Lights.jpg/960px-The_Rangoli_of_Lights.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:The_Rangoli_of_Lights.jpg",
+   "artist": "Subharnab Majumdar",
+   "license": "CC BY 2.0"
+  }
+ },
+ "holi": {
+  "article": "https://en.wikipedia.org/wiki/Holi",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Holi_shop.jpg/960px-Holi_shop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Holi_shop.jpg",
+   "artist": "Kamalakanta777",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "pongal": {
+  "article": "https://en.wikipedia.org/wiki/Pongal_(festival)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Pongal_fest.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Pongal_fest.jpg",
+   "artist": "Saral Shots",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "chinese-new-year": {
+  "article": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Kung_Hei_Fat_Choi%21_%286834861529%29.jpg/960px-Kung_Hei_Fat_Choi%21_%286834861529%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Kung_Hei_Fat_Choi!_(6834861529).jpg",
+   "artist": "Michael Elleray from England, United Kingdom",
+   "license": "CC BY 2.0"
+  }
+ },
+ "rio-carnival": {
+  "article": "https://en.wikipedia.org/wiki/Rio_Carnival",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Desfile_Portela_2014_%28906185%29.jpg/960px-Desfile_Portela_2014_%28906185%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Desfile_Portela_2014_(906185).jpg",
+   "artist": "Fernando Frazão/Agência Brasil",
+   "license": "CC BY 3.0 br"
+  }
+ },
+ "christmas": {
+  "article": "https://en.wikipedia.org/wiki/Christmas",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/NativityChristmasLights2.jpg/960px-NativityChristmasLights2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:NativityChristmasLights2.jpg",
+   "artist": "File:NativityChristmasLights.jpg: derivative work: Crumpled Fire",
+   "license": "CC BY-SA 2.0"
+  }
+ },
+ "hanami": {
+  "article": "https://en.wikipedia.org/wiki/Hanami",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Castle_Himeji_sakura02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Castle_Himeji_sakura02.jpg",
+   "artist": "Unknown",
+   "license": "CC BY-SA 3.0"
+  }
+ },
+ "eid": {
+  "article": "https://en.wikipedia.org/wiki/Eid_al-Fitr",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Eid_al_fitr_photo.jpg/960px-Eid_al_fitr_photo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Eid_al_fitr_photo.jpg",
+   "artist": "Viceskeeni2",
+   "license": "CC BY 4.0"
+  }
+ },
+ "day-of-the-dead": {
+  "article": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Catrina_3.jpg/960px-Catrina_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Catrina_3.jpg",
+   "artist": "Paolaricaurte",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "songkran": {
+  "article": "https://en.wikipedia.org/wiki/Songkran_(Thailand)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Songkran_Day_%40_Chiangmai_Wall.jpg/960px-Songkran_Day_%40_Chiangmai_Wall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": null,
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:Songkran_Day_@_Chiangmai_Wall.jpg",
+   "artist": "Khunmoohan",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "oktoberfest": {
+  "article": "https://en.wikipedia.org/wiki/Oktoberfest",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/O%27zapft_is%21_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is%21_Munich_5_season%2C_the_Oktoberfest_has_begun_%289855483374%29.jpg/960px-O%27zapft_is%21_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is%21_Munich_5_season%2C_the_Oktoberfest_has_begun_%289855483374%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "coords": [
+   11.5492,
+   48.1314
+  ],
+  "credit": {
+   "page": "https://commons.wikimedia.org/wiki/File:O%27zapft_is!_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is!_Munich_5_season,_the_Oktoberfest_has_begun_(9855483374).jpg",
+   "artist": "Heribert Pohl --- Thanks for half a million clicks! from Germering bei München, ",
+   "license": "CC BY-SA 2.0"
+  }
+ }
+}

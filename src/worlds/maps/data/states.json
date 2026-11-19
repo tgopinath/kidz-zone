@@ -1,0 +1,947 @@
+{
+  "_meta": {
+    "about": "Curated learning content for India's 28 states and 8 Union Territories. Boundaries, district counts and neighbours are NOT stored here: they are derived from verified LGD boundary data by scripts/build-maps.mjs.",
+    "contentStatus": "curated",
+    "reviewedOn": "2026-11-13"
+  },
+  "states": [
+    {
+      "id": "andhra-pradesh",
+      "lgd": 28,
+      "name": "Andhra Pradesh",
+      "type": "state",
+      "capital": "Amaravati",
+      "region": "South",
+      "languages": [
+        "Telugu",
+        "Urdu"
+      ],
+      "famousPlaces": [
+        "Tirumala Venkateswara Temple",
+        "Araku Valley",
+        "Borra Caves",
+        "Gandikota Canyon"
+      ],
+      "facts": [
+        "It has the second-longest coastline of any Indian state, along the Bay of Bengal.",
+        "The Krishna and Godavari rivers form rich deltas here, great for growing rice."
+      ],
+      "ta": {
+        "name": "ஆந்திரப் பிரதேசம்",
+        "capital": "அமராவதி"
+      }
+    },
+    {
+      "id": "arunachal-pradesh",
+      "lgd": 12,
+      "name": "Arunachal Pradesh",
+      "type": "state",
+      "capital": "Itanagar",
+      "region": "North-East",
+      "languages": [
+        "English"
+      ],
+      "famousPlaces": [
+        "Tawang Monastery",
+        "Ziro Valley",
+        "Namdapha National Park",
+        "Sela Pass"
+      ],
+      "facts": [
+        "Its name means 'land of the dawn-lit mountains' — the sun rises here first in India.",
+        "It is the largest state in North-East India by area."
+      ],
+      "ta": {
+        "name": "அருணாச்சலப் பிரதேசம்",
+        "capital": "இட்டாநகர்"
+      }
+    },
+    {
+      "id": "assam",
+      "lgd": 18,
+      "name": "Assam",
+      "type": "state",
+      "capital": "Dispur",
+      "region": "North-East",
+      "languages": [
+        "Assamese",
+        "Bodo",
+        "Bengali (Barak Valley)"
+      ],
+      "famousPlaces": [
+        "Kaziranga National Park",
+        "Majuli Island",
+        "Kamakhya Temple",
+        "Manas National Park"
+      ],
+      "facts": [
+        "Kaziranga is home to most of the world's one-horned rhinoceroses.",
+        "Assam grows a huge share of India's tea."
+      ],
+      "ta": {
+        "name": "அசாம்",
+        "capital": "திஸ்பூர்"
+      }
+    },
+    {
+      "id": "bihar",
+      "lgd": 10,
+      "name": "Bihar",
+      "type": "state",
+      "capital": "Patna",
+      "region": "East",
+      "languages": [
+        "Hindi",
+        "Urdu"
+      ],
+      "famousPlaces": [
+        "Mahabodhi Temple, Bodh Gaya",
+        "Ruins of Nalanda University",
+        "Vaishali",
+        "Rajgir"
+      ],
+      "facts": [
+        "The Buddha attained enlightenment under a Bodhi tree in Bodh Gaya.",
+        "Nalanda was one of the world's oldest universities."
+      ],
+      "ta": {
+        "name": "பீகார்",
+        "capital": "பட்னா"
+      }
+    },
+    {
+      "id": "chhattisgarh",
+      "lgd": 22,
+      "name": "Chhattisgarh",
+      "type": "state",
+      "capital": "Raipur",
+      "region": "Central",
+      "languages": [
+        "Hindi",
+        "Chhattisgarhi"
+      ],
+      "famousPlaces": [
+        "Chitrakote Falls",
+        "Bastar",
+        "Bhoramdeo Temple",
+        "Kanger Valley National Park"
+      ],
+      "facts": [
+        "Chitrakote Falls is often called the 'Niagara of India'.",
+        "About two-fifths of the state is covered by forest."
+      ],
+      "ta": {
+        "name": "சத்தீசுகர்",
+        "capital": "ராய்ப்பூர்"
+      }
+    },
+    {
+      "id": "goa",
+      "lgd": 30,
+      "name": "Goa",
+      "type": "state",
+      "capital": "Panaji",
+      "region": "West",
+      "languages": [
+        "Konkani",
+        "Marathi"
+      ],
+      "famousPlaces": [
+        "Basilica of Bom Jesus",
+        "Dudhsagar Falls",
+        "Fort Aguada",
+        "Palolem Beach"
+      ],
+      "facts": [
+        "Goa is India's smallest state by area.",
+        "Dudhsagar means 'sea of milk' because the falls look white and foamy."
+      ],
+      "ta": {
+        "name": "கோவா",
+        "capital": "பனாஜி"
+      }
+    },
+    {
+      "id": "gujarat",
+      "lgd": 24,
+      "name": "Gujarat",
+      "type": "state",
+      "capital": "Gandhinagar",
+      "region": "West",
+      "languages": [
+        "Gujarati",
+        "Hindi"
+      ],
+      "famousPlaces": [
+        "Statue of Unity",
+        "Gir National Park",
+        "Rann of Kutch",
+        "Somnath Temple"
+      ],
+      "facts": [
+        "Gir forest is the only wild home of the Asiatic lion.",
+        "Gujarat has the longest coastline of any Indian state."
+      ],
+      "ta": {
+        "name": "குஜராத்",
+        "capital": "காந்திநகர்"
+      }
+    },
+    {
+      "id": "haryana",
+      "lgd": 6,
+      "name": "Haryana",
+      "type": "state",
+      "capital": "Chandigarh",
+      "region": "North",
+      "languages": [
+        "Hindi",
+        "Punjabi"
+      ],
+      "famousPlaces": [
+        "Kurukshetra",
+        "Sultanpur Bird Sanctuary",
+        "Pinjore Gardens",
+        "Surajkund"
+      ],
+      "facts": [
+        "Haryana shares its capital, Chandigarh, with Punjab.",
+        "It surrounds Delhi on three sides."
+      ],
+      "ta": {
+        "name": "அரியானா",
+        "capital": "சண்டிகர்"
+      }
+    },
+    {
+      "id": "himachal-pradesh",
+      "lgd": 2,
+      "name": "Himachal Pradesh",
+      "type": "state",
+      "capital": "Shimla (summer), Dharamshala (winter)",
+      "region": "North",
+      "languages": [
+        "Hindi",
+        "Sanskrit"
+      ],
+      "famousPlaces": [
+        "Manali",
+        "Spiti Valley",
+        "Kalka–Shimla Railway",
+        "Dharamshala"
+      ],
+      "facts": [
+        "Himachal means 'land of snow'.",
+        "The Kalka–Shimla toy train is a UNESCO World Heritage railway."
+      ],
+      "ta": {
+        "name": "இமாச்சலப் பிரதேசம்",
+        "capital": "சிம்லா, தர்மசாலா"
+      }
+    },
+    {
+      "id": "jharkhand",
+      "lgd": 20,
+      "name": "Jharkhand",
+      "type": "state",
+      "capital": "Ranchi",
+      "region": "East",
+      "languages": [
+        "Hindi"
+      ],
+      "famousPlaces": [
+        "Hundru Falls",
+        "Betla National Park",
+        "Netarhat",
+        "Baidyanath Temple, Deoghar"
+      ],
+      "facts": [
+        "Jharkhand means 'land of forests'.",
+        "It holds a large share of India's coal and iron ore."
+      ],
+      "ta": {
+        "name": "ஜார்க்கண்ட்",
+        "capital": "ராஞ்சி"
+      }
+    },
+    {
+      "id": "karnataka",
+      "lgd": 29,
+      "name": "Karnataka",
+      "type": "state",
+      "capital": "Bengaluru",
+      "region": "South",
+      "languages": [
+        "Kannada"
+      ],
+      "famousPlaces": [
+        "Hampi",
+        "Mysuru Palace",
+        "Jog Falls",
+        "Coorg (Kodagu)"
+      ],
+      "facts": [
+        "The ruins of Hampi, once capital of the Vijayanagara Empire, are a UNESCO site.",
+        "Karnataka grows most of India's coffee."
+      ],
+      "ta": {
+        "name": "கர்நாடகா",
+        "capital": "பெங்களூரு"
+      }
+    },
+    {
+      "id": "kerala",
+      "lgd": 32,
+      "name": "Kerala",
+      "type": "state",
+      "capital": "Thiruvananthapuram",
+      "region": "South",
+      "languages": [
+        "Malayalam",
+        "English"
+      ],
+      "famousPlaces": [
+        "Alappuzha backwaters",
+        "Munnar",
+        "Periyar Tiger Reserve",
+        "Fort Kochi"
+      ],
+      "facts": [
+        "Kerala is called 'God's Own Country'.",
+        "The monsoon usually reaches mainland India first in Kerala."
+      ],
+      "ta": {
+        "name": "கேரளா",
+        "capital": "திருவனந்தபுரம்"
+      }
+    },
+    {
+      "id": "madhya-pradesh",
+      "lgd": 23,
+      "name": "Madhya Pradesh",
+      "type": "state",
+      "capital": "Bhopal",
+      "region": "Central",
+      "languages": [
+        "Hindi"
+      ],
+      "famousPlaces": [
+        "Khajuraho Temples",
+        "Sanchi Stupa",
+        "Kanha National Park",
+        "Bhimbetka Rock Shelters"
+      ],
+      "facts": [
+        "It is called the 'Heart of India' because it sits right in the middle.",
+        "Madhya Pradesh has more tigers than any other state."
+      ],
+      "ta": {
+        "name": "மத்தியப் பிரதேசம்",
+        "capital": "போபால்"
+      }
+    },
+    {
+      "id": "maharashtra",
+      "lgd": 27,
+      "name": "Maharashtra",
+      "type": "state",
+      "capital": "Mumbai (summer), Nagpur (winter)",
+      "region": "West",
+      "languages": [
+        "Marathi"
+      ],
+      "famousPlaces": [
+        "Gateway of India",
+        "Ajanta & Ellora Caves",
+        "Lonavala",
+        "Shaniwar Wada"
+      ],
+      "facts": [
+        "Mumbai is home to the Hindi film industry, often called Bollywood.",
+        "The Ajanta caves have paintings over 1,500 years old."
+      ],
+      "ta": {
+        "name": "மகாராஷ்டிரா",
+        "capital": "மும்பை, நாக்பூர்"
+      }
+    },
+    {
+      "id": "manipur",
+      "lgd": 14,
+      "name": "Manipur",
+      "type": "state",
+      "capital": "Imphal",
+      "region": "North-East",
+      "languages": [
+        "Meitei (Manipuri)",
+        "English"
+      ],
+      "famousPlaces": [
+        "Loktak Lake",
+        "Keibul Lamjao National Park",
+        "Kangla Fort",
+        "Ima Keithel market"
+      ],
+      "facts": [
+        "Keibul Lamjao is the world's only floating national park, on Loktak Lake.",
+        "Modern polo grew from a game played in Manipur."
+      ],
+      "ta": {
+        "name": "மணிப்பூர்",
+        "capital": "இம்பால்"
+      }
+    },
+    {
+      "id": "meghalaya",
+      "lgd": 17,
+      "name": "Meghalaya",
+      "type": "state",
+      "capital": "Shillong",
+      "region": "North-East",
+      "languages": [
+        "English",
+        "Khasi",
+        "Garo"
+      ],
+      "famousPlaces": [
+        "Living Root Bridges",
+        "Mawlynnong",
+        "Nohkalikai Falls",
+        "Shillong Peak"
+      ],
+      "facts": [
+        "Meghalaya means 'abode of clouds'.",
+        "Mawsynram and Cherrapunji are among the rainiest places on Earth."
+      ],
+      "ta": {
+        "name": "மேகாலயா",
+        "capital": "ஷில்லாங்"
+      }
+    },
+    {
+      "id": "mizoram",
+      "lgd": 15,
+      "name": "Mizoram",
+      "type": "state",
+      "capital": "Aizawl",
+      "region": "North-East",
+      "languages": [
+        "Mizo",
+        "English"
+      ],
+      "famousPlaces": [
+        "Phawngpui (Blue Mountain)",
+        "Reiek",
+        "Vantawng Falls",
+        "Dampa Tiger Reserve"
+      ],
+      "facts": [
+        "Most of Mizoram is covered by hills and bamboo forests.",
+        "It has one of the highest literacy rates in India."
+      ],
+      "ta": {
+        "name": "மிசோரம்",
+        "capital": "ஐஸ்வால்"
+      }
+    },
+    {
+      "id": "nagaland",
+      "lgd": 13,
+      "name": "Nagaland",
+      "type": "state",
+      "capital": "Kohima",
+      "region": "North-East",
+      "languages": [
+        "English"
+      ],
+      "famousPlaces": [
+        "Dzükou Valley",
+        "Kohima War Cemetery",
+        "Kisama Heritage Village",
+        "Mount Saramati"
+      ],
+      "facts": [
+        "The Hornbill Festival is held every December.",
+        "Nagaland is home to many Naga tribes, each with its own language and dress."
+      ],
+      "ta": {
+        "name": "நாகாலாந்து",
+        "capital": "கோகிமா"
+      }
+    },
+    {
+      "id": "odisha",
+      "lgd": 21,
+      "name": "Odisha",
+      "type": "state",
+      "capital": "Bhubaneswar",
+      "region": "East",
+      "languages": [
+        "Odia"
+      ],
+      "famousPlaces": [
+        "Konark Sun Temple",
+        "Jagannath Temple, Puri",
+        "Chilika Lake",
+        "Simlipal National Park"
+      ],
+      "facts": [
+        "The Konark Sun Temple is shaped like a giant stone chariot.",
+        "Chilika is Asia's largest brackish-water lagoon."
+      ],
+      "ta": {
+        "name": "ஒடிசா",
+        "capital": "புவனேசுவர்"
+      }
+    },
+    {
+      "id": "punjab",
+      "lgd": 3,
+      "name": "Punjab",
+      "type": "state",
+      "capital": "Chandigarh",
+      "region": "North",
+      "languages": [
+        "Punjabi"
+      ],
+      "famousPlaces": [
+        "Golden Temple, Amritsar",
+        "Jallianwala Bagh",
+        "Wagah Border",
+        "Anandpur Sahib"
+      ],
+      "facts": [
+        "Punjab means 'land of five rivers'.",
+        "Punjab is often called the 'food bowl of India' for its wheat."
+      ],
+      "ta": {
+        "name": "பஞ்சாப்",
+        "capital": "சண்டிகர்"
+      }
+    },
+    {
+      "id": "rajasthan",
+      "lgd": 8,
+      "name": "Rajasthan",
+      "type": "state",
+      "capital": "Jaipur",
+      "region": "West",
+      "languages": [
+        "Hindi"
+      ],
+      "famousPlaces": [
+        "Amber Fort",
+        "Thar Desert, Jaisalmer",
+        "Lake Pichola, Udaipur",
+        "Ranthambore National Park"
+      ],
+      "facts": [
+        "Rajasthan is India's largest state by area.",
+        "Jaipur is known as the 'Pink City'."
+      ],
+      "ta": {
+        "name": "இராஜஸ்தான்",
+        "capital": "ஜெய்ப்பூர்"
+      }
+    },
+    {
+      "id": "sikkim",
+      "lgd": 11,
+      "name": "Sikkim",
+      "type": "state",
+      "capital": "Gangtok",
+      "region": "North-East",
+      "languages": [
+        "English",
+        "Nepali",
+        "Sikkimese",
+        "Lepcha"
+      ],
+      "famousPlaces": [
+        "Kangchenjunga",
+        "Tsomgo Lake",
+        "Rumtek Monastery",
+        "Nathu La"
+      ],
+      "facts": [
+        "Kangchenjunga, the world's third-highest mountain, stands on its border.",
+        "Sikkim became India's first fully organic farming state."
+      ],
+      "ta": {
+        "name": "சிக்கிம்",
+        "capital": "கேங்டாக்"
+      }
+    },
+    {
+      "id": "tamil-nadu",
+      "lgd": 33,
+      "name": "Tamil Nadu",
+      "type": "state",
+      "capital": "Chennai",
+      "region": "South",
+      "languages": [
+        "Tamil"
+      ],
+      "famousPlaces": [
+        "Meenakshi Amman Temple, Madurai",
+        "Brihadeeswarar Temple, Thanjavur",
+        "Mamallapuram",
+        "Ooty (Nilgiris)",
+        "Kanniyakumari"
+      ],
+      "facts": [
+        "Tamil is one of the oldest living languages in the world.",
+        "Kanniyakumari is at the southern tip of mainland India, where three seas meet."
+      ],
+      "ta": {
+        "name": "தமிழ்நாடு",
+        "capital": "சென்னை"
+      }
+    },
+    {
+      "id": "telangana",
+      "lgd": 36,
+      "name": "Telangana",
+      "type": "state",
+      "capital": "Hyderabad",
+      "region": "South",
+      "languages": [
+        "Telugu",
+        "Urdu"
+      ],
+      "famousPlaces": [
+        "Charminar",
+        "Golconda Fort",
+        "Ramappa Temple",
+        "Bhadrachalam"
+      ],
+      "facts": [
+        "Telangana became India's newest state in 2014.",
+        "The Ramappa Temple is a UNESCO World Heritage Site."
+      ],
+      "ta": {
+        "name": "தெலங்கானா",
+        "capital": "ஐதராபாத்"
+      }
+    },
+    {
+      "id": "tripura",
+      "lgd": 16,
+      "name": "Tripura",
+      "type": "state",
+      "capital": "Agartala",
+      "region": "North-East",
+      "languages": [
+        "Bengali",
+        "Kokborok",
+        "English"
+      ],
+      "famousPlaces": [
+        "Ujjayanta Palace",
+        "Neermahal",
+        "Unakoti",
+        "Sepahijala Wildlife Sanctuary"
+      ],
+      "facts": [
+        "Neermahal is a palace built in the middle of a lake.",
+        "Tripura is surrounded by Bangladesh on three sides."
+      ],
+      "ta": {
+        "name": "திரிபுரா",
+        "capital": "அகர்தலா"
+      }
+    },
+    {
+      "id": "uttar-pradesh",
+      "lgd": 9,
+      "name": "Uttar Pradesh",
+      "type": "state",
+      "capital": "Lucknow",
+      "region": "North",
+      "languages": [
+        "Hindi",
+        "Urdu"
+      ],
+      "famousPlaces": [
+        "Taj Mahal, Agra",
+        "Varanasi ghats",
+        "Fatehpur Sikri",
+        "Sarnath"
+      ],
+      "facts": [
+        "More people live in Uttar Pradesh than in any other Indian state.",
+        "The Ganga and Yamuna rivers meet at Prayagraj."
+      ],
+      "ta": {
+        "name": "உத்தரப் பிரதேசம்",
+        "capital": "லக்னோ"
+      }
+    },
+    {
+      "id": "uttarakhand",
+      "lgd": 5,
+      "name": "Uttarakhand",
+      "type": "state",
+      "capital": "Dehradun (winter), Gairsain (summer)",
+      "region": "North",
+      "languages": [
+        "Hindi",
+        "Sanskrit"
+      ],
+      "famousPlaces": [
+        "Valley of Flowers",
+        "Jim Corbett National Park",
+        "Rishikesh",
+        "Nainital"
+      ],
+      "facts": [
+        "The Ganga river begins at the Gangotri glacier here.",
+        "Jim Corbett is India's oldest national park."
+      ],
+      "ta": {
+        "name": "உத்தராகண்ட்",
+        "capital": "டேராடூன், கைர்சைன்"
+      }
+    },
+    {
+      "id": "west-bengal",
+      "lgd": 19,
+      "name": "West Bengal",
+      "type": "state",
+      "capital": "Kolkata",
+      "region": "East",
+      "languages": [
+        "Bengali",
+        "English"
+      ],
+      "famousPlaces": [
+        "Victoria Memorial",
+        "Sundarbans",
+        "Darjeeling",
+        "Howrah Bridge"
+      ],
+      "facts": [
+        "The Sundarbans is the world's largest mangrove forest and home to Bengal tigers.",
+        "Darjeeling tea is famous all over the world."
+      ],
+      "ta": {
+        "name": "மேற்கு வங்காளம்",
+        "capital": "கொல்கத்தா"
+      }
+    },
+    {
+      "id": "andaman-and-nicobar-islands",
+      "lgd": 35,
+      "name": "Andaman and Nicobar Islands",
+      "type": "ut",
+      "capital": "Sri Vijaya Puram",
+      "region": "Islands",
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "famousPlaces": [
+        "Cellular Jail",
+        "Radhanagar Beach",
+        "Ross Island",
+        "Baratang limestone caves"
+      ],
+      "facts": [
+        "The islands are spread across about 800 km of the Bay of Bengal.",
+        "Barren Island has India's only active volcano."
+      ],
+      "ta": {
+        "name": "அந்தமான் நிக்கோபார் தீவுகள்",
+        "capital": "ஸ்ரீ விஜய புரம்"
+      }
+    },
+    {
+      "id": "chandigarh",
+      "lgd": 4,
+      "name": "Chandigarh",
+      "type": "ut",
+      "capital": "Chandigarh",
+      "region": "North",
+      "languages": [
+        "English"
+      ],
+      "famousPlaces": [
+        "Rock Garden",
+        "Sukhna Lake",
+        "Capitol Complex",
+        "Rose Garden"
+      ],
+      "facts": [
+        "Chandigarh is a planned city designed by architect Le Corbusier.",
+        "It is the capital of both Punjab and Haryana."
+      ],
+      "ta": {
+        "name": "சண்டிகர்",
+        "capital": "சண்டிகர்"
+      }
+    },
+    {
+      "id": "dadra-and-nagar-haveli-and-daman-and-diu",
+      "lgd": 38,
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "type": "ut",
+      "capital": "Daman",
+      "region": "West",
+      "languages": [
+        "Hindi",
+        "English",
+        "Gujarati"
+      ],
+      "famousPlaces": [
+        "Diu Fort",
+        "Naida Caves",
+        "Devka Beach",
+        "Vanganga Lake Garden"
+      ],
+      "facts": [
+        "Two UTs joined together in 2020 to make this one.",
+        "Its pieces are separate from each other — Diu is an island far from Daman."
+      ],
+      "ta": {
+        "name": "தாத்ரா நகர் ஹவேலி மற்றும் தமன் தியூ",
+        "capital": "தமன்"
+      }
+    },
+    {
+      "id": "delhi",
+      "lgd": 7,
+      "name": "Delhi",
+      "type": "ut",
+      "capital": "New Delhi",
+      "region": "North",
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "famousPlaces": [
+        "Red Fort",
+        "Qutub Minar",
+        "India Gate",
+        "Lotus Temple"
+      ],
+      "facts": [
+        "New Delhi is the capital of India.",
+        "The Qutub Minar is one of the tallest brick minarets in the world."
+      ],
+      "ta": {
+        "name": "டெல்லி",
+        "capital": "புது தில்லி"
+      }
+    },
+    {
+      "id": "jammu-and-kashmir",
+      "lgd": 1,
+      "name": "Jammu and Kashmir",
+      "type": "ut",
+      "capital": "Srinagar (summer), Jammu (winter)",
+      "region": "North",
+      "languages": [
+        "Kashmiri",
+        "Dogri",
+        "Urdu",
+        "Hindi",
+        "English"
+      ],
+      "famousPlaces": [
+        "Dal Lake",
+        "Gulmarg",
+        "Vaishno Devi",
+        "Pahalgam"
+      ],
+      "facts": [
+        "Shikara boats and houseboats float on Dal Lake in Srinagar.",
+        "Its capital moves between Srinagar and Jammu with the seasons."
+      ],
+      "ta": {
+        "name": "ஜம்மு காஷ்மீர்",
+        "capital": "ஸ்ரீநகர், ஜம்மு"
+      }
+    },
+    {
+      "id": "ladakh",
+      "lgd": 37,
+      "name": "Ladakh",
+      "type": "ut",
+      "capital": "Leh",
+      "region": "North",
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "famousPlaces": [
+        "Pangong Lake",
+        "Nubra Valley",
+        "Hemis Monastery",
+        "Magnetic Hill"
+      ],
+      "facts": [
+        "Ladakh is a cold desert high in the Himalayas.",
+        "It is India's largest Union Territory by area."
+      ],
+      "ta": {
+        "name": "லடாக்",
+        "capital": "லே"
+      }
+    },
+    {
+      "id": "lakshadweep",
+      "lgd": 31,
+      "name": "Lakshadweep",
+      "type": "ut",
+      "capital": "Kavaratti",
+      "region": "Islands",
+      "languages": [
+        "Malayalam",
+        "English"
+      ],
+      "famousPlaces": [
+        "Agatti Island",
+        "Bangaram Island",
+        "Minicoy lighthouse",
+        "Kavaratti lagoon"
+      ],
+      "facts": [
+        "Lakshadweep is India's smallest Union Territory.",
+        "Its islands are made of coral reefs."
+      ],
+      "ta": {
+        "name": "இலட்சத்தீவு",
+        "capital": "கவரத்தி"
+      }
+    },
+    {
+      "id": "puducherry",
+      "lgd": 34,
+      "name": "Puducherry",
+      "type": "ut",
+      "capital": "Puducherry",
+      "region": "South",
+      "languages": [
+        "Tamil",
+        "French",
+        "English",
+        "Malayalam",
+        "Telugu"
+      ],
+      "famousPlaces": [
+        "Promenade Beach",
+        "Auroville",
+        "White Town",
+        "Paradise Beach"
+      ],
+      "facts": [
+        "It has four separate parts: Puducherry, Karaikal, Mahe and Yanam.",
+        "It was a French colony, so some streets still have French names."
+      ],
+      "ta": {
+        "name": "புதுச்சேரி",
+        "capital": "புதுச்சேரி"
+      }
+    }
+  ]
+}

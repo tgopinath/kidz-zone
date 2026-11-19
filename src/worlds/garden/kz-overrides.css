@@ -1,0 +1,9 @@
+/* KidZ Zone look for Word Garden: flatter buttons and level tiles; it already uses Kolam. */
+.w-garden { --ground: var(--bg); background: var(--color-bg); }
+.w-garden .chunky, .w-garden .k-btn-outline.chunky { box-shadow: none; }
+.w-garden .chunky:active { transform: scale(.98); box-shadow: none; }
+.w-garden .lv { box-shadow: none; border-width: 1px; }
+.w-garden .lv.next { border-width: 2px; }
+.w-garden .now .go { box-shadow: none; }
+.w-garden .card { border-width: 1px; border-radius: 20px; box-shadow: 0 6px 18px -10px rgb(31 36 51 / .18); }
+.w-garden .wrap { padding-top: 16px; }
