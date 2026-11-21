@@ -189,3 +189,17 @@ html.k-ios :is(a, button):active { opacity: 0.6; }
 html.k-ios a[class] { color: revert-layer; }
 html.k-android .bcard { border-radius: 16px; box-shadow: none; border-color: transparent; background: var(--md-sys-color-surface-container-low, #fff); }
 html.k-ios .bcard { border-radius: 22px; box-shadow: none; border-color: transparent; background: var(--ios-grouped2, #fff); }
+
+/* ---------- shell pictures (src/shell/art.tsx): a gentle lift on hover, a soft pop when they appear ---------- */
+.kz-scene img { transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.group:hover .kz-scene .kz-hero, .group:focus-visible .kz-scene .kz-hero { transform: translateY(-6%) scale(1.04); }
+.group:hover .kz-scene .kz-side-a, .group:focus-visible .kz-scene .kz-side-a { transform: translate(-6%, -10%) rotate(6deg); }
+.group:hover .kz-scene .kz-side-b, .group:focus-visible .kz-scene .kz-side-b { transform: translate(4%, -8%) rotate(-6deg); }
+@keyframes kz-pop { from { transform: scale(0.6); opacity: 0; } to { transform: none; opacity: 1; } }
+.kz-pop { animation: kz-pop 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+@keyframes kz-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5%); } }
+.kz-float { animation: kz-float 4.5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .kz-scene img, .kz-pop, .kz-float { animation: none !important; transition: none !important; transform: none !important; }
+}
+html.reduce-motion .kz-scene img, html.reduce-motion .kz-pop, html.reduce-motion .kz-float { animation: none !important; transform: none !important; }

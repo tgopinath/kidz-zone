@@ -2,9 +2,10 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useShared } from '../shared/store'
 import { useTodayMix } from '../shared/useMix'
-import { GROUPS, worldsIn, type GroupId } from '../shared/worlds'
+import { GROUPS, worldMeta, worldsIn, type GroupId } from '../shared/worlds'
+import { WorldBadge } from './art'
 import { WorldCard } from './Home'
-import { Eyebrow, PageTitle } from './ui'
+import { Eyebrow } from './ui'
 
 const LEAD: Record<GroupId, string> = {
   learn: 'Grow words with moving pictures, read your first words in the garden, and count real rupee notes and coins.',
@@ -17,12 +18,30 @@ export function Hub({ group }: { group: GroupId }) {
   const g = GROUPS.find((x) => x.id === group)!
   const s = useShared()
   const { items } = useTodayMix()
-  const mine = items.filter((it) => worldsIn(group).some((w) => w.id === it.world) && !it.done)
+  const worlds = worldsIn(group)
+  const mine = items.filter((it) => worlds.some((w) => w.id === it.world) && !it.done)
+  const tint = worldMeta(worlds[0].id)
   return (
     <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-10">
-      <PageTitle eyebrow={`${worldsIn(group).length} worlds`} title={g.name} lead={LEAD[group]} />
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {worldsIn(group).map((w) => (
+      <header
+        className="mb-8 flex flex-wrap items-center justify-between gap-6 overflow-hidden rounded-3xl border border-line p-6 sm:p-8"
+        style={{ background: `radial-gradient(80% 140% at 100% 0%, ${tint.soft}, transparent 70%), #fff` }}
+      >
+        <div className="min-w-0 max-w-2xl">
+          <Eyebrow className="mb-1">{worlds.length} worlds</Eyebrow>
+          <h1 className="text-[32px] leading-tight font-black sm:text-5xl">{g.name}</h1>
+          <p className="mt-2 text-ink-soft sm:text-lg">{LEAD[group]}</p>
+        </div>
+        <span className="flex -space-x-4" aria-hidden>
+          {worlds.map((w, i) => (
+            <span key={w.id} className="rounded-3xl ring-4 ring-white" style={{ rotate: `${(i - (worlds.length - 1) / 2) * 6}deg` }}>
+              <WorldBadge world={w.id} size={84} />
+            </span>
+          ))}
+        </span>
+      </header>
+      <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+        {worlds.map((w) => (
           <li key={w.id}><WorldCard id={w.id} /></li>
         ))}
       </ul>
@@ -33,8 +52,13 @@ export function Hub({ group }: { group: GroupId }) {
           <ul className="mt-3 flex flex-col gap-2">
             {mine.map((it) => (
               <li key={it.world + it.activityId}>
-                <Link to={it.href} className="kz-card flex min-h-14 items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 py-3 font-bold hover:shadow-card">
-                  <span>{it.title}</span> <ArrowRight size={18} aria-hidden />
+                <Link to={it.href} className="kz-card group flex min-h-16 items-center gap-3 rounded-2xl border border-line bg-white px-3 py-2.5 font-bold transition hover:shadow-card">
+                  <WorldBadge world={it.world} size={44} />
+                  <span className="min-w-0 flex-1">
+                    {it.title}
+                    <span className="block text-sm font-normal text-ink-soft">{it.subtitle}</span>
+                  </span>
+                  <ArrowRight size={18} className="shrink-0 transition group-hover:translate-x-0.5" aria-hidden />
                 </Link>
               </li>
             ))}

@@ -2,7 +2,8 @@ import { BookA, Brain, IndianRupee, Map as MapIcon, PawPrint, Puzzle, ShoppingCa
 import type { CSSProperties, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import type { WorldId } from '../shared/store'
-import { avatarColour, initials, worldMeta } from '../shared/worlds'
+import { avatarColour, initials } from '../shared/worlds'
+import { WorldBadge } from './art'
 
 export const WORLD_ICON: Record<WorldId, LucideIcon> = {
   words: BookA,
@@ -17,13 +18,9 @@ export const WORLD_ICON: Record<WorldId, LucideIcon> = {
 
 export function WorldIcon({ world, size = 22, tile = false }: { world: WorldId; size?: number; tile?: boolean }) {
   const Icon = WORLD_ICON[world]
-  const m = worldMeta(world)
   if (!tile) return <Icon size={size} aria-hidden strokeWidth={1.8} />
-  return (
-    <span className="grid shrink-0 place-items-center rounded-xl" style={{ width: size * 2, height: size * 2, background: m.soft, color: m.accent }} aria-hidden>
-      <Icon size={size} strokeWidth={1.8} />
-    </span>
-  )
+  // tiles show the world's picture (src/shell/art.tsx) on its soft colour
+  return <WorldBadge world={world} size={size * 2} />
 }
 
 export function Avatar({ name, colour, size = 40 }: { name: string; colour?: string; size?: number }) {
