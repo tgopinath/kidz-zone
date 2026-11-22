@@ -1,6 +1,6 @@
 # Motion kit (copy)
 
-Unchanged copy of `animations/motion-kit.css` and `motion-kit.js` from tgopinath/portfolio-agent (commit dcd28e0).
+Unchanged copy of `animations/motion-kit.css` and `motion-kit.js` from tgopinath/portfolio-agent (commit 93a3602).
 To update, copy both files over again. How the app uses it:
 
 - `src/index.css` imports the CSS into Tailwind's `components` layer, so utility classes still win where both set

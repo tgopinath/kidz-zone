@@ -111,11 +111,30 @@
 @view-transition{navigation:auto}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.35s}
 
+/* ---------- 19. animated grid: an even grid whose tiles cascade in, lift with a light, glide when filtered ---------- */
+/* data-mk="grid" on the list; --mk-min = smallest tile width (default 330px: 3 columns wide, 2 on a tablet, 1 on a
+   phone), --mk-gap. Pictures inside a tile: class mk-grid-art (zoom and tilt on hover). Filter with MotionKit.flip.
+   Uses the tiles' ::after for the light: give tiles that already use ::after the class mk-no-light. */
+[data-mk~=grid]{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(var(--mk-min,330px),100%),1fr));gap:var(--mk-gap,clamp(16px,2vw,24px))}
+[data-mk~=grid]>*{position:relative;isolation:isolate;overflow:hidden;opacity:0;translate:0 40px;scale:.97;
+  transition:opacity .7s ease var(--mk-d,0ms),translate .8s var(--mk-ease) var(--mk-d,0ms),scale .8s var(--mk-ease) var(--mk-d,0ms),transform .5s var(--mk-ease),box-shadow .5s var(--mk-ease)}
+[data-mk~=grid]>.mk-in{opacity:1;translate:0 0;scale:1}
+[data-mk~=grid]>[hidden]{display:none}
+[data-mk~=grid]>:hover{transform:translateY(-6px);box-shadow:0 32px 60px -32px #141a2673}
+[data-mk~=grid]>:not(.mk-no-light):after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .4s;
+  background:radial-gradient(440px circle at calc(50% + var(--mk-mx,0)*50%) calc(50% + var(--mk-my,0)*50%),#ffffff5c,transparent 60%)}
+[data-mk~=grid]>:hover:after{opacity:1}
+[data-mk~=grid] .mk-grid-art{transition:transform .6s var(--mk-ease);transform:rotateY(calc(var(--mk-mx,0)*3deg)) rotateX(calc(var(--mk-my,0)*-3deg))}
+[data-mk~=grid]>:hover .mk-grid-art{transform:scale(1.04) rotateY(calc(var(--mk-mx,0)*3deg)) rotateX(calc(var(--mk-my,0)*-3deg))}
+
 /* ---------- reduce motion: layouts stay, movement goes ---------- */
 @media(prefers-reduced-motion:reduce){
   [data-mk],[data-mk] *,[data-mk]:before,[data-mk]:after{animation:none!important;transition:none!important}
   [data-mk~=reveal],[data-mk~=stagger]>*,[data-mk~=words] .mk-piece,[data-mk~=skeleton] img{opacity:1!important;translate:none!important;transform:none!important}
   [data-mk~=parallax],[data-mk~=lift],[data-mk~=tilt]{transform:none!important;opacity:1!important}
+  [data-mk~=grid]>*{opacity:1!important;translate:none!important;scale:none!important;transform:none!important}
+  [data-mk~=grid]>:after{display:none}
+  [data-mk~=grid] .mk-grid-art{transform:none!important}
   .mk-down [data-mk~=hide-on-down]{transform:none;opacity:1;pointer-events:auto}
   .mk-progress{display:none}
   @view-transition{navigation:none}
@@ -123,4 +142,7 @@
 html.mk-still [data-mk],html.mk-still [data-mk] *,html.mk-still [data-mk]:before,html.mk-still [data-mk]:after{animation:none!important;transition:none!important}
 html.mk-still [data-mk~=reveal],html.mk-still [data-mk~=stagger]>*,html.mk-still [data-mk~=words] .mk-piece,html.mk-still [data-mk~=skeleton] img{opacity:1!important;translate:none!important;transform:none!important}
 html.mk-still [data-mk~=parallax],html.mk-still [data-mk~=lift],html.mk-still [data-mk~=tilt]{transform:none!important;opacity:1!important}
+html.mk-still [data-mk~=grid]>*{opacity:1!important;translate:none!important;scale:none!important;transform:none!important}
+html.mk-still [data-mk~=grid]>:after{display:none}
+html.mk-still [data-mk~=grid] .mk-grid-art{transform:none!important}
 html.mk-still.mk-down [data-mk~=hide-on-down]{transform:none;opacity:1;pointer-events:auto}
