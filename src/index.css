@@ -191,3 +191,22 @@ html.k-ios :is(a, button):active { opacity: 0.6; }
 html.k-ios a[class] { color: revert-layer; }
 html.k-android .bcard { border-radius: 16px; box-shadow: none; border-color: transparent; background: var(--md-sys-color-surface-container-low, #fff); }
 html.k-ios .bcard { border-radius: 22px; box-shadow: none; border-color: transparent; background: var(--ios-grouped2, #fff); }
+
+/* ---------- phone looks: screen transitions in each platform's own style (useScreenTransition in Layout.tsx) ---------- */
+html:is(.k-android, .k-ios) body { overflow-x: clip; }
+/* Material 3: fade through between tabs, shared axis X going deeper or back (emphasized easing) */
+@keyframes kz-m3-fade-through { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
+@keyframes kz-m3-axis-forward { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: none; } }
+@keyframes kz-m3-axis-back { from { opacity: 0; transform: translateX(-32px); } to { opacity: 1; transform: none; } }
+html.k-android #main.kz-enter-tab { animation: kz-m3-fade-through 300ms cubic-bezier(0.05, 0.7, 0.1, 1) both; }
+html.k-android #main.kz-enter-forward { animation: kz-m3-axis-forward 350ms cubic-bezier(0.2, 0, 0, 1) both; }
+html.k-android #main.kz-enter-back { animation: kz-m3-axis-back 350ms cubic-bezier(0.2, 0, 0, 1) both; }
+/* iOS: push from the right going deeper, the previous screen sliding back in on Back, a quick cross-fade between tabs */
+@keyframes kz-ios-push { from { transform: translateX(100%); } to { transform: none; } }
+@keyframes kz-ios-pop { from { transform: translateX(-30%); opacity: 0.7; } to { transform: none; opacity: 1; } }
+@keyframes kz-ios-tab { from { opacity: 0; } to { opacity: 1; } }
+html.k-ios #main.kz-enter-forward { animation: kz-ios-push 420ms cubic-bezier(0.32, 0.72, 0, 1) both; box-shadow: -10px 0 28px rgb(0 0 0 / 0.12); }
+html.k-ios #main.kz-enter-back { animation: kz-ios-pop 420ms cubic-bezier(0.32, 0.72, 0, 1) both; }
+html.k-ios #main.kz-enter-tab { animation: kz-ios-tab 200ms ease-out both; }
+@media (prefers-reduced-motion: reduce) { html #main[class*='kz-enter-'] { animation: none !important; } }
+html.reduce-motion #main[class*='kz-enter-'] { animation: none !important; }

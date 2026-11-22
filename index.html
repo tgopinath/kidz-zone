@@ -13,6 +13,22 @@
     <!-- Lato is Kolam's type; Andika is a reading font for early readers (Word Garden's words); Noto Sans Tamil for Map Explorer's Tamil voice labels -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Andika:wght@400;700&family=Noto+Sans+Tamil:wght@400..700&display=swap" rel="stylesheet" />
     <!-- Native looks only inside the phone apps: Material 3 in the Android app, Apple HIG in the iPhone app. Inert in a browser. -->
+    <script>
+      /* Phone browsers get the phone app's look too (Kolam kits below): Apple HIG on iPhone and iPad, Material 3 on
+         other phones. Only when this tab has no choice yet; ?app=web, ?app=android or ?app=ios always wins. */
+      (function () {
+        try {
+          if (/[?&]app=(web|android|ios)\b/.test(location.search)) return
+          if (sessionStorage.getItem('kolam.app') || sessionStorage.getItem('k-app-mode')) return
+          var phone = matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) <= 820
+          if (!phone) return
+          var ua = navigator.userAgent
+          var apple = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)
+          if (apple) sessionStorage.setItem('kolam.app', 'ios')
+          else { sessionStorage.setItem('k-app-mode', 'android'); sessionStorage.setItem('kolam.app', 'android') }
+        } catch (e) {}
+      })()
+    </script>
     <script src="https://tgopinath.github.io/kolam-design-system/m3/kolam-m3.js"></script>
     <link rel="stylesheet" href="https://tgopinath.github.io/kolam-design-system/m3/kolam-m3.css" />
     <link rel="stylesheet" href="https://tgopinath.github.io/kolam-design-system/ios/kolam-ios.css" />

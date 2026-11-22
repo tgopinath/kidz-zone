@@ -1,6 +1,6 @@
 import { Home as HomeIcon, Compass, BookOpen, LineChart, Puzzle, Settings } from 'lucide-react'
-import { useEffect, type ReactNode } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { useEffect, useRef, type ReactNode } from 'react'
+import { Link, NavLink, useLocation, useNavigationType } from 'react-router-dom'
 import { isImmersive, syncNative, tabOf, type TabId } from '../shared/native'
 import { hush } from '../shared/speech'
 import { useShared, type WorldId } from '../shared/store'
@@ -52,8 +52,40 @@ export function Logo() {
   )
 }
 
+/**
+ * Phone looks (Android Material 3, iPhone HIG): each screen change plays that platform's own transition on <main>.
+ * Switching tabs: M3 "fade through", iOS cross-fade. Going deeper: M3 shared-axis slide, iOS push from the right.
+ * Going back: the reverse. Only the class on <main> changes (no remount), so a world keeps its state; game screens
+ * that own the whole screen are skipped. CSS in index.css; off with reduce motion (device or app setting).
+ */
+function useScreenTransition(pathname: string) {
+  const ref = useRef<HTMLElement>(null)
+  const prev = useRef(pathname)
+  const nav = useNavigationType()
+  useEffect(() => {
+    const from = prev.current
+    prev.current = pathname
+    const el = ref.current
+    const html = document.documentElement
+    if (!el || from === pathname || isImmersive(pathname)) return
+    if (!html.classList.contains('k-android') && !html.classList.contains('k-ios')) return
+    // the tab pages (Home, Learn, Play, Explore, Progress) are level 0; a world is 1, its inner screens deeper
+    const depth = (p: string) => (/^\/(learn|play|explore|progress)?$/.test(p) ? 0 : p.split('/').filter(Boolean).length)
+    // depth decides (hash links, like the kits' tab bars, arrive as POP too); history direction only breaks ties
+    const d0 = depth(from), d1 = depth(pathname)
+    const kind = d0 === 0 && d1 === 0 ? 'tab' : d1 > d0 ? 'forward' : d1 < d0 ? 'back' : nav === 'POP' ? 'back' : 'forward'
+    el.classList.remove('kz-enter-tab', 'kz-enter-forward', 'kz-enter-back')
+    void el.offsetWidth // restart the animation
+    el.classList.add(`kz-enter-${kind}`)
+    const done = () => el.classList.remove(`kz-enter-${kind}`)
+    el.addEventListener('animationend', done, { once: true })
+  }, [pathname, nav])
+  return ref
+}
+
 export function Layout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
+  const mainRef = useScreenTransition(pathname)
   const s = useShared()
   const tab = tabOf(pathname)
   const immersive = isImmersive(pathname)
@@ -99,7 +131,7 @@ export function Layout({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main id="main" className={immersive ? '' : 'pb-28 md:pb-12'}>
+      <main id="main" ref={mainRef} className={immersive ? '' : 'pb-28 md:pb-12'}>
         {children}
       </main>
 
