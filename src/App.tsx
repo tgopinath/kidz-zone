@@ -30,6 +30,7 @@ function Screens() {
   useEffect(() => {
     const html = document.documentElement
     html.classList.toggle('reduce-motion', s.settings.reducedMotion)
+    html.classList.toggle('mk-still', s.settings.reducedMotion) // motion kit: the app's own Reduce motion switch
     html.dataset.text = s.settings.textSize
   }, [s.settings.reducedMotion, s.settings.textSize])
   useEffect(() => {

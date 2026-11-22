@@ -1,0 +1,126 @@
+/* Motion kit: the animation styles from the portfolio home page and the KidZ Zone shell, in one reusable file.
+   Pair with motion-kit.js. Each effect is opt-in through a data-mk attribute (see README.md); nothing moves
+   unless you ask for it. Everything stops with prefers-reduced-motion or when <html> has the class mk-still
+   (use that for an in-app "Reduce motion" switch).
+
+   Tokens you can override on :root or on any element:
+     --mk-ease      the house easing (soft start, gentle settle)
+     --mk-accent    progress line colour
+     --mk-shimmer   skeleton base colour
+     --mk-blob-a / --mk-blob-b   colours of the drifting background */
+:root{
+  --mk-ease:cubic-bezier(.2,.75,.2,1);
+  --mk-pop:cubic-bezier(.3,1.4,.5,1);
+  --mk-accent:#d92f45;
+  --mk-shimmer:#e7eaf1;
+  --mk-blob-a:#fbe0e7;
+  --mk-blob-b:#dbeafb;
+}
+
+/* ---------- 1. reading progress: a thin line along the top (motion-kit.js adds it with data-mk-progress on <body>) ---------- */
+.mk-progress{position:fixed;z-index:1000;top:0;left:0;right:0;height:2px;background:var(--mk-accent);transform-origin:0 50%;transform:scaleX(var(--mk-sp,0));pointer-events:none}
+
+/* ---------- 2. reveal: fade up the first time it reaches the screen (data-mk="reveal"; data-mk-delay="120") ---------- */
+[data-mk~=reveal]{opacity:0;translate:0 28px;transition:opacity .8s ease,translate .9s var(--mk-ease);transition-delay:var(--mk-delay,0ms)}
+[data-mk~=reveal].mk-in{opacity:1;translate:0 0}
+
+/* ---------- 3. stagger: children reveal one after another (data-mk="stagger"; --mk-step on the parent, default 70ms) ---------- */
+[data-mk~=stagger]>*{opacity:0;translate:0 24px;transition:opacity .7s ease,translate .8s var(--mk-ease);transition-delay:calc(var(--mk-i,0)*var(--mk-step,70ms))}
+[data-mk~=stagger].mk-in>*{opacity:1;translate:0 0}
+
+/* ---------- 4. words / letters: split text that rises piece by piece ---------- */
+/* data-mk="words": on reveal.  data-mk="letters": on page load (a welcome), once per browser tab with data-mk-once */
+.mk-w{display:inline-block;white-space:nowrap}
+.mk-piece{display:inline-block}
+[data-mk~=words] .mk-piece{opacity:0;transform:translateY(.45em);transition:opacity .6s ease,transform .8s var(--mk-ease);transition-delay:calc(var(--mk-i)*70ms)}
+[data-mk~=words].mk-in .mk-piece{opacity:1;transform:none}
+[data-mk~=letters].mk-play .mk-piece{animation:mk-rise .9s var(--mk-ease) both;animation-delay:calc(var(--mk-start,.2s) + var(--mk-i)*38ms)}
+@keyframes mk-rise{from{opacity:0;transform:translateY(.55em) rotate(4deg)}to{opacity:1;transform:none}}
+
+/* ---------- 5. parallax: moves slower or faster than the page (data-mk="parallax" data-mk-speed="-0.3") ---------- */
+[data-mk~=parallax]{transform:translate3d(0,calc(var(--mk-p,0)*var(--mk-speed,.3)*100px),0);will-change:transform}
+
+/* ---------- 6. scroll-away hero: lifts and fades as it scrolls off (data-mk="lift"; --mk-hs runs 0 to 1) ---------- */
+[data-mk~=lift]{transform:translate3d(0,calc(var(--mk-hs,0)*-140px),0);opacity:calc(1 - var(--mk-hs,0)*1.3)}
+
+/* ---------- 7. tilt: leans toward the mouse (data-mk="tilt"; mouse only) ---------- */
+[data-mk~=tilt]{transform:perspective(1400px) rotateY(calc(var(--mk-mx,0)*5deg)) rotateX(calc(var(--mk-my,0)*-4deg));transition:transform .5s var(--mk-ease)}
+
+/* ---------- 8. skeleton: shimmer until every image inside has loaded, then fade them in (data-mk="skeleton") ---------- */
+[data-mk~=skeleton]{position:relative}
+[data-mk~=skeleton].mk-loading:before{content:"";position:absolute;z-index:0;inset:0;border-radius:inherit;background:linear-gradient(100deg,#fff0 30%,#ffffffb3 50%,#fff0 70%) 0 0/250% 100%,var(--mk-shimmer);animation:mk-shimmer 1.4s linear infinite}
+[data-mk~=skeleton] img{opacity:0;transition:opacity .6s ease}
+[data-mk~=skeleton] img.mk-ok{opacity:1}
+@keyframes mk-shimmer{from{background-position:120% 0,0 0}to{background-position:-120% 0,0 0}}
+
+/* ---------- 9. hide on scroll down, back on scroll up (data-mk="hide-on-down"; sticky bars, filter rows) ---------- */
+[data-mk~=hide-on-down]{transition:transform .35s var(--mk-ease),opacity .35s}
+.mk-down [data-mk~=hide-on-down]{transform:translateY(calc(-100% - 20px));opacity:0;pointer-events:none}
+
+/* ---------- 10. soft swap: MotionKit.swap(el, fn) fades el out, runs fn, fades back (filters, tabs) ---------- */
+.mk-swap{transition:opacity .18s ease}
+.mk-swap.mk-out{opacity:0}
+
+/* ---------- 11. press: a small squeeze on tap or click (data-mk="press"); hover lift for buttons (data-mk="lift-hover") ---------- */
+[data-mk~=press]{-webkit-tap-highlight-color:transparent;transition:scale .15s}
+[data-mk~=press]:active{scale:.97}
+[data-mk~=lift-hover]{transition:transform .2s,box-shadow .2s}
+[data-mk~=lift-hover]:hover{transform:translateY(-2px)}
+
+/* ---------- 12. nudge: one small shake when it first appears, to draw the eye (data-mk="nudge"; data-mk-times="2") ---------- */
+[data-mk~=nudge].mk-in{animation:mk-nudge 1.1s ease .6s var(--mk-times,2)}
+@keyframes mk-nudge{0%,100%{transform:none}30%{transform:translateX(8px)}60%{transform:translateX(-2px)}}
+
+/* ---------- 13. drifting background: two soft colours drift behind a block (data-mk="drift") ---------- */
+[data-mk~=drift]{position:relative;isolation:isolate;overflow:hidden}
+[data-mk~=drift]:before,[data-mk~=drift]:after{content:"";position:absolute;z-index:-1;width:48vmax;height:48vmax;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none}
+[data-mk~=drift]:before{background:var(--mk-blob-a);left:-18vmax;bottom:-30vmax;animation:mk-drift 22s ease-in-out infinite alternate}
+[data-mk~=drift]:after{background:var(--mk-blob-b);right:-16vmax;top:-30vmax;animation:mk-drift 26s ease-in-out infinite alternate-reverse}
+@keyframes mk-drift{from{transform:translate(0,0) scale(1)}to{transform:translate(8vmax,-4vmax) scale(1.15)}}
+
+/* ---------- 14. pop and float (from KidZ Zone): a springy entrance, a gentle bob ---------- */
+[data-mk~=pop]{animation:mk-pop .45s var(--mk-pop) both}
+[data-mk~=float]{animation:mk-float 4.5s ease-in-out infinite}
+@keyframes mk-pop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+@keyframes mk-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5%)}}
+
+/* ---------- 15. scene lift (from KidZ Zone cards): pictures inside a hovered card rise and spread ---------- */
+/* card: class "mk-card"; pictures: data-mk="scene-main" / "scene-a" / "scene-b" */
+[data-mk~=scene-main],[data-mk~=scene-a],[data-mk~=scene-b]{transition:transform .5s var(--mk-ease)}
+.mk-card:hover [data-mk~=scene-main],.mk-card:focus-visible [data-mk~=scene-main]{transform:translateY(-6%) scale(1.04)}
+.mk-card:hover [data-mk~=scene-a],.mk-card:focus-visible [data-mk~=scene-a]{transform:translate(-6%,-10%) rotate(6deg)}
+.mk-card:hover [data-mk~=scene-b],.mk-card:focus-visible [data-mk~=scene-b]{transform:translate(4%,-8%) rotate(-6deg)}
+
+/* ---------- 16. menu slide-in: links of an opened menu slide in one by one (data-mk="menu"; toggle class mk-open) ---------- */
+[data-mk~=menu].mk-open>*{animation:mk-slide .45s var(--mk-ease) both;animation-delay:calc(.04s + var(--mk-i,0)*40ms)}
+@keyframes mk-slide{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+
+/* ---------- 17. full-screen panels: each child a full-screen section, picture and text alternating sides ---------- */
+/* data-mk="panels" on the list; each item holds .mk-panel-art (picture) and .mk-panel-text. Combine with parallax. */
+[data-mk~=panels]{display:block;width:100vw;margin-left:calc(50% - 50vw)}
+[data-mk~=panels]>*{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);align-items:center;gap:clamp(28px,4vw,72px);min-height:100vh;min-height:100svh;padding:clamp(72px,10vh,120px) max(clamp(18px,4vw,48px),calc((100vw - 1480px)/2))}
+[data-mk~=panels]>* .mk-panel-text{order:-1}
+[data-mk~=panels]>:nth-child(even){grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+[data-mk~=panels]>:nth-child(even) .mk-panel-text{order:2}
+@media(max-width:860px){
+  [data-mk~=panels]>*,[data-mk~=panels]>:nth-child(even){grid-template-columns:1fr;gap:28px;padding:84px clamp(18px,4vw,48px) 56px}
+  [data-mk~=panels]>* .mk-panel-text,[data-mk~=panels]>:nth-child(even) .mk-panel-text{order:0}
+}
+
+/* ---------- 18. page transition: soft cross-fade between pages of the same site (put this file on both pages) ---------- */
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.35s}
+
+/* ---------- reduce motion: layouts stay, movement goes ---------- */
+@media(prefers-reduced-motion:reduce){
+  [data-mk],[data-mk] *,[data-mk]:before,[data-mk]:after{animation:none!important;transition:none!important}
+  [data-mk~=reveal],[data-mk~=stagger]>*,[data-mk~=words] .mk-piece,[data-mk~=skeleton] img{opacity:1!important;translate:none!important;transform:none!important}
+  [data-mk~=parallax],[data-mk~=lift],[data-mk~=tilt]{transform:none!important;opacity:1!important}
+  .mk-down [data-mk~=hide-on-down]{transform:none;opacity:1;pointer-events:auto}
+  .mk-progress{display:none}
+  @view-transition{navigation:none}
+}
+html.mk-still [data-mk],html.mk-still [data-mk] *,html.mk-still [data-mk]:before,html.mk-still [data-mk]:after{animation:none!important;transition:none!important}
+html.mk-still [data-mk~=reveal],html.mk-still [data-mk~=stagger]>*,html.mk-still [data-mk~=words] .mk-piece,html.mk-still [data-mk~=skeleton] img{opacity:1!important;translate:none!important;transform:none!important}
+html.mk-still [data-mk~=parallax],html.mk-still [data-mk~=lift],html.mk-still [data-mk~=tilt]{transform:none!important;opacity:1!important}
+html.mk-still.mk-down [data-mk~=hide-on-down]{transform:none;opacity:1;pointer-events:auto}

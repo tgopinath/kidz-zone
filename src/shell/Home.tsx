@@ -4,6 +4,7 @@ import { playerLevel, streak, totals, useShared, type WorldId } from '../shared/
 import { useTodayMix } from '../shared/useMix'
 import { GROUPS, WORLDS, worldMeta, worldsIn } from '../shared/worlds'
 import { Art, WorldBadge, WorldScene } from './art'
+import { useMotionKit, Words } from './motion'
 import { Card, Eyebrow, ProgressBar } from './ui'
 
 export function TodayMix({ compact = false }: { compact?: boolean }) {
@@ -17,7 +18,7 @@ export function TodayMix({ compact = false }: { compact?: boolean }) {
           <Eyebrow>Today’s mix</Eyebrow>
           <h2 id="mix-h" className="flex items-center gap-2 text-2xl font-black">
             {all ? 'All done for today' : `${items.length} short activities`}
-            {all && <Art name="party" size={30} className="kz-pop" />}
+            {all && <Art name="party" size={30} motion="pop" />}
           </h2>
         </div>
         <div className="w-32 shrink-0 text-right" aria-live="polite">
@@ -25,13 +26,14 @@ export function TodayMix({ compact = false }: { compact?: boolean }) {
           <div className="mt-1.5"><ProgressBar value={done / items.length} colour="var(--color-success)" label={`Today’s mix: ${done} of ${items.length} done`} /></div>
         </div>
       </div>
-      <ol className={`grid gap-3 ${compact ? 'sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-4'}`}>
+      <ol data-mk="stagger" className={`grid gap-3 ${compact ? 'sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-4'}`}>
         {items.map((it, i) => {
           const m = worldMeta(it.world)
           return (
             <li key={it.world + it.activityId}>
               <Link
                 to={it.href}
+                data-mk="press"
                 className={`kz-card group flex h-full min-h-24 items-center gap-3 rounded-2xl border p-3.5 transition hover:-translate-y-0.5 hover:shadow-card ${it.done ? 'border-success/30 bg-success-soft/60' : 'border-line bg-white'}`}
                 aria-label={`${i + 1}. ${it.title}, in ${m.name}${it.done ? ', done' : ''}`}
               >
@@ -59,7 +61,8 @@ export function WorldCard({ id }: { id: WorldId }) {
   return (
     <Link
       to={m.href}
-      className="kz-card group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white transition hover:-translate-y-1 hover:shadow-card focus-visible:-translate-y-1"
+      data-mk="press"
+      className="kz-card mk-card group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white transition hover:-translate-y-1 hover:shadow-card focus-visible:-translate-y-1"
       aria-label={`${m.name}: ${m.tagline}. ${w.stars} stars. ${started ? 'Continue' : 'Start'}`}
     >
       <div className="relative">
@@ -95,7 +98,8 @@ function ContinueBanner() {
     <section aria-labelledby="cont-h" className="mb-10">
       <Link
         to={m.href}
-        className="kz-card group grid overflow-hidden rounded-3xl border border-line bg-white transition hover:shadow-card sm:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]"
+        data-mk="press"
+        className="kz-card mk-card group grid overflow-hidden rounded-3xl border border-line bg-white transition hover:shadow-card sm:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]"
         aria-label={`Pick up where you left off: ${m.name}${w.levelLabel ? `, ${w.levelLabel}` : ''}. Continue`}
       >
         <WorldScene world={last.id} className="sm:aspect-auto sm:h-full sm:min-h-44" />
@@ -106,7 +110,7 @@ function ContinueBanner() {
             {w.levelLabel || `${w.plays} played`}
             {act ? ` · last time: ${act.title}` : ''}
           </p>
-          <span className="mt-3 inline-flex min-h-12 w-fit items-center gap-2 rounded-full px-6 text-lg font-black text-white transition-[gap] group-hover:gap-3" style={{ background: m.accent }} aria-hidden>
+          <span data-mk="nudge" className="mt-3 inline-flex min-h-12 w-fit items-center gap-2 rounded-full px-6 text-lg font-black text-white transition-[gap] group-hover:gap-3" style={{ background: m.accent }} aria-hidden>
             Continue <ArrowRight size={19} />
           </span>
         </div>
@@ -120,12 +124,13 @@ export function Home() {
   const t = totals(s)
   const lvl = playerLevel(t.xp)
   const days = streak(s)
+  useMotionKit()
   return (
     <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-10">
       <header className="mb-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
         <div>
-          <Eyebrow className="flex items-center gap-1.5">Hi {s.profile!.name} <Art name="wave" size={20} className="kz-pop" /></Eyebrow>
-          <h1 className="mt-1 text-[32px] leading-tight font-black tracking-tight sm:text-5xl">Where shall we play today?</h1>
+          <Eyebrow className="flex items-center gap-1.5">Hi {s.profile!.name} <Art name="wave" size={20} motion="pop" /></Eyebrow>
+          <Words text="Where shall we play today?" className="mt-1 text-[32px] leading-tight font-black tracking-tight sm:text-5xl" />
         </div>
         <Card className="grid grid-cols-3 divide-x divide-line p-0">
           <div className="px-4 py-3">
@@ -134,7 +139,7 @@ export function Home() {
           </div>
           <div className="px-4 py-3">
             <p className="eyebrow">Streak</p>
-            <p className="mt-0.5 flex items-center gap-1.5 text-2xl font-black"><Art name="fire" size={26} className={days > 0 ? 'kz-float' : 'opacity-40 grayscale'} />{days}<span className="text-sm font-bold text-ink-soft">{days === 1 ? 'day' : 'days'}</span></p>
+            <p className="mt-0.5 flex items-center gap-1.5 text-2xl font-black"><Art name="fire" size={26} motion={days > 0 ? 'float' : undefined} className={days > 0 ? '' : 'opacity-40 grayscale'} />{days}<span className="text-sm font-bold text-ink-soft">{days === 1 ? 'day' : 'days'}</span></p>
           </div>
           <div className="min-w-28 px-4 py-3 sm:min-w-36">
             <p className="eyebrow flex items-center gap-1"><Art name="trophy" size={16} /> Level {lvl.level}</p>
@@ -156,7 +161,7 @@ export function Home() {
             </div>
             <Link to={g.href} className="inline-flex min-h-11 shrink-0 items-center gap-1 font-bold text-brand hover:underline">All of {g.name} <ArrowRight size={16} aria-hidden /></Link>
           </div>
-          <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+          <ul data-mk="stagger" className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {worldsIn(g.id).map((w) => (
               <li key={w.id}><WorldCard id={w.id} /></li>
             ))}
