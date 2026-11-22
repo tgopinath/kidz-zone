@@ -25,6 +25,6 @@ export const GAMES: GameInfo[] = [
   { id: 'shadow', name: 'Shadow Matching', emoji: '👤', bg: '#F5E9DC', kind: 'mini', description: 'Which object makes this shadow? In Brain Gym.', ready: true, path: '/brain/play/shadow-match' },
   { id: 'sort', name: 'Word Sorting', emoji: '🗂️', bg: '#DFF6E3', kind: 'mini', description: 'Sort things into the right groups.', ready: false },
   { id: 'sentence', name: 'Sentence Builder', emoji: '📝', bg: '#FFF0D4', kind: 'mini', description: 'Put words in order to make a sentence.', ready: false },
-  { id: 'sound', name: 'What’s the Sound?', emoji: '🔊', bg: '#DBF1FC', kind: 'mini', description: 'Guess who makes that sound.', ready: false },
+  { id: 'sound', name: 'What’s the Sound?', emoji: '👂', bg: '#DBF1FC', kind: 'mini', description: 'Guess who makes that sound.', ready: false },
   { id: 'speed', name: 'Speed Challenge', emoji: '⏱️', bg: '#FFE0EF', kind: 'mini', description: 'An optional race against the clock.', ready: false },
 ]

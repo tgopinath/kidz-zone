@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect } from 'react'
 import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useFirstRunImport } from './shared/import'
 import { useShared } from './shared/store'
+import { installTapToHear } from './shared/tapToHear'
 import { Layout } from './shell/Layout'
 import { Hub } from './shell/Hub'
 import { Home } from './shell/Home'
@@ -26,6 +27,7 @@ function Screens() {
   const s = useShared()
   const loc = useLocation()
   useFirstRunImport()
+  useEffect(() => installTapToHear(), []) // tap a card or a title to hear it (no speaker buttons)
 
   useEffect(() => {
     const html = document.documentElement

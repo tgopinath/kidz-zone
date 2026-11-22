@@ -1,6 +1,5 @@
 import { Component, useEffect, useState, type ReactNode } from 'react'
 import { Link, Route, Routes, useLocation } from 'react-router-dom'
-import { Volume2, VolumeX } from 'lucide-react'
 import { WorldFrame } from '../../shell/WorldFrame'
 import { useShared } from '../../shared/store'
 import { celebrate } from './lib/celebrate'
@@ -67,21 +66,6 @@ function VoiceControls() {
   }
   return (
     <div className="flex items-center gap-2">
-      <button
-        type="button"
-        aria-pressed={p.readAloud}
-        aria-label={p.readAloud ? 'Read aloud is on' : 'Read aloud is off'}
-        title={p.readAloud ? 'Read aloud is on' : 'Read aloud is off'}
-        onClick={() => {
-          if (p.readAloud) stopSpeaking()
-          else speak('Okay! I will read things out loud for you.', { force: true })
-          actions.toggleReadAloud()
-        }}
-        className={`inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 text-sm font-bold ${p.readAloud ? 'border-primary bg-primary-soft text-primary' : 'border-line bg-white text-ink-soft'}`}
-      >
-        {p.readAloud ? <Volume2 size={18} aria-hidden /> : <VolumeX size={18} aria-hidden />}
-        <span className="hidden sm:inline">Read aloud</span>
-      </button>
       <div role="group" aria-label="Voice language" className="flex rounded-xl border border-line bg-white p-0.5">
         {(['en', 'ta'] as const).map((l) => (
           <button key={l} type="button" lang={l} aria-pressed={p.voiceLang === l} aria-label={l === 'en' ? 'English voice' : 'Tamil voice'} onClick={() => choose(l)} className={`min-h-10 min-w-10 rounded-[10px] px-2 text-sm font-bold ${p.voiceLang === l ? 'bg-primary text-white' : 'text-ink-soft'}`}>

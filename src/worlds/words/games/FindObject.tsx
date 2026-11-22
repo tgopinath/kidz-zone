@@ -194,13 +194,10 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-        <h1 className="font-display text-3xl font-bold text-ink sm:text-4xl">
+        <h1 className="cursor-pointer font-display text-3xl font-bold text-ink sm:text-4xl" data-no-announce onClick={() => void speak(question)}>
           Where is the <span style={{ color }}>{target.word}</span>?
         </h1>
-        <button type="button" onClick={() => void speak(question)} aria-label="Hear the question again"
-          className="inline-flex min-h-12 items-center gap-2 rounded-full px-4 text-white shadow focus-visible:outline-4 focus-visible:outline-primary" style={{ background: color }}>
-          🔊 <Waveform active={speaking === question} color="#fff" />
-        </button>
+        <Waveform active={speaking === question} color={color} />
       </div>
 
       <div className="mx-auto grid max-w-3xl grid-cols-2 gap-4 sm:gap-6">

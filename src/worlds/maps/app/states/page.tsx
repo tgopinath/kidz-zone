@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { Check, Search, Volume2 } from "lucide-react";
+import { Check, Search } from "lucide-react";
 import { IndiaOutlineDefs, StateLocator } from "@/components/StateLocator";
-import { Chip, PageHeader, ShowMore, TamilName } from "@/components/ui";
+import { Chip, PageHeader, ShowMore, SpeakButton, TamilName } from "@/components/ui";
 import { REGION_COLOURS, STATES, type Region, type StateInfo, districtsLabel } from "@/lib/content";
 import { useIndiaMap } from "@/lib/geo";
 import { speakLocal } from "@/lib/speech";
@@ -108,16 +108,7 @@ export default function StatesPage() {
                   </div>
                 </div>
               </Link>
-              <button
-                type="button"
-                onClick={() => sayState(s)}
-                aria-label={`Hear ${s.name}`}
-                title={`Hear ${s.name}`}
-                data-no-announce
-                className="absolute right-3 top-3 grid size-12 place-items-center rounded-full bg-primary text-white transition active:translate-y-px"
-              >
-                <Volume2 className="size-6" />
-              </button>
+              <SpeakButton label={`Hear ${s.name}`} onSpeak={() => sayState(s)} />
               {seen && (
                 <span className="absolute left-3 top-3 grid size-8 place-items-center rounded-full bg-success text-white" title="Explored" aria-label="Explored">
                   <Check className="size-4" />

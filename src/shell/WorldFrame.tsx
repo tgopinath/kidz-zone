@@ -3,7 +3,6 @@ import { useLayoutEffect, useRef, type ReactNode } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import type { WorldId } from '../shared/store'
 import { GROUPS, worldMeta } from '../shared/worlds'
-import { SoundToggle } from './Layout'
 import { WorldIcon } from './ui'
 
 export interface WorldTab {
@@ -71,7 +70,6 @@ export function WorldFrame({ world, tabs, actions, fill = false, children, class
           )}
           <div className="ml-auto flex items-center gap-2">
             {actions}
-            <span className="kz-app-only"><SoundToggle compact /></span>
           </div>
         </div>
       </div>

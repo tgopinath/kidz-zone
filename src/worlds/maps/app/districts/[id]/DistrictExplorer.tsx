@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { Check, Volume2, ChevronLeft, ChevronRight, Building2, GraduationCap, Puzzle, Search, Sparkles, X } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, Building2, GraduationCap, Puzzle, Search, Sparkles, X } from "lucide-react";
 import MapView from "@/components/MapView";
 import { GoogleMapFrame, MapModeSwitch, type MapMode } from "@/components/RealMap";
 import { Mascot, MascotSays } from "@/components/Mascot";
-import { Button, Card, DataStatusBadge, LinkButton, Loading, PageHeader, ProgressBar, ShowMore, TamilName } from "@/components/ui";
+import { Button, Card, DataStatusBadge, LinkButton, Loading, PageHeader, ProgressBar, ShowMore, SpeakButton, TamilName } from "@/components/ui";
 import { getDistricts, getState, districtsLabel } from "@/lib/content";
 import { DISTRICT_FILLS, useDistrictMap } from "@/lib/geo";
 import { actions, useProgress } from "@/lib/progress";
@@ -126,14 +126,10 @@ export default function DistrictExplorer({ id }: { id: string }) {
                 <div className="flex items-start justify-between gap-2">
                   <div>
                     <p className="text-sm font-bold uppercase tracking-wide text-primary">District</p>
-                    <h2 className="text-3xl font-extrabold leading-tight">{d.name}</h2>
+                    <h2 className="cursor-pointer text-3xl font-extrabold leading-tight" data-no-announce onClick={() => tell(d.id, true)}>{d.name}</h2>
                     <TamilName text={d.ta?.name} className="font-display text-xl font-bold text-primary" />
                     {d.name !== d.lgdName && <p className="text-sm text-ink-soft">Also written: {d.lgdName}</p>}
                   </div>
-                  <button type="button" aria-label="Listen again"
-                  data-no-announce title="Listen again" onClick={() => tell(d.id, true)} className="ml-auto grid size-11 shrink-0 place-items-center rounded-full bg-primary text-white">
-                    <Volume2 className="size-5" />
-                  </button>
                   <button type="button" aria-label="Close" onClick={() => setSelected(null)} className="grid size-9 shrink-0 place-items-center rounded-full bg-bg">
                     <X className="size-4" />
                   </button>
@@ -209,18 +205,7 @@ export default function DistrictExplorer({ id }: { id: string }) {
                     {x.name}
                     {learned.has(x.id) && <Check className={`size-4 ${x.id === selected ? "text-white" : "text-success"}`} strokeWidth={3} />}
                   </button>
-                  <button
-                    type="button"
-                    aria-label={`Say ${x.name}`}
-                    title={`Say ${x.name}`}
-                    data-no-announce
-                    onClick={() => speakLocal(x.name, x.ta?.name, { force: true })}
-                    className={`grid size-9 shrink-0 place-items-center rounded-full transition ${
-                      x.id === selected ? "bg-white/25 text-white" : "bg-primary-soft text-primary hover:bg-primary hover:text-white"
-                    }`}
-                  >
-                    <Volume2 className="size-5" />
-                  </button>
+                  <SpeakButton label={`Say ${x.name}`} onSpeak={() => speakLocal(x.name, x.ta?.name, { force: true })} />
                 </li>
                 )}
               />

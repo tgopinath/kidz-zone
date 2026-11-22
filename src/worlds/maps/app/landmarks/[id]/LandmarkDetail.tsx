@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { Calendar, Compass, Globe2, Landmark as LandmarkIcon, Lock, MapPin, Satellite, Sparkles, Volume2 } from "lucide-react";
+import { Calendar, Compass, Globe2, Landmark as LandmarkIcon, Lock, MapPin, Satellite, Sparkles } from "lucide-react";
 import GlobeView from "@/components/GlobeView";
 import { Flag, Photo } from "@/components/Media";
 import { Card, Chip, LinkButton, Loading, PageHeader } from "@/components/ui";
@@ -50,16 +50,7 @@ export default function LandmarkDetail({ id }: { id: string }) {
 
   return (
     <div className="space-y-6">
-      <PageHeader back="/landmarks" backLabel="All landmarks" title={l.name} subtitle={`${l.city}, ${countryName(l.country)}`}>
-        <button
-          type="button"
-          data-no-announce
-          onClick={say}
-          className="flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 font-display text-lg font-bold text-white"
-        >
-          <Volume2 className="size-5" /> Hear the story
-        </button>
-      </PageHeader>
+      <PageHeader back="/landmarks" backLabel="All landmarks" title={l.name} subtitle={`${l.city}, ${countryName(l.country)}`} say={say} />
 
       <div className="grid items-start gap-5 lg:grid-cols-[1.2fr_1fr]">
         <Photo id={id} alt={l.name} ratio="aspect-[16/10]" />

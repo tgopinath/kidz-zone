@@ -52,11 +52,10 @@ export function BuddyBubble({ compact }: { compact?: boolean }) {
         {FACES[buddy.mood]}
       </div>
       {subtitles && (
-        <div className="spanel relative px-4 py-2 text-base leading-snug" role="status" aria-live="polite">
+        <div className="spanel relative cursor-pointer px-4 py-2 text-base leading-snug" role="status" aria-live="polite" data-no-announce title="Tap to hear it again" onClick={(e) => { if (!(e.target as Element).closest('button')) speak(buddy.text) }}>
           <div className="text-xs font-bold uppercase tracking-wide text-brand">ShopBuddy</div>
           {buddy.text}
           <div className="mt-1 flex gap-2">
-            <button className="text-sm font-bold text-sky-700" onClick={() => speak(buddy.text)}>🔊 Again</button>
             <button className="text-sm font-bold text-ink/50" onClick={() => setHidden(true)}>Hide</button>
           </div>
         </div>

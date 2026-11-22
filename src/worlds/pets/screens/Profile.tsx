@@ -68,7 +68,7 @@ export default function Profile() {
             <input type="range" min={0} max={1} step={0.05} value={g.settings.volume} onChange={(e) => g.setSettings({ volume: +e.target.value })} className="w-full accent-pink-500 h-8" />
           </label>
           <Toggle label="🎵 Background music" on={g.settings.music} set={(v) => g.setSettings({ music: v })} />
-          <Toggle label="🔊 Sound effects" on={g.settings.sfx} set={(v) => g.setSettings({ sfx: v })} />
+          <Toggle label="Sound effects" on={g.settings.sfx} set={(v) => g.setSettings({ sfx: v })} />
           <Toggle label="🐢 Reduce motion" on={g.settings.reducedMotion} set={(v) => g.setSettings({ reducedMotion: v })} />
           <Toggle label="💬 Pet reminders in game" on={g.settings.reminders} set={(v) => g.setSettings({ reminders: v })} />
           <Toggle label="🔔 Device notifications" on={g.settings.notifications} set={askNotifications} />

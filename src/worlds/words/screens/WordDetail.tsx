@@ -106,17 +106,14 @@ function WordView({ item, cat }: { item: VocabItem; cat: Category }) {
             ) : (
               <motion.div key="shown" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
                 <Card className="p-6">
-                  <WordLetters word={item.word} color={cat.color} active={speakingWord} />
+                  <div role="button" tabIndex={0} data-no-announce aria-label={`Hear ${item.word}`} className="cursor-pointer" onClick={() => { void sayWord() }} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); void sayWord() } }}>
+                    <WordLetters word={item.word} color={cat.color} active={speakingWord} />
+                  </div>
                   <div className="mt-4 flex flex-wrap items-center gap-3">
-                    <motion.button type="button" onClick={() => { void sayWord() }} whileTap={{ scale: 0.9 }}
-                      className="grid h-20 w-20 place-items-center rounded-full text-4xl text-white focus-visible:outline-4 focus-visible:outline-primary"
-                      style={{ background: cat.color }} aria-label={`Hear ${item.word}`}>
-                      🔊
-                    </motion.button>
                     <div className="flex flex-col gap-1">
                       <Waveform active={speakingWord} color={cat.color} />
                       <span className="text-sm font-semibold text-ink-soft" aria-live="polite">
-                        {!available ? 'Sound is not available on this device' : speakingWord ? 'Listening…' : 'Tap to hear it again'}
+                        {!available ? 'Sound is not available on this device' : speakingWord ? 'Listening…' : 'Tap the word to hear it again'}
                       </span>
                     </div>
                     <div className="flex-1" />
@@ -133,18 +130,17 @@ function WordView({ item, cat }: { item: VocabItem; cat: Category }) {
 
                 <Card className="p-6">
                   <p className="font-display text-sm font-semibold uppercase tracking-wide text-ink-soft">What it means</p>
-                  <p className="mt-1 text-xl text-ink">{item.definition}</p>
+                  <p className="mt-1 cursor-pointer text-xl text-ink" data-say={item.definition}>{item.definition}</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center justify-between gap-3">
                     <p className="font-display text-sm font-semibold uppercase tracking-wide text-ink-soft">Example sentence</p>
-                    <button type="button" onClick={() => void speak(item.sentence, { slow })} aria-label="Hear the sentence"
-                      className="inline-flex min-h-11 items-center gap-2 rounded-full px-4 font-display font-semibold text-white focus-visible:outline-4 focus-visible:outline-primary" style={{ background: cat.color }}>
-                      🔊 <Waveform active={speakingSentence} color="#fff" />
-                    </button>
+                    <Waveform active={speakingSentence} color={cat.color} />
                   </div>
-                  <Sentence text={item.sentence} word={item.word} color={cat.color} active={speakingSentence} />
+                  <div role="button" tabIndex={0} data-no-announce aria-label="Hear the sentence" className="cursor-pointer" onClick={() => void speak(item.sentence, { slow })} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); void speak(item.sentence, { slow }) } }}>
+                    <Sentence text={item.sentence} word={item.word} color={cat.color} active={speakingSentence} />
+                  </div>
                   <Scene item={item} cat={cat} />
                 </Card>
 

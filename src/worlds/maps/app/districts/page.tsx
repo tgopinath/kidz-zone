@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Star, Volume2 } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { DistrictPreview, IndiaOutlineDefs, StateLocator } from "@/components/StateLocator";
-import { DataStatusBadge, PageHeader, ProgressBar, ShowMore, TamilName } from "@/components/ui";
+import { DataStatusBadge, PageHeader, ProgressBar, ShowMore, SpeakButton, TamilName } from "@/components/ui";
 import { getState, PILOT_STATE, REGION_COLOURS, STATES, districtsLabel, type StateInfo } from "@/lib/content";
 import { DISTRICT_FILLS, useIndiaMap } from "@/lib/geo";
 import { speakLocal } from "@/lib/speech";
@@ -16,19 +16,9 @@ const sayDistricts = (s: StateInfo) =>
     { force: true },
   );
 
-function Speaker({ s, className = "" }: { s: StateInfo; className?: string }) {
-  return (
-    <button
-      type="button"
-      onClick={() => sayDistricts(s)}
-      aria-label={`Hear ${s.name}`}
-      title={`Hear ${s.name}`}
-      data-no-announce
-      className={`grid size-12 place-items-center rounded-full bg-primary text-white transition active:translate-y-px ${className}`}
-    >
-      <Volume2 className="size-6" />
-    </button>
-  );
+/** Tapping the state's card reads its districts (no speaker button; see SpeakButton). */
+function Speaker({ s }: { s: StateInfo; className?: string }) {
+  return <SpeakButton label={`Hear ${s.name}`} onSpeak={() => sayDistricts(s)} />;
 }
 
 export default function DistrictsHome() {

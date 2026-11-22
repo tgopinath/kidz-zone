@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, Coins, Globe2, Landmark, Languages, Map as MapIcon, Rocket, Search, Users, Volume2 } from "lucide-react";
+import { ArrowRight, Coins, Globe2, Landmark, Languages, Map as MapIcon, Rocket, Search, Users } from "lucide-react";
 import GlobeView, { type GlobeMarker } from "@/components/GlobeView";
 import MapView, { type RegionMark } from "@/components/MapView";
 import { GoogleMapFrame } from "@/components/RealMap";
@@ -273,18 +273,9 @@ function CountryPanel({ id }: { id: string }) {
         <Flag id={id} size={64} />
         <div className="min-w-0 flex-1">
           {c.continent !== c.name && <Chip className="bg-primary-soft text-primary">{continentLabel(c.continent)}</Chip>}
-          <h2 className="mt-1 text-3xl font-extrabold leading-tight">{c.name}</h2>
+          <h2 className="mt-1 cursor-pointer text-3xl font-extrabold leading-tight" data-no-announce onClick={() => speak(describeCountry(id), { force: true })}>{c.name}</h2>
           {c.kind === "Dependency" && <p className="text-sm text-ink-soft">Part of {c.sovereign}</p>}
         </div>
-        <button
-          type="button"
-          aria-label="Listen again"
-          data-no-announce
-          onClick={() => speak(describeCountry(id), { force: true })}
-          className="grid size-11 shrink-0 place-items-center rounded-full bg-primary text-white"
-        >
-          <Volume2 className="size-5" />
-        </button>
       </div>
       <dl className="grid grid-cols-2 gap-3">
         {c.capitals.length > 0 && <Info label={c.capitals.length > 1 ? "Capitals" : "Capital"} value={c.capitals.join(", ")} />}

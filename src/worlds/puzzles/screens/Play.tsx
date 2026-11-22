@@ -158,7 +158,7 @@ export default function Play({ child, category, daily = false, preview, onExit }
     <div className="play" style={{ ['--world' as string]: world.color }}>
       <header className="play-top">
         <button className="icon-btn" onClick={() => setPaused(true)} aria-label="Pause">⏸️</button>
-        <div className="play-title grow">
+        <div className="play-title grow" data-say={puzzle.instruction}>
           <div className="row" style={{ gap: 8 }}>
             <span className="play-cat">{meta.emoji} {daily ? 'Daily Challenge' : world.name}</span>
             <span className="chip purple">{LEVELS[puzzle.difficulty].name}</span>
@@ -169,14 +169,13 @@ export default function Play({ child, category, daily = false, preview, onExit }
         {timeLimit && (
           <span className={`play-timer${timeLimit - elapsed < 15 ? ' low' : ''}`} aria-label="Time left">⏱️ {Math.max(0, Math.ceil(timeLimit - elapsed))}s</span>
         )}
-        <button className="icon-btn" onClick={() => speak(puzzle.instruction)} aria-label="Read instructions aloud">🔊</button>
         <button className="icon-btn" onClick={restart} aria-label="Restart puzzle">🔄</button>
         <button className="icon-btn hint-btn" onClick={takeHint} disabled={hintsLeft <= 0} aria-label={`Hint${Number.isFinite(hintsLeft) ? `, ${hintsLeft} left` : ''}`}>
           💡{Number.isFinite(puzzle.hints) && <span className="badge">{Math.max(0, hintsLeft)}</span>}
         </button>
       </header>
 
-      <p className="play-instruction">{puzzle.instruction}</p>
+      <p className="play-instruction" data-no-announce style={{ cursor: 'pointer' }} onClick={() => speak(puzzle.instruction)}>{puzzle.instruction}</p>
       <main className="play-body">{body}</main>
 
       {paused && !outcome && (

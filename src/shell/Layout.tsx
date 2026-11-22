@@ -1,9 +1,9 @@
-import { Home as HomeIcon, Compass, BookOpen, LineChart, Puzzle, Settings, Volume2, VolumeX } from 'lucide-react'
+import { Home as HomeIcon, Compass, BookOpen, LineChart, Puzzle, Settings } from 'lucide-react'
 import { useEffect, type ReactNode } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { isImmersive, syncNative, tabOf, type TabId } from '../shared/native'
 import { hush } from '../shared/speech'
-import { shared, useShared, type WorldId } from '../shared/store'
+import { useShared, type WorldId } from '../shared/store'
 import { GROUPS, WORLDS } from '../shared/worlds'
 import { Avatar } from './ui'
 
@@ -52,26 +52,6 @@ export function Logo() {
   )
 }
 
-export function SoundToggle({ compact = false }: { compact?: boolean }) {
-  const { settings } = useShared()
-  const on = settings.sound
-  return (
-    <button
-      type="button"
-      onClick={() => {
-        if (on) hush()
-        shared.updateSettings({ sound: !on })
-      }}
-      aria-pressed={on}
-      aria-label={on ? 'Sound is on. Turn sound off' : 'Sound is off. Turn sound on'}
-      className={`inline-flex size-11 items-center justify-center gap-2 rounded-xl border border-line bg-white text-ink hover:border-ink/30 ${compact ? '' : 'sm:w-auto sm:px-3'}`}
-    >
-      {on ? <Volume2 size={20} aria-hidden /> : <VolumeX size={20} aria-hidden />}
-      {!compact && <span className="hidden text-sm font-bold sm:inline">{on ? 'Sound on' : 'Sound off'}</span>}
-    </button>
-  )
-}
-
 export function Layout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const s = useShared()
@@ -108,7 +88,6 @@ export function Layout({ children }: { children: ReactNode }) {
             ))}
           </nav>
           <div className="ml-auto flex items-center gap-2">
-            <SoundToggle />
             <Link to="/settings" className="grid size-11 place-items-center rounded-xl border border-line bg-white hover:border-ink/30" aria-label="Settings">
               <Settings size={20} aria-hidden />
             </Link>

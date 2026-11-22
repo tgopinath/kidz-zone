@@ -252,7 +252,7 @@ export function SettingsScreen() {
   return (
     <ScreenShell title="Settings" back={() => goto('modes')}>
       <div className="spanel mt-4 p-5">
-        <Toggle k="sound" label="🔈 Sound effects" />
+        <Toggle k="sound" label="Sound effects" />
         <Toggle k="voice" label="🗣️ ShopBuddy voice (Indian English when available)" />
         <Toggle k="subtitles" label="💬 Subtitles" />
         <div className="py-3">

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { PawPrint, Puzzle, Sparkles, Users, Volume2 } from "lucide-react";
+import { PawPrint, Puzzle, Sparkles, Users } from "lucide-react";
 import GlobeView from "@/components/GlobeView";
 import { Flag, Photo } from "@/components/Media";
 import { Card, LinkButton, Loading, PageHeader, ShowMore } from "@/components/ui";
@@ -28,16 +28,7 @@ export default function ContinentExplorer({ id }: { id: Continent }) {
 
   return (
     <div className="space-y-6">
-      <PageHeader back="/world" backLabel="World" title={label} subtitle={k.blurb}>
-        <button
-          type="button"
-          data-no-announce
-          onClick={() => speakLines([label, ...info.facts, info.people], { force: true })}
-          className="flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 font-display text-lg font-bold text-white"
-        >
-          <Volume2 className="size-5" /> Hear about {label}
-        </button>
-      </PageHeader>
+      <PageHeader back="/world" backLabel="World" title={label} subtitle={k.blurb} say={() => speakLines([label, ...info.facts, info.people], { force: true })} />
 
       <div className="grid items-start gap-5 lg:grid-cols-[1.2fr_1fr]">
         {features ? (

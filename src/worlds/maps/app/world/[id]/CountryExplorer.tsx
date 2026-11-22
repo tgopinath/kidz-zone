@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
-import { Building2, Cloud, Coins, Landmark, Languages, Mountain, PawPrint, Sparkles, Stamp, Users, Volume2 } from "lucide-react";
+import { Building2, Cloud, Coins, Landmark, Languages, Mountain, PawPrint, Sparkles, Stamp, Users } from "lucide-react";
 import GlobeView from "@/components/GlobeView";
 import { Flag, Photo } from "@/components/Media";
 import { Card, Chip, Loading, PageHeader } from "@/components/ui";
@@ -33,7 +33,7 @@ export default function CountryExplorer({ id }: { id: string }) {
 
   return (
     <div className="space-y-6">
-      <PageHeader back="/world" backLabel="World" title={c.name} subtitle={c.name === c.continent ? "A continent of its own" : `${continentLabel(c.continent)}${c.subregion && c.subregion !== c.continent ? ` · ${c.subregion}` : ""}`}>
+      <PageHeader back="/world" backLabel="World" title={c.name} say={() => speak(describeCountry(id), { force: true })} subtitle={c.name === c.continent ? "A continent of its own" : `${continentLabel(c.continent)}${c.subregion && c.subregion !== c.continent ? ` · ${c.subregion}` : ""}`}>
         <div className="flex items-center gap-3">
           <Flag id={id} size={84} />
           {stamped && (
@@ -59,14 +59,6 @@ export default function CountryExplorer({ id }: { id: string }) {
           ) : (
             <Loading label="Spinning the globe…" />
           )}
-          <button
-            type="button"
-            data-no-announce
-            onClick={() => speak(describeCountry(id), { force: true })}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-3 font-display text-lg font-bold text-white"
-          >
-            <Volume2 className="size-5" /> Hear about {c.name}
-          </button>
         </div>
 
         <Card className="grid grid-cols-2 gap-3">
@@ -152,7 +144,7 @@ export default function CountryExplorer({ id }: { id: string }) {
                 <span className="text-sm font-bold text-white/80">Say hello in {g.language}</span>
                 <span className="font-display text-3xl font-extrabold">{g.word}</span>
                 <span className="flex items-center gap-1 text-sm">
-                  <Volume2 className="size-4" /> Tap to hear
+                  Tap to hear
                 </span>
               </button>
             ))}

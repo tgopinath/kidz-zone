@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import type { Challenge, ChallengeStatus } from '../lib/challenges';
-import { say, speakable } from '../lib/sound';
+import { speakable } from '../lib/sound';
 import { KidButton } from './ui';
 
 interface Props {
@@ -32,15 +32,7 @@ export function ChallengeCard({ challenge, index, status, completed, onPrev, onN
               <span className="ml-auto whitespace-nowrap rounded-full bg-amber-100 px-2 py-0.5 normal-case text-amber-700">⭐ {completed.length}</span>
             </div>
             <div className="flex items-start gap-2">
-              <h3 className="text-xl font-extrabold leading-tight text-ink sm:text-2xl">{challenge.title}</h3>
-              <button
-                type="button"
-                aria-label="Read the challenge aloud"
-                onClick={() => say(speakable(`${challenge.title}. ${status?.message ?? challenge.hint}`))}
-                className="grid size-9 shrink-0 place-items-center rounded-full bg-violet-500 text-lg text-white shadow-sm transition hover:scale-110 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-violet-300"
-              >
-                🔊
-              </button>
+              <h3 className="cursor-pointer text-xl font-extrabold leading-tight text-ink sm:text-2xl" data-say={speakable(`${challenge.title}. ${status?.message ?? challenge.hint}`)}>{challenge.title}</h3>
             </div>
             <p className={`text-sm font-bold sm:text-base ${status?.done ? 'text-mint-700' : 'text-ink/60'}`}>
               {status?.done ? '✅ ' : '💡 '}

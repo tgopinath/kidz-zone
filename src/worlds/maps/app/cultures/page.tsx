@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CalendarDays, Check, Languages, Shirt, Utensils, Volume2 } from "lucide-react";
+import { CalendarDays, Check, Languages, Shirt, Utensils } from "lucide-react";
 import { Flag, Photo } from "@/components/Media";
 import { Chip, PageHeader } from "@/components/ui";
 import { CLOTHING, FESTIVALS, FOODS, GREETINGS } from "@/lib/explorer";
@@ -161,9 +161,11 @@ export default function CulturesPage() {
                   {g.native !== g.word && <p className="text-lg">{g.native}</p>}
                   <p className="text-sm text-ink-soft">“{g.meaning}”</p>
                 </div>
-                <span className="grid size-12 shrink-0 place-items-center rounded-full bg-primary text-white">
-                  {heard ? <Check className="size-6" strokeWidth={3} /> : <Volume2 className="size-6" />}
-                </span>
+                {heard && (
+                  <span className="grid size-12 shrink-0 place-items-center rounded-full bg-primary text-white">
+                    <Check className="size-6" strokeWidth={3} />
+                  </span>
+                )}
               </button>
             );
           })}

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type ComponentProps, type ReactNode } from "react";
-import { AlertTriangle, ArrowLeft, BadgeCheck, ChevronDown, ChevronUp, Info, Star, Volume2 } from "lucide-react";
+import { useEffect, useRef, useState, type ComponentProps, type ReactNode } from "react";
+import { AlertTriangle, ArrowLeft, BadgeCheck, ChevronDown, ChevronUp, Info, Star } from "lucide-react";
 import type { DataStatus } from "@/lib/content";
 import { speakLines } from "@/lib/speech";
 import { useProgress } from "@/lib/progress";
@@ -45,7 +45,10 @@ export function PageHeader({
   children,
   back,
   backLabel = "Go back",
+  say,
 }: {
+  /** what tapping the title reads; default: the title, then the subtitle */
+  say?: () => void;
   title: string;
   subtitle?: ReactNode;
   children?: ReactNode;
@@ -70,17 +73,7 @@ export function PageHeader({
           ))}
         <div className="min-w-0">
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-extrabold leading-tight text-ink sm:text-4xl">{title}</h1>
-            <button
-              type="button"
-              onClick={() => speakLines([title, typeof subtitle === "string" ? subtitle : ""], { force: true })}
-              aria-label={`Read: ${title}`}
-              title="Read this out"
-              data-no-announce
-              className="grid size-10 shrink-0 place-items-center rounded-full bg-primary-soft text-primary transition hover:bg-primary hover:text-white active:translate-y-px"
-            >
-              <Volume2 className="size-5" />
-            </button>
+            <h1 className="cursor-pointer text-3xl font-extrabold leading-tight text-ink sm:text-4xl" data-no-announce onClick={() => (say ? say() : speakLines([title, typeof subtitle === "string" ? subtitle : ""], { force: true }))}>{title}</h1>
           </div>
           {subtitle && <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">{subtitle}</p>}
         </div>
@@ -226,22 +219,22 @@ export function ShowMore<T>({
   );
 }
 
-/** Round speaker button that reads something aloud; sits on top of a card, not inside its link. */
-export function SpeakButton({ label, onSpeak, className = "", tone = "primary" }: { label: string; onSpeak: () => void; className?: string; tone?: "primary" | "white" }) {
-  return (
-    <button
-      type="button"
-      onClick={onSpeak}
-      aria-label={label}
-      title={label}
-      data-no-announce
-      className={`grid size-12 place-items-center rounded-full transition active:translate-y-px ${
-        tone === "white" ? "bg-white text-primary" : "bg-primary text-white"
-      } ${className}`}
-    >
-      <Volume2 className="size-6" />
-    </button>
-  );
+/**
+ * No speaker buttons: this keeps the old name and props but draws nothing. It hands its speech to the element it
+ * sits in (a card), so tapping the card reads it — after Maps' own announcer, so this richer text wins.
+ */
+export function SpeakButton({ label, onSpeak }: { label: string; onSpeak: () => void; className?: string; tone?: "primary" | "white" }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const speakNow = useRef(onSpeak);
+  speakNow.current = onSpeak;
+  useEffect(() => {
+    const host = ref.current?.parentElement;
+    if (!host) return;
+    const onTap = () => speakNow.current();
+    host.addEventListener("click", onTap);
+    return () => host.removeEventListener("click", onTap);
+  }, []);
+  return <span ref={ref} hidden data-speak={label} />;
 }
 
 /** Tamil name under an English one — only shown when the child has chosen Tamil. */

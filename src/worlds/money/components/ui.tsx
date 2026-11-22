@@ -1,7 +1,7 @@
 import { useEffect, useRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
 import { animate, motion } from 'motion/react';
 import { rupees } from '../lib/format';
-import { say, speakable } from '../lib/sound';
+import { speakable } from '../lib/sound';
 
 export type Tone = 'mint' | 'peach' | 'lilac';
 
@@ -31,21 +31,9 @@ export function Panel({ tone, step, title, subtitle, announce, right, className 
       <header className={`flex items-center gap-3 px-5 py-3 ${t.header}`}>
         <span className={`grid size-9 shrink-0 place-items-center rounded-full text-lg font-extrabold text-white shadow-sm ${t.badge}`}>{step}</span>
         <div className="min-w-0 flex-1">
-          <h2 className="text-xl font-extrabold leading-tight text-ink sm:text-2xl">
-            <button
-              type="button"
-              aria-label={`${title}, read aloud`}
-              onClick={() => say(speakable(announce ?? `${title}. ${subtitle}`))}
-              className="group inline-flex max-w-full items-center gap-2 rounded-xl text-left outline-none focus-visible:ring-4 focus-visible:ring-saffron-300"
-            >
-              <span className="truncate">{title}</span>
-              <span
-                aria-hidden="true"
-                className="grid size-7 shrink-0 place-items-center rounded-full bg-white/80 text-sm shadow-sm ring-1 ring-ink/10 transition group-hover:scale-110 group-active:scale-95"
-              >
-                🔊
-              </span>
-            </button>
+          {/* tap the title to hear it (app-wide tap to hear, src/shared/tapToHear.ts) */}
+          <h2 className="cursor-pointer truncate text-xl font-extrabold leading-tight text-ink sm:text-2xl" data-say={speakable(announce ?? `${title}. ${subtitle}`)}>
+            {title}
           </h2>
           <p className="truncate text-sm font-semibold text-ink/60">{subtitle}</p>
         </div>

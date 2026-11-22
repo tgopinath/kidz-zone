@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Check, Clock, RotateCcw, Target, Trophy, Volume2, X } from "lucide-react";
+import { ArrowRight, Check, Clock, RotateCcw, Target, Trophy, X } from "lucide-react";
 import MapView, { type RegionMark } from "./MapView";
 import GlobeView from "./GlobeView";
 import { Flag, Photo } from "./Media";
 import { Mascot, MascotSays, type Mood } from "./Mascot";
-import { Button, Card, LinkButton, Loading, ProgressBar, Stars } from "./ui";
+import { Button, Card, LinkButton, Loading, ProgressBar, SpeakButton, Stars } from "./ui";
 import { getDistricts, getState, STATES } from "@/lib/content";
 import { DISTRICT_FILLS, STATE_FILLS, useDistrictMap, useIndiaMap, useWorldMap, type RegionFeature } from "@/lib/geo";
 import { countryName, getCountry } from "@/lib/world";
@@ -237,20 +237,10 @@ export default function QuizRunner({ make, stateId, onFinish, backHref, backLabe
         <div className="order-1 space-y-3 lg:order-2">
           <Card className="space-y-4">
             <div className="flex items-start gap-2">
-              <h2 className="flex flex-1 items-start gap-2 text-2xl font-extrabold leading-snug">
+              <h2 className="flex flex-1 cursor-pointer items-start gap-2 text-2xl font-extrabold leading-snug" data-no-announce onClick={() => speak(q.kind === "mcq" ? `${q.prompt} ${q.options.join(". ")}.` : q.prompt, { force: true })}>
                 {q.kind === "tap" && <Target className="mt-1 size-6 shrink-0 text-accent" />}
                 {q.prompt}
               </h2>
-              <button
-                type="button"
-                aria-label="Read the question"
-                data-no-announce
-                title="Read the question"
-                onClick={() => speak(q.kind === "mcq" ? `${q.prompt} ${q.options.join(". ")}.` : q.prompt, { force: true })}
-                className="grid size-11 shrink-0 place-items-center rounded-full bg-primary text-white"
-              >
-                <Volume2 className="size-5" />
-              </button>
             </div>
             {q.kind === "mcq" && (
               <div className="grid gap-2">
@@ -259,15 +249,7 @@ export default function QuizRunner({ make, stateId, onFinish, backHref, backLabe
                   const state = !answered ? "idle" : isAns ? "right" : o === picked ? "wrong" : "idle";
                   return (
                     <div key={o} className="flex items-center gap-1.5">
-                    <button
-                      type="button"
-                      aria-label={`Say ${o}`}
-                      data-no-announce
-                      onClick={() => speakLocal(o, taByName.get(o), { force: true })}
-                      className="grid size-11 shrink-0 place-items-center rounded-full bg-primary-soft text-primary"
-                    >
-                      <Volume2 className="size-5" />
-                    </button>
+                    <SpeakButton label={`Say ${o}`} onSpeak={() => speakLocal(o, taByName.get(o), { force: true })} />
                     <button
                       type="button"
                       disabled={answered}

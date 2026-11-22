@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent } from "react";
-import { Clock, Lightbulb, Lock, RotateCcw, Shuffle, Star, Timer, Trophy, Volume2 } from "lucide-react";
+import { Clock, Lightbulb, Lock, RotateCcw, Shuffle, Star, Timer, Trophy } from "lucide-react";
 import MapView, { type RegionMark } from "./MapView";
 import { Mascot, MascotSays, type Mood } from "./Mascot";
-import { Button, Card, DataStatusBadge, LinkButton, Loading, Stars } from "./ui";
+import { Button, Card, DataStatusBadge, LinkButton, Loading, SpeakButton, Stars } from "./ui";
 import { getDistricts, getState, shuffle, STATES } from "@/lib/content";
 import { DISTRICT_FILLS, STATE_FILLS, useDistrictMap, useIndiaMap, useWorldMap, type RegionFeature } from "@/lib/geo";
 import { continentBySlug, CONTINENT_BOX, COUNTRIES } from "@/lib/world";
@@ -382,19 +382,7 @@ export default function PuzzleGame({ mapKey }: { mapKey: string }) {
                     >
                       {names.get(id)}
                     </button>
-                    <button
-                      type="button"
-                      aria-label={`Hear ${names.get(id)}`}
-                      title={`Hear ${names.get(id)}`}
-                      data-no-announce
-                      onPointerDown={(e) => e.stopPropagation()}
-                      onClick={() => speakLocal(names.get(id) ?? "", taNames.get(id), { force: true })}
-                      className={`absolute right-1.5 top-1.5 grid size-7 place-items-center rounded-full transition ${
-                        active === id ? "bg-white/25 text-white" : "bg-primary-soft text-primary hover:bg-primary hover:text-white"
-                      }`}
-                    >
-                      <Volume2 className="size-4" />
-                    </button>
+                    <SpeakButton label={`Hear ${names.get(id)}`} onSpeak={() => speakLocal(names.get(id) ?? "", taNames.get(id), { force: true })} />
                     </div>
                   ))}
                 </div>

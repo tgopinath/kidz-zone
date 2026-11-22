@@ -34,6 +34,7 @@ export function TodayMix({ compact = false }: { compact?: boolean }) {
               <Link
                 to={it.href}
                 data-mk="press"
+                data-say={`${it.title}. ${it.subtitle}`}
                 className={`kz-card group flex h-full min-h-24 items-center gap-3 rounded-2xl border p-3.5 transition hover:-translate-y-0.5 hover:shadow-card ${it.done ? 'border-success/30 bg-success-soft/60' : 'border-line bg-white'}`}
                 aria-label={`${i + 1}. ${it.title}, in ${m.name}${it.done ? ', done' : ''}`}
               >
