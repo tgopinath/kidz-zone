@@ -8,8 +8,8 @@ const DECKS = {
   animals: ['🐶', '🐱', '🦊', '🐼', '🐸', '🦁', '🐵', '🐧', '🐙', '🦄', '🐢', '🐝', '🦋', '🐳', '🦒', '🐨'],
   food: ['🍎', '🍌', '🍇', '🍓', '🍉', '🥕', '🍕', '🍩', '🧁', '🍪', '🥑', '🌽', '🍒', '🥨', '🍋', '🫐'],
   objects: ['⚽', '🎈', '🚀', '🎸', '🧩', '🎁', '📚', '⏰', '🔑', '🪁', '🎨', '🛼', '🔭', '🧲', '🎲', '🪀'],
-  // Look-alike set for higher levels
-  faces: ['😀', '😃', '😄', '😁', '😆', '😊', '🙂', '😉', '😌', '😍', '🥰', '😘', '😋', '😛', '😜', '🤪'],
+  // Look-alike set for higher levels (vehicles and sea animals: recognisable, but close)
+  faces: ['🚗', '🚙', '🚕', '🚓', '🚌', '🚑', '🚒', '🚚', '🐠', '🐟', '🐡', '🦈', '🐬', '🐳', '🦀', '🦞'],
 }
 
 function gridFor(d: number): [number, number] {

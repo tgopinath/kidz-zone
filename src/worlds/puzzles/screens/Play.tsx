@@ -181,7 +181,7 @@ export default function Play({ child, category, daily = false, preview, onExit }
       {paused && !outcome && (
         <Modal label="Paused" onClose={() => setPaused(false)}>
           <div className="col" style={{ alignItems: 'center', textAlign: 'center', gap: 16 }}>
-            <div style={{ fontSize: 56 }}>😴</div>
+            <div style={{ fontSize: 56 }}>🌙</div>
             <h2>Taking a little break</h2>
             <button className="btn green lg block" onClick={() => setPaused(false)}>▶ Keep playing</button>
             <button className="btn ghost block" onClick={restart}>🔄 Start this puzzle again</button>

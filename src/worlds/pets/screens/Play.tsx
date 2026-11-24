@@ -74,7 +74,7 @@ export default function Play() {
                 {result.reward.coins ? <span className="pill bg-yellow-100 text-lg">🪙 +{result.reward.coins}</span> : null}
                 {result.reward.gems ? <span className="pill bg-violet-100 text-lg">💎 +{result.reward.gems}</span> : null}
                 <span className="pill bg-sky-100 text-lg">⭐ +{result.reward.xp} XP</span>
-                <span className="pill bg-pink-100 text-lg">😊 Happiness up</span>
+                <span className="pill bg-pink-100 text-lg">💖 Happiness up</span>
               </div>
               {(bestScores[game] ?? 0) <= result.score && result.score > 0 && <div className="mt-3 font-display font-bold text-grape">New best score! 🌟</div>}
               <div className="grid grid-cols-2 gap-3 mt-5">

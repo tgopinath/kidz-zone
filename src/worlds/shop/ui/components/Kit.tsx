@@ -37,7 +37,7 @@ export function ScreenShell({ title, back, children, wide }: { title: string; ba
   )
 }
 
-const FACES: Record<BuddyMood, string> = { happy: '😊', thinking: '🤔', celebrate: '🤩', oops: '😮' }
+const FACES: Record<BuddyMood, string> = { happy: '🛒', thinking: '💡', celebrate: '🎉', oops: '🧺' }
 
 /** ShopBuddy's 2D speech bubble with subtitles and a replay button. */
 export function BuddyBubble({ compact }: { compact?: boolean }) {

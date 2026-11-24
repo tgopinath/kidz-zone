@@ -74,7 +74,7 @@ export function Onboarding() {
                   role="radio"
                   aria-checked={age === b.id}
                   onClick={() => setAge(b.id)}
-                  className={`min-h-12 rounded-xl border px-2 font-bold transition ${age === b.id ? 'border-brand bg-brand-soft text-brand' : 'border-line hover:border-ink/30'}`}
+                  className={`min-h-16 rounded-xl border px-2 font-bold transition ${age === b.id ? 'border-brand bg-brand-soft text-brand' : 'border-line hover:border-ink/30'}`}
                 >
                   {b.label}
                 </button>
@@ -111,7 +111,7 @@ export function Onboarding() {
             </div>
           </div>
 
-          <button type="submit" disabled={!ready} className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 text-lg font-black text-white transition hover:brightness-110 disabled:opacity-50">
+          <button type="submit" disabled={!ready} className="mt-6 inline-flex min-h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 text-lg font-black text-white transition hover:brightness-110 disabled:opacity-50">
             Start playing <ArrowRight size={20} aria-hidden />
           </button>
         </form>

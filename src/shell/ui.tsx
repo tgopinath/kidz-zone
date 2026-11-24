@@ -72,7 +72,7 @@ export function PageTitle({ eyebrow, title, lead, right }: { eyebrow?: string; t
 }
 
 export function ButtonLink({ to, children, tone = 'primary', className = '', style }: { to: string; children: ReactNode; tone?: 'primary' | 'outline' | 'ghost'; className?: string; style?: CSSProperties }) {
-  const base = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 font-bold transition active:scale-[0.98]'
+  const base = 'inline-flex min-h-16 items-center justify-center gap-2 rounded-xl px-5 font-bold transition active:scale-[0.98]'
   const tones = {
     primary: 'bg-brand text-white hover:brightness-110',
     outline: 'border border-line bg-white text-ink hover:border-ink/30',

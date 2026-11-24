@@ -39,7 +39,7 @@ export function FindObjectGame() {
   }, [lessonId]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!setup) {
-    return <Card className="p-10 text-center"><p className="text-6xl">🧐</p><p className="mt-3 font-display text-2xl font-bold">That game could not be found.</p><BackLink to="/words/games" label="Games" /></Card>
+    return <Card className="p-10 text-center"><p className="text-6xl">🔎</p><p className="mt-3 font-display text-2xl font-bold">That game could not be found.</p><BackLink to="/words/games" label="Games" /></Card>
   }
   if (setup.pool.length < 2) {
     return (

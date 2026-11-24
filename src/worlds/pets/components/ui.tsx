@@ -31,7 +31,7 @@ export function Modal({ open, onClose, children, title, wide }: { open: boolean;
 
 export const STAT_META: Record<StatKey, { icon: string; label: string }> = {
   hunger: { icon: '🍖', label: 'Hunger' },
-  happiness: { icon: '😊', label: 'Happy' },
+  happiness: { icon: '💖', label: 'Happy' },
   energy: { icon: '⚡', label: 'Energy' },
   cleanliness: { icon: '🫧', label: 'Clean' },
   health: { icon: '❤️', label: 'Health' },

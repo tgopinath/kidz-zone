@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowRight, Check, Delete, Flag, X } from 'lucide-react'
+import { Check, Delete, Flag, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import type { Difficulty } from '../../lib/difficulty'
 import { pick, randInt, type Rng } from '../../lib/random'
@@ -83,7 +83,7 @@ function ArithmeticRace({ diff, rng, paused, api }: GameProps) {
         const mid = Math.floor(chain.steps.length / 2)
         return `Halfway through (after step ${mid}) the total was ${chain.values[mid]}.`
       }
-      return 'Press Next for the next race.'
+      return 'The next race is coming.'
     })
     return () => api.onHint(null)
   }, [phase, chain, api])
@@ -138,7 +138,7 @@ function ArithmeticRace({ diff, rng, paused, api }: GameProps) {
     setPhase('show')
   }
 
-  useTimeout(next, phase === 'right' ? 1600 : null, paused)
+  useTimeout(next, phase === 'right' ? 1600 : phase === 'wrong' ? 2600 : null, paused)
 
   const press = (k: string) => {
     if (paused) return
@@ -284,11 +284,7 @@ function ArithmeticRace({ diff, rng, paused, api }: GameProps) {
         </div>
       )}
 
-      {phase === 'wrong' && (
-        <button type="button" className="bbtn-primary mx-auto" onClick={next} autoFocus>
-          {race + 1 >= RACES ? 'See results' : 'Next race'} <ArrowRight size={18} />
-        </button>
-      )}
+      {phase === 'wrong' && <p className="text-center text-xl font-bold text-muted" role="status">Next race coming…</p>}
       {phase === 'show' && <p className="text-center text-sm text-muted">Watch each step and keep the total in your head…</p>}
     </div>
   )

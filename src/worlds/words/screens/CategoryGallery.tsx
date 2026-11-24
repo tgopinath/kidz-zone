@@ -26,7 +26,7 @@ export function CategoryGallery() {
   if (!cat) {
     return (
       <Card className="p-10 text-center">
-        <p className="text-6xl">🧐</p>
+        <p className="text-6xl">🔎</p>
         <h1 className="mt-3 font-display text-2xl font-bold">We couldn’t find that category</h1>
         <Button className="mt-6" onClick={() => nav('/words/explore')}>Go to Explore</Button>
       </Card>

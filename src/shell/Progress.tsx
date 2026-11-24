@@ -20,8 +20,8 @@ export function ProgressScreen() {
           <h1 className="text-3xl font-black sm:text-4xl">{s.profile!.name}</h1>
         </div>
         <div className="flex gap-2">
-          <Link to="/settings" className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-line bg-white px-4 font-bold hover:border-ink/30"><SettingsIcon size={18} aria-hidden /> Settings</Link>
-          <Link to="/parent" className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-line bg-white px-4 font-bold hover:border-ink/30"><Lock size={18} aria-hidden /> Grown-ups</Link>
+          <Link to="/settings" className="inline-flex min-h-16 items-center gap-2 rounded-xl border border-line bg-white px-4 font-bold hover:border-ink/30"><SettingsIcon size={18} aria-hidden /> Settings</Link>
+          <Link to="/parent" className="inline-flex min-h-16 items-center gap-2 rounded-xl border border-line bg-white px-4 font-bold hover:border-ink/30"><Lock size={18} aria-hidden /> Grown-ups</Link>
         </div>
       </header>
 

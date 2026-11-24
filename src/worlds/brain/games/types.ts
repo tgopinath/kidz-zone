@@ -26,6 +26,8 @@ export interface GameApi {
    * Pass null to disable hints.
    */
   onHint(fn: (() => string) | null): void
+  /** The game draws its own round cheer (shared play kit); the shell then skips its progress cheer. */
+  selfCheer?(): void
 }
 
 export interface GameProps {

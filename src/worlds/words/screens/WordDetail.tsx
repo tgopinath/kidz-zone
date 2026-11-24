@@ -19,7 +19,7 @@ export function WordDetail() {
   if (!item || !cat) {
     return (
       <Card className="p-10 text-center">
-        <p className="text-6xl">🧐</p>
+        <p className="text-6xl">🔎</p>
         <h1 className="mt-3 font-display text-2xl font-bold">We couldn’t find that word</h1>
         <Link to="/words/explore" className="mt-6 inline-block font-display font-semibold text-primary underline">Go to Explore</Link>
       </Card>

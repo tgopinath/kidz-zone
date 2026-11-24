@@ -15,7 +15,7 @@ function Segmented<T extends string>({ label, value, options, onChange }: { labe
           role="radio"
           aria-checked={value === o.id}
           onClick={() => onChange(o.id)}
-          className={`min-h-11 rounded-xl border px-4 font-bold transition ${value === o.id ? 'border-brand bg-brand-soft text-brand' : 'border-line bg-white hover:border-ink/30'}`}
+          className={`min-h-16 rounded-xl border px-4 font-bold transition ${value === o.id ? 'border-brand bg-brand-soft text-brand' : 'border-line bg-white hover:border-ink/30'}`}
         >
           {o.label}
         </button>
@@ -38,7 +38,7 @@ function Row({ title, hint, children }: { title: string; hint?: string; children
 
 function Switch({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <label className="k-switch inline-flex min-h-11 cursor-pointer items-center gap-3 font-bold">
+    <label className="k-switch inline-flex min-h-16 cursor-pointer items-center gap-3 font-bold">
       <input type="checkbox" role="switch" className="peer sr-only" checked={checked} onChange={(e) => onChange(e.target.checked)} />
       <span className="relative h-7 w-12 rounded-full bg-black/15 transition peer-checked:bg-brand peer-focus-visible:outline-3 peer-focus-visible:outline-brand after:absolute after:top-1 after:left-1 after:size-5 after:rounded-full after:bg-white after:transition peer-checked:after:translate-x-5" aria-hidden />
       {label}
@@ -81,7 +81,7 @@ export function SettingsScreen() {
         <Row title="Reading voice" hint="How fast words and instructions are read aloud.">
           <div className="flex flex-wrap items-center gap-2">
             <Segmented<VoiceSpeed> label="Reading voice" value={s.settings.voice} options={[{ id: 'slow', label: 'Slow' }, { id: 'normal', label: 'Normal' }, { id: 'fast', label: 'Fast' }]} onChange={(voice) => { set({ voice }); void say(`Hello ${p.name}. This is how I sound.`) }} />
-            <button type="button" className="inline-flex min-h-11 items-center gap-1.5 rounded-xl px-3 font-bold text-brand hover:bg-brand-soft" onClick={() => void say(`Hello ${p.name}. This is how I sound.`)}>
+            <button type="button" className="inline-flex min-h-16 items-center gap-1.5 rounded-xl px-3 font-bold text-brand hover:bg-brand-soft" onClick={() => void say(`Hello ${p.name}. This is how I sound.`)}>
               <Play size={16} aria-hidden /> Try it
             </button>
           </div>

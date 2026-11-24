@@ -256,7 +256,7 @@ export const oddOneOut: GameDef = {
   category: 'logic',
   skill: 'logic',
   title: 'Odd One Out',
-  emoji: '🧐',
+  emoji: '🔍',
   blurb: 'Find the item that breaks the group rule.',
   instructions: ['All but one item share a rule.', 'Tap the one that does not belong.', 'The explanation tells you the rule.'],
   kidInstructions: ['One of these is different.', 'Tap the one that does not belong!'],

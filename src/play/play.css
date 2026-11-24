@@ -166,3 +166,16 @@ html.reduce-motion #main :where(button, [role="button"], a[href][class]):active 
 @keyframes kz-cheer { 0% { transform: scale(0.4); opacity: 0; } 18% { transform: scale(1.08); opacity: 1; } 30% { transform: scale(1); } 85% { transform: scale(1); opacity: 1; } 100% { transform: scale(0.9); opacity: 0; } }
 html.reduce-motion :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-cstar.on, .kz-sel, .kz-sel-badge) { animation: none !important; }
 @media (prefers-reduced-motion: reduce) { :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-cstar.on, .kz-sel, .kz-sel-badge) { animation: none !important; } }
+
+/* ---------- multiple-choice answers (Brain Gym quizzes and others) ---------- */
+.kz-quiz-big .kz-sel-pic { font: 900 clamp(2.4rem, 30cqi, 7rem)/1 var(--font-display, Lato, sans-serif); }
+.kz-quiz-big .kz-sel-pic .kz-e3d { width: 72cqi; height: 72cqi; }
+.kz-quiz-big .kz-sel-pic svg { width: 70cqi; height: 70cqi; }
+.kz-quiz-text { aspect-ratio: auto; min-height: clamp(96px, 17vmin, 200px); padding: 0.6em 0.8em; }
+.kz-quiz-text .kz-sel-pic { font: 900 clamp(1.5rem, 4vmin + 0.6rem, 3.6rem)/1.15 var(--font-display, Lato, sans-serif); }
+.kz-quiz-prompt .kz-e3d { width: 1.6em; height: 1.6em; }
+/* picture answers never push below the fold: cap the grid by the screen height */
+.kz-quiz .kz-grid:has(.kz-quiz-big) { width: min(100%, calc(max(9rem, 100dvh - 29rem) * var(--kz-cols, 2) + var(--kz-gap) * (var(--kz-cols, 2) - 1))); margin-inline: auto; }
+/* Brain Gym boards were capped at small fixed widths: let them grow to fill the screen (and still fit its height) */
+.kz-brain-board [style*="max-width"] { max-width: min(100%, max(20rem, 100dvh - 19rem)) !important; }
+.kz-brain-board :where(.text-4xl) { font-size: clamp(2.25rem, 6vmin, 4rem); }

@@ -122,11 +122,11 @@ function Reset() {
           {confirm === r.id ? (
             <span className="flex flex-wrap items-center gap-2">
               <span className="text-sm">Clear {r.id === 'all' ? 'everything' : 'this world'}? This can’t be undone.</span>
-              <button className="min-h-11 rounded-xl bg-danger px-4 font-bold text-white" onClick={() => doReset(r.id)}>Clear</button>
-              <button className="min-h-11 rounded-xl border border-line px-4 font-bold" onClick={() => setConfirm(null)}>Cancel</button>
+              <button className="min-h-16 rounded-xl bg-danger px-4 font-bold text-white" onClick={() => doReset(r.id)}>Clear</button>
+              <button className="min-h-16 rounded-xl border border-line px-4 font-bold" onClick={() => setConfirm(null)}>Cancel</button>
             </span>
           ) : (
-            <button className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-line px-4 font-bold hover:border-danger hover:text-danger" onClick={() => setConfirm(r.id)}>
+            <button className="inline-flex min-h-16 items-center gap-2 rounded-xl border border-line px-4 font-bold hover:border-danger hover:text-danger" onClick={() => setConfirm(r.id)}>
               <RotateCcw size={16} aria-hidden /> Reset
             </button>
           )}
@@ -146,7 +146,7 @@ export default function ParentArea() {
       <PageTitle eyebrow="Grown-ups" title="How it is going" lead="A summary across all eight worlds, then each world’s own dashboard." />
       <nav aria-label="Grown-ups sections" className="mb-6 flex gap-1 overflow-x-auto border-b border-line">
         {tabs.map((t) => (
-          <NavLink key={t.to} to={t.to} end={t.end} className={({ isActive }) => `-mb-px flex min-h-11 shrink-0 items-center border-b-2 px-3 font-bold ${isActive ? 'border-brand text-brand' : 'border-transparent text-ink-soft hover:text-ink'}`}>
+          <NavLink key={t.to} to={t.to} end={t.end} className={({ isActive }) => `-mb-px flex min-h-16 shrink-0 items-center border-b-2 px-3 font-bold ${isActive ? 'border-brand text-brand' : 'border-transparent text-ink-soft hover:text-ink'}`}>
             {t.label}
           </NavLink>
         ))}

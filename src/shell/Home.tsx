@@ -35,10 +35,10 @@ export function TodayMix({ compact = false }: { compact?: boolean }) {
                 to={it.href}
                 data-mk="press"
                 data-say={`${it.title}. ${it.subtitle}`}
-                className={`kz-card group flex h-full min-h-24 items-center gap-3 rounded-2xl border p-3.5 transition hover:-translate-y-0.5 hover:shadow-card ${it.done ? 'border-success/30 bg-success-soft/60' : 'border-line bg-white'}`}
+                className={`kz-card group flex h-full min-h-28 items-center gap-4 rounded-3xl border p-4 transition hover:-translate-y-0.5 hover:shadow-card ${it.done ? 'border-success/30 bg-success-soft/60' : 'border-line bg-white'}`}
                 aria-label={`${i + 1}. ${it.title}, in ${m.name}${it.done ? ', done' : ''}`}
               >
-                <WorldBadge world={it.world} size={56} done={it.done} />
+                <WorldBadge world={it.world} size={80} done={it.done} />
                 <span className="min-w-0 flex-1">
                   <span className="block text-xs font-bold uppercase tracking-[0.1em]" style={{ color: m.accent }}>{m.name}</span>
                   <span className={`mt-0.5 block leading-snug font-black ${it.done ? 'text-ink-soft line-through decoration-2' : ''}`}>{it.title}</span>
@@ -73,12 +73,12 @@ export function WorldCard({ id }: { id: WorldId }) {
         </span>
       </div>
       <div className="flex flex-1 flex-col p-3 sm:p-5">
-        <h3 className="text-lg leading-tight font-black sm:text-xl">{m.name}</h3>
+        <h3 className="text-xl leading-tight font-black sm:text-2xl">{m.name}</h3>
         <p className="mt-1 text-sm text-ink-soft sm:text-base">{m.tagline}</p>
         {/* phones: two cards a row, so the level sits above a full-width button */}
         <div className="mt-auto flex flex-col gap-2 pt-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:pt-4">
           <span className="min-w-0 text-xs font-bold text-ink-soft sm:text-sm">{w.levelLabel || (started ? `${w.plays} played` : 'Not started yet')}</span>
-          <span className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-full px-4 font-black text-white transition-[gap] group-hover:gap-2.5" style={{ background: m.accent }} aria-hidden>
+          <span className="inline-flex min-h-16 shrink-0 items-center justify-center gap-1.5 rounded-full px-5 text-lg font-black text-white transition-[gap] group-hover:gap-2.5" style={{ background: m.accent }} aria-hidden>
             {started ? 'Continue' : 'Start'} <ArrowRight size={17} />
           </span>
         </div>
@@ -111,7 +111,7 @@ function ContinueBanner() {
             {w.levelLabel || `${w.plays} played`}
             {act ? ` · last time: ${act.title}` : ''}
           </p>
-          <span data-mk="nudge" className="mt-3 inline-flex min-h-12 w-fit items-center gap-2 rounded-full px-6 text-lg font-black text-white transition-[gap] group-hover:gap-3" style={{ background: m.accent }} aria-hidden>
+          <span data-mk="nudge" className="mt-3 inline-flex min-h-20 w-fit items-center gap-2 rounded-full px-8 text-xl font-black text-white transition-[gap] group-hover:gap-3" style={{ background: m.accent }} aria-hidden>
             Continue <ArrowRight size={19} />
           </span>
         </div>
@@ -160,7 +160,7 @@ export function Home() {
               <Eyebrow>{g.blurb}</Eyebrow>
               <h2 id={`g-${g.id}`} className="text-2xl font-black">{g.name}</h2>
             </div>
-            <Link to={g.href} className="inline-flex min-h-11 shrink-0 items-center gap-1 font-bold text-brand hover:underline">All of {g.name} <ArrowRight size={16} aria-hidden /></Link>
+            <Link to={g.href} className="inline-flex min-h-16 shrink-0 items-center gap-1 font-bold text-brand hover:underline">All of {g.name} <ArrowRight size={16} aria-hidden /></Link>
           </div>
           <ul data-mk="stagger" className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {worldsIn(g.id).map((w) => (

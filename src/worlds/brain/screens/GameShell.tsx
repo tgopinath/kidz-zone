@@ -4,16 +4,13 @@ import {
   ArrowRight,
   Award,
   Clock,
-  Coins,
   Lightbulb,
   Lock,
   Pause,
   Play,
   RotateCcw,
-  Sparkles,
   Target,
   Timer,
-  Trophy,
   X,
   Zap,
 } from 'lucide-react'
@@ -25,10 +22,12 @@ import { dailySeed } from '../lib/daily'
 import { formatDuration } from '../lib/dates'
 import { getDifficulty, levelName, MAX_LEVEL, passAccuracy } from '../lib/difficulty'
 import { mulberry32 } from '../lib/random'
-import { go } from '../lib/router'
 import { play } from '../lib/sound'
 import { useActive, useApp, type RecordOutcome } from '../store/AppContext'
-import { Bar, Stars } from '../components/ui'
+import { Bar } from '../components/ui'
+import { GameComplete, KzButton, RoundCheer, RoundProgress } from '../../../play/ui'
+import { burst, cue } from '../../../play/feedback'
+import type { RoundPhase } from '../../../play/roundFlow'
 
 type Phase = 'intro' | 'countdown' | 'playing' | 'result'
 const MAX_HINTS = 3
@@ -62,7 +61,7 @@ export function GameShell({ game, initialLevel, daily }: { game: GameDef; initia
       <AnimatePresence mode="wait">
         {phase === 'intro' && (
           <motion.section key="intro" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="flex flex-col gap-5">
-            <button type="button" onClick={() => history.back()} className="bbtn-ghost self-start !px-3 !py-2 text-sm">
+            <button type="button" onClick={() => history.back()} className="bbtn-ghost self-start !px-4 text-lg">
               <ArrowLeft size={18} /> Back
             </button>
             <div className={`relative overflow-hidden rounded-[2rem] bg-gradient-to-br ${cat.gradient} p-6 text-white shadow-pop sm:p-8`}>
@@ -74,7 +73,10 @@ export function GameShell({ game, initialLevel, daily }: { game: GameDef; initia
                 {daily && <span className="bchip ml-2 bg-white/25 text-white">Daily challenge</span>}
               </p>
               <h1 className="mt-1 text-3xl font-bold sm:text-4xl">{game.title}</h1>
-              <p className="mt-2 max-w-md text-white/90">{game.blurb}</p>
+              <p className="mt-2 max-w-md text-lg text-white/90">{game.blurb}</p>
+              <KzButton size="xl" tone="secondary" className="relative mt-5" onClick={() => start()} icon={<Play aria-hidden className="fill-current" />} autoFocus>
+                Start
+              </KzButton>
             </div>
 
             <div className="grid gap-5 md:grid-cols-[1.3fr_1fr]">
@@ -127,7 +129,7 @@ export function GameShell({ game, initialLevel, daily }: { game: GameDef; initia
                     <Timer size={16} /> Time limit: {formatDuration(game.timeLimit(diff)! * 1000)}
                   </p>
                 )}
-                <button type="button" className="bbtn-primary mt-auto w-full text-lg" onClick={() => start()} autoFocus>
+                <button type="button" className="bbtn-primary mt-auto min-h-20 w-full text-xl" onClick={() => start()}>
                   <Play size={20} className="fill-white" /> Start
                 </button>
               </div>
@@ -192,7 +194,7 @@ function Countdown({ onDone }: { onDone: () => void }) {
           initial={{ scale: 0.3, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 1.8, opacity: 0 }}
-          className="font-display text-9xl font-bold text-primary"
+          className="font-display text-[clamp(8rem,40vmin,22rem)] leading-none font-black text-primary"
         >
           {n || 'Go!'}
         </motion.div>
@@ -233,6 +235,22 @@ function PlayArea({
   const [hintsUsed, setHintsUsed] = useState(0)
   const [hasHint, setHasHint] = useState(false)
   const [pop, setPop] = useState<{ id: number; text: string; good: boolean } | null>(null)
+  // shared play kit cheer: a round finished (progress went up) or a gentle "Try again!" after a miss
+  const [cheer, setCheer] = useState<{ phase: RoundPhase; n: number }>({ phase: 'play', n: 0 })
+  const selfCheer = useRef(false)
+  const lastCheer = useRef(0)
+  const cheerTimer = useRef<number | undefined>(undefined)
+  const showCheer = useCallback((phase: RoundPhase) => {
+    if (selfCheer.current) return
+    const now = performance.now()
+    if (now - lastCheer.current < 1100) return
+    lastCheer.current = now
+    window.clearTimeout(cheerTimer.current)
+    setCheer((c) => ({ phase, n: c.n + 1 }))
+    if (phase === 'celebrate') burst(false)
+    cheerTimer.current = window.setTimeout(() => setCheer((c) => ({ ...c, phase: 'play' })), phase === 'celebrate' ? 1300 : 800)
+  }, [])
+  useEffect(() => () => window.clearTimeout(cheerTimer.current), [])
   const limit = game.timeLimit?.(diff)
   const [remaining, setRemaining] = useState(limit ?? 0)
 
@@ -283,10 +301,15 @@ function PlayArea({
       },
       wrong() {
         acc.current.wrong++
-        setPop({ id: Math.random(), text: 'Miss', good: false })
+        setPop({ id: Math.random(), text: 'Try again', good: false })
+        showCheer('retry')
       },
       progress(d, t) {
-        setProg((p) => (p.done === d && p.total === t ? p : { done: d, total: t }))
+        setProg((p) => {
+          if (p.done === d && p.total === t) return p
+          if (t === p.total && d > p.done && d < t && t <= 20) showCheer('celebrate')
+          return { done: d, total: t }
+        })
       },
       reaction(ms) {
         acc.current.reactions.push(ms)
@@ -301,8 +324,11 @@ function PlayArea({
         hintFn.current = fn
         setHasHint(!!fn)
       },
+      selfCheer() {
+        selfCheer.current = true
+      },
     }),
-    [diff.d, finish],
+    [diff.d, finish, showCheer],
   )
 
   // Track active (unpaused) time and drive the countdown.
@@ -378,29 +404,29 @@ function PlayArea({
   return (
     <motion.section key="play" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-1 flex-col gap-4" aria-label={`${game.title} game`}>
       <header className="bcard sticky top-2 z-30 flex flex-col gap-3 px-3 py-3 sm:px-5">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button type="button" onClick={() => openMenu('exit')} className="grid size-11 shrink-0 place-items-center rounded-2xl bg-bg hover:bg-primary-soft" aria-label="Exit game">
-            <X size={22} />
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <button type="button" onClick={() => openMenu('exit')} className="grid size-16 shrink-0 place-items-center rounded-2xl bg-bg hover:bg-primary-soft" aria-label="Exit game">
+            <X size={30} />
           </button>
-          <div className="min-w-0 flex-1">
-            <h1 className="truncate text-base font-semibold sm:text-lg">
+          <div className="order-1 min-w-[6rem] flex-1">
+            <h1 className="truncate text-lg font-black sm:text-2xl">
               <span aria-hidden>{game.emoji} </span>
               {game.title}
             </h1>
-            <p className="text-xs font-bold text-muted sm:text-sm">
+            <p className="hidden text-sm font-bold text-muted sm:block">
               Level {level} · {levelName(level)}
             </p>
           </div>
           {limit ? (
             <div
-              className={`flex items-center gap-1 rounded-2xl px-3 py-2 font-display text-lg font-semibold tabular-nums ${lowTime ? 'animate-pulse bg-danger/10 text-danger' : 'bg-bg'}`}
+              className={`order-3 flex min-h-16 items-center gap-1 rounded-2xl px-3 py-2 font-display text-xl font-black tabular-nums ${lowTime ? 'animate-pulse bg-danger/10 text-danger' : 'bg-bg'}`}
               aria-label={`${remaining} seconds left`}
               role="timer"
             >
               <Clock size={18} /> {formatDuration(remaining * 1000)}
             </div>
           ) : null}
-          <div className="relative flex items-center gap-1 rounded-2xl bg-primary-soft px-3 py-2 font-display text-lg font-semibold text-primary tabular-nums" aria-label={`Score ${score}`}>
+          <div className="relative order-4 flex min-h-16 items-center gap-1 rounded-2xl bg-primary-soft px-3 py-2 font-display text-xl font-black text-primary tabular-nums" aria-label={`Score ${score}`}>
             <Zap size={18} className="fill-primary" /> {score}
             <AnimatePresence>
               {pop && (
@@ -421,18 +447,20 @@ function PlayArea({
             type="button"
             onClick={useHint}
             disabled={!hasHint || hintsUsed >= MAX_HINTS}
-            className="relative grid size-11 shrink-0 place-items-center rounded-2xl bg-accent/20 text-[#b26a00] hover:bg-accent/30 disabled:opacity-40"
+            className="relative order-5 grid size-16 shrink-0 place-items-center rounded-2xl bg-accent/20 text-[#b26a00] hover:bg-accent/30 disabled:opacity-40"
             aria-label={`Hint, ${MAX_HINTS - hintsUsed} left`}
           >
-            <Lightbulb size={22} />
-            <span className="absolute -top-1 -right-1 grid size-5 place-items-center rounded-full bg-accent text-[11px] font-bold text-ink">{MAX_HINTS - hintsUsed}</span>
+            <Lightbulb size={30} />
+            <span className="absolute -top-1 -right-1 grid size-6 place-items-center rounded-full bg-accent text-[11px] font-bold text-ink">{MAX_HINTS - hintsUsed}</span>
           </button>
-          <button type="button" onClick={() => openMenu('pause')} className="grid size-11 shrink-0 place-items-center rounded-2xl bg-bg hover:bg-primary-soft" aria-label="Pause">
-            <Pause size={22} />
+          <button type="button" onClick={() => openMenu('pause')} className="order-2 grid size-16 shrink-0 place-items-center rounded-2xl bg-bg hover:bg-primary-soft" aria-label="Pause">
+            <Pause size={30} />
           </button>
+          {!selfCheer.current && prog.total > 0 && prog.total <= 12 && <RoundProgress className="order-6 ml-auto" round={prog.done} total={prog.total} />}
         </div>
-        <Bar value={pct} color={Cat.color} label="Game progress" />
+        {!selfCheer.current && !(prog.total > 0 && prog.total <= 12) && <Bar value={pct} color={Cat.color} label="Game progress" />}
       </header>
+      <RoundCheer phase={cheer.phase} round={cheer.n} />
 
       <AnimatePresence>
         {hintText && (
@@ -448,7 +476,7 @@ function PlayArea({
         )}
       </AnimatePresence>
 
-      <div className={`relative flex flex-1 flex-col items-center justify-start py-2 ${paused ? 'pointer-events-none blur-md select-none' : ''}`} aria-hidden={paused}>
+      <div className={`kz-brain-board relative flex flex-1 flex-col items-center justify-start py-2 ${paused ? 'pointer-events-none blur-md select-none' : ''}`} aria-hidden={paused}>
         <game.component diff={diff} rng={rng} paused={paused} api={api} />
       </div>
 
@@ -481,53 +509,42 @@ function PlayArea({
 function Result({ game, outcome, onRetry, onNext, daily }: { game: GameDef; outcome: RecordOutcome; onRetry: () => void; onNext?: () => void; daily: boolean }) {
   const r = outcome.result
   const needed = Math.round(passAccuracy(r.level) * 100)
-  const headline = r.passed ? (r.stars === 3 ? 'Brilliant!' : r.stars === 2 ? 'Great job!' : 'Level passed!') : 'Nice try!'
+  const headline = r.passed ? (r.stars === 3 ? 'Brilliant!' : r.stars === 2 ? 'Great job!' : 'Level passed!') : 'Good try!'
+  useEffect(() => {
+    if (r.passed) cue('cheer')
+  }, [r.passed])
   return (
-    <motion.section key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="mx-auto flex w-full max-w-xl flex-col gap-4" aria-live="polite">
-      <div className="bcard relative overflow-hidden p-6 text-center sm:p-8">
-        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-primary-soft to-transparent" aria-hidden />
-        <div className="relative flex flex-col items-center gap-2">
-          <motion.div className="text-6xl" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 200 }} aria-hidden>
-            {r.passed ? '🏆' : '💪'}
-          </motion.div>
-          <h1 className="text-3xl font-bold">{headline}</h1>
-          <p className="text-muted">
-            {game.title} · Level {r.level} · {levelName(r.level)}
-          </p>
-          <Stars value={r.stars} size={38} animate />
-          {!r.passed && (
-            <p className="mt-1 rounded-2xl bg-bg px-4 py-2 text-sm font-semibold">
-              You need {needed}% accuracy to pass – you got {Math.round(r.accuracy * 100)}%. Practice makes perfect!
+    <motion.section key="result" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mx-auto flex w-full max-w-4xl flex-col gap-[var(--kz-gap)]" aria-live="polite">
+      <GameComplete
+        stars={r.stars}
+        title={headline}
+        onReplay={onRetry}
+        homeHref={daily ? '/brain' : `/brain/games/${game.category}`}
+        homeLabel={daily ? 'Brain Gym' : 'More games'}
+        detail={
+          <>
+            <p>{game.title} · Level {r.level}</p>
+            <p className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-1 text-xl">
+              <span>Score {r.score}</span>
+              <span>{Math.round(r.accuracy * 100)}% right</span>
+              <span>+{r.xp} XP</span>
+              <span>+{r.coins} coins</span>
             </p>
-          )}
-        </div>
+            {!r.passed && <p className="mt-2">Get {needed}% right to open the next level. You can do it!</p>}
+          </>
+        }
+        extra={
+          onNext && !daily ? (
+            <KzButton size="xl" tone="success" onClick={onNext} icon={<ArrowRight aria-hidden />}>
+              Next level
+            </KzButton>
+          ) : undefined
+        }
+      />
 
-        <dl className="relative mt-6 grid grid-cols-2 gap-3 text-left sm:grid-cols-3">
-          <Stat icon={<Zap size={18} />} label="Score" value={r.score} />
-          <Stat icon={<Target size={18} />} label="Accuracy" value={`${Math.round(r.accuracy * 100)}%`} />
-          <Stat icon={<Clock size={18} />} label="Time" value={formatDuration(r.durationMs)} />
-          <Stat icon={<span aria-hidden>✅</span>} label="Correct" value={r.correct} />
-          <Stat icon={<span aria-hidden>❌</span>} label="Mistakes" value={r.wrong} />
-          {r.avgReactionMs ? <Stat icon={<Timer size={18} />} label="Avg reaction" value={`${r.avgReactionMs} ms`} /> : <Stat icon={<Lightbulb size={18} />} label="Hints" value={r.hintsUsed} />}
-        </dl>
-
-        <div className="relative mt-5 flex flex-wrap justify-center gap-2">
-          <span className="bchip bg-primary-soft text-primary">
-            <Sparkles size={14} /> +{r.xp} XP
-          </span>
-          <span className="bchip bg-accent/20 text-[#8a5200]">
-            <Coins size={14} /> +{r.coins} coins
-          </span>
-          {outcome.newBest && (
-            <span className="bchip bg-success/15 text-[#1d8a5c]">
-              <Trophy size={14} /> New personal best
-            </span>
-          )}
-        </div>
-      </div>
-
-      {(outcome.unlockedLevel || outcome.playerLevelUp || outcome.dailyBonus || outcome.newAchievements.length > 0) && (
+      {(outcome.unlockedLevel || outcome.playerLevelUp || outcome.dailyBonus || outcome.newBest || outcome.newAchievements.length > 0) && (
         <div className="bcard flex flex-col gap-2 p-4">
+          {outcome.newBest && <Reward icon="🏅" text="New personal best!" />}
           {outcome.unlockedLevel && <Reward icon="🔓" text={`Level ${outcome.unlockedLevel} unlocked – ${levelName(outcome.unlockedLevel)}!`} />}
           {outcome.playerLevelUp && <Reward icon="🚀" text={`You reached player level ${outcome.playerLevelUp}!`} />}
           {outcome.dailyBonus && <Reward icon="🏆" text="All daily challenges done! Bonus XP and coins added." />}
@@ -536,40 +553,14 @@ function Result({ game, outcome, onRetry, onNext, daily }: { game: GameDef; outc
           ))}
         </div>
       )}
-
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <button type="button" className="bbtn-ghost flex-1" onClick={onRetry}>
-          <RotateCcw size={18} /> Play again
-        </button>
-        {onNext && !daily ? (
-          <button type="button" className="bbtn-primary flex-1" onClick={onNext} autoFocus>
-            Next level <ArrowRight size={18} />
-          </button>
-        ) : (
-          <button type="button" className="bbtn-primary flex-1" onClick={() => (daily ? go({ name: 'home' }) : go({ name: 'category', id: game.category }))} autoFocus>
-            {daily ? 'Back to dashboard' : 'More games'} <ArrowRight size={18} />
-          </button>
-        )}
-      </div>
     </motion.section>
-  )
-}
-
-function Stat({ icon, label, value }: { icon: React.ReactNode; label: string; value: React.ReactNode }) {
-  return (
-    <div className="rounded-2xl bg-bg px-3 py-2.5">
-      <dt className="flex items-center gap-1.5 text-xs font-bold text-muted">
-        {icon} {label}
-      </dt>
-      <dd className="font-display text-xl font-semibold">{value}</dd>
-    </div>
   )
 }
 
 function Reward({ icon, text }: { icon: string; text: string }) {
   return (
     <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3 rounded-2xl bg-bg px-3 py-2 font-bold">
-      <span className="text-2xl" aria-hidden>
+      <span className="text-4xl" aria-hidden>
         {icon}
       </span>
       {text}

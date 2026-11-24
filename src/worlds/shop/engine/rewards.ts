@@ -126,7 +126,7 @@ export const SHOP_ITEMS: ShopItem[] = [
   { id: 'env-sunny', kind: 'environment', name: 'Sunny Day', cost: 0, icon: '☀️', value: 'sunny' },
   { id: 'env-festival', kind: 'environment', name: 'Festival Lights', cost: 150, icon: '🪔', value: 'festival' },
   { id: 'env-night', kind: 'environment', name: 'Night Market', cost: 250, icon: '🌙', value: 'night' },
-  { id: 'acc-none', kind: 'accessory', name: 'No Hat', cost: 0, icon: '🙂', value: 'none' },
+  { id: 'acc-none', kind: 'accessory', name: 'No Hat', cost: 0, icon: '🚫', value: 'none' },
   { id: 'acc-cap', kind: 'accessory', name: 'Cap', cost: 60, icon: '🧢', value: 'cap' },
   { id: 'acc-glasses', kind: 'accessory', name: 'Cool Glasses', cost: 80, icon: '🕶️', value: 'glasses' },
   { id: 'acc-crown', kind: 'accessory', name: 'Crown', cost: 200, icon: '👑', value: 'crown' },

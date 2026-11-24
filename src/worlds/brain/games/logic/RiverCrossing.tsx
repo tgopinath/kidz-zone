@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { AlertTriangle, ArrowLeftRight, Check, RotateCcw, Undo2, ArrowRight } from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, Check, RotateCcw, Undo2 } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Difficulty } from '../../lib/difficulty'
 import { pick, type Rng } from '../../lib/random'
@@ -287,6 +287,14 @@ function RiverCrossing({ diff, rng, paused, api }: GameProps) {
     setMsg(null)
   }
 
+  // the next puzzle loads by itself after the cheer (shared play kit: no Next buttons)
+  useEffect(() => {
+    if (!solved || paused || pi + 1 >= puzzles.length) return
+    const t = window.setTimeout(() => nextPuzzle(), 2200)
+    return () => window.clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [solved, paused, pi])
+
   const nextPuzzle = () => {
     const n = pi + 1
     setPi(n)
@@ -393,9 +401,7 @@ function RiverCrossing({ diff, rng, paused, api }: GameProps) {
 
       <div className="flex flex-wrap justify-center gap-3">
         {solved && pi + 1 < puzzles.length ? (
-          <button type="button" className="bbtn-primary" onClick={nextPuzzle} autoFocus>
-            Next puzzle <ArrowRight size={18} />
-          </button>
+          <p className="text-center text-xl font-bold text-muted" role="status">Next puzzle coming…</p>
         ) : (
           <>
             <button type="button" className="bbtn-primary min-w-40" onClick={cross} disabled={solved}>

@@ -43,13 +43,13 @@ export function WorldFrame({ world, tabs, actions, fill = false, children, class
   return (
     <div data-theme="light" className={`w-${world} ${className}`} style={{ ['--kz-accent' as string]: m.accent, ['--kz-soft' as string]: m.soft }}>
       <div className="border-b border-line bg-white">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2">
-          <Link to={group.href} className="kz-web-only -ml-2 flex min-h-11 items-center gap-1 rounded-xl pr-2 pl-1 font-bold text-ink-soft hover:text-ink" aria-label={`Back to ${group.name}`}>
-            <ChevronLeft size={20} aria-hidden /> {group.name}
+        <div className="kz-bar-inner mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2">
+          <Link to={group.href} className="kz-web-only -ml-2 flex min-h-16 items-center gap-1 rounded-2xl pr-3 pl-1 text-lg font-bold text-ink-soft hover:text-ink" aria-label={`Back to ${group.name}`}>
+            <ChevronLeft size={26} aria-hidden /> {group.name}
           </Link>
           <div className="kz-web-only flex items-center gap-2">
-            <WorldIcon world={world} size={16} tile />
-            <span className="text-lg font-black">{m.name}</span>
+            <WorldIcon world={world} size={24} tile />
+            <span className="text-2xl font-black">{m.name}</span>
           </div>
           {tabs && tabs.length > 1 && (
             <nav aria-label={`${m.name} sections`} className="-mx-1 flex max-w-full items-center gap-1 overflow-x-auto px-1 [scrollbar-width:none] sm:ml-4">
@@ -59,7 +59,7 @@ export function WorldFrame({ world, tabs, actions, fill = false, children, class
                   to={t.to}
                   end={t.end}
                   className={({ isActive }) =>
-                    `flex min-h-11 shrink-0 items-center rounded-full px-3.5 text-sm font-bold whitespace-nowrap transition ${isActive ? 'text-white' : 'text-ink-soft hover:bg-black/5 hover:text-ink'}`
+                    `flex min-h-16 shrink-0 items-center rounded-full px-5 text-lg font-black whitespace-nowrap transition ${isActive ? 'text-white' : 'text-ink-soft hover:bg-black/5 hover:text-ink'}`
                   }
                   style={({ isActive }) => (isActive ? { background: m.accent } : undefined)}
                 >

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Check, Eye, X } from 'lucide-react'
+import { Check, Eye, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { sample, shuffle } from '../../lib/random'
 import type { Rng } from '../../lib/random'
 import { play } from '../../lib/sound'
-import { useInterval } from '../shared/hooks'
+import { useInterval, useTimeout } from '../shared/hooks'
 import type { GameDef, GameProps } from '../types'
 
 const POOL = [
@@ -56,7 +56,7 @@ function ObjectMemory({ diff, rng, paused, api }: GameProps) {
 
   useEffect(() => {
     api.onHint(() => {
-      if (phase !== 'pick') return phase === 'show' ? 'Try saying the names of the objects in your head.' : 'Press Next to continue.'
+      if (phase !== 'pick') return phase === 'show' ? 'Try saying the names of the objects in your head.' : 'The next round is coming.'
       const missing = data.shown.find((s) => !selected.has(s))
       if (!missing) return 'You have picked all the right ones – press Check!'
       setPeek(missing)
@@ -94,6 +94,9 @@ function ObjectMemory({ diff, rng, paused, api }: GameProps) {
     play(wrong === 0 && right > 0 ? 'correct' : 'wrong')
     setPhase('result')
   }
+
+  // the next round loads by itself (shared play kit: no Next buttons)
+  useTimeout(() => next(), phase === 'result' ? 2400 : null, paused)
 
   const next = () => {
     if (paused) return
@@ -237,14 +240,16 @@ function ObjectMemory({ diff, rng, paused, api }: GameProps) {
               <Check size={18} /> Check ({selected.size} selected)
             </button>
           ) : (
-            <button type="button" className="bbtn-primary" onClick={next} autoFocus>
-              {round + 1 >= ROUNDS ? 'See results' : 'Next round'} <ArrowRight size={18} />
-            </button>
+            <AutoNext />
           )}
         </>
       )}
     </div>
   )
+}
+
+function AutoNext() {
+  return <p className="text-center text-xl font-bold text-muted" role="status">Next round coming…</p>
 }
 
 export const objectMemory: GameDef = {

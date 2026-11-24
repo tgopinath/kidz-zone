@@ -104,27 +104,27 @@ export function Layout({ children }: { children: ReactNode }) {
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[90] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-bold">
         Skip to content
       </a>
-      <header className="kz-web-only sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
+      <header className="kz-web-only kz-chrome sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+        <div className="kz-bar-inner mx-auto flex h-20 max-w-6xl items-center gap-3 px-4">
           <Logo />
-          <nav className="ml-6 hidden items-center gap-1 md:flex" aria-label="Main">
+          <nav className="ml-6 hidden items-center gap-1 xl:flex" aria-label="Main">
             {NAV.map((n) => (
               <Link
                 key={n.id}
                 to={n.to}
                 aria-current={tab === n.id ? 'page' : undefined}
-                className={`flex min-h-11 items-center gap-2 rounded-xl px-3 font-bold transition ${tab === n.id ? 'bg-brand-soft text-brand' : 'text-ink-soft hover:text-ink'}`}
+                className={`flex min-h-16 items-center gap-2 rounded-2xl px-4 text-lg font-bold transition ${tab === n.id ? 'bg-brand-soft text-brand' : 'text-ink-soft hover:text-ink'}`}
               >
-                <n.icon size={18} aria-hidden /> {n.label}
+                <n.icon size={22} aria-hidden /> {n.label}
               </Link>
             ))}
           </nav>
           <div className="ml-auto flex items-center gap-2">
-            <Link to="/settings" className="grid size-11 place-items-center rounded-xl border border-line bg-white hover:border-ink/30" aria-label="Settings">
+            <Link to="/settings" className="grid size-16 place-items-center rounded-2xl border border-line bg-white hover:border-ink/30" aria-label="Settings">
               <Settings size={20} aria-hidden />
             </Link>
-            <Link to="/progress" className="flex min-h-11 items-center gap-2 rounded-full border border-line bg-white py-1 pr-3 pl-1 hover:border-ink/30" aria-label={`${s.profile!.name}: my progress`}>
-              <Avatar name={s.profile!.name} colour={s.profile!.avatar} size={34} />
+            <Link to="/progress" className="flex min-h-16 items-center gap-2 rounded-full border border-line bg-white py-1 pr-3 pl-2 hover:border-ink/30" aria-label={`${s.profile!.name}: my progress`}>
+              <Avatar name={s.profile!.name} colour={s.profile!.avatar} size={44} />
               <span className="hidden max-w-28 truncate font-bold lg:inline">{s.profile!.name}</span>
             </Link>
           </div>
@@ -136,17 +136,17 @@ export function Layout({ children }: { children: ReactNode }) {
       </main>
 
       {!immersive && (
-        <nav className="kz-web-only fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/97 pb-[max(0.25rem,env(safe-area-inset-bottom))] md:hidden" aria-label="Main">
-          <ul className="mx-auto flex max-w-lg justify-around px-1 pt-1">
+        <nav className="kz-web-only kz-chrome fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/97 pb-[max(0.25rem,env(safe-area-inset-bottom))] xl:hidden" aria-label="Main">
+          <ul className="mx-auto flex max-w-2xl justify-around px-1 pt-1">
             {NAV.map((n) => (
               <li key={n.id} className="flex-1">
                 <NavLink
                   to={n.to}
                   aria-current={tab === n.id ? 'page' : undefined}
-                  className={`flex min-h-14 flex-col items-center justify-center gap-0.5 text-[12px] font-bold ${tab === n.id ? 'text-brand' : 'text-ink-soft'}`}
+                  className={`flex min-h-16 flex-col items-center justify-center gap-0.5 text-[13px] font-bold ${tab === n.id ? 'text-brand' : 'text-ink-soft'}`}
                 >
-                  <span className={`grid h-7 w-14 place-items-center rounded-full ${tab === n.id ? 'bg-brand-soft' : ''}`}>
-                    <n.icon size={20} aria-hidden />
+                  <span className={`grid h-8 w-16 place-items-center rounded-full ${tab === n.id ? 'bg-brand-soft' : ''}`}>
+                    <n.icon size={24} aria-hidden />
                   </span>
                   {n.label}
                 </NavLink>

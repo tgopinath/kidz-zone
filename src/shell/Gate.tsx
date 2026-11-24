@@ -33,7 +33,7 @@ export function Gate({ onPass, title = 'Grown-ups only', lead = 'Progress for ev
           <label htmlFor="gate" className="font-bold">What is {q.a} × {q.b}?</label>
           <input id="gate" className="k-input text-center text-xl" inputMode="numeric" autoComplete="off" value={ans} onChange={(e) => { setAns(e.target.value.replace(/\D/g, '').slice(0, 4)); setErr(false) }} aria-invalid={err} aria-describedby={err ? 'gate-err' : undefined} autoFocus />
           {err && <p id="gate-err" className="text-sm font-bold text-danger" role="alert">Not quite. Try again.</p>}
-          <button className="min-h-12 rounded-xl bg-brand font-black text-white hover:brightness-110">Open</button>
+          <button className="min-h-16 rounded-xl bg-brand font-black text-white hover:brightness-110">Open</button>
         </form>
       </Card>
     </div>
