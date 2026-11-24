@@ -137,10 +137,27 @@ function Reset() {
   )
 }
 
+function About() {
+  return (
+    <Card className="mb-6 space-y-4 p-5 sm:p-6">
+      <h2 className="text-2xl font-black">About KidZ Zone</h2>
+      <p className="text-ink-soft">Eight learning worlds in one app for children aged 4 to 12. Progress stays on this device.</p>
+      <h3 className="text-lg font-black">Pictures and data</h3>
+      <ul className="list-disc space-y-2 pl-5 text-ink-soft">
+        <li>3D pictures: Fluent Emoji © Microsoft, MIT licence (github.com/microsoft/fluentui-emoji).</li>
+        <li>Money: Reserve Bank of India specimen notes and coins from Wikimedia Commons (GODL-India, CC0).</li>
+        <li>Maps: Government of India Local Government Directory boundaries via datameet (CC0); Natural Earth (public domain); country facts from mledoze/countries (ODbL); photos from Wikimedia Commons, credited under each photo.</li>
+        <li>Speech uses the device’s own voices.</li>
+      </ul>
+      <p className="text-sm text-ink-soft">Designed and built by Gopinath Thandapani.</p>
+    </Card>
+  )
+}
+
 export default function ParentArea() {
   const [open, setOpen] = useState(isUnlocked)
   if (!open) return <Gate onPass={() => setOpen(true)} />
-  const tabs = [{ to: '/parent', label: 'Overview', end: true }, ...PANELS.map((p) => ({ to: `/parent/${p.id}`, label: p.label, end: false })), { to: '/parent/reset', label: 'Reset', end: false }]
+  const tabs = [{ to: '/parent', label: 'Overview', end: true }, ...PANELS.map((p) => ({ to: `/parent/${p.id}`, label: p.label, end: false })), { to: '/parent/reset', label: 'Reset', end: false }, { to: '/parent/about', label: 'About', end: false }]
   return (
     <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-10">
       <PageTitle eyebrow="Grown-ups" title="How it is going" lead="A summary across all eight worlds, then each world’s own dashboard." />
@@ -159,6 +176,7 @@ export default function ParentArea() {
             return <Route key={p.id} path={p.id} element={<div className={`w-${p.id}`}><C /></div>} />
           })}
           <Route path="reset" element={<Reset />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </Suspense>
     </div>
