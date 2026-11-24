@@ -180,3 +180,6 @@ html.reduce-motion :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-c
 .kz-brain-board [style*="max-width"] { max-width: min(100%, max(20rem, 100dvh - 19rem)) !important; }
 .kz-brain-board :where(.text-4xl) { font-size: clamp(2.25rem, 6vmin, 4rem); }
 .kz-complete-actions > * { flex: 1 1 15rem; max-width: 26rem; white-space: nowrap; }
+/* four picture answers on a portrait screen: two by two, as big as possible */
+@media (orientation: portrait) { .kz-grid[data-count="4"] { --kz-cols: 2 !important; } }
+@media (orientation: portrait) and (max-width: 600px) { .kz-grid[data-count="6"] { --kz-cols: 2 !important; } .kz-grid[data-count="5"], .kz-grid[data-count="3"] { --kz-cols: 3 !important; } }

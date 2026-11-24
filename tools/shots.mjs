@@ -49,6 +49,10 @@ try {
   await go('/maps', 5000); await capture('maps', 600);
   await go('/brain'); await capture('brain', 600);
   await go('/progress'); await capture('progress', 600);
+  // games in play (big picture cards, round dots)
+  const startJs = "[...document.querySelectorAll('button')].find((b) => /^start/i.test(b.innerText.trim()))?.click()";
+  await go('/words/play/find/animals-L1', 3200, startJs); await sleep(1500); await capture('game-words', 600);
+  await go('/brain/play/odd-one-out', 3200, startJs); await sleep(3000); await capture('game-brain', 600);
 
   // Android app look (Material 3) for the README / card notes
   await c.send('Page.navigate', { url: `${LIVE}/?app=android#/` });
