@@ -127,16 +127,16 @@ button { cursor: pointer; }
 
 /* Brain Gym's component utilities (renamed bg-… so they never collide with Puzzle Quest's .card/.btn) */
 @utility bcard { @apply bg-card min-w-0 rounded-2xl border border-line shadow-card; }
-@utility bbtn { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-bold transition select-none active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50; }
+@utility bbtn { @apply inline-flex min-h-16 items-center justify-center gap-2 rounded-2xl px-6 py-2.5 text-lg font-black transition select-none active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50; }
 @utility bbtn-primary { @apply bbtn bg-primary text-white hover:bg-primary-dark; }
 @utility bbtn-accent { @apply bbtn bg-ink text-white hover:bg-ink-2; }
 @utility bbtn-ghost { @apply bbtn border border-line bg-white text-ink hover:border-primary hover:bg-primary-soft; }
-@utility bchip { @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold; }
+@utility bchip { @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-bold; }
 @utility btile { @apply rounded-xl border-2 border-line bg-white font-display font-bold text-ink transition hover:-translate-y-0.5 hover:border-primary hover:shadow-soft active:scale-95 disabled:pointer-events-none; }
 
 /* My Supermarket's component utilities (renamed s… for the same reason) */
 @utility spanel { @apply rounded-2xl bg-white/95 shadow-panel ring-1 ring-black/5 backdrop-blur; }
-@utility sbtn { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-3 text-lg font-bold transition active:scale-95 disabled:opacity-50 disabled:active:scale-100; }
+@utility sbtn { @apply inline-flex min-h-16 items-center justify-center gap-2 rounded-2xl px-6 py-3 text-xl font-black transition active:scale-95 disabled:opacity-50 disabled:active:scale-100; }
 @utility sbtn-primary { @apply sbtn bg-primary text-white hover:bg-primary-dark; }
 @utility sbtn-green { @apply sbtn bg-emerald-700 text-white hover:bg-emerald-800; }
 @utility sbtn-blue { @apply sbtn bg-sky-700 text-white hover:bg-sky-800; }

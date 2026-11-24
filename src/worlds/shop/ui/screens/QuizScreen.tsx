@@ -2,33 +2,39 @@ import { useEffect, useState } from 'react'
 import { DENOMINATIONS } from '../../data/currency'
 import { purseTotal } from '../../engine/money'
 import { quizDone, useSession } from '../../store/sessionStore'
-import { Bar, BuddyBubble, Keypad, ScreenShell } from '../components/Kit'
+import { BuddyBubble, Keypad, ScreenShell } from '../components/Kit'
 import { DraggableMoney, MoneyPiece, MoneyTray } from '../components/Money'
+import { useAutoAdvance } from '../../../../play/roundFlow'
+import { RoundCheer, RoundProgress } from '../../../../play/ui'
 
 const TITLES = { identify: 'Identify Products', prices: 'Learn Prices', totals: 'Calculate Totals', math: 'Maths Challenge', currency: 'Understand Currency', change: 'Calculate Change', money: 'Money Learning' }
 
 export function QuizScreen() {
   const quiz = useSession((s) => s.quiz)
-  const { answerQuiz, nextQuestion, goto, quizTrayAdd, quizTrayRemove } = useSession.getState()
+  const { answerQuiz, goto, quizTrayAdd, quizTrayRemove } = useSession.getState()
   const [typed, setTyped] = useState('')
   useEffect(() => setTyped(''), [quiz?.index])
+  const done = quiz ? quizDone(quiz) : false
+  const right = !!quiz?.feedback?.correct
+  // the next question loads by itself after the cheer (shared play kit: no Next button)
+  const phase = useAutoAdvance(done, () => useSession.getState().nextQuestion(), { ms: right ? 1800 : 3200, cheer: right })
   if (!quiz) return null
   const q = quiz.questions[quiz.index]
-  const done = quizDone(quiz)
   const made = purseTotal(quiz.makeTray)
 
   return (
     <ScreenShell title={`${TITLES[quiz.kind]}${quiz.level ? ` · Level ${quiz.level}` : ''}`} back={() => window.confirm('Stop this quiz?') && goto(quiz.level ? 'levels' : 'modes')}>
+      <RoundCheer phase={right ? phase : 'play'} round={quiz.index} />
       <div className="mt-4 flex items-center gap-3">
-        <span className="font-bold">Question {quiz.index + 1} of {quiz.questions.length}</span>
-        <div className="flex-1"><Bar value={(quiz.index + (done ? 1 : 0)) / quiz.questions.length} /></div>
+        <RoundProgress round={quiz.index} total={quiz.questions.length} done={done && quiz.index + 1 >= quiz.questions.length} />
+        <div className="flex-1" />
         <span className="flex gap-0.5">{quiz.answers.map((a, i) => <span key={i} className={`h-3 w-3 rounded-full ${a === true ? 'bg-emerald-500' : a === false ? 'bg-rose-400' : 'bg-black/15'}`} />)}</span>
       </div>
 
       <div className="spanel mt-4 p-5 anim-rise" key={q.id}>
-        {q.visual?.images && <div className="mb-3 flex flex-wrap justify-center gap-2 text-6xl" aria-hidden>{q.visual.images.map((im, i) => <span key={i}>{im}</span>)}</div>}
+        {q.visual?.images && <div className="mb-3 flex flex-wrap justify-center gap-3 text-[clamp(4rem,14vmin,9rem)]" aria-hidden>{q.visual.images.map((im, i) => <span key={i}>{im}</span>)}</div>}
         {q.visual?.denomination && <div className="mb-3 flex justify-center"><MoneyPiece value={q.visual.denomination} size={1.6} /></div>}
-        <h2 className="text-center text-2xl font-extrabold leading-snug sm:text-3xl">{q.prompt}</h2>
+        <h2 className="text-center text-3xl font-black leading-snug sm:text-4xl">{q.prompt}</h2>
 
         <div className="mt-5">
           {q.input === 'choice' && (
@@ -37,7 +43,7 @@ export function QuizScreen() {
                 const isAnswer = done && c === String(q.answer)
                 return (
                   <button key={c} disabled={done} onClick={() => answerQuiz(c)}
-                    className={`sbtn text-xl ${isAnswer ? 'bg-emerald-500 text-white' : 'bg-white ring-1 ring-black/10 hover:bg-orange-50'}`}>{c}</button>
+                    className={`sbtn min-h-24 text-3xl ${isAnswer ? 'bg-emerald-500 text-white' : 'bg-white ring-1 ring-black/10 hover:bg-orange-50'}`}>{c}</button>
                 )
               })}
             </div>
@@ -62,7 +68,7 @@ export function QuizScreen() {
             {quiz.feedback.correct ? '🎉 ' : '💡 '}{quiz.feedback.text}
           </div>
         )}
-        {done && <button className="sbtn-primary mt-4 w-full text-2xl" onClick={nextQuestion}>{quiz.index + 1 < quiz.questions.length ? 'Next question →' : 'See my score →'}</button>}
+        {done && <p className="mt-4 text-center text-xl font-bold text-ink/60" role="status">{quiz.index + 1 < quiz.questions.length ? 'Next question coming…' : 'Your score is coming…'}</p>}
       </div>
       <div className="mt-4"><BuddyBubble /></div>
     </ScreenShell>

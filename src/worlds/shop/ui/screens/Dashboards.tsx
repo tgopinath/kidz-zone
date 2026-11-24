@@ -4,7 +4,8 @@ import { LEVELS, MAX_LEVEL } from '../../engine/levels'
 import { ACHIEVEMENTS, SHOP_ITEMS, skillAccuracy, type ShopItemKind, type Tally } from '../../engine/rewards'
 import { useProgress } from '../../store/progressStore'
 import { useSession } from '../../store/sessionStore'
-import { Bar, Confetti, ScreenShell, Stars } from '../components/Kit'
+import { Bar, ScreenShell, Stars } from '../components/Kit'
+import { GameComplete, KzButton } from '../../../../play/ui'
 
 export function CompleteOverlay() {
   const r = useSession((s) => s.lastResult)
@@ -17,28 +18,29 @@ export function CompleteOverlay() {
   const nextLevel = r.nextLevel && r.nextLevel <= MAX_LEVEL ? LEVELS[r.nextLevel - 1] : null
   return (
     <div className="fixed inset-0 z-40 grid place-items-center overflow-auto bg-black/30 p-4">
-      {r.success && <Confetti />}
-      <div className="spanel relative w-full max-w-lg p-6 text-center anim-pop">
-        <div className="text-6xl">{r.success ? '🏆' : '💪'}</div>
-        <h2 className="text-4xl font-extrabold">{r.title}</h2>
-        <Stars n={r.stars} size="text-5xl" />
-        <ul className="mt-3 space-y-1 text-left text-lg">{r.lines.map((l, i) => <li key={i}>• {l}</li>)}</ul>
-        {r.evaluation?.healthy && (
-          <ul className="mt-2 space-y-1 text-left">{r.evaluation.healthy.checks.map((c) => <li key={c.label}>{c.ok ? '✅' : '❌'} {c.label}</li>)}</ul>
-        )}
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
-          <span className="schip bg-amber-100 text-lg text-amber-800">+{r.award.coins} 🪙</span>
-          <span className="schip bg-yellow-100 text-lg text-yellow-800">+{r.award.stars} ⭐</span>
-          {r.award.achievements.map((a) => <span key={a.id} className="schip bg-violet-100 text-lg text-violet-800">{a.icon} {a.title}</span>)}
-        </div>
-        {nextLevel && <p className="mt-3 rounded-2xl bg-emerald-50 p-2 text-lg font-bold text-emerald-800">🔓 Level {nextLevel.level} unlocked: {nextLevel.title}!</p>}
-        {r.nextLevel === MAX_LEVEL + 1 && <p className="mt-3 rounded-2xl bg-amber-50 p-2 text-lg font-bold text-amber-800">👑 You finished every level — Supermarket Champion!</p>}
-        <div className="mt-5 grid gap-2 sm:grid-cols-3">
-          <button className="sbtn-primary" onClick={again}>Play again</button>
-          {nextLevel ? <button className="sbtn-green" onClick={() => s.goto('levels')}>Next level</button> : <button className="sbtn-ghost" onClick={() => s.goto('rewards')}>Rewards</button>}
-          <button className="sbtn-ghost" onClick={() => s.goto('modes')}>Menu</button>
-        </div>
-      </div>
+      <GameComplete
+        stars={r.stars}
+        title={r.title}
+        onReplay={again}
+        onHome={() => s.goto('modes')}
+        homeLabel="Menu"
+        detail={
+          <>
+            <ul className="space-y-1 text-left text-lg">{r.lines.map((l, i) => <li key={i}>• {l}</li>)}</ul>
+            {r.evaluation?.healthy && (
+              <ul className="mt-2 space-y-1 text-left">{r.evaluation.healthy.checks.map((c) => <li key={c.label}>{c.ok ? '✅' : '➖'} {c.label}</li>)}</ul>
+            )}
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              <span className="schip bg-amber-100 text-lg text-amber-800">+{r.award.coins} 🪙</span>
+              <span className="schip bg-yellow-100 text-lg text-yellow-800">+{r.award.stars} ⭐</span>
+              {r.award.achievements.map((a) => <span key={a.id} className="schip bg-violet-100 text-lg text-violet-800">{a.icon} {a.title}</span>)}
+            </div>
+            {nextLevel && <p className="mt-3 rounded-2xl bg-emerald-50 p-2 text-lg font-bold text-emerald-800">🔓 Level {nextLevel.level} unlocked: {nextLevel.title}!</p>}
+            {r.nextLevel === MAX_LEVEL + 1 && <p className="mt-3 rounded-2xl bg-amber-50 p-2 text-lg font-bold text-amber-800">👑 You finished every level — Supermarket Champion!</p>}
+          </>
+        }
+        extra={nextLevel ? <KzButton size="xl" tone="success" onClick={() => s.goto('levels')}>Next level</KzButton> : undefined}
+      />
     </div>
   )
 }
