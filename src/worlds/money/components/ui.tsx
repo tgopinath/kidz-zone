@@ -29,13 +29,13 @@ export function Panel({ tone, step, title, subtitle, announce, right, className 
   return (
     <section className={`mm-panel flex min-h-0 min-w-0 flex-col overflow-hidden rounded-[28px] bg-white/85 shadow-panel ring-1 ring-ink/5 ${className}`}>
       <header className={`flex items-center gap-3 px-5 py-3 ${t.header}`}>
-        <span className={`grid size-9 shrink-0 place-items-center rounded-full text-lg font-extrabold text-white shadow-sm ${t.badge}`}>{step}</span>
+        <span className={`grid size-12 shrink-0 place-items-center rounded-full text-lg font-extrabold text-white shadow-sm ${t.badge}`}>{step}</span>
         <div className="min-w-0 flex-1">
           {/* tap the title to hear it (app-wide tap to hear, src/shared/tapToHear.ts) */}
-          <h2 className="cursor-pointer truncate text-xl font-extrabold leading-tight text-ink sm:text-2xl" data-say={speakable(announce ?? `${title}. ${subtitle}`)}>
+          <h2 className="cursor-pointer text-xl font-extrabold leading-tight text-ink sm:text-2xl" data-say={speakable(announce ?? `${title}. ${subtitle}`)}>
             {title}
           </h2>
-          <p className="truncate text-sm font-semibold text-ink/60">{subtitle}</p>
+          <p className="text-base font-semibold text-ink/60">{subtitle}</p>
         </div>
         {right}
       </header>
@@ -66,7 +66,7 @@ export function KidButton({
       className={`kid-btn inline-flex select-none items-center justify-center gap-2 rounded-2xl border-b-4 font-extrabold transition
         hover:brightness-105 active:translate-y-0.5 active:border-b-2 disabled:cursor-not-allowed disabled:opacity-45 disabled:active:translate-y-0 disabled:active:border-b-4
         focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-saffron-300
-        ${big ? 'px-6 py-3 text-xl' : 'px-4 py-2 text-base'} ${VARIANTS[variant]} ${className}`}
+        ${big ? 'min-h-24 px-8 py-3 text-2xl' : 'min-h-16 px-5 py-2 text-lg'} ${VARIANTS[variant]} ${className}`}
       {...rest}
     >
       {children}

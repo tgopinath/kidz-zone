@@ -3,12 +3,15 @@ import { motion } from 'motion/react';
 import type { Challenge } from '../lib/challenges';
 import { Piggy } from './Mascot';
 import { KidButton } from './ui';
+import { useAutoAdvance } from '../../../play/roundFlow';
 
 const CHEERS = ['Shabash!', 'Wah! Super!', 'Bahut badhiya!', 'You did it!', 'Money Master!'];
 const COLORS = ['#FF8A3D', '#8B5CF6', '#14B8A6', '#F5B53B', '#F472B6', '#5EC6DA'];
 
 export function Celebration({ challenge, message, onNext, onStay }: { challenge: Challenge; message: string; onNext(): void; onStay(): void }) {
   const cheer = useMemo(() => CHEERS[Math.floor(Math.random() * CHEERS.length)], []);
+  // the next challenge comes by itself (shared play kit); Keep playing stays on this one
+  useAutoAdvance(true, onNext, { ms: 2800, cheer: false });
   const confetti = useMemo(
     () =>
       Array.from({ length: 70 }, (_, i) => ({
@@ -50,7 +53,7 @@ export function Celebration({ challenge, message, onNext, onStay }: { challenge:
         initial={{ scale: 0.5, y: 40 }}
         animate={{ scale: 1, y: 0 }}
         transition={{ type: 'spring', stiffness: 260, damping: 16 }}
-        className="relative w-full max-w-md rounded-[32px] bg-white p-7 text-center shadow-2xl"
+        className="relative w-full max-w-xl rounded-[32px] bg-white p-8 text-center shadow-2xl"
       >
         <motion.div
           className="absolute -top-14 left-1/2 -translate-x-1/2 text-8xl"
@@ -60,19 +63,17 @@ export function Celebration({ challenge, message, onNext, onStay }: { challenge:
         >
           ⭐
         </motion.div>
-        <h2 id="cheer" className="mt-8 text-4xl font-extrabold text-saffron-500">
+        <h2 id="cheer" className="mt-10 text-5xl font-black text-saffron-600">
           {cheer}
         </h2>
         <p className="mt-1 text-lg font-extrabold text-ink">
           {challenge.emoji} {challenge.title}
         </p>
         <p className="mt-1 font-semibold text-ink/60">{message}</p>
-        <Piggy className="mx-auto my-3 w-24 animate-bob" />
+        <Piggy className="mx-auto my-3 w-32 animate-bob" />
         <div className="flex flex-wrap justify-center gap-3">
-          <KidButton onClick={onStay}>Keep playing</KidButton>
-          <KidButton variant="violet" big onClick={onNext} autoFocus>
-            Next challenge ➜
-          </KidButton>
+          <p className="w-full text-lg font-extrabold text-ink/60" role="status">Next challenge coming…</p>
+          <KidButton onClick={onStay} autoFocus>Stay on this one</KidButton>
         </div>
       </motion.div>
     </motion.div>

@@ -4,7 +4,6 @@ import { DENOMINATIONS, isCoin, sumValues, type Denomination } from './lib/curre
 import { say, setMuted, sfx, spokenRupees } from './lib/sound';
 import { useMoney, type Point } from './state/useMoney';
 import { useChallenges } from './state/useChallenges';
-import { useMediaQuery } from './hooks/useMediaQuery';
 import { DragProvider, type DragPayload, type DropInfo } from './drag/DragProvider';
 import { ChallengeToggle, TableActions } from './components/Toolbar';
 import { MoneyBank } from './components/MoneyBank';
@@ -49,7 +48,7 @@ export default function MoneyWorld() {
     return () => window.removeEventListener('mm:dismiss', onDismiss);
   }, [challenges]);
 
-  const bankSize = useMediaQuery('(min-width: 1280px)') ? 'lg' : 'md';
+  const bankSize = 'lg';
 
   const add = useCallback(
     (value: Denomination, at?: Point) => {
