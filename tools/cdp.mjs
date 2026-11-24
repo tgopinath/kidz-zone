@@ -1,13 +1,16 @@
 // Tiny Chrome DevTools Protocol helper for the tools in this folder (system Chrome, headless, no npm packages).
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { spawn } from 'node:child_process';
 
 export const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export async function launch(root) {
-  const tmp = fs.mkdtempSync(path.join(root, '.shots-'));
+  // outside the project, so a running Vite dev server does not reload pages when Chrome writes its profile
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'kz-shots-'));
+  void root;
   const port = 9400 + Math.floor(Math.random() * 400);
   const proc = spawn(CHROME, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--mute-audio', '--autoplay-policy=no-user-gesture-required', `--remote-debugging-port=${port}`, `--user-data-dir=${tmp}/profile`, 'about:blank'], { stdio: 'ignore' });
   let ws;

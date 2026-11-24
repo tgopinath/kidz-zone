@@ -52,6 +52,8 @@ export interface RoundFlow {
   success(): boolean
   /** a wrong try: gentle feedback, the round stays */
   miss(): boolean
+  /** the round is over without a win (the answer was shown): no cheer, move on a little later */
+  reveal(): boolean
   /** lock input while the game checks an answer (call success/miss after) */
   lock(): void
   /** start again from round 1 */
@@ -83,6 +85,32 @@ export function createRoundFlow(opts: RoundFlowOptions): RoundFlow {
     if (timer) clearTimeout(timer)
     timer = null
   }
+  /** after the cheer: the next round, or the end of the game */
+  const finishRound = (ms: number) => {
+    const last = s.round + 1 >= s.total
+    timer = setTimeout(() => {
+      timer = null
+      if (last) {
+        set({ phase: 'done', locked: true })
+        if (fx) {
+          cue('cheer')
+          burst(true)
+        }
+        if (o.record) {
+          try {
+            record(o.record.world, { id: o.record.id, title: o.record.title, stars: starsFor(s.wins, s.misses) })
+          } catch {
+            /* store not ready (tests) */
+          }
+        }
+        o.onComplete?.(s)
+      } else {
+        const round = s.round + 1
+        set({ round, phase: 'play', locked: false })
+        o.onAdvance?.(round)
+      }
+    }, ms)
+  }
 
   const flow: RoundFlow = {
     get: () => s,
@@ -93,36 +121,19 @@ export function createRoundFlow(opts: RoundFlowOptions): RoundFlow {
     success() {
       if (s.phase === 'celebrate' || s.phase === 'done' || (s.locked && s.phase !== 'play')) return false
       clear()
-      const wins = s.wins + 1
-      const last = s.round + 1 >= s.total
-      set({ phase: 'celebrate', locked: true, wins })
+      set({ phase: 'celebrate', locked: true, wins: s.wins + 1 })
       if (fx) {
         cue('success')
         burst(false)
       }
-      timer = setTimeout(() => {
-        timer = null
-        if (last) {
-          set({ phase: 'done', locked: true })
-          if (fx) {
-            cue('cheer')
-            burst(true)
-          }
-          const st = flow.stars()
-          if (o.record) {
-            try {
-              record(o.record.world, { id: o.record.id, title: o.record.title, stars: st })
-            } catch {
-              /* store not ready (tests) */
-            }
-          }
-          o.onComplete?.(s)
-        } else {
-          const round = s.round + 1
-          set({ round, phase: 'play', locked: false })
-          o.onAdvance?.(round)
-        }
-      }, o.advanceMs ?? 1500)
+      finishRound(o.advanceMs ?? 1500)
+      return true
+    },
+    reveal() {
+      if (s.phase === 'celebrate' || s.phase === 'done') return false
+      clear()
+      set({ phase: 'celebrate', locked: true, misses: s.misses + 1 })
+      finishRound((o.advanceMs ?? 1500) * 1.8)
       return true
     },
     miss() {
@@ -171,4 +182,24 @@ export function useRoundFlow(opts: RoundFlowOptions): RoundState & { flow: Round
   useEffect(() => () => flow.destroy(), [flow])
   const state = useSyncExternalStore(flow.subscribe, flow.get, flow.get)
   return { ...state, flow }
+}
+
+/**
+ * For games that already know when a round is won: once `ready` turns true, cheer and call `go` after `ms`
+ * (default 1.8 s) — the next round loads by itself. Returns the phase for <RoundCheer>.
+ * `cheer: false` skips the sound/confetti (the world plays its own) but still shows the cheer.
+ */
+export function useAutoAdvance(ready: boolean, go: () => void, { ms = 1800, cheer = true, paused = false }: { ms?: number; cheer?: boolean; paused?: boolean } = {}): RoundPhase {
+  const goRef = useRef(go)
+  goRef.current = go
+  useEffect(() => {
+    if (!ready || paused) return
+    if (cheer) {
+      cue('success')
+      burst(false)
+    }
+    const t = setTimeout(() => goRef.current(), ms)
+    return () => clearTimeout(t)
+  }, [ready, ms, cheer, paused])
+  return ready ? 'celebrate' : 'play'
 }

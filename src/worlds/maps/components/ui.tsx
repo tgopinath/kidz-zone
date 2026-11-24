@@ -20,7 +20,7 @@ const TONES: Record<Tone, string> = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 font-display text-lg font-bold leading-none transition active:translate-y-[3px] active:shadow-none disabled:pointer-events-none disabled:opacity-45";
+  "inline-flex min-h-20 items-center justify-center gap-2 rounded-3xl px-7 py-3 font-display text-xl font-black leading-none transition active:translate-y-[3px] active:shadow-none disabled:pointer-events-none disabled:opacity-45";
 
 export function Button({ tone = "primary", className = "", ...rest }: ComponentProps<"button"> & { tone?: Tone }) {
   return <button type="button" className={`${base} ${TONES[tone]} ${className}`} {...rest} />;

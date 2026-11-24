@@ -2,15 +2,16 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent } from "react";
-import { Clock, Lightbulb, Lock, RotateCcw, Shuffle, Star, Timer, Trophy } from "lucide-react";
+import { Clock, Lightbulb, Lock, RotateCcw, Shuffle, Timer } from "lucide-react";
 import MapView, { type RegionMark } from "./MapView";
-import { Mascot, MascotSays, type Mood } from "./Mascot";
-import { Button, Card, DataStatusBadge, LinkButton, Loading, SpeakButton, Stars } from "./ui";
+import { MascotSays, type Mood } from "./Mascot";
+import { Button, Card, DataStatusBadge, Loading, SpeakButton, Stars } from "./ui";
 import { getDistricts, getState, shuffle, STATES } from "@/lib/content";
 import { DISTRICT_FILLS, STATE_FILLS, useDistrictMap, useIndiaMap, useWorldMap, type RegionFeature } from "@/lib/geo";
 import { continentBySlug, CONTINENT_BOX, COUNTRIES } from "@/lib/world";
 import { actions, starsFor, unlocks, useProgress, type PuzzleLevel } from "@/lib/progress";
 import { celebrate, playSound } from "@/lib/celebrate";
+import { GameComplete, KzButton } from "../../../play/ui";
 import { speakLocal } from "@/lib/speech";
 
 const LEVELS: Record<PuzzleLevel, { label: string; cards: number; hints: number; timer: "optional" | "on"; blurb: string }> = {
@@ -392,28 +393,27 @@ export default function PuzzleGame({ mapKey }: { mapKey: string }) {
           )}
 
           {phase === "done" && result && (
-            <Card className="animate-pop space-y-4 text-center">
-              <Mascot mood="cheer" size={110} className="mx-auto" />
-              <h2 className="text-3xl font-extrabold">Puzzle complete!</h2>
-              <div className="flex justify-center"><Stars count={result.stars} size="size-10" /></div>
-              <div className="grid grid-cols-2 gap-2 text-left">
-                <Stat label="Score" value={result.score.toLocaleString()} icon={<Trophy className="size-4 text-[#e5a100]" />} />
-                <Stat label="Time" value={`${Math.floor(result.timeSec / 60)}m ${result.timeSec % 60}s`} icon={<Clock className="size-4 text-accent" />} />
-                <Stat label="First try" value={`${result.firstTry}/${result.total}`} icon={<Star className="size-4 text-success" />} />
-                <Stat label="Hints used" value={String(result.hints)} icon={<Lightbulb className="size-4 text-[#c58a00]" />} />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Button onClick={() => start(level)}>
-                  <RotateCcw className="size-5" /> Play again
-                </Button>
-                {level !== "hard" && (
-                  <Button tone="success" onClick={() => start(level === "easy" ? "medium" : "hard")}>
+            <GameComplete
+              stars={result.stars}
+              title="Puzzle complete!"
+              onReplay={() => start(level)}
+              homeHref="/maps/puzzle"
+              homeLabel="More puzzles"
+              detail={
+                <p className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-xl">
+                  <span>Score {result.score.toLocaleString()}</span>
+                  <span>{Math.floor(result.timeSec / 60)}m {result.timeSec % 60}s</span>
+                  <span>{result.firstTry}/{result.total} first try</span>
+                </p>
+              }
+              extra={
+                level !== "hard" ? (
+                  <KzButton size="xl" tone="success" onClick={() => start(level === "easy" ? "medium" : "hard")}>
                     Try {level === "easy" ? "Medium" : "Hard"}
-                  </Button>
-                )}
-                <LinkButton href="/puzzle" tone="ghost">More puzzles</LinkButton>
-              </div>
-            </Card>
+                  </KzButton>
+                ) : undefined
+              }
+            />
           )}
         </div>
       </div>
@@ -435,11 +435,3 @@ export default function PuzzleGame({ mapKey }: { mapKey: string }) {
   );
 }
 
-function Stat({ label, value, icon }: { label: string; value: string; icon: React.ReactNode }) {
-  return (
-    <div className="rounded-2xl bg-bg p-3">
-      <p className="flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-ink-soft">{icon} {label}</p>
-      <p className="font-display text-xl font-bold">{value}</p>
-    </div>
-  );
-}

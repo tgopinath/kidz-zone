@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
 import MapView, { type RegionMark } from "@/components/MapView";
 import { Results, type RunResult } from "@/components/QuizRunner";
 import { BackLink } from "@/components/games/BackLink";
@@ -11,6 +11,8 @@ import { getState, sample, STATES } from "@/lib/content";
 import { STATE_FILLS, useIndiaMap } from "@/lib/geo";
 import { actions, starsFor } from "@/lib/progress";
 import { celebrate, playSound } from "@/lib/celebrate";
+import { useAutoAdvance } from "../../../../../play/roundFlow";
+import { RoundCheer } from "../../../../../play/ui";
 
 const ROUNDS = 5;
 const POOL = STATES.filter((s) => s.neighbours.length >= 2);
@@ -43,6 +45,8 @@ export default function NeighbourChallenge() {
 
   const s = rounds.length ? getState(rounds[r])! : null;
   const complete = s ? found.length === s.neighbours.length || revealed : false;
+  // the next round loads by itself (shared play kit)
+  const cheerPhase = useAutoAdvance(complete && !result, () => next(), { cheer: false, ms: revealed ? 3200 : 1800 });
 
   const tap = (id: string) => {
     if (!s || complete || id === s.id || found.includes(id)) return;
@@ -107,6 +111,7 @@ export default function NeighbourChallenge() {
 
   return (
     <div>
+      <RoundCheer phase={revealed ? 'play' : cheerPhase} round={r} />
       <PageHeader back="/games" backLabel="All games" title="Neighbour Challenge" subtitle="Tap every state that touches the orange one." />
       {!features || !s ? (
         <Loading />
@@ -143,9 +148,7 @@ export default function NeighbourChallenge() {
                   <Eye className="size-5" /> Show me
                 </Button>
               ) : (
-                <Button className="w-full animate-pop" onClick={next}>
-                  {r + 1 >= rounds.length ? "See results" : "Next round"} <ArrowRight className="size-5" />
-                </Button>
+                <p className="text-center text-lg font-bold text-ink-soft" role="status">{r + 1 >= rounds.length ? "Your results are coming…" : "Next round coming…"}</p>
               )}
             </Card>
             {say && <MascotSays say mood={say.mood} size={60}>{say.text}</MascotSays>}

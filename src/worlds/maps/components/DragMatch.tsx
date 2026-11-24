@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ArrowRight, Check, Clock, Trophy } from "lucide-react";
+import { Check, Clock, Trophy } from "lucide-react";
 import { MascotSays, type Mood } from "./Mascot";
 import { Results, type RunResult } from "./QuizRunner";
-import { Button, Loading, ProgressBar } from "./ui";
+import { Loading, ProgressBar } from "./ui";
 import { actions, starsFor } from "@/lib/progress";
 import { celebrate, playSound } from "@/lib/celebrate";
 import { speak } from "@/lib/speech";
+import { useAutoAdvance } from "../../../play/roundFlow";
+import { RoundCheer } from "../../../play/ui";
 
 export interface MatchItem {
   id: string;
@@ -81,6 +83,8 @@ export default function DragMatch({ make, renderItem, renderTarget, instructions
 
   const left = round.items.filter((i) => !placed[i.id]);
   const done = left.length === 0;
+  // the next round loads by itself (shared play kit)
+  const cheerPhase = useAutoAdvance(done && rounds.length > 0, () => next(), { cheer: false });
 
   const tryPlace = (itemId: string, targetId: string) => {
     const item = round.items.find((i) => i.id === itemId);
@@ -196,7 +200,7 @@ export default function DragMatch({ make, renderItem, renderTarget, instructions
                   setDrag(null);
                 }}
                 style={{ touchAction: "none" }}
-                className={`grid min-h-16 cursor-grab select-none place-items-center rounded-2xl border-2 p-2 transition active:cursor-grabbing ${
+                className={`grid min-h-24 cursor-grab select-none place-items-center rounded-3xl border-4 p-3 text-xl font-bold transition active:cursor-grabbing ${
                   active === it.id ? "border-primary bg-primary-soft" : "border-line bg-white hover:border-primary/50"
                 } ${drag?.id === it.id ? "opacity-30" : ""}`}
               >
@@ -215,7 +219,7 @@ export default function DragMatch({ make, renderItem, renderTarget, instructions
                 data-target={t.id}
                 aria-label={`Put it on ${t.label}`}
                 onClick={() => active && tryPlace(active, t.id)}
-                className={`w-full rounded-2xl border-2 border-dashed p-3 text-left transition ${
+                className={`w-full min-h-20 rounded-3xl border-4 border-dashed p-4 text-left text-xl font-bold transition ${
                   wrongTarget === t.id ? "animate-shake border-danger bg-danger-soft" : active ? "border-primary bg-primary-soft/40" : "border-line bg-white"
                 } ${layout === "buckets" ? "min-h-32" : ""}`}
                 style={t.colour && wrongTarget !== t.id ? { background: `${t.colour}66`, borderColor: t.colour } : undefined}
@@ -227,11 +231,8 @@ export default function DragMatch({ make, renderItem, renderTarget, instructions
         </div>
       </div>
 
-      {done && (
-        <Button className="w-full animate-pop" onClick={next}>
-          {r + 1 < rounds.length ? "Next round" : "See my results"} <ArrowRight className="size-5" />
-        </Button>
-      )}
+      <RoundCheer phase={cheerPhase} round={r} />
+      {done && <p className="text-center text-lg font-bold text-ink-soft" role="status">{r + 1 < rounds.length ? "Next round coming…" : "Your results are coming…"}</p>}
 
       {drag && (
         <div className="pointer-events-none fixed z-[70] -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] rounded-2xl bg-white p-2 shadow-2xl ring-2 ring-primary" style={{ left: drag.x, top: drag.y }}>

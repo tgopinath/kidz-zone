@@ -82,3 +82,19 @@ describe('round flow', () => {
     expect(starsFor(0, 0)).toBe(0)
   })
 })
+
+describe('round flow reveal', () => {
+  beforeEach(() => vi.useFakeTimers())
+  afterEach(() => vi.useRealTimers())
+  it('reveal() moves on without a win, a bit later than a success', () => {
+    const onAdvance = vi.fn()
+    const f = createRoundFlow({ total: 3, onAdvance, effects: false })
+    expect(f.reveal()).toBe(true)
+    expect(f.get().locked).toBe(true)
+    vi.advanceTimersByTime(1500)
+    expect(onAdvance).not.toHaveBeenCalled()
+    vi.advanceTimersByTime(1200)
+    expect(onAdvance).toHaveBeenCalledWith(1)
+    expect(f.get()).toMatchObject({ wins: 0, misses: 1 })
+  })
+})

@@ -1,6 +1,7 @@
 import { ChevronLeft } from 'lucide-react'
 import { useLayoutEffect, useRef, type ReactNode } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { isImmersive } from '../shared/native'
 import type { WorldId } from '../shared/store'
 import { GROUPS, worldMeta } from '../shared/worlds'
 import { WorldIcon } from './ui'
@@ -20,6 +21,8 @@ export function WorldFrame({ world, tabs, actions, fill = false, children, class
   const m = worldMeta(world)
   const group = GROUPS.find((g) => g.id === m.group)!
   const box = useRef<HTMLDivElement>(null)
+  // inside a game the world's section tabs step aside, so the game gets the screen
+  const playing = isImmersive(useLocation().pathname)
 
   useLayoutEffect(() => {
     if (!fill) return
@@ -51,7 +54,7 @@ export function WorldFrame({ world, tabs, actions, fill = false, children, class
             <WorldIcon world={world} size={24} tile />
             <span className="text-2xl font-black">{m.name}</span>
           </div>
-          {tabs && tabs.length > 1 && (
+          {tabs && tabs.length > 1 && !playing && (
             <nav aria-label={`${m.name} sections`} className="-mx-1 flex max-w-full items-center gap-1 overflow-x-auto px-1 [scrollbar-width:none] sm:ml-4">
               {tabs.map((t) => (
                 <NavLink
