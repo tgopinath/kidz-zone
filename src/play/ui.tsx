@@ -137,7 +137,7 @@ export function RoundCheer({ phase, round }: { phase: RoundPhase; round: number 
 /* ---------- end of game ---------- */
 
 /** The big celebration at the end of a game: trophy, stars, Replay and Home. */
-export function GameComplete({ stars = 3, title = 'You did it!', detail, onReplay, homeHref, homeLabel = 'Home', extra }: { stars?: number; title?: string; detail?: ReactNode; onReplay: () => void; homeHref?: string; homeLabel?: string; extra?: ReactNode }) {
+export function GameComplete({ stars = 3, title = 'You did it!', detail, onReplay, homeHref, onHome, homeLabel = 'Home', extra }: { stars?: number; title?: string; detail?: ReactNode; onReplay: () => void; homeHref?: string; onHome?: () => void; homeLabel?: string; extra?: ReactNode }) {
   const actions = useRef<HTMLDivElement>(null)
   useEffect(() => {
     actions.current?.querySelector<HTMLButtonElement>('button')?.focus()
@@ -162,6 +162,11 @@ export function GameComplete({ stars = 3, title = 'You did it!', detail, onRepla
           <KzButtonLink to={homeHref} size="xl" tone="secondary" icon={<House aria-hidden />}>
             {homeLabel}
           </KzButtonLink>
+        )}
+        {onHome && !homeHref && (
+          <KzButton size="xl" tone="secondary" icon={<House aria-hidden />} onClick={onHome}>
+            {homeLabel}
+          </KzButton>
         )}
         {extra}
       </div>

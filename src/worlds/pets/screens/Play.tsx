@@ -1,3 +1,4 @@
+import { GameComplete } from '../../../play/ui'
 import { motion } from 'framer-motion'
 import { useState, type ComponentType } from 'react'
 import { useGame, useActivePet } from '../store/game'
@@ -12,7 +13,6 @@ import { ScreenShell } from '../components/ui'
 import { worldById } from '../data/worlds'
 import { levelInfo } from '../data/progress'
 import PetArt from '../components/PetArt'
-import { Confetti } from '../components/Chrome'
 import type { Reward } from '../types'
 import { sfx } from '../lib/audio'
 
@@ -39,7 +39,7 @@ export default function Play() {
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between my-3">
             <h1 className="text-3xl font-bold text-white">{def.icon} {w.activity.game === game && world !== 'garden' ? w.activity.title : def.name}</h1>
-            <button className="btn btn-white !min-h-11" onClick={() => setGame(null)}>✕ Quit</button>
+            <button className="btn btn-white !min-h-16" onClick={() => setGame(null)}>✕ Quit</button>
           </div>
           {phase === 'how' && (
             <motion.div className="card p-5 text-center" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
@@ -64,24 +64,26 @@ export default function Play() {
             </div>
           )}
           {phase === 'done' && result && (
-            <motion.div className="card p-6 text-center relative overflow-hidden" initial={{ scale: 0.8 }} animate={{ scale: 1 }}>
-              {result.won && <Confetti />}
-              <div className="text-7xl">{result.won ? '🏆' : '💪'}</div>
-              <h2 className="text-3xl font-bold mt-2">{result.won ? 'You won!' : 'Nice try!'}</h2>
-              <p className="font-bold text-ink/60">{result.won ? `${pet.name} had so much fun!` : 'Every game makes your pet happier. Try again!'}</p>
-              <div className="text-5xl font-display font-bold my-3">{result.score}</div>
-              <div className="flex justify-center gap-2 flex-wrap">
-                {result.reward.coins ? <span className="pill bg-yellow-100 text-lg">🪙 +{result.reward.coins}</span> : null}
-                {result.reward.gems ? <span className="pill bg-violet-100 text-lg">💎 +{result.reward.gems}</span> : null}
-                <span className="pill bg-sky-100 text-lg">⭐ +{result.reward.xp} XP</span>
-                <span className="pill bg-pink-100 text-lg">💖 Happiness up</span>
-              </div>
-              {(bestScores[game] ?? 0) <= result.score && result.score > 0 && <div className="mt-3 font-display font-bold text-grape">New best score! 🌟</div>}
-              <div className="grid grid-cols-2 gap-3 mt-5">
-                <button className="btn btn-white" onClick={() => setGame(null)}>All games</button>
-                <button className="btn btn-green" onClick={() => setPhase('how')}>Play again</button>
-              </div>
-            </motion.div>
+            <GameComplete
+              stars={result.won ? 3 : 1}
+              title={result.won ? 'You won!' : 'Good try!'}
+              onReplay={() => { setPhase('play'); setRunKey((k) => k + 1) }}
+              onHome={() => setGame(null)}
+              homeLabel="All games"
+              detail={
+                <>
+                  <p>{result.won ? `${pet.name} had so much fun!` : 'Every game makes your pet happier. Try again!'}</p>
+                  <p className="my-2 font-display text-5xl font-black text-ink">{result.score}</p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {result.reward.coins ? <span className="pill bg-yellow-100 text-lg">🪙 +{result.reward.coins}</span> : null}
+                    {result.reward.gems ? <span className="pill bg-violet-100 text-lg">💎 +{result.reward.gems}</span> : null}
+                    <span className="pill bg-sky-100 text-lg">⭐ +{result.reward.xp} XP</span>
+                    <span className="pill bg-pink-100 text-lg">💖 Happiness up</span>
+                  </div>
+                  {(bestScores[game] ?? 0) <= result.score && result.score > 0 && <p className="mt-3 font-display font-bold text-grape">New best score! 🌟</p>}
+                </>
+              }
+            />
           )}
         </div>
       </div>
@@ -97,14 +99,14 @@ export default function Play() {
           <span className="block text-2xl font-display font-bold mt-1 text-ink">{w.activity.title}</span>
           <span className="block font-bold text-ink/80">{w.activity.desc}</span>
         </span>
-        <span className="btn btn-gold !min-h-12">Play</span>
+        <span className="btn btn-gold !min-h-16">Play</span>
       </motion.button>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {GAMES.map((g, i) => (
           <motion.button key={g.id} onClick={() => open(g.id)} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} whileHover={{ y: -4 }} whileTap={{ scale: 0.96 }}
-            className={`rounded-[28px] p-4 text-left text-white bg-gradient-to-br ${g.color} shadow-lg min-h-40 flex flex-col`}>
-            <span className="text-5xl drop-shadow">{g.icon}</span>
-            <span className="text-xl font-display font-bold mt-auto drop-shadow">{g.name}</span>
+            className={`rounded-[28px] p-4 text-left text-white bg-gradient-to-br ${g.color} shadow-lg min-h-48 flex flex-col`}>
+            <span className="text-7xl drop-shadow">{g.icon}</span>
+            <span className="text-2xl font-display font-bold mt-auto drop-shadow">{g.name}</span>
             <span className="text-xs font-extrabold opacity-90">{bestScores[g.id] ? `Best: ${bestScores[g.id]}` : 'Not played yet'}</span>
           </motion.button>
         ))}
