@@ -16,7 +16,7 @@ const TONES: Record<Tone, string> = {
 
 /** Tactile button (press scale), flat in KidZ Zone. */
 export function Button({ tone = 'sun', size = 'md', className = '', children, onClick, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & { tone?: Tone; size?: 'sm' | 'md' | 'lg' }) {
-  const sz = size === 'lg' ? 'text-2xl px-8 py-4 min-h-16' : size === 'sm' ? 'text-base px-4 py-2 min-h-11' : 'text-xl px-6 py-3 min-h-14'
+  const sz = size === 'lg' ? 'text-3xl px-9 py-4 min-h-24' : size === 'sm' ? 'text-lg px-5 py-2 min-h-16' : 'text-2xl px-7 py-3 min-h-20'
   return (
     <button
       {...rest}
@@ -34,7 +34,7 @@ export function Card({ children, className = '', style }: { children: ReactNode;
 
 export function BackLink({ to, label = 'Back' }: { to: string; label?: string }) {
   return (
-    <Link to={to} onClick={() => sfx.tap()} className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 font-display font-semibold text-ink-2 ring-1 ring-line shadow-sm min-h-11 focus-visible:outline-4 focus-visible:outline-primary" aria-label={label}>
+    <Link to={to} onClick={() => sfx.tap()} className="inline-flex items-center gap-1 rounded-full bg-white px-5 py-2 font-display text-lg font-bold text-ink-2 ring-1 ring-line shadow-sm min-h-16 focus-visible:outline-4 focus-visible:outline-primary" aria-label={label}>
       <span aria-hidden className="text-xl">←</span> {label}
     </Link>
   )

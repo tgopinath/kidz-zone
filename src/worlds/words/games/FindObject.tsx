@@ -2,8 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AnimatedObject } from '../components/AnimatedObject'
-import { Confetti } from '../components/Celebration'
-import { BackLink, Button, Card, ProgressBar, Waveform } from '../components/ui'
+import { BackLink, Card, Waveform } from '../components/ui'
 import { categoryById } from '../data/categories'
 import { lessonById, lessonsForCategory, VOCABULARY, wordById, wordsInCategory } from '../data/vocabulary'
 import { useSpeech } from '../hooks/useSpeech'
@@ -12,6 +11,9 @@ import { sfx } from '../services/sfx'
 import { useProgress } from '../state/ProgressProvider'
 import type { VocabItem } from '../types'
 import { buildRounds, MAX_STARS_PER_ROUND, starsFor, type Round } from './findLogic'
+import { useAutoAdvance } from '../../../play/roundFlow'
+import { GameComplete, KzButton, RoundCheer, RoundProgress } from '../../../play/ui'
+import { useFitSize } from '../../../play/useFit'
 
 type Phase = 'intro' | 'play' | 'results'
 
@@ -77,6 +79,12 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
 
   const round = rounds[i]
   const target = round?.target
+  // the next round loads by itself after the cheer (shared play kit: no Next button)
+  const cheer = useAutoAdvance(phase === 'play' && solved, () => nextRound(), { cheer: false, ms: 2000 })
+  // picture cards as big as the screen allows: two columns, two rows, below the question
+  const n = round?.options.length ?? 4
+  const rows = Math.ceil(n / 2)
+  const art = useFitSize((w, h) => Math.max(96, Math.min((Math.min(w, 1500) - 56) / 2 / 1.2, (h - 330) / rows / 1.3, 300)), [rows])
   const question = target ? `Where is the ${target.word}?` : ''
 
   useEffect(() => {
@@ -141,7 +149,7 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
             <li>⭐ Win 2 stars on the first try, 1 star after a hint.</li>
           </ol>
           <p className="mt-4 text-ink-soft">{rounds.length} rounds · no rush, take your time!</p>
-          <Button className="mt-6" size="lg" tone="leaf" onClick={() => setPhase('play')} autoFocus>Start ▶</Button>
+          <KzButton className="mt-6" size="xl" onClick={() => setPhase('play')} autoFocus>Start ▶</KzButton>
         </Card>
       </div>
     )
@@ -156,29 +164,22 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
     const nextLesson = lesson ? lessonsForCategory(lesson.categoryId)[lesson.index + 1] : undefined
     const trophies = total >= max ? 3 : total >= max * 0.6 ? 2 : 1
     return (
-      <div className="space-y-5">
-        <Confetti />
-        <Card className="mx-auto max-w-xl p-8 text-center">
-          <p className="font-display text-lg font-semibold" style={{ color }}>{title}</p>
-          <h1 className="font-display text-4xl font-bold text-ink">{trophies === 3 ? 'Perfect!' : trophies === 2 ? 'Great job!' : 'Well done!'}</h1>
-          <div className="my-5 flex justify-center gap-2" aria-label={`${trophies} of 3 big stars`}>
-            {[0, 1, 2].map((k) => (
-              <motion.span key={k} className="text-6xl" initial={{ scale: 0, rotate: -90 }} animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.3 + k * 0.25, type: 'spring', stiffness: 220, damping: 10 }} style={{ filter: k < trophies ? undefined : 'grayscale(1) opacity(0.3)' }} aria-hidden>⭐</motion.span>
-            ))}
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            <Stat label="Stars won" value={`+${total}`} />
-            <Stat label="First try" value={`${firstTry}/${rounds.length}`} />
-            <Stat label="Bonus" value={reward?.bonus ? `+${reward.bonus}` : '—'} />
-          </div>
-          {reward?.firstTime && <p className="mt-4 rounded-2xl bg-[#FFF3C4] p-3 font-display font-semibold text-[#8A5A00]">🏆 Lesson complete! You earned a 5-star bonus.</p>}
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button tone="sun" onClick={replay}>🔁 Play again</Button>
-            {nextLesson && <Button tone="leaf" onClick={() => nav(`/words/word/${nextLesson.wordIds[0]}`)}>Next lesson →</Button>}
-            <Button tone="white" onClick={() => nav(backTo)}>{backLabel}</Button>
-          </div>
-        </Card>
+      <div className="space-y-5 py-4">
+        <GameComplete
+          stars={trophies}
+          title={trophies === 3 ? 'Perfect!' : trophies === 2 ? 'Great job!' : 'Well done!'}
+          onReplay={replay}
+          homeHref={backTo}
+          homeLabel={backLabel}
+          detail={
+            <>
+              <p style={{ color }}>{title}</p>
+              <p className="mt-1 text-xl">+{total} stars · {firstTry} of {rounds.length} first try{reward?.bonus ? ` · +${reward.bonus} bonus` : ''}</p>
+              {reward?.firstTime && <p className="mt-2 rounded-2xl bg-[#FFF3C4] p-3 font-display font-semibold text-[#8A5A00]">🏆 Lesson complete! You earned a 5-star bonus.</p>}
+            </>
+          }
+          extra={nextLesson ? <KzButton size="xl" tone="success" onClick={() => nav(`/words/word/${nextLesson.wordIds[0]}`)}>Next lesson</KzButton> : undefined}
+        />
       </div>
     )
   }
@@ -187,20 +188,21 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
   const showHelp = wrongs.length >= 2
   return (
     <div className="space-y-5">
-      <div className="flex items-center gap-3">
+      <RoundCheer phase={cheer} round={i} />
+      <div className="flex flex-wrap items-center gap-3">
         <BackLink to={backTo} label="Quit" />
-        <ProgressBar className="flex-1" value={(i + (solved ? 1 : 0)) / rounds.length} color={color} />
-        <span className="font-display font-bold text-[#8A5A00]">⭐ {scores.reduce((a, b) => a + b, 0)}</span>
+        <RoundProgress className="ml-auto" round={i} total={rounds.length} done={solved && i + 1 >= rounds.length} />
+        <span className="font-display text-2xl font-black text-[#8A5A00]">⭐ {scores.reduce((a, b) => a + b, 0)}</span>
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-        <h1 className="cursor-pointer font-display text-3xl font-bold text-ink sm:text-4xl" data-no-announce onClick={() => void speak(question)}>
+        <h1 className="cursor-pointer font-display text-4xl font-black text-ink sm:text-5xl" data-no-announce onClick={() => void speak(question)}>
           Where is the <span style={{ color }}>{target.word}</span>?
         </h1>
         <Waveform active={speaking === question} color={color} />
       </div>
 
-      <div className="mx-auto grid max-w-3xl grid-cols-2 gap-4 sm:gap-6">
+      <div className="mx-auto grid w-fit grid-cols-2 gap-[var(--kz-gap)]">
         {round.options.map((w) => {
           const isWrong = wrongs.includes(w.id)
           const isRight = solved && w.id === target.id
@@ -209,8 +211,8 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
             <motion.div key={w.id}
               animate={isWrong ? { x: [0, -12, 12, -8, 8, 0], opacity: 0.55 } : glow ? { scale: [1, 1.05, 1] } : { opacity: solved && !isRight ? 0.4 : 1 }}
               transition={glow ? { duration: 1, repeat: Infinity } : { duration: 0.5 }}
-              className={`grid place-items-center rounded-2xl border-4 p-2 ${isRight ? 'border-[#4CC26B] bg-[#E6F8EA]' : glow ? 'border-[#FFC83D] bg-white' : 'border-transparent bg-white'}`}>
-              <AnimatedObject item={w} size={120} playKey={isRight ? playKey : 0} idle={!solved} onTap={() => pick(w)}
+              className={`grid place-items-center rounded-[var(--kz-radius)] border-4 p-1 shadow-[var(--kz-card-shadow)] ${isRight ? 'border-[#4CC26B] bg-[#E6F8EA]' : glow ? 'border-[#FFC83D] bg-white' : 'border-transparent bg-white'}`}>
+              <AnimatedObject item={w} size={art} playKey={isRight ? playKey : 0} idle={!solved} onTap={() => pick(w)}
                 label={`Option: ${w.glyph ?? 'picture'} ${isWrong ? '(not this one)' : ''}`} />
               <AnimatePresence>
                 {(isWrong || isRight) && (
@@ -234,7 +236,7 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
                 <p className="font-display text-2xl font-bold text-[#2B8A3E]">Excellent! You found the {target.word}!</p>
                 <p className="font-display font-semibold text-[#8A5A00]">+{scores[scores.length - 1]} ⭐</p>
               </div>
-              <Button tone="leaf" onClick={nextRound} autoFocus>{i + 1 >= rounds.length ? 'See results' : 'Next'} →</Button>
+              <p className="font-display text-lg font-bold text-ink-soft">{i + 1 >= rounds.length ? 'Your stars are coming…' : 'Next one coming…'}</p>
             </motion.div>
           ) : wrongs.length > 0 ? (
             <motion.div key={`hint-${wrongs.length}`} initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
@@ -248,15 +250,6 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
           ) : null}
         </AnimatePresence>
       </div>
-    </div>
-  )
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl bg-primary-soft p-3">
-      <p className="font-display text-2xl font-bold text-ink">{value}</p>
-      <p className="text-sm text-ink-soft">{label}</p>
     </div>
   )
 }

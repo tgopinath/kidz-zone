@@ -29,6 +29,8 @@ function effectFor(item: VocabItem): Effect {
 }
 
 /** The tappable vocabulary object: custom SVG when available, emoji/glyph otherwise. */
+import { letterColour } from '../../../play/useFit'
+
 export function AnimatedObject({ item, size = 160, playKey = 0, idle = true, onTap, label, className = '' }: Props) {
   const controls = useAnimationControls()
   const reduce = useReducedMotion()
@@ -62,7 +64,7 @@ export function AnimatedObject({ item, size = 160, playKey = 0, idle = true, onT
   const art = item.asset === 'apple' ? <AppleArt size={size} active={active} />
     : item.asset === 'banana' ? <BananaArt size={size} peeled={active} />
     : item.glyph ? (
-      <span className="font-display font-bold leading-none select-none" style={{ fontSize: size * 0.8, color: 'var(--glyph, #C2410C)', textShadow: '0 6px 0 rgba(0,0,0,.12)' }}>{item.glyph}</span>
+      <span className="font-display font-bold leading-none select-none" style={{ fontSize: size * 0.86, fontWeight: 900, color: `var(--glyph, ${letterColour(item.glyph)})`, textShadow: '0 0.06em 0 rgba(0,0,0,.14)' }}>{item.glyph}</span>
     ) : isSplit ? (
       <SplitEmoji emoji={item.emoji ?? '❓'} size={size} open={active} />
     ) : (
