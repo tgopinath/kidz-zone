@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { challengeAt, type Challenge } from '../lib/challenges';
 import type { Denomination } from '../lib/currency';
 import { useStoredState } from '../hooks/useStoredState';
+import { exposeAnswer } from '../../../play/testMode';
 
 export function useChallenges(values: Denomination[], onComplete: () => void, startOn = false) {
   const [on, setOn] = useState(startOn);
@@ -32,6 +33,9 @@ export function useChallenges(values: Denomination[], onComplete: () => void, st
     setCelebrating(challenge);
     onComplete();
   }, [status, challenge, remembered, setCompleted, onComplete]);
+
+  // test mode: complete the current challenge as if the right money were on the table
+  useEffect(() => exposeAnswer(on && !celebrating ? () => { satisfied.current = challenge.id; setCompleted((c) => (c.includes(challenge.id) ? c : [...c, challenge.id])); setCelebrating(challenge); onComplete(); } : null));
 
   const goTo = (i: number) => {
     const next = Math.max(0, i);

@@ -179,3 +179,4 @@ html.reduce-motion :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-c
 /* Brain Gym boards were capped at small fixed widths: let them grow to fill the screen (and still fit its height) */
 .kz-brain-board [style*="max-width"] { max-width: min(100%, max(20rem, 100dvh - 19rem)) !important; }
 .kz-brain-board :where(.text-4xl) { font-size: clamp(2.25rem, 6vmin, 4rem); }
+.kz-complete-actions > * { flex: 1 1 15rem; max-width: 26rem; white-space: nowrap; }

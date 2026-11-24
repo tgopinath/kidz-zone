@@ -12,6 +12,7 @@ import { continentBySlug, CONTINENT_BOX, COUNTRIES } from "@/lib/world";
 import { actions, starsFor, unlocks, useProgress, type PuzzleLevel } from "@/lib/progress";
 import { celebrate, playSound } from "@/lib/celebrate";
 import { GameComplete, KzButton } from "../../../play/ui";
+import { exposeFinish } from "../../../play/testMode";
 import { speakLocal } from "@/lib/speech";
 
 const LEVELS: Record<PuzzleLevel, { label: string; cards: number; hints: number; timer: "optional" | "on"; blurb: string }> = {
@@ -114,6 +115,9 @@ export default function PuzzleGame({ mapKey }: { mapKey: string }) {
     setSay({ mood: "happy", text: `Drag each ${what} name to its place on the map — or tap a name, then tap the map.` });
     setPhase("play");
   };
+
+  // test mode (tools/playall.mjs): place every card
+  useEffect(() => exposeFinish(phase === "play" ? () => finish(new Set([...placed, ...deck]), wrong, hinted) : null));
 
   const elapsed = Math.max(0, Math.round(((phase === "done" ? result?.timeSec ?? 0 : (now - startAt) / 1000))));
 

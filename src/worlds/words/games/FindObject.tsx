@@ -14,6 +14,7 @@ import { buildRounds, MAX_STARS_PER_ROUND, starsFor, type Round } from './findLo
 import { useAutoAdvance } from '../../../play/roundFlow'
 import { GameComplete, KzButton, RoundCheer, RoundProgress } from '../../../play/ui'
 import { useFitSize } from '../../../play/useFit'
+import { exposeAnswer } from '../../../play/testMode'
 
 type Phase = 'intro' | 'play' | 'results'
 
@@ -133,6 +134,8 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
     savedRef.current = false
     setPhase('play')
   }
+
+  useEffect(() => exposeAnswer(phase === 'play' && target && !solved ? () => pick(target) : null))
 
   // ---------- Intro ----------
   if (phase === 'intro') {

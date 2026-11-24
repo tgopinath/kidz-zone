@@ -6,6 +6,7 @@
 // Kolam UI, line icons, accessibility, native text-to-speech in the Android app and a few bug fixes.
 
 import { burst, cue } from '../../play/feedback'
+import { KZTEST, exposeAnswer } from '../../play/testMode'
 
 export function mountGarden(ROOT, SAY, opts) {
 // ---------- word bank (pictures are emoji so every word has a clear, consistent picture) ----------
@@ -245,7 +246,7 @@ function renderCard(){
   const c=G.cards[G.i], last=G.i===G.cards.length-1;
   let body=`<h1 class="ask" id="ask" tabindex="-1">${c.ask}</h1>${c.prompt}`;
   if(c.kind==="choice"){
-    body+=`<div class="opts${c.opts.length===3?" n3":""}" role="group" aria-labelledby="ask">${c.opts.map(o=>`<button class="opt${c.letter?" letter":""}" data-o="${o}">${o}</button>`).join("")}</div>`;
+    body+=`<div class="opts${c.opts.length===3?" n3":""}" role="group" aria-labelledby="ask">${c.opts.map(o=>`<button class="opt${c.letter?" letter":""}" data-o="${o}"${KZTEST&&o===c.answer?" data-kz-answer":""}>${o}</button>`).join("")}</div>`;
   }else{
     body+=`<div class="slots" id="slots" role="status" aria-label="Your word so far">${[...c.answer].map(()=>`<div class="slot"></div>`).join("")}</div>
     <div class="tiles" id="tiles" role="group" aria-label="Letter tiles">${c.tiles.map((t,i)=>`<button class="tile" data-t="${i}">${t}</button>`).join("")}</div><button class="k-btn k-btn-ghost k-btn-sm undo" id="undo">${ic("undo","k-icon sm")}Undo</button>`;
@@ -273,6 +274,8 @@ function renderCard(){
     next.style.setProperty("--wait",WAIT+"ms");void next.offsetWidth;next.classList.add("counting");
     const here=G;advance=setTimeout(()=>{advance=null;if(G===here&&G.cards[G.i]===c)goNext()},WAIT);
   };
+  // test mode (tools/playall.mjs): answer this card
+  exposeAnswer(()=>{if(c.kind==="choice")right([...ROOT.querySelectorAll(".opt")].find(b=>b.dataset.o===c.answer));else right()});
   keyHandler=null;
   if(c.kind==="choice"){
     ROOT.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(solved||b.classList.contains("wrong"))return;b.dataset.o===c.answer?right(b):wrong(b)});

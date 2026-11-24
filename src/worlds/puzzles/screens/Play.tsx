@@ -1,4 +1,5 @@
 import { useAutoAdvance } from '../../../play/roundFlow';
+import { exposeAnswer } from '../../../play/testMode';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { setSoundEnabled, sfx, speak, stopSpeaking } from '../audio';
 import { actions, progressFor, settingsFor, store, type AttemptOutcome } from '../core/db';
@@ -126,6 +127,7 @@ export default function Play({ child, category, daily = false, preview, onExit }
     guidance: puzzle.guidance,
     paused: paused || !!outcome || timeUp,
   }), [finish, hintTick, puzzle.guidance, paused, outcome, timeUp]);
+  useEffect(() => exposeAnswer(outcome ? null : () => finish(true)), [finish, outcome]);
 
 
   // Android back: pause first (the pause menu then offers the way out).
@@ -156,7 +158,7 @@ export default function Play({ child, category, daily = false, preview, onExit }
   })();
 
   return (
-    <div className="play" style={{ ['--world' as string]: world.color }}>
+    <div className="play" data-kz-round={puzzle.id} style={{ ['--world' as string]: world.color }}>
       <header className="play-top">
         <button className="icon-btn" onClick={() => setPaused(true)} aria-label="Pause">⏸️</button>
         <div className="play-title grow" data-say={puzzle.instruction}>

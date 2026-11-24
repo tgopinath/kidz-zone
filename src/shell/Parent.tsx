@@ -1,6 +1,8 @@
 import { RotateCcw } from 'lucide-react'
 import { Gate, isUnlocked } from './Gate'
-import { lazy, Suspense, useMemo, useState, type ComponentType } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState, type ComponentType } from 'react'
+import { deleteCloudCopy, signIn, signOut, startCloud, syncNow, useCloud } from '../shared/cloud'
+import { KzButton } from '../play/ui'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { dailyCounts, shared, streak, totals, useShared, WORLD_IDS, type WorldId } from '../shared/store'
@@ -137,6 +139,66 @@ function Reset() {
   )
 }
 
+function Account() {
+  const c = useCloud()
+  useEffect(() => {
+    void startCloud()
+  }, [])
+  const busy = c.status === 'loading' || c.status === 'signing-in' || c.status === 'syncing'
+  const when = c.lastSynced ? new Date(c.lastSynced).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }) : 'Not yet'
+  return (
+    <div className="mb-6 grid gap-[var(--kz-gap)] lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+      <Card className="space-y-4 p-5 sm:p-6">
+        <h2 className="text-2xl font-black">Save progress on all devices</h2>
+        {c.user ? (
+          <>
+            <div className="flex items-center gap-4">
+              {c.user.photo ? (
+                <img src={c.user.photo} alt="" referrerPolicy="no-referrer" className="size-16 rounded-full object-cover" />
+              ) : (
+                <span className="grid size-16 place-items-center rounded-full bg-brand-soft text-2xl font-black text-brand" aria-hidden>{(c.user.name || c.user.email || '?')[0].toUpperCase()}</span>
+              )}
+              <div className="min-w-0">
+                <p className="truncate text-lg font-black">{c.user.name || 'Signed in'}</p>
+                <p className="truncate text-ink-soft">{c.user.email}</p>
+              </div>
+            </div>
+            <p className="text-ink-soft" role="status">{c.status === 'syncing' ? 'Saving to your account…' : `Last saved to your account: ${when}`}</p>
+            <div className="flex flex-wrap gap-3">
+              <KzButton tone="primary" size="md" onClick={() => void syncNow()} disabled={busy}>Save now</KzButton>
+              <KzButton tone="secondary" size="md" onClick={() => void signOut()}>Sign out</KzButton>
+            </div>
+            <p className="text-sm text-ink-soft">Signing out keeps all progress on this device.</p>
+            <button type="button" className="text-left font-bold text-danger underline-offset-4 hover:underline" onClick={() => { if (confirm('Remove the copy saved in your account? Progress on this device stays.')) void deleteCloudCopy() }}>
+              Remove the copy in my account
+            </button>
+          </>
+        ) : c.status === 'unavailable' ? (
+          <p className="text-ink-soft" role="status">{c.unavailable}</p>
+        ) : (
+          <>
+            <p className="text-ink-soft">Sign in with Google to save progress on all devices. Children never need to sign in, and the app works fully without it.</p>
+            <button type="button" onClick={() => void signIn()} disabled={busy} className="inline-flex min-h-16 items-center gap-3 rounded-2xl border-2 border-line bg-white px-6 text-lg font-black hover:border-ink/30 disabled:opacity-60">
+              <svg width="24" height="24" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+              {c.status === 'signing-in' ? 'Signing in…' : c.status === 'loading' ? 'Getting ready…' : 'Sign in with Google'}
+            </button>
+          </>
+        )}
+        {c.error && <p className="rounded-2xl bg-[#fff4e5] p-3 font-bold text-[#8a5a00]" role="alert">{c.error}</p>}
+      </Card>
+      <Card className="space-y-3 p-5 sm:p-6">
+        <h2 className="text-xl font-black">Privacy</h2>
+        <ul className="list-disc space-y-2 pl-5 text-ink-soft">
+          <li>Sign-in is for grown-ups only, and it is optional.</li>
+          <li>Only progress is saved: the child’s first name and age band, stars, levels and settings. No photos, no recordings, no location.</li>
+          <li>No ads and no tracking. Your Google name and picture are shown only here.</li>
+          <li>Saved in Google Firebase under your account; only you can read it. Remove it here at any time.</li>
+        </ul>
+      </Card>
+    </div>
+  )
+}
+
 function About() {
   return (
     <Card className="mb-6 space-y-4 p-5 sm:p-6">
@@ -157,7 +219,7 @@ function About() {
 export default function ParentArea() {
   const [open, setOpen] = useState(isUnlocked)
   if (!open) return <Gate onPass={() => setOpen(true)} />
-  const tabs = [{ to: '/parent', label: 'Overview', end: true }, ...PANELS.map((p) => ({ to: `/parent/${p.id}`, label: p.label, end: false })), { to: '/parent/reset', label: 'Reset', end: false }, { to: '/parent/about', label: 'About', end: false }]
+  const tabs = [{ to: '/parent', label: 'Overview', end: true }, ...PANELS.map((p) => ({ to: `/parent/${p.id}`, label: p.label, end: false })), { to: '/parent/reset', label: 'Reset', end: false }, { to: '/parent/account', label: 'Account', end: false }, { to: '/parent/about', label: 'About', end: false }]
   return (
     <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-10">
       <PageTitle eyebrow="Grown-ups" title="How it is going" lead="A summary across all eight worlds, then each world’s own dashboard." />
@@ -176,6 +238,7 @@ export default function ParentArea() {
             return <Route key={p.id} path={p.id} element={<div className={`w-${p.id}`}><C /></div>} />
           })}
           <Route path="reset" element={<Reset />} />
+          <Route path="account" element={<Account />} />
           <Route path="about" element={<About />} />
         </Routes>
       </Suspense>

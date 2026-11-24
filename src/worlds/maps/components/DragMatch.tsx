@@ -10,6 +10,7 @@ import { celebrate, playSound } from "@/lib/celebrate";
 import { speak } from "@/lib/speech";
 import { useAutoAdvance } from "../../../play/roundFlow";
 import { RoundCheer } from "../../../play/ui";
+import { exposeAnswer } from "../../../play/testMode";
 
 export interface MatchItem {
   id: string;
@@ -78,13 +79,15 @@ export default function DragMatch({ make, renderItem, renderTarget, instructions
   }, [result]);
 
   const round = rounds[r];
+  const left = round ? round.items.filter((i) => !placed[i.id]) : [];
+  const done = !!round && left.length === 0;
+  // the next round loads by itself (shared play kit)
+  const cheerPhase = useAutoAdvance(done && !result, () => next(), { cheer: false });
+  // test mode (tools/playall.mjs): place the next card where it belongs
+  useEffect(() => exposeAnswer(round && !done && !result && left[0] ? () => left.forEach((it) => tryPlace(it.id, it.answer)) : null));
+
   if (result) return <Results r={result} onRetry={begin} backHref={backHref} backLabel="More challenges" />;
   if (!round) return <Loading label="Shuffling the cards…" />;
-
-  const left = round.items.filter((i) => !placed[i.id]);
-  const done = left.length === 0;
-  // the next round loads by itself (shared play kit)
-  const cheerPhase = useAutoAdvance(done && rounds.length > 0, () => next(), { cheer: false });
 
   const tryPlace = (itemId: string, targetId: string) => {
     const item = round.items.find((i) => i.id === itemId);
@@ -164,7 +167,7 @@ export default function DragMatch({ make, renderItem, renderTarget, instructions
   const doneSoFar = rounds.slice(0, r).reduce((a, x) => a + x.items.length, 0) + Object.keys(placed).length;
 
   return (
-    <div className="space-y-4 pb-4">
+    <div className="space-y-4 pb-4" data-kz-round={r}>
       <div className="flex flex-wrap items-center gap-3">
         <span className="rounded-full bg-white px-4 py-2 font-display font-bold shadow-[var(--shadow-card)]">
           Round {r + 1} of {rounds.length}

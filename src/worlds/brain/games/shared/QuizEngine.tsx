@@ -8,6 +8,7 @@ import type { GameProps } from '../types'
 import { useRoundFlow } from '../../../../play/roundFlow'
 import { burst } from '../../../../play/feedback'
 import { RoundCheer, RoundProgress } from '../../../../play/ui'
+import { answerMark } from '../../../../play/testMode'
 
 export interface QuizOption {
   id: string
@@ -157,6 +158,7 @@ export function createQuizGame(gameKey: string, cfg: QuizConfig) {
                     disabled={!!picked || wrongs.has(o.id)}
                     aria-label={`${o.aria}${state === 'right' ? ', correct answer' : state === 'wrong' ? ', not this one' : ''}`}
                     className={`kz-sel kz-sel-${state} ${q.big ? 'kz-quiz-big' : 'kz-quiz-text'}`}
+                    {...answerMark(isAnswer)}
                   >
                     <span className="sr-only">Option {i + 1}: </span>
                     <span className="kz-sel-pic">{o.label}</span>

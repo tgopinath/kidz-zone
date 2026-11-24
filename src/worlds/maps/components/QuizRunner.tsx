@@ -23,6 +23,7 @@ import { celebrate, playSound } from "@/lib/celebrate";
 import { speak, speakLocal } from "@/lib/speech";
 import { useRoundFlow } from "../../../play/roundFlow";
 import { GameComplete, RoundCheer, RoundProgress } from "../../../play/ui";
+import { answerMark, exposeAnswer } from "../../../play/testMode";
 
 export interface RunResult {
   total: number;
@@ -191,6 +192,8 @@ export default function QuizRunner({ make, stateId, onFinish, backHref, backLabe
     setQStart(Date.now());
   };
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => exposeAnswer(q && !answered ? () => answer(q.answer) : null));
   if (result) return <Results r={result} onRetry={restart} backHref={backHref} backLabel={backLabel} />;
   if (!q) return <Loading label="Getting questions ready…" />;
 
@@ -277,6 +280,7 @@ export default function QuizRunner({ make, stateId, onFinish, backHref, backLabe
                     <SpeakButton label={`Say ${o}`} onSpeak={() => speakLocal(o, taByName.get(o), { force: true })} />
                     <button
                       type="button"
+                      {...answerMark(isAns)}
                       disabled={answered || wrongPicks.has(o)}
                       onClick={() => answer(o)}
                       className={`flex min-h-20 flex-1 items-center justify-between rounded-3xl border-4 px-5 py-3 text-left font-display text-2xl font-black transition ${

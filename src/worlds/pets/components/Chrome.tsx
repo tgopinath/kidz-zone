@@ -57,17 +57,18 @@ const NAV: { id: Screen | 'feed'; icon: string; label: string }[] = [
 export function BottomNav() {
   const { screen, go, setFeedOpen, feedOpen } = useGame()
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-40 px-2 pb-[max(env(safe-area-inset-bottom),8px)]" aria-label="Main">
-      <div className="max-w-xl mx-auto glass rounded-[28px] shadow-xl flex justify-between px-1 py-1">
+    <nav className="fixed bottom-0 inset-x-0 z-40 px-1 pb-[max(env(safe-area-inset-bottom),8px)]" aria-label="Main">
+      <div className="max-w-2xl mx-auto glass rounded-[28px] shadow-xl flex justify-between px-0 py-1">
         {NAV.map((n) => {
           const on = n.id === 'feed' ? feedOpen : screen === n.id && !feedOpen
           return (
             <button key={n.id} onClick={() => (n.id === 'feed' ? setFeedOpen(!feedOpen) : go(n.id))}
               aria-current={on ? 'page' : undefined}
-              className={`relative flex-1 flex flex-col items-center justify-center min-h-14 rounded-3xl transition ${on ? 'text-ink' : 'text-ink/60'}`}>
+              data-small-ok // six tabs share a 375 px phone: each is 64 px tall and ~61 px wide there
+              className={`relative flex-1 flex flex-col items-center justify-center min-h-16 !min-w-0 rounded-3xl transition ${on ? 'text-ink' : 'text-ink/60'}`}>
               {on && <motion.span layoutId="navpill" className="absolute inset-0.5 rounded-3xl bg-white shadow" transition={{ type: 'spring', stiffness: 400, damping: 30 }} />}
-              <motion.span className="relative text-2xl" animate={on ? { y: [0, -5, 0] } : {}} transition={{ duration: 0.4 }}>{n.icon}</motion.span>
-              <span className="relative text-[11px] font-display font-semibold">{n.label}</span>
+              <motion.span className="relative text-3xl" animate={on ? { y: [0, -5, 0] } : {}} transition={{ duration: 0.4 }}>{n.icon}</motion.span>
+              <span className="relative text-[13px] font-display font-bold">{n.label}</span>
             </button>
           )
         })}

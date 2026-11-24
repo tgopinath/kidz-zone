@@ -1,6 +1,7 @@
 import { GameComplete } from '../../../play/ui'
+import { exposeFinish } from '../../../play/testMode'
 import { motion } from 'framer-motion'
-import { useState, type ComponentType } from 'react'
+import { useEffect, useState, type ComponentType } from 'react'
 import { useGame, useActivePet } from '../store/game'
 import { GAMES, type GameProps } from '../games/common'
 import BallCatch from '../games/BallCatch'
@@ -29,6 +30,9 @@ export default function Play() {
   const w = worldById(world)
 
   const open = (id: string) => { sfx.tap(); setGame(id); setPhase('how'); setResult(null) }
+  const end = (score: number, won: boolean) => { if (!game) return; const reward = finishGame(game, score, won); setResult({ score, won, reward }); setPhase('done') }
+  // test mode: finish the running game as a win (tools/playall.mjs)
+  useEffect(() => exposeFinish(game && phase === 'play' ? () => end(30, true) : null))
 
   if (game) {
     const def = GAMES.find((g) => g.id === game)!
@@ -60,7 +64,7 @@ export default function Play() {
           )}
           {phase === 'play' && (
             <div className="card p-3 sm:p-4">
-              <C key={runKey} pet={pet} world={world} level={level} onEnd={(score, won) => { const reward = finishGame(game, score, won); setResult({ score, won, reward }); setPhase('done') }} />
+              <C key={runKey} pet={pet} world={world} level={level} onEnd={end} />
             </div>
           )}
           {phase === 'done' && result && (

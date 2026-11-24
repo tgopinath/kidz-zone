@@ -17,7 +17,7 @@ export function CompleteOverlay() {
   }
   const nextLevel = r.nextLevel && r.nextLevel <= MAX_LEVEL ? LEVELS[r.nextLevel - 1] : null
   return (
-    <div className="fixed inset-0 z-40 grid place-items-center overflow-auto bg-black/30 p-4">
+    <div className="fixed inset-0 z-40 grid place-items-center overflow-auto bg-black/30 p-4" role="dialog" aria-modal="true" aria-label={r.title}>
       <GameComplete
         stars={r.stars}
         title={r.title}

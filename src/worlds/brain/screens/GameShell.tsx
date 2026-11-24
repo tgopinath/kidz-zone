@@ -28,6 +28,7 @@ import { Bar } from '../components/ui'
 import { GameComplete, KzButton, RoundCheer, RoundProgress } from '../../../play/ui'
 import { burst, cue } from '../../../play/feedback'
 import type { RoundPhase } from '../../../play/roundFlow'
+import { exposeFinish } from '../../../play/testMode'
 
 type Phase = 'intro' | 'countdown' | 'playing' | 'result'
 const MAX_HINTS = 3
@@ -330,6 +331,8 @@ function PlayArea({
     }),
     [diff.d, finish, showCheer],
   )
+
+  useEffect(() => exposeFinish(() => finish(true)), [finish])
 
   // Track active (unpaused) time and drive the countdown.
   useEffect(() => {

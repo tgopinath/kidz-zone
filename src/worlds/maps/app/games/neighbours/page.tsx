@@ -13,6 +13,7 @@ import { actions, starsFor } from "@/lib/progress";
 import { celebrate, playSound } from "@/lib/celebrate";
 import { useAutoAdvance } from "../../../../../play/roundFlow";
 import { RoundCheer } from "../../../../../play/ui";
+import { exposeAnswer } from "../../../../../play/testMode";
 
 const ROUNDS = 5;
 const POOL = STATES.filter((s) => s.neighbours.length >= 2);
@@ -47,6 +48,9 @@ export default function NeighbourChallenge() {
   const complete = s ? found.length === s.neighbours.length || revealed : false;
   // the next round loads by itself (shared play kit)
   const cheerPhase = useAutoAdvance(complete && !result, () => next(), { cheer: false, ms: revealed ? 3200 : 1800 });
+
+  // test mode (tools/playall.mjs): tap the next neighbour
+  useEffect(() => exposeAnswer(s && !complete ? () => { const missing = s.neighbours.filter((n) => !found.includes(n)); setFound(s.neighbours); setStats((x) => ({ ...x, found: x.found + missing.length, score: x.score + 50 * missing.length })); } : null));
 
   const tap = (id: string) => {
     if (!s || complete || id === s.id || found.includes(id)) return;
@@ -110,7 +114,7 @@ export default function NeighbourChallenge() {
   }
 
   return (
-    <div>
+    <div data-kz-round={r}>
       <RoundCheer phase={revealed ? 'play' : cheerPhase} round={r} />
       <PageHeader back="/games" backLabel="All games" title="Neighbour Challenge" subtitle="Tap every state that touches the orange one." />
       {!features || !s ? (

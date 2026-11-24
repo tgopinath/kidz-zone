@@ -30,6 +30,14 @@ function Screens() {
   useFirstRunImport()
   useEffect(() => installTapToHear(), []) // tap a card or a title to hear it (no speaker buttons)
   useEffect(() => installArtify(document.body), []) // every emoji becomes its 3D picture (src/play/artify.ts)
+  useEffect(() => {
+    // a grown-up signed in on this device before: restore the session so progress keeps saving to their account
+    try {
+      if (localStorage.getItem('kidzzone:cloud') === '1') void import('./shared/cloud').then((m) => m.resumeCloud())
+    } catch {
+      /* storage blocked */
+    }
+  }, [])
 
   useEffect(() => {
     const html = document.documentElement

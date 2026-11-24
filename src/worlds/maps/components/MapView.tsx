@@ -320,13 +320,13 @@ export default function MapView({
           ))}
         </g>
       </svg>
-      <div className="absolute left-3 top-3">
+      <div className="absolute left-3 top-3 z-10">
         <ZoomButton label={full.on ? "Exit full screen" : "Full screen"} onClick={full.toggle}>
           {full.on ? <Minimize2 className="size-5" /> : <Maximize2 className="size-5" />}
         </ZoomButton>
       </div>
       {zoomable && (
-        <div className="absolute right-3 top-3 flex flex-col gap-2">
+        <div className="absolute right-3 top-3 z-10 flex flex-col gap-2">
           <ZoomButton label="Zoom in" onClick={() => zoomBy(1.6)}>
             <Plus className="size-5" />
           </ZoomButton>

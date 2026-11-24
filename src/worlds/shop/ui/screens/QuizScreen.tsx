@@ -6,6 +6,7 @@ import { BuddyBubble, Keypad, ScreenShell } from '../components/Kit'
 import { DraggableMoney, MoneyPiece, MoneyTray } from '../components/Money'
 import { useAutoAdvance } from '../../../../play/roundFlow'
 import { RoundCheer, RoundProgress } from '../../../../play/ui'
+import { exposeAnswer } from '../../../../play/testMode'
 
 const TITLES = { identify: 'Identify Products', prices: 'Learn Prices', totals: 'Calculate Totals', math: 'Maths Challenge', currency: 'Understand Currency', change: 'Calculate Change', money: 'Money Learning' }
 
@@ -18,6 +19,10 @@ export function QuizScreen() {
   const right = !!quiz?.feedback?.correct
   // the next question loads by itself after the cheer (shared play kit: no Next button)
   const phase = useAutoAdvance(done, () => useSession.getState().nextQuestion(), { ms: right ? 1800 : 3200, cheer: right })
+  useEffect(() => {
+    const cur = quiz?.questions[quiz.index]
+    return exposeAnswer(quiz && cur && !done ? () => useSession.getState().answerQuiz(cur.answer as never) : null)
+  })
   if (!quiz) return null
   const q = quiz.questions[quiz.index]
   const made = purseTotal(quiz.makeTray)

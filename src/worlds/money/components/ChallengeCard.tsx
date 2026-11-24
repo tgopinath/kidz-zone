@@ -19,6 +19,7 @@ export function ChallengeCard({ challenge, index, status, completed, onPrev, onN
       animate={{ opacity: 1, y: 0, height: 'auto' }}
       exit={{ opacity: 0, y: -10, height: 0 }}
       className="shrink-0 overflow-hidden"
+      data-kz-round={index}
     >
       <div className="rounded-3xl bg-gradient-to-r from-violet-500 to-fuchsia-500 p-[3px] shadow-md">
         <div className="flex items-center gap-3 rounded-[21px] bg-white px-3 py-2.5 sm:px-4">
