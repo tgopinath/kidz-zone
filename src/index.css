@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./kolam/tokens.css";
 @import "./kolam/kolam.css";
+/* the shared play kit (src/play): big touch targets, 3D pictures, picture cards, cheers. Unlayered so it wins. */
+@import "./play/play.css";
 /* motion kit (src/motion-kit): in the components layer so Tailwind utilities win where both set a property */
 @import "./motion-kit/motion-kit.css" layer(components);
 

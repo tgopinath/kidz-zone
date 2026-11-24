@@ -4,6 +4,7 @@ import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-d
 import { useFirstRunImport } from './shared/import'
 import { useShared } from './shared/store'
 import { installTapToHear } from './shared/tapToHear'
+import { installArtify } from './play/artify'
 import { Layout } from './shell/Layout'
 import { Hub } from './shell/Hub'
 import { Home } from './shell/Home'
@@ -28,6 +29,7 @@ function Screens() {
   const loc = useLocation()
   useFirstRunImport()
   useEffect(() => installTapToHear(), []) // tap a card or a title to hear it (no speaker buttons)
+  useEffect(() => installArtify(document.body), []) // every emoji becomes its 3D picture (src/play/artify.ts)
 
   useEffect(() => {
     const html = document.documentElement

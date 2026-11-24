@@ -1,0 +1,168 @@
+/*
+ * Shared play kit: one big, colourful, touch-first layer over all eight worlds.
+ * Unlayered on purpose: these rules win over Tailwind's layered utilities and the worlds' scoped CSS
+ * (min sizes only grow things; worlds can still go bigger).
+ */
+
+/* ---------- viewport-aware scale: everything in rem grows with the screen ---------- */
+:root {
+  --kz-scale: clamp(17px, calc(12.5px + 0.95vmin), 24px);
+  --kz-tap: 64px;          /* smallest touch target anywhere */
+  --kz-tap-primary: 88px;  /* main game controls */
+  --kz-gap: clamp(12px, 2.2vmin, 28px);
+  --kz-radius: clamp(18px, 2.6vmin, 32px);
+  --kz-card-shadow: 0 2px 0 rgb(31 36 51 / 0.06), 0 14px 30px -14px rgb(31 36 51 / 0.32);
+  --kz-yellow: #ffc93c;
+  --kz-orange: #ff8a3d;
+  --kz-pink: #ff5c8a;
+  --kz-green: #1f9e60;
+  --kz-blue: #2f6fe4;
+  --kz-ink: #1f2433;
+}
+html { font-size: var(--kz-scale); }
+html[data-text="large"] { font-size: calc(var(--kz-scale) * 1.12); }
+html[data-text="larger"] { font-size: calc(var(--kz-scale) * 1.25); }
+
+/* wide screens: the content column grows with the window (fills ~85–90%) */
+#main :where(.max-w-6xl, .max-w-5xl, .max-w-4xl) { max-width: min(92vw, 1680px); }
+#main :where(.max-w-3xl, .max-w-2xl) { max-width: min(92vw, 1280px); }
+.kz-bar-inner { max-width: min(94vw, 1720px) !important; }
+
+/* ---------- touch targets: every control is at least 64 × 64 ---------- */
+#main :where(button, [role="button"], [role="tab"], [role="radio"], [role="checkbox"], [role="switch"], select, summary, a[href][class]):not(svg *, [data-small-ok]),
+.kz-chrome :where(button, a[href]) {
+  min-height: var(--kz-tap);
+  min-width: var(--kz-tap);
+  touch-action: manipulation;
+}
+#main :where(input:not([type="hidden"], [type="range"], [type="checkbox"], [type="radio"])) { min-height: var(--kz-tap); font-size: max(1rem, 18px); }
+/* boards with many small cells (sudoku, mazes, sliding tiles) size their own cells to fit the screen */
+#main :where([data-board]) :where(button, [role="button"]) { min-height: 0; min-width: 0; }
+/* links inside running text stay text */
+#main :where(p, li, small) > a[href]:not([class]) { min-height: 0; min-width: 0; }
+
+/* every press responds instantly */
+#main :where(button, [role="button"], a[href][class]):not(:disabled):active { transform: scale(0.95); }
+html.reduce-motion #main :where(button, [role="button"], a[href][class]):active { transform: none; }
+
+/* ---------- 3D pictures ---------- */
+.kz-e3d {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  object-fit: contain;
+  vertical-align: -0.28em;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 0.06em 0.05em rgb(31 36 51 / 0.18));
+}
+.kz-art-only > .kz-e3d { width: 1.4em; height: 1.4em; vertical-align: middle; }
+/* a square card holding just a picture: the picture fills ~75% of it */
+.kz-fill { container-type: inline-size; }
+.kz-fill .kz-e3d, .kz-fill .kz-art { width: 74cqi !important; height: 74cqi !important; max-width: none; vertical-align: middle; }
+.kz-art { display: inline-block; object-fit: contain; user-select: none; -webkit-user-drag: none; filter: drop-shadow(0 8px 10px rgb(31 36 51 / 0.18)); }
+.kz-art-emoji { display: inline-grid; place-items: center; line-height: 1; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+
+/* ---------- buttons ---------- */
+.kz-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+  min-height: var(--kz-tap); min-width: var(--kz-tap);
+  padding: 0 1.4em; border-radius: 999px; border: 0;
+  font: 900 1.15rem/1.1 var(--font-display, Lato, sans-serif); letter-spacing: 0.005em;
+  cursor: pointer; text-decoration: none; user-select: none;
+  transition: transform 0.12s cubic-bezier(0.34, 1.6, 0.64, 1), box-shadow 0.15s ease, filter 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.kz-btn svg { width: 1.35em; height: 1.35em; flex: none; }
+.kz-btn-md { min-height: var(--kz-tap); font-size: 1.05rem; }
+.kz-btn-lg { min-height: 80px; font-size: 1.25rem; padding: 0 1.6em; }
+.kz-btn-xl { min-height: 96px; font-size: 1.45rem; padding: 0 1.8em; }
+.kz-btn-primary { background: var(--kz-accent, #2e3a8c); color: #fff; box-shadow: 0 6px 0 color-mix(in srgb, var(--kz-accent, #2e3a8c) 70%, #000), 0 14px 24px -10px color-mix(in srgb, var(--kz-accent, #2e3a8c) 70%, transparent); }
+.kz-btn-success { background: var(--kz-green); color: #fff; box-shadow: 0 6px 0 #136b40; }
+.kz-btn-secondary { background: #fff; color: var(--kz-ink); box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--kz-accent, #2e3a8c) 35%, #fff), 0 6px 0 color-mix(in srgb, var(--kz-accent, #2e3a8c) 25%, #e2e3e8); }
+.kz-btn-ghost { background: transparent; color: var(--kz-ink); }
+.kz-btn:hover { filter: brightness(1.06); }
+.kz-btn:active:not(:disabled) { transform: translateY(4px) scale(0.97); box-shadow: 0 2px 0 rgb(0 0 0 / 0.25); }
+.kz-btn:disabled { opacity: 0.5; cursor: default; }
+.kz-btn:focus-visible { outline: 4px solid var(--kz-ink); outline-offset: 3px; }
+
+/* ---------- picture cards ---------- */
+.kz-grid {
+  display: grid; gap: var(--kz-gap); width: 100%;
+  grid-template-columns: repeat(var(--kz-cols, 3), minmax(0, 1fr));
+}
+@container (max-width: 420px) { .kz-grid[data-count="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .kz-grid[data-count="6"], .kz-grid[data-count="5"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kz-grid[data-count="8"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (orientation: landscape) and (min-width: 700px) { .kz-grid[data-count="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } .kz-grid[data-count="6"] { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+
+.kz-sel {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.25em; width: 100%; aspect-ratio: 1; padding: 6%; border: 0;
+  border-radius: var(--kz-radius); background: #fff; color: var(--kz-ink);
+  box-shadow: inset 0 0 0 3px #e7e4dc, var(--kz-card-shadow);
+  cursor: pointer; container-type: inline-size;
+  transition: transform 0.18s cubic-bezier(0.34, 1.6, 0.64, 1), box-shadow 0.15s ease, background 0.15s ease, opacity 0.2s ease;
+}
+.kz-sel:hover:not(:disabled) { transform: translateY(-4px); box-shadow: inset 0 0 0 4px var(--kz-accent, #2e3a8c), var(--kz-card-shadow); }
+.kz-sel:active:not(:disabled) { transform: scale(0.94); }
+.kz-sel:focus-visible { outline: 5px solid var(--kz-ink); outline-offset: 4px; }
+.kz-sel-pic { display: grid; place-items: center; flex: 1 1 auto; min-height: 0; width: 100%; }
+.kz-sel-art { width: 80cqi; height: 80cqi; max-height: 100%; }
+.kz-sel:has(.kz-sel-label) .kz-sel-art { width: 66cqi; height: 66cqi; }
+.kz-sel-label { font: 900 clamp(1rem, 11cqi, 2.2rem)/1.1 var(--font-display, Lato, sans-serif); text-align: center; overflow-wrap: anywhere; }
+.kz-sel-selected { background: var(--kz-soft, #eef); box-shadow: inset 0 0 0 5px var(--kz-accent, #2e3a8c), var(--kz-card-shadow); animation: kz-bounce 0.35s cubic-bezier(0.34, 1.6, 0.64, 1); }
+.kz-sel-right { background: #e3f7ec; box-shadow: inset 0 0 0 6px var(--kz-green), 0 0 0 6px #bfeed4, var(--kz-card-shadow); animation: kz-bounce 0.45s cubic-bezier(0.34, 1.6, 0.64, 1); }
+.kz-sel-wrong { background: #fff4e5; box-shadow: inset 0 0 0 4px #f0b35a, var(--kz-card-shadow); animation: kz-wobble 0.45s ease; }
+.kz-sel-dim { opacity: 0.45; }
+.kz-sel:disabled { cursor: default; }
+.kz-sel-badge { position: absolute; top: 6%; right: 6%; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--kz-yellow); color: #8a5a00; box-shadow: 0 4px 10px -4px rgb(0 0 0 / 0.4); animation: kz-pop 0.4s cubic-bezier(0.34, 1.6, 0.64, 1); }
+
+/* ---------- rounds indicator ---------- */
+.kz-rounds { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.4rem 0.9rem; border-radius: 999px; background: #fff; box-shadow: inset 0 0 0 2px #ebe8e0; }
+.kz-dot { width: 0.9rem; height: 0.9rem; border-radius: 50%; background: #e2e0da; transition: background 0.3s ease, transform 0.3s ease; }
+.kz-dot.is-done { background: var(--kz-yellow); box-shadow: inset 0 0 0 2px #e0a400; }
+.kz-dot.is-now { background: var(--kz-accent, #2e3a8c); transform: scale(1.3); }
+.kz-rounds-bar { display: block; width: 8rem; height: 0.8rem; border-radius: 999px; background: #e2e0da; overflow: hidden; }
+.kz-rounds-bar > span { display: block; height: 100%; background: var(--kz-yellow); transition: width 0.4s ease; }
+.kz-rounds-text { font: 900 1rem/1 var(--font-display, Lato, sans-serif); color: var(--kz-ink); font-variant-numeric: tabular-nums; }
+
+/* ---------- in-round cheer and "Try again!" ---------- */
+.kz-cheer-wrap { position: fixed; inset: 0; z-index: 110; display: grid; place-items: center; pointer-events: none; }
+.kz-cheer, .kz-try {
+  display: flex; flex-direction: column; align-items: center; gap: 0.3em;
+  padding: 0.6em 1.2em 0.8em; border-radius: 2rem; background: #fffdf5;
+  font: 900 clamp(2rem, 7vmin, 4.5rem)/1 var(--font-display, Lato, sans-serif); color: #1f2433;
+  box-shadow: 0 0 0 6px var(--kz-yellow), 0 30px 60px -20px rgb(0 0 0 / 0.45);
+  animation: kz-cheer 1.4s cubic-bezier(0.34, 1.5, 0.64, 1) both;
+}
+.kz-try { background: #fff; font-size: clamp(1.6rem, 5vmin, 3rem); box-shadow: 0 0 0 5px #ffd79a, 0 24px 50px -20px rgb(0 0 0 / 0.35); animation: kz-cheer 0.7s cubic-bezier(0.34, 1.5, 0.64, 1) both; }
+.kz-cheer-art { width: clamp(84px, 20vmin, 200px); height: clamp(84px, 20vmin, 200px); }
+.kz-try-art { width: clamp(64px, 13vmin, 130px); height: clamp(64px, 13vmin, 130px); }
+
+/* ---------- end of game ---------- */
+.kz-complete {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(10px, 2vmin, 24px);
+  width: min(100%, 900px); margin: 0 auto; padding: clamp(20px, 4vmin, 56px);
+  border-radius: calc(var(--kz-radius) * 1.3);
+  background: radial-gradient(120% 80% at 50% 0%, #fff6d6, #fff 60%);
+  box-shadow: 0 0 0 4px #ffe18a, var(--kz-card-shadow);
+  animation: kz-pop 0.5s cubic-bezier(0.34, 1.5, 0.64, 1) both;
+}
+.kz-complete-art { width: clamp(120px, 28vmin, 260px); height: clamp(120px, 28vmin, 260px); animation: kz-float 3s ease-in-out infinite; }
+.kz-complete-title { margin: 0; font: 900 clamp(2.2rem, 7vmin, 4.6rem)/1.05 var(--font-display, Lato, sans-serif); color: #1f2433; }
+.kz-complete-stars { display: flex; gap: clamp(6px, 1.4vmin, 16px); }
+.kz-cstar { display: grid; place-items: center; width: clamp(56px, 11vmin, 110px); height: clamp(56px, 11vmin, 110px); color: #dedbd2; }
+.kz-cstar svg { width: 100%; height: 100%; }
+.kz-cstar.on { color: var(--kz-yellow); filter: drop-shadow(0 6px 6px rgb(200 140 0 / 0.45)); animation: kz-star-in 0.6s calc(0.25s + var(--i) * 0.22s) cubic-bezier(0.34, 1.6, 0.64, 1) both; }
+.kz-complete-detail { font-size: 1.25rem; font-weight: 700; color: #474e60; }
+.kz-complete-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--kz-gap); margin-top: 0.5rem; }
+
+/* ---------- motion ---------- */
+@keyframes kz-bounce { 0% { transform: scale(0.92); } 55% { transform: scale(1.06); } 100% { transform: scale(1); } }
+@keyframes kz-wobble { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-3deg); } 75% { transform: rotate(3deg); } }
+@keyframes kz-pop { 0% { transform: scale(0.6); opacity: 0; } 70% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes kz-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+@keyframes kz-star-in { 0% { transform: scale(0) rotate(-60deg); opacity: 0; } 100% { transform: scale(1) rotate(0); opacity: 1; } }
+@keyframes kz-cheer { 0% { transform: scale(0.4); opacity: 0; } 18% { transform: scale(1.08); opacity: 1; } 30% { transform: scale(1); } 85% { transform: scale(1); opacity: 1; } 100% { transform: scale(0.9); opacity: 0; } }
+html.reduce-motion :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-cstar.on, .kz-sel, .kz-sel-badge) { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-cstar.on, .kz-sel, .kz-sel-badge) { animation: none !important; } }
