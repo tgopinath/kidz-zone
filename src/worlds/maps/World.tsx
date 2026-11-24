@@ -178,7 +178,7 @@ export default function MapsWorld() {
         </p>
       </div>
       {toast && (
-        <div className="fixed inset-x-4 top-4 z-[60] mx-auto max-w-md animate-pop rounded-2xl border border-line bg-white p-4 shadow-pop" role="status">
+        <div className="fixed inset-x-4 bottom-32 z-[60] mx-auto max-w-md animate-pop rounded-2xl border border-line bg-white p-4 shadow-pop" role="status">
           <div className="flex items-center gap-3">
             <Mascot mood="cheer" size={56} />
             <div>

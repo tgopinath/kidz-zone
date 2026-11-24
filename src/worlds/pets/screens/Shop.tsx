@@ -43,9 +43,9 @@ export default function Shop() {
                 <div className="h-24 rounded-2xl relative overflow-hidden" style={{ background: t.wall }}><div className="absolute bottom-0 inset-x-0 h-1/3" style={{ background: t.floor }} /></div>
                 <div className="font-display font-bold mt-2">{t.name}</div>
                 {own ? (
-                  <button className="btn btn-white w-full !min-h-11 mt-2" onClick={() => g.setTheme(t.id)}>{g.room.theme === t.id ? '✓ Using' : 'Use'}</button>
+                  <button className="btn btn-white w-full !min-h-16 mt-2" onClick={() => g.setTheme(t.id)}>{g.room.theme === t.id ? '✓ Using' : 'Use'}</button>
                 ) : (
-                  <button className="btn btn-gold w-full !min-h-11 mt-2" onClick={() => g.buyTheme(t.id)}>🪙 {t.price}</button>
+                  <button className="btn btn-gold w-full !min-h-16 mt-2" onClick={() => g.buyTheme(t.id)}>🪙 {t.price}</button>
                 )}
               </div>
             )
@@ -116,7 +116,7 @@ export default function Shop() {
                 <button className="btn btn-white" onClick={() => setConfirm(null)}>Not now</button>
                 <button className="btn btn-gold" disabled={!can} onClick={() => { if (g.buy(confirm.id, qty)) setConfirm(null) }}>{can ? 'Buy!' : 'Not enough'}</button>
               </div>
-              {confirm.kind === 'accessory' && <button className="mt-3 font-bold text-sky min-h-11" onClick={() => { setConfirm(null); g.go('customize') }}>Preview in Style Studio →</button>}
+              {confirm.kind === 'accessory' && <button className="mt-3 font-bold text-sky min-h-16" onClick={() => { setConfirm(null); g.go('customize') }}>Preview in Style Studio →</button>}
             </div>
           )
         })()}

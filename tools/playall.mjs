@@ -29,7 +29,7 @@ const PET_GAMES = ['Ball Catch', 'Obstacle Run', 'Hide & Seek', 'Bubble Pop', 'M
  *  'puzzle' (explore with taps, then finish), 'endless' (check that three rounds move on by themselves). */
 const GAMES = [
   ...BRAIN.map((id) => ({ world: 'brain', id, route: `/brain/play/${id}`, start: ['Start'], kind: 'rounds', exploreMs: 9000 })),
-  ...MAPS.map((id) => ({ world: 'maps', id, route: `/maps/games/${id}`, start: ['Start', 'Play', 'Beginner'], kind: 'rounds' })),
+  ...MAPS.map((id) => ({ world: 'maps', id, route: `/maps/games/${id}`, start: ['Start', 'Play', 'Beginner', "Let's go"], kind: 'rounds' })),
   { world: 'maps', id: 'arrange-states', route: '/maps/puzzle/india', start: ['Start', 'Easy'], kind: 'puzzle', exploreMs: 3000 },
   { world: 'words', id: 'find-fruits', route: '/words/play/find/fruits-L1', start: ['Start'], kind: 'rounds' },
   { world: 'words', id: 'find-alphabets', route: '/words/play/find/alphabets-L1', start: ['Start'], kind: 'rounds' },
@@ -54,6 +54,8 @@ window.__pa = {
     return [...document.querySelectorAll('#main :is(button, a[href], [role=button], [role=tab], [role=radio], select, input:not([type=hidden]):not([type=range]))')]
       .filter((el) => !el.closest('svg, [data-board], [data-small-ok], [aria-hidden=true], .sr-only') && !el.matches('.sr-only, [tabindex="-1"]:not(button)') && !(el.matches('a') && el.closest('p, li') && !el.className) && this.vis(el) && !el.disabled);
   },
+  /** inside a dialog or a full-screen overlay (a modal intentionally covers the page behind it) */
+  modal(n) { for (let e = n; e && e !== document.body; e = e.parentElement) { if (e.matches('[role=dialog], [aria-modal=true], .modal, .overlay')) return true; const cs = getComputedStyle(e); if (cs.position === 'fixed') { const r = e.getBoundingClientRect(); if (r.width >= innerWidth * 0.9 && r.height >= innerHeight * 0.9) return true; } } return false; },
   check() {
     const out = { small: [], covered: [], scroll: document.documentElement.scrollWidth > innerWidth + 1 ? document.documentElement.scrollWidth : 0 };
     const header = [...document.querySelectorAll('header.sticky, .kz-chrome, .md-top-app-bar, .ios-navbar')].reduce((m, h) => Math.max(m, h.getBoundingClientRect().bottom), 0);
@@ -64,7 +66,7 @@ window.__pa = {
       const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
       if (cy <= header + 2 || cy >= bottomBar - 2 || cx < 0 || cx > innerWidth || cy < 0 || cy > innerHeight) continue;
       const hit = document.elementFromPoint(cx, cy);
-      if (hit && hit !== el && !el.contains(hit) && !(hit.closest('[role=dialog], .modal, [aria-modal=true]') && !el.closest('[role=dialog], .modal, [aria-modal=true]')) && !(hit.closest('.kz-cheer-wrap, [data-kz-complete]') && el.closest('[data-kz-complete]'))) out.covered.push(this.name(el) + ' <- ' + (hit.closest('button,a,[role=button]') ? this.name(hit.closest('button,a,[role=button]')) : hit.className?.toString().slice(0, 30) || hit.tagName));
+      if (hit && hit !== el && !el.contains(hit) && !(this.modal(hit) && !this.modal(el)) && !(hit.closest('.kz-cheer-wrap, [data-kz-complete]') && el.closest('[data-kz-complete]'))) out.covered.push(this.name(el) + ' <- ' + (hit.closest('button,a,[role=button]') ? this.name(hit.closest('button,a,[role=button]')) : hit.className?.toString().slice(0, 30) || hit.tagName));
     }
     return out;
   },
@@ -118,7 +120,8 @@ async function playOne(c, g, w, h) {
   };
   // start
   if (g.pet) {
-    for (const step of [['Enter Adoption Center'], null, ['Adopt', 'Choose', 'Take'], ['Adopt']]) {
+    const needsPet = await ev(c, `!!__pa.byText(['Enter Adoption Center'])`);
+    for (const step of needsPet ? [['Enter Adoption Center'], null, ['Adopt', 'Choose', 'Take'], ['Adopt']] : []) {
       if (step === null) { const p = await ev(c, `(()=>{const b=[...document.querySelectorAll('.w-pets button')].filter(e=>__pa.vis(e)&&/puppy|kitten|bunny|panda|fox|dog|cat/i.test(e.innerText+e.getAttribute('aria-label')))[0]; if(!b) return null; const r=b.getBoundingClientRect(); return {x:r.left+r.width/2,y:r.top+r.height/2}})()`); if (p) await click(c, p.x, p.y); await sleep(1200); continue; }
       const t = await ev(c, `__pa.byText(${JSON.stringify(step)}, '.kz-bar-inner')`);
       if (t) { await click(c, t.x, t.y); await sleep(1400); }

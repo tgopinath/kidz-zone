@@ -37,7 +37,7 @@ export default function Missions() {
               <div className="h-3 mt-2 rounded-full bg-black/10 overflow-hidden"><motion.div className="h-full bg-mint" animate={{ width: `${(prog / m.goal) * 100}%` }} /></div>
               <div className="flex justify-between items-center mt-2">
                 <span className="text-sm font-extrabold text-ink/60">{Math.min(prog, m.goal)} / {m.goal}</span>
-                <button className="btn btn-green !min-h-11 !py-1" disabled={!done || claimed} onClick={() => g.claimMission(id)}>{claimed ? 'Done ✓' : done ? 'Claim!' : 'In progress'}</button>
+                <button className="btn btn-green !min-h-16 !py-1" disabled={!done || claimed} onClick={() => g.claimMission(id)}>{claimed ? 'Done ✓' : done ? 'Claim!' : 'In progress'}</button>
               </div>
             </div>
           )
@@ -57,7 +57,7 @@ export default function Missions() {
               <div className="text-xs font-bold text-ink/60 min-h-8">{a.desc}</div>
               <div className="h-2 mt-2 rounded-full bg-black/10 overflow-hidden"><div className="h-full bg-sun" style={{ width: `${Math.min(1, v / a.goal) * 100}%` }} /></div>
               <div className="text-[11px] font-extrabold mt-1">{Math.min(v, a.goal)} / {a.goal}</div>
-              {claimed ? <div className="font-bold text-mint mt-2">🏅 Earned</div> : <button className="btn btn-gold !min-h-10 !text-sm mt-2 w-full" disabled={!done} onClick={() => g.claimAchievement(a.id)}>{done ? `Claim ${a.reward.gems ? '💎' + a.reward.gems : '🪙' + a.reward.coins}` : 'Locked'}</button>}
+              {claimed ? <div className="font-bold text-mint mt-2">🏅 Earned</div> : <button className="btn btn-gold !min-h-16 !text-sm mt-2 w-full" disabled={!done} onClick={() => g.claimAchievement(a.id)}>{done ? `Claim ${a.reward.gems ? '💎' + a.reward.gems : '🪙' + a.reward.coins}` : 'Locked'}</button>}
             </div>
           )
         })}

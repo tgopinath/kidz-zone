@@ -17,7 +17,7 @@ export function TopBar() {
   return (
     <header className="relative z-30 px-3 pt-[max(env(safe-area-inset-top),10px)]">
       <div className="max-w-5xl mx-auto flex items-center gap-2">
-        <button onClick={() => go('profile')} className="glass rounded-full pl-1 pr-3 py-1 flex items-center gap-2 shadow-md min-h-12" aria-label={`Profile: ${player.name}, level ${lv.level}`}>
+        <button onClick={() => go('profile')} className="glass rounded-full pl-1 pr-3 py-1 flex items-center gap-2 shadow-md min-h-16" aria-label={`Profile: ${player.name}, level ${lv.level}`}>
           <span className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-200 to-pink-200 grid place-items-center text-2xl">{player.avatar}</span>
           <span className="text-left leading-tight hidden sm:block">
             <span className="block font-display font-semibold text-sm">{player.name}</span>
@@ -29,8 +29,8 @@ export function TopBar() {
           </span>
         </button>
         <div className="flex-1" />
-        <motion.button key={coinBump} initial={{ scale: 1.25 }} animate={{ scale: 1 }} onClick={() => go('shop')} className="glass pill shadow-md min-h-11 text-base" aria-label={`${coins} coins`}>🪙 {coins}</motion.button>
-        <button onClick={() => go('shop')} className="glass pill shadow-md min-h-11 text-base" aria-label={`${gems} gems`}>💎 {gems}</button>
+        <motion.button key={coinBump} initial={{ scale: 1.25 }} animate={{ scale: 1 }} onClick={() => go('shop')} className="glass pill shadow-md min-h-16 text-base" aria-label={`${coins} coins`}>🪙 {coins}</motion.button>
+        <button onClick={() => go('shop')} className="glass pill shadow-md min-h-16 text-base" aria-label={`${gems} gems`}>💎 {gems}</button>
         <button onClick={() => go('missions')} className="glass rounded-full w-11 h-11 shadow-md text-xl relative" aria-label="Missions and achievements">
           📜<MissionDot />
         </button>
@@ -82,7 +82,7 @@ export function Overlays() {
   const evoPet = evolution && pets.find((p) => p.id === evolution.petId)
   return (
     <>
-      <div className="fixed top-20 inset-x-0 z-[60] flex flex-col items-center gap-2 pointer-events-none px-4" aria-live="polite">
+      <div className="fixed bottom-28 inset-x-0 z-[60] flex flex-col-reverse items-center gap-2 pointer-events-none px-4" aria-live="polite">
         <AnimatePresence>
           {toasts.map((t) => (
             <motion.button key={t.id} onClick={() => dismissToast(t.id)} layout initial={{ y: -30, opacity: 0, scale: 0.9 }} animate={{ y: 0, opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
@@ -195,7 +195,7 @@ export function Tutorial() {
           <h3 className="font-bold text-lg">{t.title}</h3>
           <p className="text-sm font-bold text-ink/70">{t.text}</p>
           <div className="flex gap-2 mt-3">
-            <button className="btn btn-blue !min-h-11 !py-1 !text-base" onClick={nextTutorial}>{tutorialStep === TUTORIAL.length - 1 ? 'Let’s play!' : 'Next'}</button>
+            <button className="btn btn-blue !min-h-16 !py-1 !text-base" onClick={nextTutorial}>{tutorialStep === TUTORIAL.length - 1 ? 'Let’s play!' : 'Next'}</button>
             <button className="text-sm font-bold text-ink/50 px-3" onClick={() => useGame.setState({ tutorialStep: -1 })}>Skip tips</button>
           </div>
         </div>

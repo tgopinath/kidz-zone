@@ -83,6 +83,59 @@ flowchart LR
 - **First run:** `src/shared/legacy.ts` summarises any saves the original apps left on the same origin (they
   lived on their own domains, so on kidz-zone's domain this normally finds nothing). It runs once per device.
 
+## Big, touch-first play (shared play kit, `src/play`)
+
+Since November 2026 every world sits on one play kit, so all games look and behave alike for young children:
+
+```mermaid
+flowchart LR
+  E[Emoji in any world's code] -->|artify.ts, MutationObserver| P[3D picture<br/>public/art3d, Fluent Emoji 3D, MIT]
+  G[Game: right answer] --> F[useRoundFlow / useAutoAdvance<br/>roundFlow.ts]
+  F -->|lock input, cheer, sound| C[RoundCheer + confetti stars]
+  C -->|~1.5–1.8 s, no Next button| N[next round]
+  N -->|last round| D[GameComplete: trophy, stars, Replay, Home]
+  W[Wrong answer] -->|gentle| T[Try again! — same round]
+```
+
+- **Pictures:** `tools/art3d.mjs` scans the source for every emoji (and Map Explorer's run-time flags) and copies
+  only those Fluent Emoji 3D pictures (256 px WebP, from `@lobehub/fluent-emoji-3d`) into `public/art3d`
+  (924 pictures, about 5 MB, loaded lazily and cached by the service worker). `src/play/artify.ts` swaps emoji
+  text for the pictures across the whole app, Word Garden's vanilla JS included, without touching React's own text
+  nodes; a square card holding only a picture gets `kz-fill` so the picture fills ~75% of it. `<Art3D>` draws one
+  directly. Emoji without a picture (5 rare flags) stay emoji. Letters and numbers are big colourful type.
+- **Sizes:** `play.css` scales the root font with the screen (`clamp(17px, 12.5px + 0.95vmin, 24px)`), widens the
+  content column to ~90% of the window, and gives every control in `#main` a 64 × 64 px minimum (88–96 px for
+  main game buttons). Boards with many cells opt out with `data-board`.
+- **Rounds:** `useRoundFlow` (React) / `createRoundFlow` (plain TS, used by Word Garden) — success locks input,
+  cheers, then loads the next round by itself; a miss says "Try again!" and keeps the round; the last round shows
+  `GameComplete` with Replay. Worlds that already know when a round ends use `useAutoAdvance`.
+  Unit tests: `src/play/roundFlow.test.ts`, `src/play/art.test.ts`.
+- **Feedback:** `feedback.ts` — synthesised sounds (Settings → Sound), a short vibration on Android, confetti
+  stars; all still with Reduce motion.
+- **Testing:** `tools/playall.mjs` plays every game start to finish at 375×667, 414×896, 768×1024, 1024×768,
+  1440×900 and 1920×1080 in headless Chrome (test mode `?kztest=1` marks the right answers, see
+  `src/play/testMode.ts`) and checks scrolling, 64 px targets, covered controls, automatic rounds, the end screen
+  and console errors.
+
+## Optional sign-in for grown-ups (`src/shared/cloud.ts`)
+
+```mermaid
+flowchart LR
+  PA[Grown-ups area → Account<br/>behind the sum gate] -->|Sign in with Google, pop-up| FB[Firebase Auth<br/>project gopinath-apps]
+  FB --> FS[(Firestore users/uid/apps/kidzzone<br/>data: progress keys only)]
+  LS[(This device's saves)] <-->|cloudMerge.ts: keep the higher progress| FS
+```
+
+- Never a wall: children play without it; only the grown-ups area offers it. Same schema and project as Kolam Auth.
+- On sign-in the cloud copy and this device are merged (per world the side with more XP wins, logs joined, the
+  larger jar kept) and saved both ways; later changes save after 1.5 s. Sign-out keeps everything on the device.
+- Synced keys: `kidzzone:v1` and each world's save (Word Wonders, Word Garden, Money Master, Puzzle Quest, Brain Gym,
+  Virtual Pet Universe, Map Explorer). My Supermarket keeps its IndexedDB progress on the device.
+- Web uses a pop-up. An address that is not in Firebase → Authentication → Authorized domains gets
+  "Sign-in isn't set up for this address yet". The Android app uses the native `@capacitor-firebase/authentication`
+  plugin when its shell has it (not yet: it needs the Android app registered in Firebase); the iPhone app hides the
+  button for now. Both say to sign in on the website instead.
+
 ## Build and deploy
 
 ```mermaid
@@ -94,8 +147,9 @@ flowchart LR
   LIVE --> P[Portfolio card<br/>gopinath-portfolio + PetProjects]
 ```
 
-- `npm test` runs the shared-layer tests (profile, progress, Today's mix, first-run import) and the source apps'
+- `npm test` runs the play kit tests (round flow, picture map), the cloud merge tests, the shared-layer tests (profile, progress, Today's mix, first-run import) and the source apps'
   own engine tests (Puzzle Quest adaptive engine and store, Money Master currency and challenges, My Supermarket
   engine).
 - `npm run build` type-checks and builds. `node tools/check.mjs` opens every world headless in web, Android and
-  iPhone modes and fails on console errors. `node tools/shots.mjs` captures the portfolio screenshots.
+  iPhone modes and fails on console errors. `node tools/playall.mjs` plays every game at six sizes.
+  `node tools/shots.mjs` captures the portfolio screenshots.

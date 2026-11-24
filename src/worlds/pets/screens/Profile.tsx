@@ -36,8 +36,8 @@ export default function Profile() {
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-200 to-pink-200 grid place-items-center text-5xl">{g.player.avatar}</div>
             <div className="flex-1 min-w-0">
               <div className="flex gap-2">
-                <input value={name} maxLength={16} onChange={(e) => setName(e.target.value)} aria-label="Player name" className="flex-1 min-w-0 min-h-12 rounded-2xl border-4 border-pink-200 px-3 font-display font-semibold text-xl" />
-                <button className="btn btn-white !min-h-12" onClick={() => { g.setPlayer({ name: name.trim() || 'Pet Pal' }); g.toast('Name saved!', '✏️') }}>Save</button>
+                <input value={name} maxLength={16} onChange={(e) => setName(e.target.value)} aria-label="Player name" className="flex-1 min-w-0 min-h-16 rounded-2xl border-4 border-pink-200 px-3 font-display font-semibold text-xl" />
+                <button className="btn btn-white !min-h-16" onClick={() => { g.setPlayer({ name: name.trim() || 'Pet Pal' }); g.toast('Name saved!', '✏️') }}>Save</button>
               </div>
               <div className="font-bold text-ink/60 mt-1">Level {lv.level} · {lv.into}/{lv.need} XP</div>
             </div>
@@ -77,13 +77,13 @@ export default function Profile() {
             <p className="text-sm font-bold text-ink/60">Progress saves automatically on this device{cloudEnabled ? ' and can sync to the cloud.' : '. (Guest mode)'}</p>
             {cloudEnabled && (
               <form className="flex gap-2 mt-2" onSubmit={async (e) => { e.preventDefault(); setCloudMsg(await signInWithEmail(email)) }}>
-                <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Grown-up's email" className="flex-1 min-w-0 min-h-11 rounded-2xl border-4 border-sky-200 px-3 font-bold" />
-                <button className="btn btn-blue !min-h-11">Sync</button>
+                <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Grown-up's email" className="flex-1 min-w-0 min-h-16 rounded-2xl border-4 border-sky-200 px-3 font-bold" />
+                <button className="btn btn-blue !min-h-16">Sync</button>
               </form>
             )}
             {cloudEnabled && <p className="text-xs font-bold text-ink/50 mt-1">{cloudMsg || cloudStatus()}</p>}
           </div>
-          <button className="text-sm font-bold text-red-500 min-h-11" onClick={() => setConfirmReset(true)}>Start over…</button>
+          <button className="text-sm font-bold text-red-500 min-h-16" onClick={() => setConfirmReset(true)}>Start over…</button>
         </div>
       </div>
 
@@ -100,7 +100,7 @@ export default function Profile() {
 
 function Toggle({ label, on, set }: { label: string; on: boolean; set: (v: boolean) => void }) {
   return (
-    <button role="switch" aria-checked={on} onClick={() => set(!on)} className="w-full flex items-center justify-between min-h-12 font-bold">
+    <button role="switch" aria-checked={on} onClick={() => set(!on)} className="w-full flex items-center justify-between min-h-16 font-bold">
       <span>{label}</span>
       <span className={`w-14 h-8 rounded-full p-1 transition ${on ? 'bg-mint' : 'bg-slate-300'}`}><span className={`block w-6 h-6 rounded-full bg-white shadow transition ${on ? 'translate-x-6' : ''}`} /></span>
     </button>

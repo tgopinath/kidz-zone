@@ -23,9 +23,14 @@ Shared across every world:
 - **One Settings screen:** sound, reading voice speed, text size and reduced motion.
 - **Grown-ups area** (behind a multiplication question): a 14-day chart across worlds, a per-world table, each
   world's own dashboard (Word Wonders, Puzzle Quest, Brain Gym, Map Explorer, My Supermarket) and reset.
+- **Optional sign-in for grown-ups:** in the grown-ups area, Sign in with Google keeps progress on every device
+  (Firebase; only progress is saved; children never need it).
 - **A play-money jar:** money challenges and shopping trips add rupees; the Shop swaps them for shop coins.
 
-Look: Kolam (Lato, ink on white, hairline borders); each world keeps one accent colour. Inside the Android app the
+Look: big, colourful and touch-first for young children: 3D pictures (Fluent Emoji 3D) for every object, 64 px
+minimum touch targets, content that fills the screen on phones, tablets and desktops, and rounds that move on by
+themselves after a cheer (no Next buttons), ending in a celebration with Replay. Lato type; each world keeps one
+accent colour. Inside the Android app the
 Kolam M3 kit gives Material 3 bars, inside the iPhone app the Kolam iOS kit gives Apple HIG bars. Preview in a
 browser with `?app=android`, `?app=ios`, and `?app=web` to go back.
 
@@ -37,13 +42,16 @@ npm run dev      # http://localhost:5173
 npm test         # shared layer + the source apps' engine tests
 npm run build    # type-check + production build into dist/
 node tools/check.mjs http://localhost:5173   # every world in web, Android and iPhone modes, fails on console errors
+node tools/playall.mjs http://localhost:4173  # plays every game start to finish at six screen sizes (after npm run build && npx vite preview)
+node tools/art3d.mjs <fluent-emoji-3d/assets> # rebuild public/art3d after adding emoji
 ```
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for how the eight apps were brought together.
 
 ## Sources and licences
 
-- Word Garden pictures: Microsoft Fluent Emoji 3D (MIT), in `public/garden/img`.
+- 3D pictures: Fluent Emoji © Microsoft, MIT licence (https://github.com/microsoft/fluentui-emoji), 256 px WebP from
+  `@lobehub/fluent-emoji-3d` (MIT), in `public/art3d`, `public/shell/art` and `public/garden/img`.
 - Money: Reserve Bank of India specimen notes and coins from Wikimedia Commons (GODL-India, CC0); see
   `public/money/currency/CREDITS.md`.
 - Maps: India boundaries from the Government of India Local Government Directory (December 2023) via datameet and
@@ -51,7 +59,8 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for how the eight apps were brought toget
   country data from mledoze/countries (ODbL); photos from Wikimedia Commons, credited under each photo.
 - Speech uses the device's own voices (Web Speech API; native text-to-speech inside the phone apps).
 
-Progress stays on the device (localStorage and IndexedDB). No account, no tracking. The Pets world's optional cloud
+Progress stays on the device (localStorage and IndexedDB) unless a grown-up signs in to keep a copy in their own
+account. No ads, no tracking. The Pets world's optional cloud
 save only switches on when `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set at build time; they are not.
 
 Designed and built by Gopinath Thandapani with AI-assisted coding.

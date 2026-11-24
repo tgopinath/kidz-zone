@@ -51,7 +51,7 @@ export default function Adopt() {
           <motion.div key="browse" className="relative max-w-5xl mx-auto px-4 pt-6 pb-10" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
             <div className="flex items-center justify-between">
               <h1 className="text-3xl font-bold text-white">Choose a friend</h1>
-              {!first && <button className="btn btn-white !min-h-11" onClick={() => go('collection')}>← Back</button>}
+              {!first && <button className="btn btn-white !min-h-16" onClick={() => go('collection')}>← Back</button>}
             </div>
             <p className="font-bold text-ink/60 mt-1">{first ? 'Your first pet is free! Tap a pet to meet it.' : `You have 🪙 ${coins} and 💎 ${gems}.`}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
@@ -79,11 +79,11 @@ export default function Adopt() {
               <label htmlFor="petname" className="font-bold text-sm text-ink/70">Pet name</label>
               <div className="flex gap-2 mt-1">
                 <input id="petname" autoFocus value={name} maxLength={14} onChange={(e) => setName(e.target.value)} placeholder={sp.label}
-                  className="flex-1 min-w-0 min-h-12 rounded-2xl border-4 border-pink-200 px-3 text-xl font-display font-semibold outline-none focus:border-pink-400" />
+                  className="flex-1 min-w-0 min-h-16 rounded-2xl border-4 border-pink-200 px-3 text-xl font-display font-semibold outline-none focus:border-pink-400" />
                 <button type="button" className="btn btn-white !px-3" aria-label="Random name" onClick={() => { sfx.tap(); setName(NAMES[Math.floor(Math.random() * NAMES.length)]) }}>🎲</button>
               </div>
               <button type="submit" className="btn btn-gold w-full mt-4 text-xl">Adopt {name || sp.label} 💛</button>
-              <button type="button" className="w-full mt-2 font-bold text-ink/50 min-h-11" onClick={() => setStep('browse')}>Choose a different pet</button>
+              <button type="button" className="w-full mt-2 font-bold text-ink/50 min-h-16" onClick={() => setStep('browse')}>Choose a different pet</button>
             </form>
           </motion.div>
         )}
@@ -118,7 +118,7 @@ export default function Adopt() {
                 <PetActor pet={preview(sp.id)} size={190} anim={anim} showSpeech={false} onTap={() => { sfx.voice(sp.sound); setAnim({ name: (['jump', 'spin', 'love', 'dance'] as Anim[])[Math.floor(Math.random() * 4)], key: Date.now() }) }} />
                 <div className="flex gap-2 pb-2">
                   {(['jump', 'spin', 'dance', 'love'] as Anim[]).map((a) => (
-                    <button key={a} className="pill bg-white shadow text-sm min-h-10 capitalize" onClick={() => { sfx.tap(); setAnim({ name: a, key: Date.now() }) }}>{a}</button>
+                    <button key={a} className="pill bg-white shadow text-sm min-h-16 capitalize" onClick={() => { sfx.tap(); setAnim({ name: a, key: Date.now() }) }}>{a}</button>
                   ))}
                 </div>
               </div>

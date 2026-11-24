@@ -94,7 +94,7 @@ export function Tabs<T extends string>({ tabs, value, onChange, onCard }: { tabs
     <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2 mb-3" role="tablist">
       {tabs.map((t) => (
         <button key={t.id} role="tab" aria-selected={value === t.id} onClick={() => onChange(t.id)}
-          className={`shrink-0 px-4 min-h-11 rounded-full font-semibold text-base transition ${onCard ? (value === t.id ? 'bg-candy text-white shadow-md' : 'bg-slate-100 text-ink/70') : value === t.id ? 'bg-white text-ink shadow-md' : 'bg-white/40 text-white'}`}>
+          className={`shrink-0 px-4 min-h-16 rounded-full font-semibold text-base transition ${onCard ? (value === t.id ? 'bg-candy text-white shadow-md' : 'bg-slate-100 text-ink/70') : value === t.id ? 'bg-white text-ink shadow-md' : 'bg-white/40 text-white'}`}>
           {t.label}
         </button>
       ))}

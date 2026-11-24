@@ -69,7 +69,7 @@ export default function Train() {
   if (skill && phase !== 'pick') {
     const newLvl = lvl(skill.id)
     return (
-      <ScreenShell title={`Train: ${skill.name}`} icon={skill.icon} right={<button className="btn btn-white !min-h-11" onClick={() => { setSkill(null); setPhase('pick') }}>← Skills</button>}>
+      <ScreenShell title={`Train: ${skill.name}`} icon={skill.icon} right={<button className="btn btn-white !min-h-16" onClick={() => { setSkill(null); setPhase('pick') }}>← Skills</button>}>
         <div className="card p-4 relative overflow-hidden max-w-xl mx-auto">
           {phase === 'success' && <Confetti />}
           <div className="text-center font-display font-bold text-xl">

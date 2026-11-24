@@ -50,16 +50,16 @@ export default function Decorate() {
 
       <div className="absolute top-[76px] inset-x-3 z-20 flex justify-between items-start gap-2">
         <div className="card px-4 py-2 font-display font-bold">🛋️ Decorating — drag items to move them</div>
-        <button className="btn btn-green !min-h-12" onClick={() => { sfx.success(); g.go('home') }}>✓ Done</button>
+        <button className="btn btn-green !min-h-16" onClick={() => { sfx.success(); g.go('home') }}>✓ Done</button>
       </div>
 
       {selItem && (
         <motion.div className="absolute top-[140px] left-1/2 -translate-x-1/2 z-30 card p-2 flex gap-2" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           <span className="px-2 self-center font-display font-bold">{itemById(selItem.id)?.name}</span>
-          <button className="btn btn-white !min-h-11 !px-3" onClick={() => g.updateFurniture(selItem.uid, { flip: !selItem.flip })} aria-label="Flip">↔️</button>
-          <button className="btn btn-white !min-h-11 !px-3" onClick={() => g.updateFurniture(selItem.uid, { rot: (selItem.rot + 15) % 360 })} aria-label="Rotate">🔄</button>
-          <button className="btn btn-white !min-h-11 !px-3" onClick={() => g.updateFurniture(selItem.uid, { rot: 0, flip: false })} aria-label="Reset">⟲</button>
-          <button className="btn !min-h-11 !px-3" onClick={() => { g.removeFurniture(selItem.uid); setSel(null) }} aria-label="Put away">🗑️</button>
+          <button className="btn btn-white !min-h-16 !px-3" onClick={() => g.updateFurniture(selItem.uid, { flip: !selItem.flip })} aria-label="Flip">↔️</button>
+          <button className="btn btn-white !min-h-16 !px-3" onClick={() => g.updateFurniture(selItem.uid, { rot: (selItem.rot + 15) % 360 })} aria-label="Rotate">🔄</button>
+          <button className="btn btn-white !min-h-16 !px-3" onClick={() => g.updateFurniture(selItem.uid, { rot: 0, flip: false })} aria-label="Reset">⟲</button>
+          <button className="btn !min-h-16 !px-3" onClick={() => { g.removeFurniture(selItem.uid); setSel(null) }} aria-label="Put away">🗑️</button>
         </motion.div>
       )}
 
@@ -67,7 +67,7 @@ export default function Decorate() {
         <div className="max-w-3xl mx-auto card p-3">
           <div className="flex gap-2 mb-2">
             {(['furniture', 'themes', 'layouts'] as const).map((p) => (
-              <button key={p} onClick={() => setPanel(p)} className={`px-4 min-h-11 rounded-full font-display font-semibold capitalize ${panel === p ? 'bg-candy text-white' : 'bg-slate-100'}`}>{p}</button>
+              <button key={p} onClick={() => setPanel(p)} className={`px-4 min-h-16 rounded-full font-display font-semibold capitalize ${panel === p ? 'bg-candy text-white' : 'bg-slate-100'}`}>{p}</button>
             ))}
           </div>
           {panel === 'furniture' && (
@@ -101,9 +101,9 @@ export default function Decorate() {
           {panel === 'layouts' && (
             <div className="flex gap-2 flex-wrap items-center">
               {g.savedLayouts.map((l, i) => (
-                <button key={i} className="btn btn-white !min-h-11 !text-sm" onClick={() => g.loadLayout(i)}>📐 {l.name}</button>
+                <button key={i} className="btn btn-white !min-h-16 !text-sm" onClick={() => g.loadLayout(i)}>📐 {l.name}</button>
               ))}
-              <button className="btn btn-blue !min-h-11 !text-sm" onClick={() => g.saveLayout(`Layout ${g.savedLayouts.length + 1}`)}>💾 Save current layout</button>
+              <button className="btn btn-blue !min-h-16 !text-sm" onClick={() => g.saveLayout(`Layout ${g.savedLayouts.length + 1}`)}>💾 Save current layout</button>
               <span className="text-xs font-bold text-ink/50">Changes save automatically; saved layouts let you swap styles.</span>
             </div>
           )}

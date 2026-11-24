@@ -42,7 +42,7 @@ export default function Explore() {
                         {w.unlock.coins > 0 && <div>{coinOk ? '✅' : '🪙'} {w.unlock.coins} coins</div>}
                         {ach && <div>{achOk ? '✅' : '🏅'} Earn “{ach.name}”</div>}
                       </div>
-                      <button className="btn btn-gold w-full mt-2 !min-h-11" disabled={!lvOk || !coinOk || !achOk} onClick={() => g.unlockWorld(w.id)}>Unlock 🔓</button>
+                      <button className="btn btn-gold w-full mt-2 !min-h-16" disabled={!lvOk || !coinOk || !achOk} onClick={() => g.unlockWorld(w.id)}>Unlock 🔓</button>
                     </div>
                   )}
                 </div>

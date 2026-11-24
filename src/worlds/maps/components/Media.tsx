@@ -35,7 +35,7 @@ export function Photo({ id, alt, className = "", ratio = "aspect-[4/3]", credit 
       {credit && m?.credit && state !== "error" && (
         <figcaption className="mt-1 truncate text-[11px] text-ink-soft">
           Photo:{" "}
-          <a href={m.credit.page} target="_blank" rel="noreferrer" className="underline">
+          <a href={m.credit.page} target="_blank" rel="noreferrer" className="underline" data-small-ok>
             {m.credit.artist}
           </a>{" "}
           · {m.credit.license} · Wikimedia Commons

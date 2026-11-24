@@ -14,7 +14,7 @@ export default function Collection() {
   const discovered = new Set(g.pets.map((x) => x.species))
 
   return (
-    <ScreenShell title="My Pets" icon="📚" right={<button className="btn btn-gold !min-h-11" onClick={() => g.go('adopt')}>+ Adopt</button>}>
+    <ScreenShell title="My Pets" icon="📚" right={<button className="btn btn-gold !min-h-16" onClick={() => g.go('adopt')}>+ Adopt</button>}>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {g.pets.map((x) => {
           const sp = speciesById(x.species)
@@ -65,8 +65,8 @@ export default function Collection() {
             </div>
             <div className="grid place-items-center"><PetArt pet={p} mood={moodOf(p)} size={150} /></div>
             <div className="flex gap-2">
-              <input value={renaming} maxLength={14} onChange={(e) => setRenaming(e.target.value)} aria-label="Pet name" className="flex-1 min-w-0 min-h-12 rounded-2xl border-4 border-pink-200 px-3 font-display font-semibold text-xl" />
-              <button className="btn btn-white !min-h-12" onClick={() => g.renamePet(p.id, renaming)}>Rename</button>
+              <input value={renaming} maxLength={14} onChange={(e) => setRenaming(e.target.value)} aria-label="Pet name" className="flex-1 min-w-0 min-h-16 rounded-2xl border-4 border-pink-200 px-3 font-display font-semibold text-xl" />
+              <button className="btn btn-white !min-h-16" onClick={() => g.renamePet(p.id, renaming)}>Rename</button>
             </div>
             <div className="mt-3"><StatsPanel stats={p.stats} /></div>
             <div className="mt-3 p-3 rounded-2xl bg-yellow-50 text-sm font-bold">✨ {speciesById(p.species).ability.name}: {speciesById(p.species).ability.desc}</div>

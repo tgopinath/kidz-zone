@@ -27,7 +27,7 @@ export default function Customize() {
   const items = ACCESSORIES.filter((a) => a.slot === slot)
 
   return (
-    <ScreenShell title="Style Studio" icon="👗" right={<button className="btn btn-white !min-h-11" onClick={() => g.go('home')}>Done</button>}>
+    <ScreenShell title="Style Studio" icon="👗" right={<button className="btn btn-white !min-h-16" onClick={() => g.go('home')}>Done</button>}>
       <div className="grid md:grid-cols-[1fr_1.2fr] gap-4">
         <div className="card p-4 flex flex-col items-center">
           <div className="relative w-full h-72 grid place-items-center rounded-3xl touch-none cursor-grab active:cursor-grabbing" style={{ background: 'radial-gradient(circle at 50% 80%,#fff,#ffe9f5 60%,#e6e0ff)', perspective: 700 }}
@@ -43,19 +43,19 @@ export default function Customize() {
             {trying && <span className="absolute top-3 left-3 pill bg-yellow-100 text-sm">Trying on: {trying.name}</span>}
           </div>
           <div className="flex gap-2 mt-3">
-            <button className="btn btn-white !min-h-11" onClick={() => setTurn((t) => t - 45)} aria-label="Rotate left">↺</button>
-            <button className="btn btn-white !min-h-11" onClick={() => setTurn(0)}>Front</button>
-            <button className="btn btn-white !min-h-11" onClick={() => setTurn((t) => t + 45)} aria-label="Rotate right">↻</button>
+            <button className="btn btn-white !min-h-16" onClick={() => setTurn((t) => t - 45)} aria-label="Rotate left">↺</button>
+            <button className="btn btn-white !min-h-16" onClick={() => setTurn(0)}>Front</button>
+            <button className="btn btn-white !min-h-16" onClick={() => setTurn((t) => t + 45)} aria-label="Rotate right">↻</button>
           </div>
           <div className="w-full mt-4">
             <div className="font-display font-bold mb-2">Saved looks</div>
             <div className="flex gap-2 flex-wrap">
               {pet.looks.map((l, i) => (
-                <button key={i} onClick={() => g.applyLook(i)} className="rounded-2xl bg-pink-50 p-1 pr-3 flex items-center gap-1 font-bold text-sm min-h-12">
+                <button key={i} onClick={() => g.applyLook(i)} className="rounded-2xl bg-pink-50 p-1 pr-3 flex items-center gap-1 font-bold text-sm min-h-16">
                   <PetArt pet={{ ...pet, equipped: l.equipped, color: l.color }} size={40} />{l.name}
                 </button>
               ))}
-              <button className="btn btn-blue !min-h-12 !text-sm" onClick={() => g.saveLook(`Look ${pet.looks.length + 1}`)}>📸 Save this look</button>
+              <button className="btn btn-blue !min-h-16 !text-sm" onClick={() => g.saveLook(`Look ${pet.looks.length + 1}`)}>📸 Save this look</button>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function Customize() {
             <div className="mt-4 p-3 rounded-2xl bg-yellow-50 flex items-center gap-3">
               <span className="text-3xl">{trying.icon}</span>
               <span className="flex-1 font-bold">Like the {trying.name}?</span>
-              <button className="btn btn-gold !min-h-11" onClick={() => setBuying(trying)}>Buy <Price p={trying.price} /></button>
+              <button className="btn btn-gold !min-h-16" onClick={() => setBuying(trying)}>Buy <Price p={trying.price} /></button>
             </div>
           )}
         </div>
