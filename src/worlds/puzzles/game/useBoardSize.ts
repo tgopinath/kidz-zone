@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 /** Square board size that fits the viewport: `vh` is the share of viewport height it may use. */
-export function useBoardSize(vh = 0.55, max = 520) {
+export function useBoardSize(vh = 0.62, max = 920) {
   const calc = () => Math.floor(Math.min(window.innerWidth - 40, window.innerHeight * vh, max));
   const [size, setSize] = useState(calc);
   useEffect(() => {

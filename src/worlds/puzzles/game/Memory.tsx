@@ -57,7 +57,7 @@ export default function Memory({ data, api }: { data: MemoryData; api: GameApi }
     }
   };
 
-  const size = cards.length > 16 ? 'clamp(52px, 13vw, 92px)' : 'clamp(64px, 18vw, 120px)';
+  const size = cards.length > 16 ? 'clamp(64px, min(14vw, 12dvh), 150px)' : 'clamp(72px, min(20vw, 17dvh), 200px)';
   return (
     <div className="mem" style={{ gridTemplateColumns: `repeat(${data.columns}, ${size})` }}>
       {cards.map((c, i) => {

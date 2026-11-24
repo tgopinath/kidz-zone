@@ -17,7 +17,7 @@ export default function Maze({ data, api }: { data: MazeData; api: GameApi }) {
   const [note, setNote] = useState<string | null>(null);
   const [steps, setSteps] = useState(0);
   const done = useRef(false);
-  const board = useBoardSize(0.55, 520);
+  const board = useBoardSize(0.62, 900);
   const cell = board / w;
   const rocks = new Set(data.rocks);
 

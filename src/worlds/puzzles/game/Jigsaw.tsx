@@ -14,7 +14,7 @@ export default function Jigsaw({ data, api, seed }: { data: JigsawData; api: Gam
   const [wrongSlot, setWrongSlot] = useState<number | null>(null);
   const [hint, setHint] = useState<number | null>(null);
   const [peek, setPeek] = useState(false);
-  const board = useBoardSize(0.5);
+  const board = useBoardSize(0.6, 900);
   const cell = board / cols;
   const pieceSize = Math.max(44, Math.min(96, cell));
 

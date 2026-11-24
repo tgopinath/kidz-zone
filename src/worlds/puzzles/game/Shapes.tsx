@@ -12,7 +12,7 @@ export default function Shapes({ data, api }: { data: ShapesData; api: GameApi }
   const [wrong, setWrong] = useState<string | null>(null);
   const [hint, setHint] = useState<string | null>(null);
   const [note, setNote] = useState<string | null>(null);
-  const size = pieces.length > 6 ? 'clamp(56px, 15vw, 96px)' : 'clamp(68px, 20vw, 120px)';
+  const size = pieces.length > 6 ? 'clamp(64px, min(16vw, 14dvh), 150px)' : 'clamp(76px, min(22vw, 18dvh), 190px)';
 
   const flash = (m: string) => { setNote(m); setTimeout(() => setNote(null), 1600); };
 

@@ -1,3 +1,4 @@
+import { useAutoAdvance } from '../../../play/roundFlow';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { setSoundEnabled, sfx, speak, stopSpeaking } from '../audio';
 import { actions, progressFor, settingsFor, store, type AttemptOutcome } from '../core/db';
@@ -210,6 +211,8 @@ export default function Play({ child, category, daily = false, preview, onExit }
 
 function Result({ outcome, daily, onNext, onMap }: { outcome: AttemptOutcome | 'preview'; daily: boolean; onNext: () => void; onMap: () => void }) {
   useEffect(() => { if (outcome !== 'preview') speak(outcome.message); }, [outcome]);
+  // the next puzzle loads by itself after the cheer (shared play kit: no Next button); the daily one ends here
+  useAutoAdvance(outcome !== 'preview' && !daily, onNext, { ms: 3200 });
   if (outcome === 'preview') {
     return (
       <Modal label="Preview finished">
@@ -243,8 +246,14 @@ function Result({ outcome, daily, onNext, onMap }: { outcome: AttemptOutcome | '
             <div key={a.id} className="result-ach"><span style={{ fontSize: 34 }}>{a.emoji}</span><div><b>{a.name}</b><div className="subtle">{a.description}</div></div></div>
           ))}
           <div className="col" style={{ width: '100%', marginTop: 8 }}>
-            <button className="btn green lg block" onClick={onNext} autoFocus>{daily ? 'Back to map' : 'Next puzzle ▶'}</button>
-            {!daily && <button className="btn ghost block" onClick={onMap}>🗺️ Map</button>}
+            {daily ? (
+              <button className="btn green lg block" onClick={onNext} autoFocus>Back to map</button>
+            ) : (
+              <>
+                <p className="result-next" role="status">Next puzzle coming…</p>
+                <button className="btn ghost block" onClick={onMap}>🗺️ Map</button>
+              </>
+            )}
           </div>
         </div>
       </Modal>

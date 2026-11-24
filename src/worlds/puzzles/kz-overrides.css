@@ -29,3 +29,29 @@
 .w-puzzles .hero-card.daily { background: #1f2433; }
 .w-puzzles .hero-card.daily.done { background: #1d7f52; }
 .w-puzzles .hero-title { font-weight: 900; }
+
+/* ---------- big, touch-first puzzles (shared play kit) ---------- */
+.w-puzzles .play { max-width: min(96vw, 1600px); }
+.w-puzzles .icon-btn, .w-puzzles .play-top .icon-btn { width: 64px !important; height: 64px !important; font-size: 28px !important; border-radius: 18px; }
+.w-puzzles .btn { min-height: 64px; font-size: 1.15rem; padding: 0 1.4em; }
+.w-puzzles .btn.lg { min-height: 88px; font-size: 1.4rem; }
+.w-puzzles .btn.sm { min-height: 64px; }
+.w-puzzles .play-cat { font-size: 1.2rem; font-weight: 900; }
+.w-puzzles .play-timer { font-size: 1.2rem; min-height: 56px; display: inline-flex; align-items: center; }
+.w-puzzles .play-instruction { font-size: clamp(20px, 3.4vmin, 36px); font-weight: 900; color: var(--ink); }
+.w-puzzles .choice { max-width: min(96vw, 1200px); gap: clamp(16px, 3vmin, 32px); }
+.w-puzzles .choice-prompt { font-size: clamp(28px, 5vmin, 56px); }
+.w-puzzles .seq-cell { width: clamp(64px, 13vmin, 140px); height: clamp(64px, 13vmin, 140px); font-size: clamp(32px, 7vmin, 80px); }
+.w-puzzles .choice-opts { gap: clamp(12px, 2.4vmin, 28px); }
+.w-puzzles .opt { min-width: clamp(96px, 20vmin, 220px); height: clamp(96px, 20vmin, 220px); font-size: clamp(36px, 8vmin, 96px); border-radius: 28px; }
+.w-puzzles .opt.small { min-width: 72px; height: 72px; font-size: 34px; }
+.w-puzzles .opt.wrong { background: #fff4e5; }
+.w-puzzles .vis-item { min-width: 64px; font-size: clamp(32px, 6vmin, 64px); }
+.w-puzzles .shp-board, .w-puzzles .shp-tray { max-width: min(96vw, 1200px); }
+.w-puzzles .shp-rot { width: 64px; height: 64px; font-size: 28px; }
+.w-puzzles .mem { gap: clamp(10px, 2vmin, 20px); }
+.w-puzzles .modal { max-width: min(92vw, 720px); padding: clamp(20px, 4vmin, 48px); }
+.w-puzzles .result h1 { font-size: clamp(34px, 7vmin, 64px); }
+.w-puzzles .result-burst { font-size: clamp(64px, 14vmin, 140px); }
+.w-puzzles .result-msg { font-size: clamp(20px, 3vmin, 28px); }
+.w-puzzles .result-next { font-size: 1.2rem; padding: 12px 20px; }
