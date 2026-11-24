@@ -5,6 +5,8 @@
 // The word bank, levels, unlocking and star rules are the original game's; this file adds the
 // Kolam UI, line icons, accessibility, native text-to-speech in the Android app and a few bug fixes.
 
+import { burst, cue } from '../../play/feedback'
+
 export function mountGarden(ROOT, SAY, opts) {
 // ---------- word bank (pictures are emoji so every word has a clear, consistent picture) ----------
 const W3=[["cat","🐱"],["dog","🐶"],["sun","☀️"],["bus","🚌"],["hat","🎩"],["pig","🐷"],["cup","☕"],["bed","🛏️"],["egg","🥚"],["fox","🦊"],["ant","🐜"],["bee","🐝"],["owl","🦉"],["cow","🐮"],["key","🔑"],["box","📦"],["car","🚗"],["map","🗺️"],["bat","🦇"],["cap","🧢"],["web","🕸️"],["nut","🥜"],["pan","🍳"],["pen","🖊️"],["gem","💎"],["van","🚐"],["axe","🪓"],["ear","👂"],["hen","🐔"],["log","🪵"],["bag","👜"],["bow","🎀"],["leg","🦵"],["eye","👁️"],["pie","🥧"],["tea","🍵"],["ice","🧊"],["saw","🪚"]];
@@ -235,7 +237,7 @@ function header(){
   <div class="meta"><span class="k-badge k-badge-pill k-badge-primary">Level ${G.lv}</span><span class="k-badge k-badge-pill">${ic(t.icon,"k-icon")} ${t.name}</span><span class="k-badge k-badge-pill">${G.cards.length} cards</span>${diff?`<span class="k-badge k-badge-pill">${diff}</span>`:""}</div>`;
 }
 let keyHandler=null, advance=null;
-const WAIT=2000; // after a right answer, move on by itself after 2 s (Next skips the wait)
+const WAIT=1800; // after a right answer the next card comes by itself (shared play kit: no Next button)
 function stopAdvance(){if(advance){clearTimeout(advance);advance=null}}
 function goNext(){stopAdvance();if(!G)return;G.i++;G.i<G.cards.length?renderCard():finish()}
 function renderCard(){
@@ -248,11 +250,10 @@ function renderCard(){
     body+=`<div class="slots" id="slots" role="status" aria-label="Your word so far">${[...c.answer].map(()=>`<div class="slot"></div>`).join("")}</div>
     <div class="tiles" id="tiles" role="group" aria-label="Letter tiles">${c.tiles.map((t,i)=>`<button class="tile" data-t="${i}">${t}</button>`).join("")}</div><button class="k-btn k-btn-ghost k-btn-sm undo" id="undo">${ic("undo","k-icon sm")}Undo</button>`;
   }
-  body+=`<div class="done" id="done" hidden><button class="k-btn k-btn-secondary hear" id="hear">${ic("speaker","k-icon sm")}Hear it</button><button class="k-btn k-btn-primary k-btn-lg chunky nextcard" id="next"><span class="tick" aria-hidden="true"></span>${last?"Finish level":"Next card"}${ic("next")}</button></div>`;
+  body+=`<div class="done" id="done" hidden><button class="k-btn k-btn-secondary hear" id="hear">${ic("speaker","k-icon sm")}Hear it</button><div class="autonext" id="next" role="status"><span class="tick" aria-hidden="true"></span>${last?"Finishing the level…":"Next card coming…"}</div></div>`;
   $("#app").innerHTML=header()+`<div class="deck${last?" last":""}"><div class="card" id="card">${body}</div></div>`;
   $("#quit").onclick=()=>home();
   $("#hear").onclick=()=>say(c.sayExtra||c.backWord);
-  $("#next").onclick=goNext;
   const card=$("#card");
   let solved=false;
   const wrong=el=>{G.miss++;sfx("wrong");card.classList.remove("shake");void card.offsetWidth;card.classList.add("shake");if(el){el.classList.add("wrong");el.setAttribute("aria-disabled","true");el.setAttribute("aria-label",`${el.textContent}, not this one`)}announce("Not quite. Try again.")};
@@ -266,10 +267,9 @@ function renderCard(){
     if(c.kind==="choice"){card.querySelectorAll(".opt").forEach(b=>{b.disabled=true;if(b===el)b.classList.add("right")})}
     else{card.querySelectorAll(".slot").forEach(s=>s.classList.add("ok"));$("#slots").setAttribute("aria-label","You spelled "+c.answer);$("#tiles").hidden=true;$("#undo").hidden=true}
     const done=$("#done"), next=$("#next");done.hidden=false;
-    sfx("right");
+    sfx("right");burst(false);
     const spoken=c;setTimeout(()=>{if(G&&G.cards[G.i]===spoken)say(c.sayExtra||c.backWord)},450); // after the chime
     announce(`Correct! ${c.backWord}. ${last?"Finishing the level":"Next card"} in ${WAIT/1000} seconds.`);
-    next.focus({preventScroll:true});
     next.style.setProperty("--wait",WAIT+"ms");void next.offsetWidth;next.classList.add("counting");
     const here=G;advance=setTimeout(()=>{advance=null;if(G===here&&G.cards[G.i]===c)goNext()},WAIT);
   };
@@ -317,11 +317,12 @@ function finish(){
   <h1 id="done" tabindex="-1">Level ${lv} done!</h1><p>${miss===0?"Perfect, not a single slip!":`You found every answer, with ${miss} slip${miss>1?"s":""} along the way.`}${s<3?" A perfect round earns 3 stars.":""}</p>
   ${hasNext&&wasNew?`<div class="unlock">${newTier?`${art(t.e)}<span>New difficulty unlocked: <b>${t.name}</b><br>${t.skill}</span>`:`${ic("unlock")}<span>Level ${nextLv} is open. It’s a little harder!</span>`}</div>`:""}
   ${!hasNext?`<div class="unlock">${art("🏆")}<span>You finished the whole garden!</span></div>`:""}
-  <div class="row">${s<3?`<button class="k-btn k-btn-outline chunky" id="again">${ic("replay","k-icon sm")}Try for 3 stars</button>`:""}${hasNext?`<button class="k-btn k-btn-primary chunky" id="go">Level ${nextLv}${ic("next","k-icon sm")}</button>`:""}${homeBtn("map")}</div></div>`;
+  <div class="row"><button class="k-btn k-btn-primary k-btn-lg chunky" id="again">${ic("replay","k-icon sm")}Replay</button>${hasNext?`<button class="k-btn k-btn-secondary k-btn-lg chunky" id="go">Level ${nextLv}${ic("next","k-icon sm")}</button>`:""}${homeBtn("map")}</div></div>`;
   const a=$("#again");if(a)a.onclick=()=>start(lv);
   const g=$("#go");if(g)g.onclick=()=>start(nextLv);
   $("#map").onclick=()=>home();
   $("#done").focus();
+  cue("cheer");burst(true);
   announce(`Level ${lv} done. ${s} star${s>1?"s":""}.`);
 }
 const lv0=+opts.startLevel||0;
