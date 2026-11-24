@@ -104,7 +104,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[90] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-bold">
         Skip to content
       </a>
-      <header className="kz-web-only kz-chrome sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+      <header className={`kz-web-only kz-chrome sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur ${immersive ? 'kz-playing' : ''}`}>
         <div className="kz-bar-inner mx-auto flex h-20 max-w-6xl items-center gap-3 px-4">
           <Logo />
           <nav className="ml-6 hidden items-center gap-1 xl:flex" aria-label="Main">

@@ -145,7 +145,7 @@ export function createQuizGame(gameKey: string, cfg: QuizConfig) {
               </div>
             </div>
 
-            <div role="group" aria-label="Answer choices" className="kz-grid" data-count={n} style={{ ['--kz-cols' as string]: q.big ? Math.min(4, n) : Math.min(2, n) }}>
+            <div role="group" aria-label="Answer choices" className="kz-grid" data-count={n} style={{ ['--kz-cols' as string]: q.big ? Math.min(4, n) : Math.min(2, n), ['--kz-rows' as string]: q.big ? Math.ceil(n / Math.min(4, n)) : Math.ceil(n / 2) }}>
               {q.options.map((o, i) => {
                 const isAnswer = o.id === q.answerId
                 const state = picked ? (isAnswer ? 'right' : 'dim') : wrongs.has(o.id) ? 'wrong' : 'idle'

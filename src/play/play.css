@@ -175,11 +175,13 @@ html.reduce-motion :is(.kz-cheer, .kz-try, .kz-complete, .kz-complete-art, .kz-c
 .kz-quiz-text .kz-sel-pic { font: 900 clamp(1.5rem, 4vmin + 0.6rem, 3.6rem)/1.15 var(--font-display, Lato, sans-serif); }
 .kz-quiz-prompt .kz-e3d { width: 1.6em; height: 1.6em; }
 /* picture answers never push below the fold: cap the grid by the screen height */
-.kz-quiz .kz-grid:has(.kz-quiz-big) { width: min(100%, calc(max(9rem, 100dvh - 29rem) * var(--kz-cols, 2) + var(--kz-gap) * (var(--kz-cols, 2) - 1))); margin-inline: auto; }
+.kz-quiz .kz-grid:has(.kz-quiz-big) { width: min(100%, calc(max(9rem, 100dvh - 27rem) / var(--kz-rows, 1) * var(--kz-cols, 2))); margin-inline: auto; }
 /* Brain Gym boards were capped at small fixed widths: let them grow to fill the screen (and still fit its height) */
 .kz-brain-board [style*="max-width"] { max-width: min(100%, max(20rem, 100dvh - 19rem)) !important; }
 .kz-brain-board :where(.text-4xl) { font-size: clamp(2.25rem, 6vmin, 4rem); }
 .kz-complete-actions > * { flex: 1 1 15rem; max-width: 26rem; white-space: nowrap; }
 /* four picture answers on a portrait screen: two by two, as big as possible */
-@media (orientation: portrait) { .kz-grid[data-count="4"] { --kz-cols: 2 !important; } }
-@media (orientation: portrait) and (max-width: 600px) { .kz-grid[data-count="6"] { --kz-cols: 2 !important; } .kz-grid[data-count="5"], .kz-grid[data-count="3"] { --kz-cols: 3 !important; } }
+@media (orientation: portrait) { .kz-grid[data-count="4"] { --kz-cols: 2 !important; --kz-rows: 2 !important; } }
+@media (orientation: portrait) and (max-width: 600px) { .kz-grid[data-count="6"] { --kz-cols: 2 !important; --kz-rows: 3 !important; } .kz-grid[data-count="5"], .kz-grid[data-count="3"] { --kz-cols: 3 !important; } }
+/* phones and small tablets: while a game runs the world bar (with Back) is enough; the app header steps aside */
+@media (max-width: 900px), (max-height: 700px) { header.kz-playing { display: none; } }
