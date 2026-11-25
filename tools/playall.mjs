@@ -30,13 +30,13 @@ const PET_GAMES = ['Ball Catch', 'Obstacle Run', 'Hide & Seek', 'Bubble Pop', 'M
 const GAMES = [
   ...BRAIN.map((id) => ({ world: 'brain', id, route: `/brain/play/${id}`, start: ['Start'], kind: 'rounds', exploreMs: 9000 })),
   ...MAPS.map((id) => ({ world: 'maps', id, route: `/maps/games/${id}`, start: ['Start', 'Play', 'Beginner', "Let's go"], kind: 'rounds' })),
-  { world: 'maps', id: 'arrange-states', route: '/maps/puzzle/india', start: ['Start', 'Easy'], kind: 'puzzle', exploreMs: 3000 },
+  { world: 'maps', id: 'arrange-states', route: '/maps/puzzle/india', start: ['Start', 'Easy'], kind: 'puzzle', exploreMs: 0 },
   { world: 'words', id: 'find-fruits', route: '/words/play/find/fruits-L1', start: ['Start'], kind: 'rounds' },
   { world: 'words', id: 'find-alphabets', route: '/words/play/find/alphabets-L1', start: ['Start'], kind: 'rounds' },
   { world: 'garden', id: 'level-1', route: '/garden', start: ['Play level'], kind: 'rounds', done: '.w-garden .result' },
   { world: 'puzzles', id: 'adaptive', route: '/puzzles', start: ['Start here', 'Continue playing', 'Play'], kind: 'endless' },
   { world: 'money', id: 'challenges', route: '/money', start: ['Challenge Mode'], kind: 'endless' },
-  ...PET_GAMES.map((name) => ({ world: 'pets', id: name.toLowerCase().replace(/\W+/g, '-'), route: '/pets', pet: name, kind: 'puzzle', exploreMs: 4000 })),
+  ...PET_GAMES.map((name) => ({ world: 'pets', id: name.toLowerCase().replace(/\W+/g, '-'), route: '/pets', pet: name, kind: 'puzzle', exploreMs: 0 })),
   { world: 'shop', id: 'money-quiz', route: '/shop', start: ['Money Learning'], kind: 'rounds' },
   { world: 'shop', id: 'maths-quiz', route: '/shop', start: ['Maths Challenge'], kind: 'rounds' },
 ].filter((g) => (!opt('only') || opt('only').split(',').includes(g.world)) && (!opt('games') || opt('games').split(',').includes(g.id)));

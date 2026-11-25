@@ -85,7 +85,7 @@ function Game({ title, pool, distractors, backTo, backLabel, color, bg, lessonKe
   // picture cards as big as the screen allows: two columns, two rows, below the question
   const n = round?.options.length ?? 4
   const rows = Math.ceil(n / 2)
-  const art = useFitSize((w, h) => Math.max(96, Math.min((Math.min(w, 1500) - 56) / 2 / 1.2, (h - 330) / rows / 1.3, 300)), [rows])
+  const art = useFitSize((w, h) => Math.max(96, Math.min((Math.min(w, 1500) - 64) / 2 / 1.32, (h - 330) / rows / 1.3, 300)), [rows])
   const question = target ? `Where is the ${target.word}?` : ''
 
   useEffect(() => {
