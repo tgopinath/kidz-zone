@@ -39,7 +39,7 @@ export function WorldBadge({ world, size = 48, done = false }: { world: WorldId;
       {art ? (
         <Art name={art[0]} size={Math.round(size * 0.74)} motion="pop" />
       ) : (
-        <img src="/money/currency/coin-5.png" alt="" width={size} height={size} loading="lazy" data-mk="pop" className="select-none" style={{ width: size * 0.7, height: size * 0.7, objectFit: 'contain' }} />
+        <img src="/money/currency/coin-5.webp" alt="" width={size} height={size} loading="lazy" data-mk="pop" className="select-none" style={{ width: size * 0.7, height: size * 0.7, objectFit: 'contain' }} />
       )}
       {done && (
         <span className="absolute -right-1 -bottom-1 grid size-5 place-items-center rounded-full bg-success text-[11px] font-black text-white ring-2 ring-white">✓</span>
@@ -68,9 +68,9 @@ export function WorldScene({ world, className = '' }: { world: WorldId; classNam
         </>
       ) : (
         <>
-          <img src="/money/currency/note-100.jpg" alt="" loading="lazy" decoding="async" draggable={false} data-mk="scene-main" className="absolute rounded-md select-none" style={{ left: '10%', top: '20%', width: '58%', rotate: '-7deg', boxShadow: `0 16px 24px -10px ${m.accent}66` }} />
-          <img src="/money/currency/coin-5.png" alt="" loading="lazy" decoding="async" draggable={false} data-mk="scene-a" className="absolute select-none" style={{ right: '10%', top: '14%', height: '42%', aspectRatio: '1', objectFit: 'contain', filter: `drop-shadow(0 8px 10px ${m.accent}40)` }} />
-          <img src="/money/currency/coin-2.png" alt="" loading="lazy" decoding="async" draggable={false} data-mk="scene-b" className="absolute select-none" style={{ right: '26%', bottom: '8%', height: '32%', aspectRatio: '1', objectFit: 'contain', filter: `drop-shadow(0 8px 10px ${m.accent}40)` }} />
+          <img src="/money/currency/note-100.webp" alt="" loading="lazy" decoding="async" draggable={false} data-mk="scene-main" className="absolute rounded-md select-none" style={{ left: '10%', top: '20%', width: '58%', rotate: '-7deg', boxShadow: `0 16px 24px -10px ${m.accent}66` }} />
+          <img src="/money/currency/coin-5.webp" alt="" loading="lazy" decoding="async" draggable={false} data-mk="scene-a" className="absolute select-none" style={{ right: '10%', top: '14%', height: '42%', aspectRatio: '1', objectFit: 'contain', filter: `drop-shadow(0 8px 10px ${m.accent}40)` }} />
+          <img src="/money/currency/coin-2.webp" alt="" loading="lazy" decoding="async" draggable={false} data-mk="scene-b" className="absolute select-none" style={{ right: '26%', bottom: '8%', height: '32%', aspectRatio: '1', objectFit: 'contain', filter: `drop-shadow(0 8px 10px ${m.accent}40)` }} />
         </>
       )}
     </div>

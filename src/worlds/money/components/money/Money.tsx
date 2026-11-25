@@ -18,7 +18,7 @@ export function moneySize(value: Denomination, size: MoneySize) {
 
 /** Photos of real Indian currency (RBI specimens and 2019-series coins); see public/currency/CREDITS.md. */
 export const moneyImage = (value: Denomination) =>
-  `/money/currency/${CURRENCY[value].kind}-${value}.${CURRENCY[value].kind === 'coin' ? 'png' : 'jpg'}`;
+  `/money/currency/${CURRENCY[value].kind}-${value}.webp`; // WebP copies (tools/webp.mjs) of the original PNG/JPEG photos
 
 export function Money({ value, size = 'md', className = '' }: { value: Denomination; size?: MoneySize; className?: string }) {
   const meta = CURRENCY[value];

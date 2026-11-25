@@ -17,10 +17,17 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 2000,
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        manualChunks: (id: string) =>
-          id.includes('node_modules/three/') ? 'three' : id.includes('node_modules/@react-three/') ? 'r3f' : id.includes('node_modules/recharts') || id.includes('node_modules/d3-') ? 'charts' : undefined,
+        // React and its small shared helpers form one chunk. Heavy libraries (three.js and React Three Fiber for the
+        // Shop's 3D store, recharts for the grown-ups and Puzzle Quest charts) are left to Rolldown's automatic
+        // splitting, so they load only with the lazy worlds that import them, never on Home. (Manual groups for
+        // them captured shared React internals and made Home preload 1.4 MB.)
+        codeSplitting: {
+          groups: [
+            { name: 'react', test: /node_modules[\\/](react|react-dom|scheduler|react-is|use-sync-external-store|zustand)[\\/]/, priority: 30 },
+          ],
+        },
       },
     },
   },
